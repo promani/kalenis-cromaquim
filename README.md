@@ -84,42 +84,35 @@ for d in backend/lims*; do ln -sf "$PWD/$d" "$MODDIR/$(basename $d)"; done
 mkdir -p ~/kalenis_front_end
 curl -fsSL https://downloads.kalenislims.com/frontend_dist_6.0.tar.gz | tar xz -C ~/kalenis_front_end
 
-# 4. Variables
-export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib   # WeasyPrint encuentra las libs de brew
-export TRYTOND_database__uri=postgresql://localhost:5432
-export TRYTOND_web__root=$HOME/kalenis_front_end/frontend_dist_6.0
-
-# 5. Inicializar la base LOCAL (una sola vez; TRYTONPASSFILE evita el prompt de password)
-brew install postgresql@16 && brew services start postgresql@16
-createdb kalenislims
-.venv/bin/trytond-admin -d kalenislims -c trytond.dev.conf --all -l es --email <email>
-.venv/bin/trytond-admin -d kalenislims -c trytond.dev.conf -u lims_analysis_sheet user_view --activate-dependencies
-
-# 6. Correr el servidor
-.venv/bin/trytond -d kalenislims -c trytond.dev.conf
-# → http://localhost:8000
+# 4. Correr el server local apuntando a Supabase (MISMA base que producción)
+./run-local.sh
+# → http://localhost:8000  (lee la URI de .env; base 'postgres' de Supabase)
 ```
 
-### Supabase
+### Una sola base: Supabase
 
-**Importante:** inicializar Tryton directamente contra Supabase no es viable: el ORM
-de Tryton hace decenas de miles de queries chicas y la latencia a `us-west-1` lo
-convierte en horas. El camino es inicializar en el Postgres local y **migrar con
-dump/restore** (COPY masivo, minutos):
+Local (desarrollo) y producción (Cloudflare Containers) usan **la misma base de
+Supabase** (`postgres`). No hay base local separada ni sincronización: los cambios
+que hacés en local se ven en producción y viceversa. `run-local.sh` arma la URI
+desde `.env` y levanta trytond contra Supabase.
 
-```bash
-# El pooler exige modo sesión (:5432, sin ?pgbouncer=true); el modo transacción rompe a Tryton
-pg_dump -d kalenislims --no-owner --no-privileges | psql "$SUPABASE_SESSION_URL"
-```
+- Conexión: **modo sesión** del pooler (`:5432`, sin `?pgbouncer=true`). El modo
+  transacción (`:6543`) rompe a Tryton.
+- Como la base es remota (`us-west-1`), el **arranque** del server local es más lento
+  que contra un Postgres local (Tryton hace muchas queries chicas al iniciar); operar
+  después es normal.
 
-Tryton usa la base `postgres` del proyecto Supabase (schema `public`).
+**Bootstrap histórico (ya hecho, no repetir):** inicializar la base desde cero contra
+Supabase por WAN es inviable (horas). Por eso el init inicial se corrió en un Postgres
+local y se migró una única vez con `pg_dump -d kalenislims --no-owner --no-privileges |
+psql "$SUPABASE_SESSION_URL"`. La base local (`kalenislims`) queda solo como respaldo.
+El mismo comando sirve para **backups** puntuales de Supabase.
 
 Notas:
 - `numpy` debe quedar en `<1.24` (`pip install 'numpy==1.23.5'`): el `openpyxl 2.6.4`
   que pinea Kalenis usa `np.float`, eliminado en numpy 1.24.
-- `trytond.dev.conf` está versionado y no contiene secretos; la URI de la base va por env.
-- Desarrollo diario: usar la base local (rápida). Supabase queda como base del
-  entorno desplegado.
+- `trytond.dev.conf` y `run-local.sh` están versionados y no contienen secretos;
+  la URI de la base (con password) se deriva de `.env`.
 
 ## Próximos pasos
 
