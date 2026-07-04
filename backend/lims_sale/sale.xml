@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Groups -->
+
+        <record model="res.group" id="group_sale_services_completed_manual">
+            <field name="name">Manually complete services in sales</field>
+        </record>
+        <record model="res.user-res.group"
+            id="user_admin_group_sale_services_completed_manual">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_sale_services_completed_manual"/>
+        </record>
+
+<!-- Sale -->
+
+        <record model="ir.ui.view" id="sale_view_form">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale.sale_view_form"/>
+            <field name="name">sale_form</field>
+        </record>
+        <record model="ir.ui.view" id="sale_view_list">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale.sale_view_tree"/>
+            <field name="name">sale_list</field>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_sale_form_domain_expired">
+            <field name="name">Expired</field>
+            <field name="sequence" eval="60"/>
+            <field name="domain"
+                eval="[('state', '=', 'expired')]"
+                pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="sale.act_sale_form"/>
+        </record>
+
+        <record model="ir.model.button" id="sale_load_services_button">
+            <field name="name">load_services</field>
+            <field name="string">Load Services from Entry</field>
+            <field name="model" search="[('model', '=', 'sale.sale')]"/>
+        </record>
+        <record model="ir.model.button" id="sale_load_set_group_button">
+            <field name="name">load_set_group</field>
+            <field name="string">Load Analysis from Set/Group</field>
+            <field name="model" search="[('model', '=', 'sale.sale')]"/>
+        </record>
+
+        <record model="ir.action.act_window" id="sale.act_invoice_form">
+            <field name="domain"
+                eval="[If(Eval('active_ids', []) == [Eval('active_id')], ['OR', ('lines.origin.sale.id', '=', Eval('active_id'), 'sale.line'), ('lines.lims_sale_line_origin.sale.id', '=', Eval('active_id'))], ['OR', ('lines.origin.sale.id', 'in', Eval('active_ids'), 'sale.line'), ('lines.lims_sale_line_origin.sale.id', 'in', Eval('active_ids'))])]"
+                pyson="1"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_sale_services_completed_manual">
+            <field name="field"
+                search="[('name', '=', 'services_completed_manual'), ('model.model', '=', 'sale.sale')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_sale_services_completed_manual_group_sale_services_completed_manual">
+            <field name="field"
+                search="[('name', '=', 'services_completed_manual'), ('model.model', '=', 'sale.sale')]"/>
+            <field name="group" ref="group_sale_services_completed_manual"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_sale_untaxed_amount">
+            <field name="field"
+                search="[('name', '=', 'untaxed_amount'), ('model.model', '=', 'sale.sale')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_sale_untaxed_amount_group_sale">
+            <field name="field"
+                search="[('name', '=', 'untaxed_amount'), ('model.model', '=', 'sale.sale')]"/>
+            <field name="group" ref="sale.group_sale"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_sale_tax_amount">
+            <field name="field"
+                search="[('name', '=', 'tax_amount'), ('model.model', '=', 'sale.sale')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_sale_tax_amount_group_sale">
+            <field name="field"
+                search="[('name', '=', 'tax_amount'), ('model.model', '=', 'sale.sale')]"/>
+            <field name="group" ref="sale.group_sale"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_sale_total_amount">
+            <field name="field"
+                search="[('name', '=', 'total_amount'), ('model.model', '=', 'sale.sale')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_sale_total_amount_group_sale">
+            <field name="field"
+                search="[('name', '=', 'total_amount'), ('model.model', '=', 'sale.sale')]"/>
+            <field name="group" ref="sale.group_sale"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Sale Section -->
+
+        <record model="ir.ui.view" id="sale_section_view_form">
+            <field name="model">sale.sale.section</field>
+            <field name="type">form</field>
+            <field name="name">sale_section_form</field>
+        </record>
+        <record model="ir.ui.view" id="sale_section_view_list">
+            <field name="model">sale.sale.section</field>
+            <field name="type">tree</field>
+            <field name="name">sale_section_list</field>
+        </record>
+
+<!-- Sale Line -->
+
+        <record model="ir.ui.view" id="sale_line_view_form">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_form"/>
+            <field name="name">sale_line_form</field>
+        </record>
+        <record model="ir.ui.view" id="sale_line_view_list">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_tree"/>
+            <field name="name">sale_line_list</field>
+        </record>
+        <record model="ir.ui.view" id="sale_line_view_list_sequence">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_tree_sequence"/>
+            <field name="name">sale_line_list_sequence</field>
+        </record>
+
+        <record model="ir.ui.view" id="lims_sale_line_view_form">
+            <field name="model">sale.line</field>
+            <field name="type">form</field>
+            <field name="name">lims_sale_line_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_sale_line_view_tree">
+            <field name="model">sale.line</field>
+            <field name="type">tree</field>
+            <field name="name">lims_sale_line_tree</field>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_sale_line_unit_price">
+            <field name="field"
+                search="[('name', '=', 'unit_price'), ('model.model', '=', 'sale.line')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_sale_line_unit_price_group_sale">
+            <field name="field"
+                search="[('name', '=', 'unit_price'), ('model.model', '=', 'sale.line')]"/>
+            <field name="group" ref="sale.group_sale"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_sale_line_amount">
+            <field name="field"
+                search="[('name', '=', 'amount'), ('model.model', '=', 'sale.line')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_sale_line_amount_group_sale">
+            <field name="field"
+                search="[('name', '=', 'amount'), ('model.model', '=', 'sale.line')]"/>
+            <field name="group" ref="sale.group_sale"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Sale Load Services from Entry Wizard-->
+
+        <record model="ir.ui.view" id="sale_load_services_start_view_form">
+            <field name="model">sale.load_services.start</field>
+            <field name="type">form</field>
+            <field name="name">sale_load_services_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_sale_load_services">
+            <field name="name">Load Services from Entry</field>
+            <field name="wiz_name">sale.load_services</field>
+            <field name="model">sale.sale</field>
+        </record>
+
+<!-- Sale Load Analysis from Set/Group Wizard-->
+
+        <record model="ir.ui.view" id="sale_load_set_group_start_view_form">
+            <field name="model">sale.load_set_group.start</field>
+            <field name="type">form</field>
+            <field name="name">sale_load_set_group_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_sale_load_set_group">
+            <field name="name">Load Analysis from Set/Group</field>
+            <field name="wiz_name">sale.load_set_group</field>
+            <field name="model">sale.sale</field>
+        </record>
+
+<!-- Sale Report -->
+
+        <record model="ir.action.report" id="report_sale_html">
+            <field name="name">Sale</field>
+            <field name="model">sale.sale</field>
+            <field name="report_name">sale.sale</field>
+            <field name="report">lims_sale/report/sale.html</field>
+            <field name="extension">pdf</field>
+            <field name="template_extension">lims</field>
+        </record>
+
+<!-- Cron Update Expired Sales Status -->
+
+        <record model="ir.cron" id="cron_update_expired_sales_status">
+            <field name="interval_number" eval="1"/>
+            <field name="interval_type">days</field>
+            <field name="method">sale.sale|update_expired_sales_status</field>
+        </record>
+
+    </data>
+    <data depends="lims_account_invoice">
+
+<!-- Sale Line -->
+
+        <record model="ir.ui.view" id="sale_line_view_form2">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_form"/>
+            <field name="name">sale_line_form2</field>
+        </record>
+
+    </data>
+</tryton>

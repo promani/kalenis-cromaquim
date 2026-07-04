@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<form>
+    <label name="variable"/>
+    <field name="variable"/>
+    <newline/>
+    <label name="value"/>
+    <field name="value"/>
+    <label name="analysis"/>
+    <field name="analysis"/>
+    <label name="product_type"/>
+    <field name="product_type"/>
+    <label name="matrix"/>
+    <field name="matrix"/>
+    <label name="method"/>
+    <field name="method"/>
+    <label name="laboratory"/>
+    <field name="laboratory"/>
+</form>

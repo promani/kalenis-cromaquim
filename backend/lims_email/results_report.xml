@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Results Report -->
+
+        <record model="ir.action.act_window" id="lims.act_lims_results_report">
+            <field name="search_value"
+                eval="[('ready_to_send', '=', True), ('sent', '=', False)]"
+                pyson="1"/>
+        </record>
+
+        <record model="ir.ui.view" id="lims_results_report_view_list">
+            <field name="model">lims.results_report</field>
+            <field name="inherit" ref="lims.lims_results_report_view_list"/>
+            <field name="name">results_report_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_view_form">
+            <field name="model">lims.results_report</field>
+            <field name="inherit" ref="lims.lims_results_report_view_form"/>
+            <field name="name">results_report_form</field>
+        </record>
+
+<!-- Results Report Attachment -->
+
+        <record model="ir.ui.view" id="lims_results_report_attachment_view_list">
+            <field name="model">lims.results_report.attachment</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_attachment_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_attachment_view_form">
+            <field name="model">lims.results_report.attachment</field>
+            <field name="type">form</field>
+            <field name="name">results_report_attachment_form</field>
+        </record>
+
+<!-- Results Report Mailing -->
+
+        <record model="ir.ui.view" id="lims_results_report_mailing_view_list">
+            <field name="model">lims.results_report.mailing</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_mailing_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_mailing_view_form">
+            <field name="model">lims.results_report.mailing</field>
+            <field name="type">form</field>
+            <field name="name">results_report_mailing_form</field>
+        </record>
+
+<!-- Results Report Version Detail -->
+
+        <record model="ir.ui.view" id="lims_results_report_version_detail_view_list">
+            <field name="model">lims.results_report.version.detail</field>
+            <field name="inherit" ref="lims.lims_results_report_version_detail_view_list"/>
+            <field name="name">results_report_version_detail_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_version_detail_view_form">
+            <field name="model">lims.results_report.version.detail</field>
+            <field name="inherit" ref="lims.lims_results_report_version_detail_view_form"/>
+            <field name="name">results_report_version_detail_form</field>
+        </record>
+
+        <record model="ir.model.button" id="results_report_version_detail_relate_mail_attachment_button">
+            <field name="name">relate_mail_attachment</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="results_report_version_detail_relate_mail_attachment_button_group_lims_laboratory_reports">
+            <field name="button" ref="results_report_version_detail_relate_mail_attachment_button"/>
+            <field name="group" ref="lims.group_lims_laboratory_reports"/>
+        </record>
+
+<!-- Wizard Relate Mail Attachment to Results Report -->
+
+        <record model="ir.ui.view" id="results_report_version_detail_relate_mail_attachment_start_form">
+            <field name="model">lims.results_report.version.detail.relate_mail_attachment.start</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_detail_relate_mail_attachment_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_results_report_version_detail_relate_mail_attachment">
+            <field name="name">Relate Mail Attachment to Results Report</field>
+            <field name="wiz_name">lims.results_report.version.detail.relate_mail_attachment</field>
+        </record>
+
+<!-- Wizard Send Results Report -->
+
+        <record model="ir.ui.view" id="send_results_report_start_view">
+            <field name="model">lims_email.send_results_report.start</field>
+            <field name="type">form</field>
+            <field name="name">send_results_report_start_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="send_results_report_succeed_view">
+            <field name="model">lims_email.send_results_report.succeed</field>
+            <field name="type">form</field>
+            <field name="name">send_results_report_succeed_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="send_results_report_failed_view">
+            <field name="model">lims_email.send_results_report.failed</field>
+            <field name="type">form</field>
+            <field name="name">send_results_report_failed_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_send_results_report">
+            <field name="name">Send Results Reports</field>
+            <field name="wiz_name">lims_email.send_results_report</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wizard_send_results_report_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.results_report,-1</field>
+            <field name="action" ref="wizard_send_results_report"/>
+        </record>
+
+        <record model="ir.action-res.group"
+            id="wizard_send_results_report_group_send_results_report">
+            <field name="action" ref="wizard_send_results_report"/>
+            <field name="group" ref="group_lims_send_results_report"/>
+        </record>
+
+<!-- Wizard Mark Results Report as Sent -->
+
+        <record model="ir.ui.view" id="mark_results_report_sent_start_view">
+            <field name="model">lims_email.mark_results_report_sent.start</field>
+            <field name="type">form</field>
+            <field name="name">mark_results_report_sent_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_mark_results_report_sent">
+            <field name="name">Mark Results Report as Sent</field>
+            <field name="wiz_name">lims_email.mark_results_report_sent</field>
+            <field name="model">lims.results_report</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wizard_mark_results_report_sent_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.results_report,-1</field>
+            <field name="action" ref="wizard_mark_results_report_sent"/>
+        </record>
+
+        <record model="ir.action-res.group"
+            id="wizard_mark_results_report_sent_group_send_results_report">
+            <field name="action" ref="wizard_mark_results_report_sent"/>
+            <field name="group" ref="group_lims_send_results_report"/>
+        </record>
+
+<!-- Results Report Name Format -->
+
+        <record model="ir.ui.view" id="results_report_format_view_list">
+            <field name="model">lims.result_report.format</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_format_list</field>
+        </record>
+
+        <record model="ir.ui.view" id="results_report_format_view_form">
+            <field name="model">lims.result_report.format</field>
+            <field name="type">form</field>
+            <field name="name">results_report_format_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_results_report_format">
+            <field name="name">Results Report Name Formats</field>
+            <field name="res_model">lims.result_report.format</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_results_report_format_view_form">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="results_report_format_view_list"/>
+            <field name="act_window" ref="act_results_report_format"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_results_report_format_view_list">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="results_report_format_view_form"/>
+          <field name="act_window" ref="act_results_report_format"/>
+        </record>
+
+        <menuitem action="act_results_report_format"
+            id="menu_results_report_format"
+            parent="lims.lims_config_report" sequence="40"/>
+
+    </data>
+</tryton>

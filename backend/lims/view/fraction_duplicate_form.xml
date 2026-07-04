@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form>
+    <label name="fraction"/>
+    <field name="fraction"/>
+    <label name="quantity"/>
+    <field name="quantity"/>
+    <label name="confirm"/>
+    <field name="confirm"/>
+</form>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Party -->
+
+        <record model="ir.ui.view" id="lims_party_view_form">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_form"/>
+            <field name="name">party_party_form</field>
+        </record>
+
+<!-- Replace/Erase Party wizards -->
+
+        <record model="ir.action.wizard" id="party.wizard_replace">
+            <field name="active" eval="False"/>
+        </record>
+        <record model="ir.action.wizard" id="party.wizard_erase">
+            <field name="active" eval="False"/>
+        </record>
+
+<!-- Address -->
+
+        <record model="ir.ui.view" id="lims_address_view_form">
+            <field name="model">party.address</field>
+            <field name="inherit" ref="party.address_view_form"/>
+            <field name="name">party_address_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_address_view_list1">
+            <field name="model">party.address</field>
+            <field name="inherit" ref="party.address_view_tree"/>
+            <field name="name">party_address_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_address_view_list2">
+            <field name="model">party.address</field>
+            <field name="inherit" ref="party.address_view_tree_sequence"/>
+            <field name="name">party_address_list</field>
+        </record>
+
+<!-- Company -->
+
+        <record model="ir.ui.view" id="company_view_form">
+            <field name="model">company.company</field>
+            <field name="inherit" ref="company.company_view_form"/>
+            <field name="name">company_form</field>
+        </record>
+
+<!-- Employee -->
+
+        <record model="ir.ui.view" id="employee_view_form">
+            <field name="model">company.employee</field>
+            <field name="inherit" ref="company.employee_view_form"/>
+            <field name="name">employee_form</field>
+        </record>
+
+    </data>
+</tryton>

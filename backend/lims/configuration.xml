@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Configuration -->
+
+        <record model="ir.ui.view" id="lims_configuration_view">
+            <field name="model">lims.configuration</field>
+            <field name="type">form</field>
+            <field name="name">configuration_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_configuration">
+            <field name="name">Configuration</field>
+            <field name="res_model">lims.configuration</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_configuration_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_configuration_view"/>
+            <field name="act_window" ref="act_lims_configuration"/>
+        </record>
+
+        <menuitem action="act_lims_configuration" id="lims_configuration_menu"
+            parent="lims_config_base" sequence="10"/>
+
+        <record model="ir.model.access" id="access_configuration">
+            <field name="model" search="[('model', '=', 'lims.configuration')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_configuration_group_conf_base_admin">
+            <field name="model" search="[('model', '=', 'lims.configuration')]"/>
+            <field name="group" ref="group_lims_conf_base_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- About -->
+
+        <record model="ir.ui.view" id="lims_about_view">
+            <field name="model">lims.about</field>
+            <field name="type">form</field>
+            <field name="name">about_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_about">
+            <field name="name">About</field>
+            <field name="res_model">lims.about</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_about_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_about_view"/>
+            <field name="act_window" ref="act_lims_about"/>
+        </record>
+
+        <menuitem action="act_lims_about" id="lims_about_menu"
+            parent="lims_config" sequence="10"/>
+
+<!-- Work Year -->
+
+        <record model="ir.ui.view" id="lims_workyear_view_form">
+            <field name="model">lims.lab.workyear</field>
+            <field name="type">form</field>
+            <field name="name">workyear_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_workyear_view_list">
+            <field name="model">lims.lab.workyear</field>
+            <field name="type">tree</field>
+            <field name="name">workyear_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_workyear_list">
+            <field name="name">Work Years</field>
+            <field name="res_model">lims.lab.workyear</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_workyear_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_workyear_view_list"/>
+            <field name="act_window" ref="act_lims_workyear_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_workyear_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_workyear_view_form"/>
+            <field name="act_window" ref="act_lims_workyear_list"/>
+        </record>
+
+        <menuitem action="act_lims_workyear_list" id="lims_workyear_menu"
+            parent="lims_config_base" sequence="20"/>
+
+        <record model="ir.model.access" id="access_workyear">
+            <field name="model" search="[('model', '=', 'lims.lab.workyear')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_workyear_group_conf_base_admin">
+            <field name="model" search="[('model', '=', 'lims.lab.workyear')]"/>
+            <field name="group" ref="group_lims_conf_base_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Work Year Holiday -->
+
+        <record model="ir.ui.view" id="lims_workyear_holiday_view_form">
+            <field name="model">lims.lab.workyear.holiday</field>
+            <field name="type">form</field>
+            <field name="name">workyear_holiday_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_workyear_holiday_view_list">
+            <field name="model">lims.lab.workyear.holiday</field>
+            <field name="type">tree</field>
+            <field name="name">workyear_holiday_list</field>
+        </record>
+
+<!-- Work Year Shift -->
+
+        <record model="ir.ui.view" id="lims_workshift_view_form">
+            <field name="model">lims.lab.workshift</field>
+            <field name="type">form</field>
+            <field name="name">workshift_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_workshift_view_list">
+            <field name="model">lims.lab.workshift</field>
+            <field name="type">tree</field>
+            <field name="name">workshift_list</field>
+        </record>
+
+<!-- Laboratory Notebook View -->
+
+        <record model="ir.ui.view" id="lims_notebook_views_view_form">
+            <field name="model">lims.notebook.view</field>
+            <field name="type">form</field>
+            <field name="name">notebook_view_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_notebook_views_view_list">
+            <field name="model">lims.notebook.view</field>
+            <field name="type">tree</field>
+            <field name="name">notebook_view_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_notebook_views_list">
+            <field name="name">Laboratory Notebook Views</field>
+            <field name="res_model">lims.notebook.view</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_notebook_views_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_notebook_views_view_list"/>
+            <field name="act_window" ref="act_lims_notebook_views_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_notebook_views_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_notebook_views_view_form"/>
+            <field name="act_window" ref="act_lims_notebook_views_list"/>
+        </record>
+
+        <menuitem action="act_lims_notebook_views_list"
+            id="lims_notebook_views_menu"
+            parent="lims_config_laboratory" sequence="30"/>
+
+        <record model="ir.model.access" id="access_notebook_views">
+            <field name="model" search="[('model', '=', 'lims.notebook.view')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_notebook_views_group_conf_laboratory_admin">
+            <field name="model" search="[('model', '=', 'lims.notebook.view')]"/>
+            <field name="group" ref="group_lims_conf_laboratory_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Laboratory Notebook View Column -->
+
+        <record model="ir.ui.view" id="lims_notebook_view_column_view_form">
+            <field name="model">lims.notebook.view.column</field>
+            <field name="type">form</field>
+            <field name="name">notebook_view_column_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_notebook_view_column_view_list">
+            <field name="model">lims.notebook.view.column</field>
+            <field name="type">tree</field>
+            <field name="name">notebook_view_column_list</field>
+        </record>
+
+<!-- Printer -->
+
+        <record model="ir.ui.view" id="lims_printer_view_form">
+            <field name="model">lims.printer</field>
+            <field name="type">form</field>
+            <field name="name">printer_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_printer_view_list">
+            <field name="model">lims.printer</field>
+            <field name="type">tree</field>
+            <field name="name">printer_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_printer_list">
+            <field name="name">Printers</field>
+            <field name="res_model">lims.printer</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_printer_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_printer_view_list"/>
+            <field name="act_window" ref="act_printer_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_printer_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_printer_view_form"/>
+            <field name="act_window" ref="act_printer_list"/>
+        </record>
+
+        <menuitem action="act_printer_list" id="lims_printer_menu"
+            parent="lims_config_base" sequence="30"/>
+
+<!-- Attachment -->
+
+        <menuitem name="Attachments" id="menu_attachment"
+            icon="tryton-attach"/>
+        <menuitem name="Attachments" parent="menu_attachment"
+            action="ir.act_attachment_form" id="menu_attachment_form"/>
+
+        <record model="res.group" id="group_attachments_global">
+            <field name="name">Attachments Global List</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_attachments_global">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_attachments_global"/>
+        </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_attachment_group_attachments_global">
+            <field name="menu" ref="menu_attachment"/>
+            <field name="group" ref="group_attachments_global"/>
+        </record>
+
+<!-- Sequence -->
+
+        <record model="ir.ui.view" id="sequence_view_form">
+            <field name="model">ir.sequence</field>
+            <field name="inherit" ref="ir.sequence_view_form"/>
+            <field name="name">sequence_form</field>
+        </record>
+
+<!-- Sequence Strict -->
+
+        <record model="ir.ui.view" id="sequence_strict_view_form">
+            <field name="model">ir.sequence</field>
+            <field name="inherit" ref="ir.sequence_strict_view_form"/>
+            <field name="name">sequence_form</field>
+        </record>
+
+<!-- About -->
+
+        <record model="lims.about" id="about">
+            <field name="version">6.0</field>
+            <field name="release_date">2023-3-10</field>
+        </record>
+
+    </data>
+</tryton>

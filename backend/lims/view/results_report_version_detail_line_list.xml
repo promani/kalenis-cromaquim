@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="notebook_line" tree_invisible="1"/>
+    <field name="analysis_origin"/>
+    <field name="analysis"/>
+    <field name="repetition"/>
+    <field name="start_date"/>
+    <field name="end_date"/>
+    <field name="method"/>
+    <field name="device"/>
+    <field name="urgent"/>
+    <field name="priority"/>
+    <field name="report_date"/>
+    <field name="result"/>
+    <field name="initial_unit"/>
+    <field name="converted_result"/>
+    <field name="final_unit"/>
+    <field name="comments"/>
+    <field name="trace_report"/>
+    <field name="corrected"/>
+    <field name="hide"/>
+</tree>

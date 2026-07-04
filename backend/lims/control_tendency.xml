@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Origins -->
+
+        <record model="ir.ui.view" id="lims_range_type_view_form">
+            <field name="model">lims.range.type</field>
+            <field name="type">form</field>
+            <field name="name">range_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_range_type_view_list">
+            <field name="model">lims.range.type</field>
+            <field name="type">tree</field>
+            <field name="name">range_type_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_range_type_list">
+            <field name="name">Origins</field>
+            <field name="res_model">lims.range.type</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_range_type_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_range_type_view_list"/>
+            <field name="act_window" ref="act_lims_range_type_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_range_type_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_range_type_view_form"/>
+            <field name="act_window" ref="act_lims_range_type_list"/>
+        </record>
+
+        <menuitem action="act_lims_range_type_list"
+            id="lims_range_type_list_menu"
+            parent="lims_config_base_tables" sequence="80"/>
+
+        <record model="ir.model.access" id="access_range_type">
+            <field name="model" search="[('model', '=', 'lims.range.type')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_range_type_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.range.type')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Range -->
+
+        <record model="ir.ui.view" id="lims_range_view_form">
+            <field name="model">lims.range</field>
+            <field name="type">form</field>
+            <field name="name">range_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_range_view_list">
+            <field name="model">lims.range</field>
+            <field name="type">tree</field>
+            <field name="name">range_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_range_list">
+            <field name="name">Ranges</field>
+            <field name="res_model">lims.range</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_range_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_range_view_list"/>
+            <field name="act_window" ref="act_lims_range_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_range_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_range_view_form"/>
+            <field name="act_window" ref="act_lims_range_list"/>
+        </record>
+
+        <menuitem action="act_lims_range_list" id="lims_range_list_menu"
+            parent="lims_config_base_tables" sequence="90"/>
+
+        <record model="ir.model.access" id="access_range">
+            <field name="model" search="[('model', '=', 'lims.range')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_range_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.range')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Wizard Copy Ranges -->
+
+        <record model="ir.ui.view" id="copy_range_start_view_form">
+            <field name="model">lims.range.copy.start</field>
+            <field name="type">form</field>
+            <field name="name">range_copy_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="copy_range_result_view_form">
+            <field name="model">lims.range.copy.result</field>
+            <field name="type">form</field>
+            <field name="name">range_copy_result_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_copy_range">
+            <field name="name">Copy Ranges</field>
+            <field name="wiz_name">lims.range.copy</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_copy_range_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.range,-1</field>
+            <field name="action" ref="wiz_copy_range"/>
+        </record>
+
+<!-- Tendency -->
+
+        <record model="ir.ui.view" id="lims_control_tendency_view_list">
+            <field name="model">lims.control.tendency</field>
+            <field name="type">tree</field>
+            <field name="name">control_tendency_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_control_tendency_view_form">
+            <field name="model">lims.control.tendency</field>
+            <field name="type">form</field>
+            <field name="name">control_tendency_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_control_tendency">
+            <field name="name">Tendencies</field>
+            <field name="res_model">lims.control.tendency</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_control_tendency_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_control_tendency_view_list"/>
+            <field name="act_window" ref="act_lims_control_tendency"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_control_tendency_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_control_tendency_view_form"/>
+            <field name="act_window" ref="act_lims_control_tendency"/>
+        </record>
+
+        <menuitem action="act_lims_control_tendency"
+            id="lims_control_tendency_menu"
+            parent="lims_laboratory_control" sequence="10"
+            icon="lims-tendencies"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_control_tendency_group_control_readonly">
+            <field name="menu" ref="lims_control_tendency_menu"/>
+            <field name="group" ref="group_lims_control_readonly"/>
+        </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_control_tendency_group_control">
+            <field name="menu" ref="lims_control_tendency_menu"/>
+            <field name="group" ref="group_lims_control"/>
+        </record>
+
+        <record model="ir.model.access" id="access_control_tendency">
+            <field name="model" search="[('model', '=', 'lims.control.tendency')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_control_tendency_group_control">
+            <field name="model" search="[('model', '=', 'lims.control.tendency')]"/>
+            <field name="group" ref="group_lims_control"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Tendency 2 -->
+
+        <record model="ir.ui.view" id="lims_control_tendency_view_form2">
+            <field name="model">lims.control.tendency</field>
+            <field name="type">form</field>
+            <field name="name">control_tendency_form2</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_control_tendency2">
+            <field name="name">Tendencies</field>
+            <field name="res_model">lims.control.tendency</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_control_tendency2_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_control_tendency_view_list"/>
+            <field name="act_window" ref="act_lims_control_tendency2"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_control_tendency2_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_control_tendency_view_form2"/>
+            <field name="act_window" ref="act_lims_control_tendency2"/>
+        </record>
+
+<!-- Tendency 3 -->
+
+        <record model="ir.ui.view" id="lims_control_tendency_view_list3">
+            <field name="model">lims.control.tendency</field>
+            <field name="type">tree</field>
+            <field name="name">control_tendency_list3</field>
+        </record>
+        <record model="ir.ui.view" id="lims_control_tendency_view_form3">
+            <field name="model">lims.control.tendency</field>
+            <field name="type">form</field>
+            <field name="name">control_tendency_form3</field>
+        </record>
+
+        <record model="ir.ui.view" id="lims_control_tendency_detail_view_list">
+            <field name="model">lims.control.tendency.detail</field>
+            <field name="type">tree</field>
+            <field name="name">control_tendency_detail_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_control_tendency_detail_view_form">
+            <field name="model">lims.control.tendency.detail</field>
+            <field name="type">form</field>
+            <field name="name">control_tendency_detail_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_control_tendency3">
+            <field name="name">Tendencies Analysis</field>
+            <field name="res_model">lims.control.tendency</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_control_tendency3_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_control_tendency_view_list3"/>
+            <field name="act_window" ref="act_lims_control_tendency3"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_control_tendency3_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_control_tendency_view_form3"/>
+            <field name="act_window" ref="act_lims_control_tendency3"/>
+        </record>
+
+<!-- Wizard Calculation of Means and Deviations -->
+
+        <record model="ir.ui.view" id="lims_control_means_deviations_calc_start_view_form">
+            <field name="model">lims.control.means_deviations_calc.start</field>
+            <field name="type">form</field>
+            <field name="name">control_means_deviations_calc_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_control_means_deviations_calc_empty_view_form">
+            <field name="model">lims.control.means_deviations_calc.empty</field>
+            <field name="type">form</field>
+            <field name="name">control_means_deviations_calc_empty_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_control_means_deviations_calc_result_view_form">
+            <field name="model">lims.control.means_deviations_calc.result</field>
+            <field name="type">form</field>
+            <field name="name">control_means_deviations_calc_result_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="lims_control_result_line_view_list">
+            <field name="model">lims.control.result_line</field>
+            <field name="type">tree</field>
+            <field name="name">control_result_line_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_control_result_line_view_form">
+            <field name="model">lims.control.result_line</field>
+            <field name="type">form</field>
+            <field name="name">control_result_line_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="lims_control_result_line_detail_view_list">
+            <field name="model">lims.control.result_line.detail</field>
+            <field name="type">tree</field>
+            <field name="name">control_result_line_detail_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_control_result_line_detail_view_form">
+            <field name="model">lims.control.result_line.detail</field>
+            <field name="type">form</field>
+            <field name="name">control_result_line_detail_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="lims_control_means_deviations_calc_result2_view_form">
+            <field name="model">lims.control.means_deviations_calc.result2</field>
+            <field name="type">form</field>
+            <field name="name">control_means_deviations_calc_result2_form</field>
+        </record>
+
+        <record model="ir.model.button" id="means_deviations_calc_select_all_button">
+            <field name="name">select_all</field>
+            <field name="string">Select All</field>
+            <field name="model"
+                search="[('model', '=', 'lims.control.means_deviations_calc.result')]"/>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_control_means_deviations_calc">
+            <field name="name">Calculation of Means and Deviations</field>
+            <field name="wiz_name">lims.control.means_deviations_calc</field>
+        </record>
+
+        <menuitem action="wiz_lims_control_means_deviations_calc"
+            id="lims_control_means_deviations_calc_menu"
+            parent="lims_laboratory_control" sequence="30"
+            icon="lims-control_means_deviations_calc"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_control_means_deviations_calc_group_control">
+            <field name="menu" ref="lims_control_means_deviations_calc_menu"/>
+            <field name="group" ref="group_lims_control"/>
+        </record>
+
+        <record model="ir.model.field.access" id="access_means_deviations_calc_result_lines">
+            <field name="field"
+                search="[('name', '=', 'lines'), ('model.model', '=', 'lims.control.means_deviations_calc.result')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+<!-- Wizard Tendencies Analysis -->
+
+        <record model="ir.ui.view" id="lims_control_tendencies_analysis_start_view_form">
+            <field name="model">lims.control.tendencies_analysis.start</field>
+            <field name="type">form</field>
+            <field name="name">control_tendencies_analysis_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_control_tendencies_analysis_result_view_form">
+            <field name="model">lims.control.tendencies_analysis.result</field>
+            <field name="type">form</field>
+            <field name="name">control_tendencies_analysis_result_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_control_tendencies_analysis">
+            <field name="name">Tendencies Analysis</field>
+            <field name="wiz_name">lims.control.tendencies_analysis</field>
+        </record>
+
+        <menuitem action="wiz_lims_control_tendencies_analysis"
+            id="lims_control_tendencies_analysis_menu"
+            parent="lims_laboratory_control" sequence="40"
+            icon="lims-tendencies_analysis"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_control_tendencies_analysis_group_control">
+            <field name="menu" ref="lims_control_tendencies_analysis_menu"/>
+            <field name="group" ref="group_lims_control"/>
+        </record>
+
+<!-- Analysis Group for Tendencies Analysis -->
+
+        <record model="ir.ui.view" id="control_tendencies_analysis_group_view_list">
+            <field name="model">lims.control.analysis_group</field>
+            <field name="type">tree</field>
+            <field name="name">control_tendencies_analysis_group_list</field>
+        </record>
+        <record model="ir.ui.view" id="control_tendencies_analysis_group_view_form">
+            <field name="model">lims.control.analysis_group</field>
+            <field name="type">form</field>
+            <field name="name">control_tendencies_analysis_group_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_control_tendencies_analysis_group">
+            <field name="name">Analysis Group for Tendencies Analysis</field>
+            <field name="res_model">lims.control.analysis_group</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_control_tendencies_analysis_group_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="control_tendencies_analysis_group_view_list"/>
+            <field name="act_window" ref="act_control_tendencies_analysis_group"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_control_tendencies_analysis_group_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="control_tendencies_analysis_group_view_form"/>
+            <field name="act_window" ref="act_control_tendencies_analysis_group"/>
+        </record>
+
+        <menuitem action="act_control_tendencies_analysis_group"
+            id="control_tendencies_analysis_group_menu"
+            parent="lims_laboratory_control" sequence="25"/>
+
+<!-- Control Charts -->
+
+        <record model="ir.action.report" id="report_control_chart">
+            <field name="name">Control Chart</field>
+            <field name="model">lims.control.tendency</field>
+            <field name="report_name">lims.control_chart.report</field>
+            <field name="report">lims/report/control_chart_report.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_control_chart_print">
+            <field name="name">Control Chart</field>
+            <field name="wiz_name">lims.control_chart.print</field>
+            <field name="model">lims.control.tendency</field>
+        </record>
+
+        <record model="ir.action.keyword" id="report_control_chart_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">lims.control.tendency,-1</field>
+            <field name="action" ref="wiz_control_chart_print"/>
+        </record>
+
+<!-- Trend Charts -->
+
+        <record model="ir.ui.view" id="trend_chart_view_list">
+            <field name="model">lims.trend.chart</field>
+            <field name="type">tree</field>
+            <field name="name">trend_chart_list</field>
+        </record>
+        <record model="ir.ui.view" id="trend_chart_view_form">
+            <field name="model">lims.trend.chart</field>
+            <field name="type">form</field>
+            <field name="name">trend_chart_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_trend_chart_list">
+            <field name="name">Trend Charts</field>
+            <field name="res_model">lims.trend.chart</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_trend_chart_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="trend_chart_view_list"/>
+            <field name="act_window" ref="act_trend_chart_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_trend_chart_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="trend_chart_view_form"/>
+            <field name="act_window" ref="act_trend_chart_list"/>
+        </record>
+
+        <menuitem action="act_trend_chart_list" id="menu_trend_chart_list"
+            parent="lims_laboratory" sequence="70"
+            icon="tryton-graph"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_trend_chart_list_group_lims_trend_chart">
+            <field name="menu" ref="menu_trend_chart_list"/>
+            <field name="group" ref="group_lims_trend_chart"/>
+        </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_trend_chart_list_group_lims_trend_chart_admin">
+            <field name="menu" ref="menu_trend_chart_list"/>
+            <field name="group" ref="group_lims_trend_chart_admin"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_trend_chart_active">
+            <field name="field"
+                search="[('name', '=', 'active'), ('model.model', '=', 'lims.trend.chart')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_trend_chart_active_group_lims_trend_chart_admin">
+            <field name="field"
+                search="[('name', '=', 'active'), ('model.model', '=', 'lims.trend.chart')]"/>
+            <field name="group" ref="group_lims_trend_chart_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Trend Chart Analysis -->
+
+        <record model="ir.ui.view" id="trend_chart_analysis_view_list">
+            <field name="model">lims.trend.chart.analysis</field>
+            <field name="type">tree</field>
+            <field name="name">trend_chart_analysis_list</field>
+        </record>
+        <record model="ir.ui.view" id="trend_chart_analysis_view_form">
+            <field name="model">lims.trend.chart.analysis</field>
+            <field name="type">form</field>
+            <field name="name">trend_chart_analysis_form</field>
+        </record>
+
+<!-- Wizard Open Trend Chart -->
+
+        <record model="ir.ui.view" id="trend_chart_open_start_form">
+            <field name="model">lims.trend.chart.open.start</field>
+            <field name="type">form</field>
+            <field name="name">trend_chart_open_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_trend_chart_open">
+            <field name="name">Open Trend Chart</field>
+            <field name="wiz_name">lims.trend.chart.open</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_trend_chart_open_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.trend.chart,-1</field>
+            <field name="action" ref="wiz_trend_chart_open"/>
+        </record>
+
+<!-- Trend Chart Data -->
+
+        <record model="ir.action.act_window" id="act_trend_chart_data">
+            <field name="name">Trend Chart</field>
+            <field name="res_model">lims.trend.chart.data</field>
+        </record>
+
+<!-- Wizard Download Trend Chart -->
+
+        <record model="ir.action.report" id="report_trend_chart">
+            <field name="name">Trend Chart</field>
+            <field name="report_name">lims.trend.chart.report</field>
+            <field name="report">lims/report/trend_chart_report.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_trend_chart_download">
+            <field name="name">Download Trend Chart</field>
+            <field name="wiz_name">lims.trend.chart.download</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_trend_chart_download_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.trend.chart.data,-1</field>
+            <field name="action" ref="wiz_trend_chart_download"/>
+        </record>
+
+<!-- Cron Trend Chart Clean -->
+
+        <record model="ir.cron" id="cron_trend_chart_clean">
+            <field name="interval_number" eval="1"/>
+            <field name="interval_type">days</field>
+            <field name="method">lims.trend.chart|clean</field>
+        </record>
+
+    </data>
+</tryton>

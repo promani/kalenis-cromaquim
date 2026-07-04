@@ -1,0 +1,1560 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:lims.analysis,ind_volume:"
+msgid "Required volume"
+msgstr "Volumen requerido"
+
+msgctxt "field:lims.analysis,ind_volume_uom:"
+msgid "Required volume UoM"
+msgstr "UdM Volumen requerido"
+
+msgctxt "field:lims.brand,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.comercial.product,brand:"
+msgid "Brand"
+msgstr "Marca"
+
+msgctxt "field:lims.comercial.product,dangerous:"
+msgid "Dangerous"
+msgstr "Peligroso"
+
+msgctxt "field:lims.comercial.product,matrix:"
+msgid "Base/Matrix"
+msgstr "Base/Matriz"
+
+msgctxt "field:lims.comercial.product,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.comercial.product.brand,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.comercial.product.warn_dangerous.start,attachments:"
+msgid "Attachments"
+msgstr "Adjuntos"
+
+msgctxt ""
+"field:lims.comercial.product.warn_dangerous.start,comercial_products:"
+msgid "Dangerous Products"
+msgstr "Productos Peligrosos"
+
+msgctxt "field:lims.component,brand:"
+msgid "Brand"
+msgstr "Marca"
+
+msgctxt "field:lims.component,capacity:"
+msgid "Capacity (lts)"
+msgstr "Capacidad (lts)"
+
+msgctxt "field:lims.component,comercial_product:"
+msgid "Comercial product"
+msgstr "Producto comercial"
+
+msgctxt "field:lims.component,customer_description:"
+msgid "Customer description"
+msgstr "Descripción del cliente"
+
+msgctxt "field:lims.component,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:lims.component,internal_id:"
+msgid "Internal ID Code"
+msgstr "Código ID interno"
+
+msgctxt "field:lims.component,kind:"
+msgid "Kind"
+msgstr "Clase"
+
+msgctxt "field:lims.component,location:"
+msgid "Location"
+msgstr "Ubicación"
+
+msgctxt "field:lims.component,missing_data:"
+msgid "Missing data"
+msgstr "Falta información"
+
+msgctxt "field:lims.component,model:"
+msgid "Model"
+msgstr "Modelo"
+
+msgctxt "field:lims.component,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:lims.component,plant:"
+msgid "Plant"
+msgstr "Planta"
+
+msgctxt "field:lims.component,power:"
+msgid "Power"
+msgstr "Potencia"
+
+msgctxt "field:lims.component,product_type:"
+msgid "Product type"
+msgstr "Tipo de producto"
+
+msgctxt "field:lims.component,serial_number:"
+msgid "Serial number"
+msgstr "Número de serie"
+
+msgctxt "field:lims.component,year_manufacturing:"
+msgid "Year of manufacturing"
+msgstr "Año de fabricación"
+
+msgctxt "field:lims.component.kind,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.component.kind,product_type:"
+msgid "Product type"
+msgstr "Tipo de producto"
+
+msgctxt "field:lims.component.location,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.component.type,kind:"
+msgid "Kind"
+msgstr "Clase"
+
+msgctxt "field:lims.component.type,location:"
+msgid "Location"
+msgstr "Ubicación"
+
+msgctxt "field:lims.component.type,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.component.type,product_type:"
+msgid "Product type"
+msgstr "Tipo de producto"
+
+msgctxt "field:lims.create_sample.start,air_filter_changed:"
+msgid "Did change Air Filter?"
+msgstr "Cambió filtro de aire?"
+
+msgctxt "field:lims.create_sample.start,attributes_domain:"
+msgid "Attributes domain"
+msgstr "Dominio para Atributos"
+
+msgctxt "field:lims.create_sample.start,comercial_product:"
+msgid "Comercial Product"
+msgstr "Producto comercial"
+
+msgctxt "field:lims.create_sample.start,component:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "field:lims.create_sample.start,dangerous:"
+msgid "Dangerous Product"
+msgstr "Producto Peligroso"
+
+msgctxt "field:lims.create_sample.start,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:lims.create_sample.start,ind_analysis_reason:"
+msgid "Reason for analysis"
+msgstr "Motivo de análisis"
+
+msgctxt "field:lims.create_sample.start,ind_component:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "field:lims.create_sample.start,ind_component_uom:"
+msgid "UoM"
+msgstr "UdM"
+
+msgctxt "field:lims.create_sample.start,ind_equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:lims.create_sample.start,ind_equipment_uom:"
+msgid "UoM"
+msgstr "UdM"
+
+msgctxt "field:lims.create_sample.start,ind_oil:"
+msgid "Oil"
+msgstr "Aceite"
+
+msgctxt "field:lims.create_sample.start,ind_oil_uom:"
+msgid "UoM"
+msgstr "UdM"
+
+msgctxt "field:lims.create_sample.start,ind_operational_detail:"
+msgid "Operational detail"
+msgstr "Detalle operativo"
+
+msgctxt "field:lims.create_sample.start,ind_required:"
+msgid "Industry required"
+msgstr "Requerido Industria"
+
+msgctxt "field:lims.create_sample.start,ind_sampling_date:"
+msgid "Sampling date"
+msgstr "Fecha muestra"
+
+msgctxt "field:lims.create_sample.start,ind_volume:"
+msgid "Received volume"
+msgstr "Volumen recibido"
+
+msgctxt "field:lims.create_sample.start,ind_work_environment:"
+msgid "Work environment"
+msgstr "Ambiente de trabajo"
+
+msgctxt "field:lims.create_sample.start,label:"
+msgid "Label"
+msgstr "Rótulo"
+
+msgctxt "field:lims.create_sample.start,label_photo:"
+msgid "Label Photo"
+msgstr "Foto etiqueta"
+
+msgctxt "field:lims.create_sample.start,missing_data:"
+msgid "Missing data"
+msgstr "Falta información"
+
+msgctxt "field:lims.create_sample.start,oil_added:"
+msgid "Liters Oil added"
+msgstr "Litros aceite agregado"
+
+msgctxt "field:lims.create_sample.start,oil_changed:"
+msgid "Did change Oil?"
+msgstr "Cambió aceite?"
+
+msgctxt "field:lims.create_sample.start,oil_filter_changed:"
+msgid "Did change Oil Filter?"
+msgstr "Cambió filtro de aceite?"
+
+msgctxt "field:lims.create_sample.start,sample_photo:"
+msgid "Sample Photo"
+msgstr "Foto muestra"
+
+msgctxt "field:lims.create_sample.start,sampling_type:"
+msgid "Sampling Type"
+msgstr "Muestreo"
+
+msgctxt "field:lims.equipment,amperage:"
+msgid "Secondary Amperage"
+msgstr "Intensidad secundaria"
+
+msgctxt "field:lims.equipment,brand:"
+msgid "Brand"
+msgstr "Marca"
+
+msgctxt "field:lims.equipment,components:"
+msgid "Components"
+msgstr "Componentes"
+
+msgctxt "field:lims.equipment,contacts:"
+msgid "Contacts"
+msgstr "Contactos"
+
+msgctxt "field:lims.equipment,internal_id:"
+msgid "Internal ID Code"
+msgstr "Código ID interno"
+
+msgctxt "field:lims.equipment,internal_location:"
+msgid "Internal location"
+msgstr "Ubicación interna"
+
+msgctxt "field:lims.equipment,conservation:"
+msgid "Conservation"
+msgstr "Conservación"
+
+msgctxt "field:lims.equipment,refrigeration:"
+msgid "Refrigeration"
+msgstr "Refrigeración"
+
+msgctxt "field:lims.equipment,volume:"
+msgid "Volume"
+msgstr "Volumen"
+
+msgctxt "field:lims.equipment,location:"
+msgid "Location"
+msgstr "Localización"
+
+msgctxt "field:lims.equipment,latitude:"
+msgid "Latitude"
+msgstr "Latitud"
+
+msgctxt "field:lims.equipment,longitude:"
+msgid "Longitude"
+msgstr "Longitud"
+
+msgctxt "field:lims.equipment,missing_data:"
+msgid "Missing data"
+msgstr "Falta información"
+
+msgctxt "field:lims.equipment,model:"
+msgid "Model"
+msgstr "Modelo"
+
+msgctxt "field:lims.equipment,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.equipment,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:lims.equipment,plant:"
+msgid "Plant"
+msgstr "Planta"
+
+msgctxt "field:lims.equipment,power:"
+msgid "Power"
+msgstr "Potencia"
+
+msgctxt "field:lims.equipment,serial_number:"
+msgid "Serial number"
+msgstr "Número de serie"
+
+msgctxt "field:lims.equipment,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:lims.equipment,type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:lims.equipment,voltage:"
+msgid "Primary Voltage"
+msgstr "Tensión primaria"
+
+msgctxt "field:lims.equipment,voltage_secondary:"
+msgid "Secondary Voltage"
+msgstr "Tensión secundaria"
+
+msgctxt "field:lims.equipment,voltage_tertiary:"
+msgid "Tertiary Voltage"
+msgstr "Tensión terciaria"
+
+msgctxt "field:lims.equipment,year_manufacturing:"
+msgid "Year of manufacturing"
+msgstr "Año de fabricación"
+
+msgctxt "field:lims.equipment,year_service_start:"
+msgid "Year of service start"
+msgstr "Año de inicio en servicio"
+
+msgctxt "field:lims.equipment.template,brand:"
+msgid "Brand"
+msgstr "Marca"
+
+msgctxt "field:lims.equipment.template,component_kinds:"
+msgid "Component kinds"
+msgstr "Clases de componente"
+
+msgctxt "field:lims.equipment.template,model:"
+msgid "Model"
+msgstr "Modelo"
+
+msgctxt "field:lims.equipment.template,power:"
+msgid "Power"
+msgstr "Potencia"
+
+msgctxt "field:lims.equipment.template,type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:lims.equipment.template-component.kind,kind:"
+msgid "Kind"
+msgstr "Clase"
+
+msgctxt "field:lims.equipment.template-component.kind,location:"
+msgid "Location"
+msgstr "Ubicación"
+
+msgctxt "field:lims.equipment.template-component.kind,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:lims.equipment.type,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.fraction,comercial_product:"
+msgid "Comercial Product"
+msgstr "Producto comercial"
+
+msgctxt "field:lims.fraction,component:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "field:lims.fraction,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:lims.fraction,ind_component:"
+msgid "Hs/Km Component"
+msgstr "Hs/Km Componente"
+
+msgctxt "field:lims.fraction.type,default_sampling_type:"
+msgid "Default Sampling Type"
+msgstr "Tipo de muestreo por defecto"
+
+msgctxt "field:lims.notebook,comercial_product:"
+msgid "Comercial Product"
+msgstr "Producto comercial"
+
+msgctxt "field:lims.notebook,component:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "field:lims.notebook,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:lims.notebook,equipment_model:"
+msgid "Equipment Model"
+msgstr "Modelo"
+
+msgctxt "field:lims.notebook,equipment_name:"
+msgid "Equipment Name"
+msgstr "Equipo"
+
+msgctxt "field:lims.notebook,equipment_serial_number:"
+msgid "Equipment Serial Number"
+msgstr "Número de Serie"
+
+msgctxt "field:lims.notebook,equipment_template:"
+msgid "Equipment Template"
+msgstr "Tipo/Marca"
+
+msgctxt "field:lims.notebook,ind_component:"
+msgid "Hs/Km Component"
+msgstr "Hs/Km Componente"
+
+msgctxt "field:lims.notebook,ind_equipment:"
+msgid "Hs/Km Equipment"
+msgstr "Hs/Km Equipo"
+
+msgctxt "field:lims.notebook,plant:"
+msgid "Plant"
+msgstr "Planta"
+
+msgctxt "field:lims.plant,city:"
+msgid "City"
+msgstr "Ciudad"
+
+msgctxt "field:lims.plant,contacts:"
+msgid "Contacts"
+msgstr "Contactos"
+
+msgctxt "field:lims.plant,country:"
+msgid "Country"
+msgstr "País"
+
+msgctxt "field:lims.plant,equipments:"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "field:lims.plant,invoice_party:"
+msgid "Invoice Party"
+msgstr "Entidad de facturación"
+
+msgctxt "field:lims.plant,latitude:"
+msgid "Latitude"
+msgstr "Latitud"
+
+msgctxt "field:lims.plant,longitude:"
+msgid "Longitude"
+msgstr "Longitud"
+
+msgctxt "field:lims.plant,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.plant,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:lims.plant,postal_code:"
+msgid "Postal Code"
+msgstr "Código postal"
+
+msgctxt "field:lims.plant,street:"
+msgid "Street"
+msgstr "Calle"
+
+msgctxt "field:lims.plant,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivisión"
+
+msgctxt "field:lims.product.type,attribute_set:"
+msgid "Attribute Set"
+msgstr "Conjunto de atributos"
+
+msgctxt "field:lims.results_report,components_list:"
+msgid "Components"
+msgstr "Componentes"
+
+msgctxt "field:lims.results_report,equipments_list:"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "field:lims.results_report,last_report:"
+msgid "Last report"
+msgstr "Último informe"
+
+msgctxt "field:lims.results_report,plants_list:"
+msgid "Plants"
+msgstr "Plantas"
+
+msgctxt "field:lims.results_report.version.detail,components_list:"
+msgid "Components"
+msgstr "Componentes"
+
+msgctxt "field:lims.results_report.version.detail,equipments_list:"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "field:lims.results_report.version.detail,plants_list:"
+msgid "Plants"
+msgstr "Plantas"
+
+msgctxt "field:lims.results_report.version.detail.line,precedent1_result:"
+msgid "Precedent 1"
+msgstr "Antecedente 1"
+
+msgctxt "field:lims.results_report.version.detail.line,precedent2_result:"
+msgid "Precedent 2"
+msgstr "Antecedente 2"
+
+msgctxt "field:lims.results_report.version.detail.line,precedent3_result:"
+msgid "Precedent 3"
+msgstr "Antecedente 3"
+
+msgctxt "field:lims.results_report.version.detail.line,precedent4_result:"
+msgid "Precedent 4"
+msgstr "Antecedente 4"
+
+msgctxt "field:lims.results_report.version.detail.line,precedent5_result:"
+msgid "Precedent 5"
+msgstr "Antecedente 5"
+
+msgctxt "field:lims.results_report.version.detail.line,precedent6_result:"
+msgid "Precedent 6"
+msgstr "Antecedente 6"
+
+msgctxt "field:lims.results_report.version.detail.line,precedent7_result:"
+msgid "Precedent 7"
+msgstr "Antecedente 7"
+
+msgctxt "field:lims.results_report.version.detail.line,precedent8_result:"
+msgid "Precedent 8"
+msgstr "Antecedente 8"
+
+msgctxt "field:lims.results_report.version.detail.line,precedent_analysis:"
+msgid "Analysis"
+msgstr "Análisis"
+
+msgctxt "field:lims.results_report.version.detail.sample,comercial_product:"
+msgid "Comercial Product"
+msgstr "Producto comercial"
+
+msgctxt "field:lims.results_report.version.detail.sample,component:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "field:lims.results_report.version.detail.sample,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:lims.results_report.version.detail.sample,equipment_model:"
+msgid "Equipment Model"
+msgstr "Modelo"
+
+msgctxt "field:lims.results_report.version.detail.sample,equipment_name:"
+msgid "Equipment Name"
+msgstr "Equipo"
+
+msgctxt ""
+"field:lims.results_report.version.detail.sample,equipment_serial_number:"
+msgid "Equipment Serial Number"
+msgstr "Número de Serie"
+
+msgctxt "field:lims.results_report.version.detail.sample,equipment_template:"
+msgid "Equipment Template"
+msgstr "Tipo/Marca"
+
+msgctxt "field:lims.results_report.version.detail.sample,free_precedents:"
+msgid "Free precedents"
+msgstr "Antecedentes libres"
+
+msgctxt "field:lims.results_report.version.detail.sample,plant:"
+msgid "Plant"
+msgstr "Planta"
+
+msgctxt "field:lims.results_report.version.detail.sample,precedent1:"
+msgid "Precedent 1"
+msgstr "Antecedente 1"
+
+msgctxt ""
+"field:lims.results_report.version.detail.sample,precedent1_diagnosis:"
+msgid "Diagnosis Precedent 1"
+msgstr "Diagnóstico Antecedente 1"
+
+msgctxt ""
+"field:lims.results_report.version.detail.sample,precedent1_diagnosis_states:"
+msgid "Diagnosis States Precedent 1"
+msgstr "Estados de Diagnóstico Antecedente 1"
+
+msgctxt "field:lims.results_report.version.detail.sample,precedent2:"
+msgid "Precedent 2"
+msgstr "Antecedente 2"
+
+msgctxt ""
+"field:lims.results_report.version.detail.sample,precedent2_diagnosis:"
+msgid "Diagnosis Precedent 2"
+msgstr "Diagnóstico Antecedente 2"
+
+msgctxt ""
+"field:lims.results_report.version.detail.sample,precedent2_diagnosis_states:"
+msgid "Diagnosis States Precedent 2"
+msgstr "Estados de Diagnóstico Antecedente 2"
+
+msgctxt "field:lims.results_report.version.detail.sample,precedent3:"
+msgid "Precedent 3"
+msgstr "Antecedente 3"
+
+msgctxt ""
+"field:lims.results_report.version.detail.sample,precedent3_diagnosis:"
+msgid "Diagnosis Precedent 3"
+msgstr "Diagnóstico Antecedente 3"
+
+msgctxt ""
+"field:lims.results_report.version.detail.sample,precedent3_diagnosis_states:"
+msgid "Diagnosis States Precedent 3"
+msgstr "Estados de Diagnóstico Antecedente 3"
+
+msgctxt "field:lims.results_report.version.detail.sample,precedent4:"
+msgid "Precedent 4"
+msgstr "Antecedente 4"
+
+msgctxt "field:lims.results_report.version.detail.sample,precedent5:"
+msgid "Precedent 5"
+msgstr "Antecedente 5"
+
+msgctxt "field:lims.results_report.version.detail.sample,precedent6:"
+msgid "Precedent 6"
+msgstr "Antecedente 6"
+
+msgctxt "field:lims.results_report.version.detail.sample,precedent7:"
+msgid "Precedent 7"
+msgstr "Antecedente 7"
+
+msgctxt "field:lims.results_report.version.detail.sample,precedent8:"
+msgid "Precedent 8"
+msgstr "Antecedente 8"
+
+msgctxt "field:lims.sample,air_filter_changed:"
+msgid "Did change Air Filter?"
+msgstr "Cambió filtro de aire?"
+
+msgctxt "field:lims.sample,attributes_domain:"
+msgid "Attributes domain"
+msgstr "Dominio para Atributos"
+
+msgctxt "field:lims.sample,comercial_product:"
+msgid "Comercial Product"
+msgstr "Producto comercial"
+
+msgctxt "field:lims.sample,component:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "field:lims.sample,dangerous:"
+msgid "Dangerous Product"
+msgstr "Producto Peligroso"
+
+msgctxt "field:lims.sample,edition_log:"
+msgid "Edition log"
+msgstr "Registro de cambios"
+
+msgctxt "field:lims.sample,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:lims.sample,equipment_model:"
+msgid "Equipment Model"
+msgstr "Modelo"
+
+msgctxt "field:lims.sample,equipment_name:"
+msgid "Equipment Name"
+msgstr "Equipo"
+
+msgctxt "field:lims.sample,equipment_serial_number:"
+msgid "Equipment Serial Number"
+msgstr "Número de Serie"
+
+msgctxt "field:lims.sample,equipment_template:"
+msgid "Equipment Template"
+msgstr "Tipo/Marca"
+
+msgctxt "field:lims.sample,ind_analysis_reason:"
+msgid "Reason for analysis"
+msgstr "Motivo de análisis"
+
+msgctxt "field:lims.sample,ind_component:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "field:lims.sample,ind_component_uom:"
+msgid "UoM"
+msgstr "UdM"
+
+msgctxt "field:lims.sample,ind_equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:lims.sample,ind_equipment_uom:"
+msgid "UoM"
+msgstr "UdM"
+
+msgctxt "field:lims.sample,ind_oil:"
+msgid "Oil"
+msgstr "Aceite"
+
+msgctxt "field:lims.sample,ind_oil_uom:"
+msgid "UoM"
+msgstr "UdM"
+
+msgctxt "field:lims.sample,ind_operational_detail:"
+msgid "Operational detail"
+msgstr "Detalle operativo"
+
+msgctxt "field:lims.sample,ind_sampling_date:"
+msgid "Sampling date"
+msgstr "Fecha muestra"
+
+msgctxt "field:lims.sample,ind_volume:"
+msgid "Received volume"
+msgstr "Volumen recibido"
+
+msgctxt "field:lims.sample,ind_work_environment:"
+msgid "Work environment"
+msgstr "Ambiente de trabajo"
+
+msgctxt "field:lims.sample,label_photo:"
+msgid "Label Photo"
+msgstr "Foto etiqueta"
+
+msgctxt "field:lims.sample,label_photo_id:"
+msgid "Label Photo ID"
+msgstr "ID Foto etiqueta"
+
+msgctxt "field:lims.sample,missing_data:"
+msgid "Missing data"
+msgstr "Falta información"
+
+msgctxt "field:lims.sample,oil_added:"
+msgid "Liters Oil added"
+msgstr "Litros aceite agregado"
+
+msgctxt "field:lims.sample,oil_changed:"
+msgid "Did change Oil?"
+msgstr "Cambió aceite?"
+
+msgctxt "field:lims.sample,oil_filter_changed:"
+msgid "Did change Oil Filter?"
+msgstr "Cambió filtro de aceite?"
+
+msgctxt "field:lims.sample,plant:"
+msgid "Plant"
+msgstr "Planta"
+
+msgctxt "field:lims.sample,sample_photo:"
+msgid "Sample Photo"
+msgstr "Foto muestra"
+
+msgctxt "field:lims.sample,sample_photo_id:"
+msgid "Sample Photo ID"
+msgstr "ID Foto muestra"
+
+msgctxt "field:lims.sample,sampling_type:"
+msgid "Sampling Type"
+msgstr "Muestreo"
+
+msgctxt "field:lims.sample.attribute,sets:"
+msgid "Sets"
+msgstr "Conjuntos"
+
+msgctxt "field:lims.sample.attribute-attribute.set,attribute:"
+msgid "Attribute"
+msgstr "Atributo"
+
+msgctxt "field:lims.sample.attribute-attribute.set,attribute_set:"
+msgid "Set"
+msgstr "Conjunto"
+
+msgctxt "field:lims.sample.attribute.set,attributes:"
+msgid "Attributes"
+msgstr "Atributos"
+
+msgctxt "field:lims.sample.attribute.set,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.sample.edit.start,comercial_product:"
+msgid "Comercial Product"
+msgstr "Producto comercial"
+
+msgctxt "field:lims.sample.edit.start,component:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "field:lims.sample.edit.start,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:lims.sample.edit.start,plant:"
+msgid "Plant"
+msgstr "Planta"
+
+msgctxt "field:lims.sample.edition.log,create_date2:"
+msgid "Created at"
+msgstr "Creado el"
+
+msgctxt "field:lims.sample.edition.log,field:"
+msgid "Field"
+msgstr "Campo"
+
+msgctxt "field:lims.sample.edition.log,final_value:"
+msgid "Final value"
+msgstr "Valor final"
+
+msgctxt "field:lims.sample.edition.log,initial_value:"
+msgid "Initial value"
+msgstr "Valor inicial"
+
+msgctxt "field:lims.sample.edition.log,sample:"
+msgid "Sample"
+msgstr "Muestra"
+
+msgctxt "field:lims.sampling.type,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:lims.sampling.type,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:party.address,administrative_contact:"
+msgid "Administrative contact"
+msgstr "Administrativo"
+
+msgctxt "field:party.address,contract_contact:"
+msgid "Contract contact"
+msgstr "Contratos"
+
+msgctxt "field:party.address,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:party.address,phone:"
+msgid "Phone"
+msgstr "Teléfono"
+
+msgctxt "field:party.address,plant:"
+msgid "Plant"
+msgstr "Planta"
+
+msgctxt "field:party.address,purchase_contact:"
+msgid "Purchase contact"
+msgstr "Compras"
+
+msgctxt "field:party.address,technical_contact:"
+msgid "Technical contact"
+msgstr "Técnico"
+
+msgctxt "field:party.party,complete_file:"
+msgid "Complete File"
+msgstr "Ficha completa"
+
+msgctxt "field:party.party,fantasy_name:"
+msgid "Fantasy Name"
+msgstr "Nombre de fantasía"
+
+msgctxt "field:party.party,is_invoice_party:"
+msgid "Invoice party"
+msgstr "Entidad de facturación"
+
+msgctxt "field:party.party,plants:"
+msgid "Plants"
+msgstr "Plantas"
+
+msgctxt "help:lims.result_report.format,format_:"
+msgid ""
+"\n"
+"- ${party_fantasy_name}\n"
+"- ${equipment_name}\n"
+"- ${equipment_serial_number}\n"
+"- ${equipment_type}\n"
+"- ${plant_name}\n"
+"- ${component_customer_description}\n"
+"- ${component_kind}\n"
+"- ${ind_equipment}"
+msgstr ""
+"\n"
+"- ${party_fantasy_name}\n"
+"- ${equipment_name}\n"
+"- ${equipment_serial_number}\n"
+"- ${equipment_type}\n"
+"- ${plant_name}\n"
+"- ${component_customer_description}\n"
+"- ${component_kind}\n"
+"- ${ind_equipment}"
+
+msgctxt "model:ir.action,name:act_brand"
+msgid "Brands"
+msgstr "Marcas"
+
+msgctxt "model:ir.action,name:act_comercial_product"
+msgid "Comercial Products"
+msgstr "Productos comerciales"
+
+msgctxt "model:ir.action,name:act_comercial_product_brand"
+msgid "Comercial Products Brands"
+msgstr "Marcas de Productos comerciales"
+
+msgctxt "model:ir.action,name:act_component"
+msgid "Components"
+msgstr "Componentes"
+
+msgctxt "model:ir.action,name:act_component_from_party"
+msgid "Components"
+msgstr "Componentes"
+
+msgctxt "model:ir.action,name:act_component_kind"
+msgid "Component Kinds"
+msgstr "Clases de componente"
+
+msgctxt "model:ir.action,name:act_component_location"
+msgid "Component Locations"
+msgstr "Ubicaciones de componente"
+
+msgctxt "model:ir.action,name:act_component_type"
+msgid "Component Types"
+msgstr "Tipos de componente"
+
+msgctxt "model:ir.action,name:act_equipment"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "model:ir.action,name:act_equipment_from_party"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "model:ir.action,name:act_equipment_template"
+msgid "Equipment Templates"
+msgstr "Plantillas de equipo"
+
+msgctxt "model:ir.action,name:act_equipment_type"
+msgid "Equipment Types"
+msgstr "Tipos de equipo"
+
+msgctxt "model:ir.action,name:act_lims_sample_relate_component"
+msgid "Samples"
+msgstr "Muestras"
+
+msgctxt "model:ir.action,name:act_lims_sample_relate_equipment"
+msgid "Samples"
+msgstr "Muestras"
+
+msgctxt "model:ir.action,name:act_plant"
+msgid "Plants"
+msgstr "Plantas"
+
+msgctxt "model:ir.action,name:act_sample_attribute_set"
+msgid "Sample Attributes Sets"
+msgstr "Conjuntos de Atributos de muestra"
+
+msgctxt "model:ir.action,name:act_sampling_type"
+msgid "Sampling Types"
+msgstr "Tipos de muestreo"
+
+msgctxt "model:ir.action,name:wiz_comercial_product_warn_dangerous"
+msgid "Warn Dangerous Product"
+msgstr "Advertencia de Producto Peligroso"
+
+msgctxt "model:ir.action,name:wiz_results_detail_open_precedent"
+msgid "Results Report Precedents"
+msgstr "Antecedentes del Informe de resultados"
+
+msgctxt "model:ir.message,text:lbl_component_missing_data"
+msgid "Missing data in Component"
+msgstr "Faltan datos en Componente"
+
+msgctxt "model:ir.message,text:lbl_equipment_missing_data"
+msgid "Missing data in Equipment"
+msgstr "Faltan datos en Equipo"
+
+msgctxt "model:ir.message,text:lbl_party_incomplete_file"
+msgid "Incomplete file in Party"
+msgstr "Ficha incompleta en Tercero"
+
+msgctxt "model:ir.message,text:lbl_precedents"
+msgid "Precedents"
+msgstr "Antecedentes"
+
+msgctxt "model:ir.message,text:lbl_sample_insufficient_volume"
+msgid "Insufficient volume in Sample"
+msgstr "Volumen insuficiente en Muestra"
+
+msgctxt "model:ir.message,text:lbl_sample_missing_data"
+msgid "Missing data in Sample"
+msgstr "Faltan datos en Muestra"
+
+msgctxt "model:ir.message,text:msg_brand_name_unique"
+msgid "There is already a brand with the same name"
+msgstr "Ya existe una marca con el mismo nombre"
+
+msgctxt "model:ir.message,text:msg_component_kind_name_unique"
+msgid "There is already a component kind with the same name"
+msgstr "Ya existe una clase de componente con el mismo nombre"
+
+msgctxt "model:ir.message,text:msg_component_type_name_unique"
+msgid "There is already a component type with the same name"
+msgstr "Ya existe un tipo de componente con el mismo nombre"
+
+msgctxt "model:ir.message,text:msg_component_unique"
+msgid ""
+"A component of the same kind, location and description already exists for "
+"the equipment"
+msgstr ""
+"Ya existe para el equipo un componente de la misma clase y ubicación con la "
+"misma descripción"
+
+msgctxt "model:ir.message,text:msg_delete_component"
+msgid ""
+"You can not delete component \"%(component)s\" because it is associated with"
+" a sample"
+msgstr ""
+"No puede eliminar el componente «%(component)s» porque está asociado a una "
+"muestra"
+
+msgctxt "model:ir.message,text:msg_edit_sample_component"
+msgid "The Component in sample \"%(sample)s\" does not belong to the Equipment"
+msgstr "El componente de la muestra «%(sample)s» no pertenece al equipo"
+
+msgctxt "model:ir.message,text:msg_edit_sample_equipment"
+msgid "The Equipment in sample \"%(sample)s\" does not belong to the Party"
+msgstr "El equipo de la muestra «%(sample)s» no pertenece a la entidad"
+
+msgctxt "model:ir.message,text:msg_equipment_name_unique"
+msgid "There is already an equipment with the same name for the plant"
+msgstr "Ya existe un equipo con el mismo nombre para la planta"
+
+msgctxt "model:ir.message,text:msg_equipment_template_unique"
+msgid ""
+"There is already a equipment template with the same type, brand and model"
+msgstr "Ya existe una plantilla de equipo con el mismo tipo, marca y modelo"
+
+msgctxt "model:ir.message,text:msg_equipment_type_name_unique"
+msgid "There is already a equipment type with the same name"
+msgstr "Ya existe un tipo de equipo con el mismo nombre"
+
+msgctxt "model:ir.message,text:msg_party_no_email"
+msgid "Party \"%(party)s\" has no Email"
+msgstr "La entidad «%(party)s» no tiene correo electrónico"
+
+msgctxt "model:ir.message,text:msg_party_no_phone"
+msgid "Party \"%(party)s\" has no Phone"
+msgstr "La entidad «%(party)s» no tiene teléfono"
+
+msgctxt "model:ir.message,text:msg_party_no_tax_identifier"
+msgid "Party \"%(party)s\" has no Tax Identifier"
+msgstr "La entidad «%(party)s» no tiene identificador fiscal"
+
+msgctxt "model:ir.message,text:msg_plant_name_unique"
+msgid "There is already a plant with the same name for the party"
+msgstr "Ya existe una planta con el mismo nombre para el tercero"
+
+msgctxt "model:ir.ui.menu,name:menu_brand"
+msgid "Brands"
+msgstr "Marcas"
+
+msgctxt "model:ir.ui.menu,name:menu_comercial_product"
+msgid "Comercial Products"
+msgstr "Productos comerciales"
+
+msgctxt "model:ir.ui.menu,name:menu_comercial_product_brand"
+msgid "Comercial Products Brands"
+msgstr "Marcas de Productos comerciales"
+
+msgctxt "model:ir.ui.menu,name:menu_component"
+msgid "Components"
+msgstr "Componentes"
+
+msgctxt "model:ir.ui.menu,name:menu_component_kind"
+msgid "Component Kinds"
+msgstr "Clases de componente"
+
+msgctxt "model:ir.ui.menu,name:menu_component_location"
+msgid "Component Locations"
+msgstr "Ubicaciones de componente"
+
+msgctxt "model:ir.ui.menu,name:menu_component_type"
+msgid "Component Types"
+msgstr "Tipos de componente"
+
+msgctxt "model:ir.ui.menu,name:menu_config"
+msgid "Configuration"
+msgstr "Configuración"
+
+msgctxt "model:ir.ui.menu,name:menu_equipment"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "model:ir.ui.menu,name:menu_equipment_template"
+msgid "Equipment Templates"
+msgstr "Plantillas de equipo"
+
+msgctxt "model:ir.ui.menu,name:menu_equipment_type"
+msgid "Equipment Types"
+msgstr "Tipos de equipo"
+
+msgctxt "model:ir.ui.menu,name:menu_industry"
+msgid "Industry"
+msgstr "Industria"
+
+msgctxt "model:ir.ui.menu,name:menu_plant"
+msgid "Plants"
+msgstr "Plantas"
+
+msgctxt "model:ir.ui.menu,name:menu_sample_attribute_set"
+msgid "Sample Attributes Sets"
+msgstr "Conjuntos de Atributos de muestra"
+
+msgctxt "model:ir.ui.menu,name:menu_sampling_type"
+msgid "Sampling Types"
+msgstr "Tipos de muestreo"
+
+msgctxt "model:lims.brand,name:"
+msgid "Brand"
+msgstr "Marca"
+
+msgctxt "model:lims.comercial.product,name:"
+msgid "Comercial Product"
+msgstr "Producto comercial"
+
+msgctxt "model:lims.comercial.product.brand,name:"
+msgid "Comercial Product Brand"
+msgstr "Marca de Producto comercial"
+
+msgctxt "model:lims.comercial.product.warn_dangerous.start,name:"
+msgid "Warn Dangerous Product"
+msgstr "Advertencia de Producto Peligroso"
+
+msgctxt "model:lims.component,name:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "model:lims.component.kind,name:"
+msgid "Component Kind"
+msgstr "Clase de componente"
+
+msgctxt "model:lims.component.location,name:"
+msgid "Component Location"
+msgstr "Ubicación de componente"
+
+msgctxt "model:lims.component.type,name:"
+msgid "Component Type"
+msgstr "Tipo de componente"
+
+msgctxt "model:lims.equipment,name:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "model:lims.equipment.template,name:"
+msgid "Equipment Template"
+msgstr "Plantilla de equipo"
+
+msgctxt "model:lims.equipment.template-component.kind,name:"
+msgid "Equipment Template - Component Kind"
+msgstr "Plantilla de equipo - Clase de componente"
+
+msgctxt "model:lims.equipment.type,name:"
+msgid "Equipment Type"
+msgstr "Tipo de componente"
+
+msgctxt "model:lims.plant,name:"
+msgid "Plant"
+msgstr "Planta"
+
+msgctxt "model:lims.sample.attribute-attribute.set,name:"
+msgid "Sample Attribute - Set"
+msgstr "Atributo de muestra - Conjunto"
+
+msgctxt "model:lims.sample.attribute.set,name:"
+msgid "Sample Attribute Set"
+msgstr "Conjunto de Atributos de muestra"
+
+msgctxt "model:lims.sample.edition.log,name:"
+msgid "Sample Edition Log"
+msgstr "Registro de cambios en Muestra"
+
+msgctxt "model:lims.sampling.type,name:"
+msgid "Sampling Type"
+msgstr "Muestreo"
+
+msgctxt "selection:lims.configuration,mail_ack_report_grouping:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "selection:lims.configuration,mail_ack_report_grouping:"
+msgid "Plant"
+msgstr "Planta"
+
+msgctxt "selection:lims.create_sample.start,air_filter_changed:"
+msgid "-"
+msgstr "-"
+
+msgctxt "selection:lims.create_sample.start,air_filter_changed:"
+msgid "No"
+msgstr "No"
+
+msgctxt "selection:lims.create_sample.start,air_filter_changed:"
+msgid "Yes"
+msgstr "Sí"
+
+msgctxt "selection:lims.create_sample.start,ind_component_uom:"
+msgid "Hs."
+msgstr "Hs."
+
+msgctxt "selection:lims.create_sample.start,ind_component_uom:"
+msgid "Km."
+msgstr "Km."
+
+msgctxt "selection:lims.create_sample.start,ind_equipment_uom:"
+msgid "Hs."
+msgstr "Hs."
+
+msgctxt "selection:lims.create_sample.start,ind_equipment_uom:"
+msgid "Km."
+msgstr "Km."
+
+msgctxt "selection:lims.create_sample.start,ind_oil_uom:"
+msgid "Hs."
+msgstr "Hs."
+
+msgctxt "selection:lims.create_sample.start,ind_oil_uom:"
+msgid "Km."
+msgstr "Km."
+
+msgctxt "selection:lims.create_sample.start,oil_changed:"
+msgid "-"
+msgstr "-"
+
+msgctxt "selection:lims.create_sample.start,oil_changed:"
+msgid "No"
+msgstr "No"
+
+msgctxt "selection:lims.create_sample.start,oil_changed:"
+msgid "Yes"
+msgstr "Sí"
+
+msgctxt "selection:lims.create_sample.start,oil_filter_changed:"
+msgid "-"
+msgstr "-"
+
+msgctxt "selection:lims.create_sample.start,oil_filter_changed:"
+msgid "No"
+msgstr "No"
+
+msgctxt "selection:lims.create_sample.start,oil_filter_changed:"
+msgid "Yes"
+msgstr "Sí"
+
+msgctxt "selection:lims.sample,air_filter_changed:"
+msgid "-"
+msgstr "-"
+
+msgctxt "selection:lims.sample,air_filter_changed:"
+msgid "No"
+msgstr "No"
+
+msgctxt "selection:lims.sample,air_filter_changed:"
+msgid "Yes"
+msgstr "Sí"
+
+msgctxt "selection:lims.sample,ind_component_uom:"
+msgid "Hs."
+msgstr "Hs."
+
+msgctxt "selection:lims.sample,ind_component_uom:"
+msgid "Km."
+msgstr "Km."
+
+msgctxt "selection:lims.sample,ind_equipment_uom:"
+msgid "Hs."
+msgstr "Hs."
+
+msgctxt "selection:lims.sample,ind_equipment_uom:"
+msgid "Km."
+msgstr "Km."
+
+msgctxt "selection:lims.sample,ind_oil_uom:"
+msgid "Hs."
+msgstr "Hs."
+
+msgctxt "selection:lims.sample,ind_oil_uom:"
+msgid "Km."
+msgstr "Km."
+
+msgctxt "selection:lims.sample,oil_changed:"
+msgid "-"
+msgstr "-"
+
+msgctxt "selection:lims.sample,oil_changed:"
+msgid "No"
+msgstr "No"
+
+msgctxt "selection:lims.sample,oil_changed:"
+msgid "Yes"
+msgstr "Sí"
+
+msgctxt "selection:lims.sample,oil_filter_changed:"
+msgid "-"
+msgstr "-"
+
+msgctxt "selection:lims.sample,oil_filter_changed:"
+msgid "No"
+msgstr "No"
+
+msgctxt "selection:lims.sample,oil_filter_changed:"
+msgid "Yes"
+msgstr "Sí"
+
+msgctxt "selection:lims.sample.edition.log,field:"
+msgid "Comercial Product"
+msgstr "Producto comercial"
+
+msgctxt "selection:lims.sample.edition.log,field:"
+msgid "Component"
+msgstr "Componente"
+
+msgctxt "selection:lims.sample.edition.log,field:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "selection:lims.sample.edition.log,field:"
+msgid "Matrix"
+msgstr "Matriz"
+
+msgctxt "selection:lims.sample.edition.log,field:"
+msgid "Party"
+msgstr "Entidad"
+
+msgctxt "selection:lims.sample.edition.log,field:"
+msgid "Product type"
+msgstr "Tipo de producto"
+
+msgctxt "selection:lims.trend.chart,filter:"
+msgid "Same Component"
+msgstr "Mismo Componente"
+
+msgctxt "selection:lims.trend.chart,filter:"
+msgid "Same Equipment"
+msgstr "Mismo Equipo"
+
+msgctxt "selection:lims.trend.chart,x_axis:"
+msgid "Hs/Km Component"
+msgstr "Hs/Km Componente"
+
+msgctxt "selection:lims.trend.chart,x_axis:"
+msgid "Hs/Km Equipment"
+msgstr "Hs/Km Equipo"
+
+msgctxt "selection:lims.trend.chart,x_axis:"
+msgid "Hs/Km Oil"
+msgstr "Hs/Km Aceite"
+
+msgctxt "view:lims.comercial.product.warn_dangerous.start:"
+msgid "DANGEROUS PRODUCTS"
+msgstr "PRODUCTOS PELIGROSOS"
+
+msgctxt "view:lims.comercial.product.warn_dangerous.start:"
+msgid ""
+"I have informed myself of the dangers involved in the treatment of the "
+"sample/s and I promise to take the necessary precautions."
+msgstr ""
+"Me he informado de los peligros que supone el tratamiento de la/s muestra/s "
+"y me comprometo a tomar las precauciones necesarias."
+
+msgctxt "view:lims.create_sample.start:"
+msgid "Industry"
+msgstr "Industria"
+
+msgctxt "view:lims.create_sample.start:"
+msgid "Label Photo"
+msgstr "Foto etiqueta"
+
+msgctxt "view:lims.create_sample.start:"
+msgid "Operational detail"
+msgstr "Detalle operativo"
+
+msgctxt "view:lims.create_sample.start:"
+msgid "Reason for analysis"
+msgstr "Motivo de análisis"
+
+msgctxt "view:lims.create_sample.start:"
+msgid "Sample Photo"
+msgstr "Foto muestra"
+
+msgctxt "view:lims.create_sample.start:"
+msgid "Work environment"
+msgstr "Ambiente de trabajo"
+
+msgctxt "view:lims.equipment:"
+msgid "Components"
+msgstr "Componentes"
+
+msgctxt "view:lims.equipment:"
+msgid "Contacts"
+msgstr "Contactos"
+
+msgctxt "view:lims.equipment:"
+msgid "GPS Coordinates"
+msgstr "Coordenadas GPS"
+
+msgctxt "view:lims.equipment:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:lims.planification:"
+msgid "Add BRE"
+msgstr "Añadir BRE"
+
+msgctxt "view:lims.planification:"
+msgid "Add Control"
+msgstr "Añadir Control"
+
+msgctxt "view:lims.planification:"
+msgid "Add MRT"
+msgstr "Añadir MRT"
+
+msgctxt "view:lims.planification:"
+msgid "Add RM/BMZ"
+msgstr "Añadir RM/BMZ"
+
+msgctxt "view:lims.planification:"
+msgid "Comments"
+msgstr "Observaciones"
+
+msgctxt "view:lims.planification:"
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgctxt "view:lims.planification:"
+msgid "Controls"
+msgstr "Controles"
+
+msgctxt "view:lims.planification:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:lims.planification:"
+msgid "Pre-Plan"
+msgstr "Pre-Planificar"
+
+msgctxt "view:lims.planification:"
+msgid "Relate technicians"
+msgstr "Relacionar técnicos"
+
+msgctxt "view:lims.planification:"
+msgid "Remove Control"
+msgstr "Quitar control"
+
+msgctxt "view:lims.planification:"
+msgid "Replace technician"
+msgstr "Reemplazar técnico"
+
+msgctxt "view:lims.planification:"
+msgid "Technicians"
+msgstr "Técnicos"
+
+msgctxt "view:lims.planification:"
+msgid "Unlink technicians"
+msgstr "Desvincular técnicos"
+
+msgctxt "view:lims.plant:"
+msgid "Address"
+msgstr "Dirección"
+
+msgctxt "view:lims.plant:"
+msgid "Contacts"
+msgstr "Contactos"
+
+msgctxt "view:lims.plant:"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "view:lims.plant:"
+msgid "GPS Coordinates"
+msgstr "Coordenadas GPS"
+
+msgctxt "view:lims.plant:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:lims.results_report.version.detail.sample:"
+msgid "Precedents"
+msgstr "Antecedentes"
+
+msgctxt "view:lims.sample.edition.log:"
+msgid "Time"
+msgstr "Hora"
+
+msgctxt "view:lims.sample:"
+msgid "Edition log"
+msgstr "Registro de cambios"
+
+msgctxt "view:lims.sample:"
+msgid "Industry"
+msgstr "Industria"
+
+msgctxt "view:lims.sample:"
+msgid "Label Photo"
+msgstr "Foto etiqueta"
+
+msgctxt "view:lims.sample:"
+msgid "Operational detail"
+msgstr "Detalle operativo"
+
+msgctxt "view:lims.sample:"
+msgid "Reason for analysis"
+msgstr "Motivo de análisis"
+
+msgctxt "view:lims.sample:"
+msgid "Sample Photo"
+msgstr "Foto muestra"
+
+msgctxt "view:lims.sample:"
+msgid "Work environment"
+msgstr "Ambiente de trabajo"
+
+msgctxt "view:party.party:"
+msgid "Plants"
+msgstr "Plantas"
+
+msgctxt ""
+"wizard_button:lims.comercial.product.warn_dangerous,warn_dangerous_products,end:"
+msgid "Ok"
+msgstr "Aceptar"
+
+msgctxt "wizard_button:lims.create_sample,start,create_continue:"
+msgid "Create same Equipment"
+msgstr "Crear mismo Equipo"
+
+msgctxt ""
+"wizard_button:lims.planification.technicians_qualification,warn_dangerous_products,end:"
+msgid "Ok"
+msgstr "Aceptar"

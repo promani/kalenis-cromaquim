@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<form cursor="party">
+    <label name="number"/>
+    <field name="number"/>
+    <group id="date" colspan="2">
+        <label name="date"/>
+        <field name="date"/>
+        <label name="contract_number"/>
+        <field name="contract_number"/>
+    </group>
+    <label name="party"/>
+    <field name="party"/>
+    <label name="invoice_party"/>
+    <field name="invoice_party"/>
+    <notebook>
+        <page string="General" id="general">
+            <group col="10" colspan="4" id="options_holder">
+                <label name="report_language"/>
+                <field name="report_language" widget="selection"/>
+                <label name="single_sending_report"/>
+                <field name="single_sending_report" xexpand="0" width="25"/>
+                <label name="entry_single_sending_report"/>
+                <field name="entry_single_sending_report" xexpand="0" width="25"/>
+                <label name="no_acknowledgment_of_receipt"/>
+                <field name="no_acknowledgment_of_receipt" xexpand="0" width="25"/>
+            </group>
+            <group id="create_sample_spacer" colspan="2">
+            </group>
+            <button name="create_sample" string="CREATE SAMPLES"
+                colspan="1" icon="tryton-add"/>
+            <button name="pre_assign_sample"/>
+            <field name="samples" colspan="4"/>
+        </page>
+        <page string="Additional Information" id="additional_information">
+            <label name="carrier"/>
+            <field name="carrier"/>
+            <label name="package_type"/>
+            <field name="package_type"/>
+            <label name="package_state"/>
+            <field name="package_state"/>
+            <label name="packages_quantity"/>
+            <field name="packages_quantity"/>
+            <label name="pre_assigned_samples"/>
+            <field name="pre_assigned_samples"/>
+        </page>
+        <page string="Contacts" id="contacts">
+            <field name="invoice_contacts" colspan="4"/>
+            <field name="report_contacts" colspan="4"/>
+            <field name="acknowledgment_contacts" colspan="4"/>
+        </page>
+        <page string="Comments" id="comments">
+            <separator string="Invoice comments" colspan="2" id="invoice_comments"/>
+            <separator string="Report comments" colspan="2" id="report_comments"/>
+            <field name="invoice_comments" colspan="2"/>
+            <field name="report_comments" colspan="2"/>
+            <separator string="Transfer comments" colspan="2" id="transfer_comments"/>
+            <separator string="Comments" colspan="2" id="comments"/>
+            <field name="transfer_comments" colspan="2"/>
+            <field name="comments" colspan="2"/>
+            <separator name="cancellation_comments" colspan="2"/>
+            <newline/>
+            <field name="cancellation_comments" colspan="2"/>
+        </page>
+    </notebook>
+    <group id="state_reason" colspan="4" col="-1">
+        <label name="cancellation_reason"/>
+        <field name="cancellation_reason"/>
+        <label name="pending_reason"/>
+        <field name="pending_reason"/>
+    </group>
+    <group id="buttons" colspan="4" col="-1">
+        <label name="state"/>
+        <field name="state"/>
+        <button name="cancel" string="Cancel" icon="tryton-cancel"/>
+        <button name="on_hold" string="Administration pending" icon="tryton-log"/>
+        <button name="confirm" string="Confirm" icon="tryton-ok"/>
+    </group>
+</form>

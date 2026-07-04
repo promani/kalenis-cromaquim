@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<form>
+    <notebook width="1200" height="550">
+        <page id="general" string="General">
+            <label name="party"/>
+            <field name="party" colspan="3"/>
+            <label name="invoice_party"/>
+            <field name="invoice_party" colspan="3"/>
+            <group col="6" colspan="4" id="fraction_type">
+                <label name="date"/>
+                <field name="date"/>
+                <label name="fraction_type"/>
+                <field name="fraction_type"/>
+                <label name="storage_location"/>
+                <field name="storage_location"/>
+            </group>
+            <label name="product_type"/>
+            <field name="product_type"/>
+            <label name="matrix"/>
+            <field name="matrix"/>
+            <group col="2" colspan="2" id="sample_client_description">
+                <label name="sample_client_description"/>
+                <field name="sample_client_description"/>
+            </group>
+            <group col="2" colspan="2" id="sample_client_description_lang">
+                <label name="sample_client_description_lang"/>
+                <field name="sample_client_description_lang"/>
+            </group>
+            <group id="trace_report" colspan="4" col="-1">
+                <label name="storage_time"/>
+                <field name="storage_time"/>
+                <label name="trace_report"/>
+                <field name="trace_report"/>
+                <label name="shared"/>
+                <field name="shared"/>
+                <label name="without_services"/>
+                <field name="without_services"/>
+            </group>
+            <field name="packages" colspan="2" mode="tree,form"
+                view_ids="lims.sample_package_view_list,lims.sample_package_view_form"/>
+            <group id="labels" string="Labels" col="1" colspan="2" yexpand="1" yfill="1">
+                <field name="labels" colspan="2"/>
+            </group>
+            <field name="services" colspan="2"/>
+        </page>
+        <page string="Additional Information" id="additional_information">
+            <label name="variety"/>
+            <field name="variety"/>
+            <label name="producer"/>
+            <field name="producer"/>
+            <group col="6" colspan="4" id="obj_description">
+                <label name="obj_description"/>
+                <field name="obj_description"/>
+                <label name="obj_description_manual"/>
+                <field name="obj_description_manual"/>
+                <label name="obj_description_manual_lang"/>
+                <field name="obj_description_manual_lang"/>
+            </group>
+            <label name="zone"/>
+            <field name="zone"/>
+            <label name="restricted_entry"/>
+            <field name="restricted_entry"/>
+            <field name="attributes" colspan="4"/>
+        </page>
+        <page id="report" string="Report">
+            <separator string="Report comments" colspan="4" id="report_comments"/>
+            <field name="report_comments" colspan="4"/>
+        </page>
+        <page id="comments" string="Comments">
+            <separator string="Comments" colspan="4" id="comments"/>
+            <field name="comments" colspan="4"/>
+        </page>
+    </notebook>
+</form>

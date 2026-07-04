@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<form>
+    <label name="kind"/>
+    <field name="kind"/>
+    <label name="location"/>
+    <field name="location"/>
+    <label name="equipment"/>
+    <field name="equipment"/>
+    <label name="plant"/>
+    <field name="plant"/>
+    <label name="party"/>
+    <field name="party"/>
+    <label name="product_type"/>
+    <field name="product_type"/>
+    <label name="comercial_product"/>
+    <field name="comercial_product"/>
+    <label name="brand"/>
+    <field name="brand"/>
+    <label name="model"/>
+    <field name="model"/>
+    <label name="serial_number"/>
+    <field name="serial_number"/>
+    <label name="internal_id"/>
+    <field name="internal_id"/>
+    <label name="customer_description"/>
+    <field name="customer_description"/>
+    <label name="capacity"/>
+    <field name="capacity"/>
+    <label name="power"/>
+    <field name="power"/>
+    <label name="year_manufacturing"/>
+    <field name="year_manufacturing"/>
+    <label name="missing_data"/>
+    <field name="missing_data"/>
+</form>

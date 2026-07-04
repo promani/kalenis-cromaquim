@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree editable="1">
+    <field name="data" widget="image" width="250" height="250"/>
+    <field name="name" expand="2"/>
+    <field name="summary" expand="1"/>
+    <field name="resource" expand="2"/>
+    <field name="last_user" expand="1"/>
+    <field name="last_modification" widget="date"/>
+    <field name="last_modification" widget="time"
+        string="Last Modification Time"/>
+    <field name="description" tree_invisible="1"/>
+</tree>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<tryton>
+    <data grouped="1">
+        <record model="ir.message" id="msg_sheet_compilation_unique">
+            <field name="text">Compilation already in use by another Analysis Sheet</field>
+        </record>
+        <record model="ir.message" id="msg_sheet_missing_controls">
+            <field name="text">Controls are missing for Analysis Sheet "%(sheet)s"</field>
+        </record>
+        <record model="ir.message" id="msg_sheet_not_controls">
+            <field name="text">Controls are required for this Analysis Sheet</field>
+        </record>
+        <record model="ir.message" id="msg_sheet_not_lines">
+            <field name="text">The analysis sheet has no data</field>
+        </record>
+        <record model="ir.message" id="msg_sheet_not_results">
+            <field name="text">There are lines without result</field>
+        </record>
+        <record model="ir.message" id="msg_template_analysis_unique">
+            <field name="text">Analysis "%(analysis)s" already exists in another Template</field>
+        </record>
+        <record model="ir.message" id="msg_template_not_report">
+            <field name="text">Template "%(template)s" has no associated report</field>
+        </record>
+        <record model="ir.message" id="msg_sheets_different_templates">
+            <field name="text">The selected sheets have different templates</field>
+        </record>
+        <record model="ir.message" id="msg_template_not_result_field">
+            <field name="text">The template does not have a column for the Result field</field>
+        </record>
+        <record model="ir.message" id="msg_template_not_result_modifier_field">
+            <field name="text">The template does not have a column for the Result modifier field</field>
+        </record>
+        <record model="ir.message" id="msg_template_not_verification_field">
+            <field name="text">The template does not have a column for the Verification field</field>
+        </record>
+        <record model="ir.message" id="delete_done_sheet">
+            <field name="text">You cannot delete an Analysis Sheet in "Done" state</field>
+        </record>
+        <record model="ir.message" id="msg_fraction_already_sheet">
+            <field name="text">Fraction "%(fraction)s" has analyses already in progress on Sheet "%(sheet)s"</field>
+        </record>
+        <record model="ir.message" id="msg_expression_column_interface">
+            <field name="text">Column "%(column)s" does not belong to the interface of template "%(template)s".</field>
+        </record>
+        <record model="ir.message" id="msg_expression_duplicate_default">
+            <field name="text">Only one special formula per analysis can set a default value for column "%(column)s".</field>
+        </record>
+    </data>
+</tryton>

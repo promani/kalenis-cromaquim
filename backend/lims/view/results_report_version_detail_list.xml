@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="report_version" icon="icon"/>
+    <field name="laboratory"/>
+    <field name="number"/>
+    <field name="state"/>
+    <field name="valid"/>
+    <field name="type"/>
+    <field name="party"/>
+    <field name="invoice_party"/>
+    <field name="samples_list"/>
+    <field name="entry_summary"/>
+    <field name="report_type"/>
+    <field name="report_result_type"/>
+    <field name="cie_fraction_type"/>
+    <field name="resultrange_origin"/>
+    <field name="trace_report"/>
+    <field name="create_date2" widget="date"/>
+    <field name="create_date2" widget="time" string="Time"/>
+    <field name="write_date2" widget="date"/>
+    <field name="write_date2" widget="time" string="Time"/>
+    <field name="fractions_comments" tree_invisible="1"/>
+</tree>

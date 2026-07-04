@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/notebook/page[@id='info']" position="after">
+        <page string="Contacts" id="contacts">
+            <field name="invoice_contacts" colspan="4"/>
+            <label name="no_send_invoice"/>
+            <field name="no_send_invoice"/>
+            <label name="sent_date"/>
+            <field name="sent_date"/>
+        </page>
+    </xpath>
+    <xpath expr="/form/notebook/page[@id='info']/field[@name='comment']"
+        position="after">
+        <separator name="entries_comments" colspan="4"/>
+        <field name="entries_comments" colspan="4"/>
+    </xpath>
+</data>

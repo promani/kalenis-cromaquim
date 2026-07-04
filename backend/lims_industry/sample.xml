@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Sample -->
+
+        <record model="ir.ui.view" id="sample_view_form">
+            <field name="model">lims.sample</field>
+            <field name="inherit" ref="lims.lims_sample_view_form"/>
+            <field name="name">sample_form</field>
+        </record>
+        <record model="ir.ui.view" id="sample_view_list">
+            <field name="model">lims.sample</field>
+            <field name="inherit" ref="lims.lims_sample_view_list"/>
+            <field name="name">sample_list</field>
+        </record>
+
+<!-- Sample Edition Log -->
+
+        <record model="ir.ui.view" id="sample_edition_log_view_list">
+            <field name="model">lims.sample.edition.log</field>
+            <field name="type">tree</field>
+            <field name="name">sample_edition_log_list</field>
+        </record>
+        <record model="ir.ui.view" id="sample_edition_log_view_form">
+            <field name="model">lims.sample.edition.log</field>
+            <field name="type">form</field>
+            <field name="name">sample_edition_log_form</field>
+        </record>
+
+<!-- Fraction Type -->
+
+        <record model="ir.ui.view" id="fraction_type_view_form">
+            <field name="model">lims.fraction.type</field>
+            <field name="inherit" ref="lims.lims_fraction_type_view_form"/>
+            <field name="name">fraction_type_form</field>
+        </record>
+
+<!-- Wizard Create Sample -->
+
+        <record model="ir.ui.view" id="create_sample_start_view_form">
+            <field name="model">lims.create_sample.start</field>
+            <field name="inherit" ref="lims.lims_create_sample_start_view_form"/>
+            <field name="name">create_sample_start_form</field>
+        </record>
+
+<!-- Wizard Edit Samples -->
+
+        <record model="ir.ui.view" id="edit_sample_start_view_form">
+            <field name="model">lims.sample.edit.start</field>
+            <field name="type" eval="None"/>
+            <field name="inherit" ref="lims.edit_sample_start_view_form"/>
+            <field name="name">sample_edit_form</field>
+        </record>
+
+<!-- Samples Pending Reporting -->
+
+        <record model="ir.ui.view" id="samples_pending_reporting_view_list">
+            <field name="model">lims.notebook</field>
+            <field name="inherit" ref="lims.lims_samples_pending_reporting_view_list"/>
+            <field name="name">samples_pending_reporting_list</field>
+        </record>
+        <record model="ir.ui.view" id="samples_pending_reporting_view_form">
+            <field name="model">lims.notebook</field>
+            <field name="inherit" ref="lims.lims_samples_pending_reporting_view_form"/>
+            <field name="name">samples_pending_reporting_form</field>
+        </record>
+
+<!-- Wizard Warn Dangerous Product -->
+
+        <record model="ir.ui.view" id="comercial_product_warn_dangerous_start_view_form">
+            <field name="model">lims.comercial.product.warn_dangerous.start</field>
+            <field name="type">form</field>
+            <field name="name">comercial_product_warn_dangerous_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_comercial_product_warn_dangerous">
+            <field name="name">Warn Dangerous Product</field>
+            <field name="wiz_name">lims.comercial.product.warn_dangerous</field>
+        </record>
+
+    </data>
+</tryton>

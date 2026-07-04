@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="fraction"/>
+    <field name="label"/>
+    <field name="create_date2" widget="date"/>
+    <field name="create_date2" widget="time" string="Time"/>
+    <field name="party"/>
+    <field name="analysis_origin"/>
+    <field name="analysis"/>
+    <field name="state"/>
+    <field name="laboratory"/>
+    <field name="method"/>
+    <field name="device"/>
+    <field name="referral"/>
+    <field name="referral_date"/>
+</tree>

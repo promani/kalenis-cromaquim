@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="active"/>
+    <field name="active" xexpand="0" width="25"/>
+    <notebook>
+        <page name="content">
+            <field name="content" colspan="4" widget="html"/>
+        </page>
+        <page name="diagnosis_states">
+            <field name="diagnosis_states" colspan="4"/>
+        </page>
+    </notebook>
+</form>

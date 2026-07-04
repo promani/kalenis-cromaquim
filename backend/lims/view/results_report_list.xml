@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="number"/>
+    <field name="versions"/>
+    <field name="report_language"/>
+    <field name="party"/>
+    <field name="invoice_party"/>
+    <field name="samples_list"/>
+    <field name="entry_summary"/>
+    <field name="cie_fraction_type"/>
+    <field name="ready_to_send"/>
+    <field name="single_sending_report"/>
+    <field name="single_sending_report_ready"/>
+    <field name="entry_single_sending_report"/>
+    <field name="entry_single_sending_report_ready"/>
+    <field name="create_date2" widget="date"/>
+    <field name="create_date2" widget="time" string="Time"/>
+    <field name="write_date2" widget="date"/>
+    <field name="write_date2" widget="time" string="Time"/>
+</tree>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<tryton>
+    <data grouped="1">
+        <record model="ir.message" id="invalid_alias">
+            <field name="text">Invalid symbol "%(symbol)s" in column "%(name)s".</field>
+        </record>
+        <record model="ir.message" id="invalid_default_value">
+            <field name="text">Default value "%(value)s" in "%(name)s" is invalid according to its type.</field>
+        </record>
+        <record model="ir.message" id="invalid_default_value_type">
+            <field name="text">The field type in "%(name)s" is not valid for default values.</field>
+        </record>
+        <record model="ir.message" id="invalid_default_value_boolean">
+            <field name="text">In "%(name)s" default value use 0 for False, and any other integer for True.</field>
+        </record>
+        <record model="ir.message" id="invalid_default_value_date">
+            <field name="text">Default date value in "%(name)s" is not valid. Check locale format and configure the template language.</field>
+        </record>
+        <record model="ir.message" id="invalid_default_value_many2one_id">
+            <field name="text">Default value in "%(name)s" should be the id of a valid resource of the model picked in 'Related model'.</field>
+        </record>
+        <record model="ir.message" id="invalid_default_value_many2one">
+            <field name="text">The resource set as default value in "%(name)s" is not valid or it does not exist.</field>
+        </record>
+        <record model="ir.message" id="invalid_domain">
+            <field name="text">Invalid domain in column "%(name)s".</field>
+        </record>
+        <record model="ir.message" id="invalid_selection">
+            <field name="text">Invalid selection in column "%(name)s".</field>
+        </record>
+        <record model="ir.message" id="duplicated_origin_file">
+            <field name="text">File "%(file_name)s" already exists as origin.</field>
+        </record>
+        <record model="ir.message" id="msg_interface_column_alias_unique">
+            <field name="text">There cannot be two columns with the same alias in an interface.</field>
+        </record>
+        <record model="ir.message" id="delete_done_compilation">
+            <field name="text">You cannot delete a Compilation in "Done" state</field>
+        </record>
+        <record model="ir.message" id="invalid_interface_charset">
+            <field name="text">The charset of the file does not match the one defined in the interface.</field>
+        </record>
+        <record model="ir.message" id="msg_analysis_specific">
+            <field name="text">There cannot be more than one column per analysis in view "%(view)s"</field>
+        </record>
+        <record model="ir.message" id="msg_line_not_annulled">
+            <field name="text">Notebook line "%(notebook_line)s" is not annulled.</field>
+        </record>
+        <record model="ir.message" id="missing_required_field">
+            <field name="text">The "%(field)s" field is required.</field>
+        </record>
+    </data>
+</tryton>

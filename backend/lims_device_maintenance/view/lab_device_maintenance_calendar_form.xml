@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<form>
+    <label name="asset"/>
+    <field name="asset"/>
+    <label name="device"/>
+    <field name="device"/>
+    <label name="product"/>
+    <field name="product"/>
+    <label name="lot"/>
+    <field name="lot"/>
+    <label name="activity"/>
+    <field name="activity"/>
+    <label name="date"/>
+    <field name="date"/>
+    <label name="party"/>
+    <field name="party"/>
+    <label name="responsible"/>
+    <field name="responsible"/>
+    <separator string="Comments" colspan="4" id="comments"/>
+    <field name="comments" colspan="4"/>
+    <label name="device_active"/>
+    <field name="device_active"/>
+    <group colspan="4" id="state">
+        <label name="state"/>
+        <field name="state"/>
+        <group col="-1" colspan="2" id="buttons">
+            <button name="pending" string="Pending"/>
+            <button name="do" string="Done"/>
+            <button name="discard" string="Discard"/>
+        </group>
+    </group>
+</form>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<form>
+    <label name="interface"/>
+    <field name="interface"/>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="report"/>
+    <field name="report"/>
+    <label name="controls_required"/>
+    <field name="controls_required"/>
+    <label name="active"/>
+    <field name="active"/>
+    <notebook>
+        <page string="Analysis" id="analysis">
+            <field name="analysis" colspan="4"/>
+        </page>
+        <page string="Controls" id="controls">
+            <field name="controls_allowed" colspan="4"/>
+        </page>
+        <page string="Comments" id="comments">
+            <field name="comments" colspan="4"/>
+        </page>
+    </notebook>
+</form>

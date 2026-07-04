@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<form>
+    <group id="number" colspan="2" col="4">
+        <label name="report_version"/>
+        <field name="report_version"/>
+        <label name="number"/>
+        <field name="number" xexpand="0"/>
+    </group>
+    <group id="type" colspan="2" col="4">
+        <label name="type"/>
+        <field name="type" xexpand="1"/>
+        <label name="report_language"/>
+        <field name="report_language" widget="selection" xexpand="1"/>
+    </group>
+    <label name="laboratory"/>
+    <field name="laboratory"/>
+    <label name="party"/>
+    <field name="party"/>
+    <label name="report_type_forced"/>
+    <field name="report_type_forced"/>
+    <label name="report_result_type_forced"/>
+    <field name="report_result_type_forced"/>
+    <label name="report_type"/>
+    <field name="report_type"/>
+    <label name="report_result_type"/>
+    <field name="report_result_type"/>
+    <label name="resultrange_origin"/>
+    <field name="resultrange_origin" widget="selection"/>
+    <label name="trace_report"/>
+    <field name="trace_report"/>
+    <label name="contract_numbers"/>
+    <field name="contract_numbers"/>
+    <notebook>
+        <page name="samples">
+            <field name="samples" colspan="4" mode="form,tree"
+                view_ids="lims.lims_results_report_version_detail_sample_view_form,lims.lims_results_report_version_detail_sample_view_list"/>
+        </page>
+        <page name="signatories">
+            <field name="signatories" colspan="4"/>
+        </page>
+        <page name="certifications">
+            <field name="certifications" colspan="4"/>
+        </page>
+        <page name="comments">
+            <field name="comments" colspan="4"/>
+        </page>
+        <page name="fractions_comments">
+            <field name="fractions_comments" colspan="4"/>
+        </page>
+        <page id="waiting" string="Waiting">
+            <separator name="waiting_reason" colspan="4"/>
+            <field name="waiting_reason" colspan="4"/>
+        </page>
+        <page id="annulation" string="Annulation">
+            <separator name="annulment_reason" colspan="4"/>
+            <field name="annulment_reason" colspan="4"/>
+            <label name="annulment_date"/>
+            <field name="annulment_date"/>
+            <label name="annulment_reason_print"/>
+            <field name="annulment_reason_print"/>
+        </page>
+        <page id="review" string="Review">
+            <separator name="review_reason" colspan="4"/>
+            <field name="review_reason" colspan="4"/>
+            <label name="review_reason_print"/>
+            <field name="review_reason_print"/>
+        </page>
+        <page id="dates" string="Dates">
+            <label name="create_date2"/>
+            <field name="create_date2"/>
+            <label name="write_date2"/>
+            <field name="write_date2"/>
+            <label name="revision_date"/>
+            <field name="revision_date"/>
+            <label name="release_date"/>
+            <field name="release_date"/>
+            <label name="annulment_date"/>
+            <field name="annulment_date"/>
+        </page>
+    </notebook>
+    <group id="state" colspan="2" col="4">
+        <label name="state"/>
+        <field name="state"/>
+        <label name="valid"/>
+        <field name="valid" xexpand="0"/>
+    </group>
+    <group id="buttons" colspan="2" col="6">
+        <button name="draft" string="Draft"/>
+        <button name="revise" string="Revised"/>
+        <button name="release" string="Release"/>
+        <button name="release_all_lang" string="Release for all languages"/>
+        <button name="new_version" string="New Version"/>
+        <button name="annul" string="Annull"/>
+    </group>
+</form>

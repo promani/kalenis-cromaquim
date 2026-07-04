@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Function -->
+
+        <record model="ir.ui.view" id="interface_function_view_form">
+            <field name="model">lims.interface.function</field>
+            <field name="type">form</field>
+            <field name="name">function_form</field>
+        </record>
+        <record model="ir.ui.view" id="interface_function_view_list">
+            <field name="model">lims.interface.function</field>
+            <field name="type">tree</field>
+            <field name="name">function_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_interface_function_list">
+            <field name="name">Interface Functions</field>
+            <field name="res_model">lims.interface.function</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_interface_function_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="interface_function_view_list"/>
+            <field name="act_window" ref="act_interface_function_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_interface_function_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="interface_function_view_form"/>
+            <field name="act_window" ref="act_interface_function_list"/>
+        </record>
+
+        <menuitem action="act_interface_function_list"
+            id="lims_interface_function_menu"
+            parent="lims_interface_menu" sequence="20"/>
+
+<!-- Functions -->
+
+        <record model="lims.interface.function" id="function_str">
+            <field name="name">STR</field>
+            <field name="parameters">value</field>
+            <field name="help">Returns the value as a string.</field>
+        </record>
+
+        <record model="lims.interface.function" id="function_var">
+            <field name="name">VAR</field>
+            <field name="parameters">notebook_line, variable</field>
+            <field name="help">Obtains the value of a given variable, setted for the analysis, product type, matrix and method indicated.</field>
+        </record>
+
+        <record model="lims.interface.function" id="function_constant">
+            <field name="name">CONSTANT</field>
+            <field name="parameters">name, parameter1=None, parameter2=None, parameter3=None, value=None</field>
+            <field name="help">Obtains the value of the constant defined for the given parameters.</field>
+        </record>
+
+        <record model="lims.interface.function" id="function_timediff">
+            <field name="name">TIMEDIF</field>
+            <field name="parameters">time_1, time_2,uom=False,delta=False</field>
+            <field name="help">Gets the diff between time_1 and time_2. If time 1 is lower than time 2, None is returned. If uom [H,M,S,MS] is specified, a Float representing the the conversion from the delta to the required uom. will be returned. If delta is true and uom is false, a timedelta object is returned.</field>
+        </record>
+
+        <record model="lims.interface.function" id="function_totime">
+            <field name="name">TOTIME</field>
+            <field name="parameters">value[float], uom[H,M,S,MS]</field>
+            <field name="help">Convert float value to time object, using the provided uom.</field>
+        </record>
+
+        <record model="lims.interface.function" id="function_dateadd">
+            <field name="name">DATEADD</field>
+            <field name="parameters">base_date[date,datetime], value[float,int], uom[MO,W,D,H,M,S]</field>
+            <field name="help">Adds value to the base date, considering the unit of measure. Negative numbers are allowed. If a float month it`s provided, will be treated as int.</field>
+        </record>
+
+        <record model="lims.interface.function" id="function_datediff">
+            <field name="name">DATEDIFF</field>
+            <field name="parameters">date_1[date], date_2[date], uom[D,W,MO,W], delta=False</field>
+            <field name="help">Return Diff[int] bewtween date_1 and date_2, expressed in uom. If delta=true, a timedelta object is returned.</field>
+        </record>
+
+        <record model="lims.interface.function" id="function_maxdate">
+            <field name="name">MAXDATE</field>
+            <field name="parameters">{dates} [list of date or datetimes]</field>
+            <field name="help">Returns max date/datetime from {dates}</field>
+        </record>
+
+        <record model="lims.interface.function" id="function_mindate">
+            <field name="name">MINDATE</field>
+            <field name="parameters">{dates} [list of date or datetimes]</field>
+            <field name="help">Returns min date/datetime from {dates}</field>
+        </record>
+
+        <record model="lims.interface.function" id="function_scientific_notation">
+            <field name="name">SCIENTIFIC_NOTATION</field>
+            <field name="parameters">value, decimals=2</field>
+            <field name="help">Returns the given number in scientific notation</field>
+        </record>
+
+    </data>
+</tryton>

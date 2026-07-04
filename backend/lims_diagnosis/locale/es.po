@@ -1,0 +1,437 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:lims.analysis,diagnosis_template:"
+msgid "Diagnosis Template"
+msgstr "Plantilla de Diagnóstico"
+
+msgctxt "field:lims.analysis,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "field:lims.analysis,not_block_diagnosis:"
+msgid "Does not block diagnosis"
+msgstr "No bloquea diagnóstico"
+
+msgctxt "field:lims.create_sample.start,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "field:lims.diagnosis.state,images:"
+msgid "Images"
+msgstr "Imágenes"
+
+msgctxt "field:lims.diagnosis.state.image,image:"
+msgid "Image"
+msgstr "Imagen"
+
+msgctxt "field:lims.diagnosis.state.image,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.diagnosis.state.image,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:lims.diagnosis.template,content:"
+msgid "Content"
+msgstr "Contenido"
+
+msgctxt "field:lims.diagnosis.template,diagnosis_states:"
+msgid "States"
+msgstr "Estados"
+
+msgctxt "field:lims.diagnosis.template,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.diagnosis.template-diagnosis.state,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:lims.diagnosis.template-diagnosis.state,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:lims.diagnostician,party:"
+msgid "Party"
+msgstr "Entidad"
+
+msgctxt "field:lims.diagnostician,signature:"
+msgid "Signature"
+msgstr "Firma"
+
+msgctxt "field:lims.fraction,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "field:lims.notebook,diagnosis_warning:"
+msgid "Diagnosis Warning"
+msgstr "Advertencia de diagnóstico"
+
+msgctxt "field:lims.notebook,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "field:lims.notebook,ready_to_diagnose:"
+msgid "Ready to diagnose"
+msgstr "Lista para diagnosticar"
+
+msgctxt "field:lims.notebook.change_diagnostician.start,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "field:lims.notebook.line,diagnosis_warning:"
+msgid "Diagnosis Warning"
+msgstr "Advertencia de diagnóstico"
+
+msgctxt "field:lims.notebook.line,notify_acceptance:"
+msgid "Notify acceptace"
+msgstr "Notificar aceptación"
+
+msgctxt "field:lims.notebook.line,notify_acceptance_user:"
+msgid "Notification User"
+msgstr "Usuario Notificación"
+
+msgctxt "field:lims.notebook.line.repeat_analysis.start,notify_acceptance:"
+msgid "Notify acceptace"
+msgstr "Notificar aceptación"
+
+msgctxt "field:lims.notebook.repeat_analysis.start,notify_acceptance:"
+msgid "Notify acceptace"
+msgstr "Notificar aceptación"
+
+msgctxt "field:lims.plant,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "field:lims.product.type,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "field:lims.report.template,diagnosis_length:"
+msgid "Diagnosis Length"
+msgstr "Longitud del diagnóstico"
+
+msgctxt "field:lims.report.template,diagnosis_template:"
+msgid "Diagnosis Template"
+msgstr "Plantilla de Diagnóstico"
+
+msgctxt "field:lims.results_report.version.detail,diagnosis_template:"
+msgid "Diagnosis Template"
+msgstr "Plantilla de Diagnóstico"
+
+msgctxt "field:lims.results_report.version.detail,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "field:lims.results_report.version.detail.line,diagnosis_warning:"
+msgid "Diagnosis Warning"
+msgstr "Advertencia de diagnóstico"
+
+msgctxt "field:lims.results_report.version.detail.sample,diagnosis:"
+msgid "Diagnosis"
+msgstr "Diagnóstico"
+
+msgctxt "field:lims.results_report.version.detail.sample,diagnosis_plain:"
+msgid "Diagnosis"
+msgstr "Diagnóstico"
+
+msgctxt "field:lims.results_report.version.detail.sample,diagnosis_states:"
+msgid "States"
+msgstr "Estados"
+
+msgctxt ""
+"field:lims.results_report.version.detail.sample,diagnosis_states_domain:"
+msgid "States domain"
+msgstr "Dominio para Estados"
+
+msgctxt "field:lims.results_report.version.detail.sample,diagnosis_warning:"
+msgid "Diagnosis Warning"
+msgstr "Advertencia de diagnóstico"
+
+msgctxt "field:lims.results_report.version.detail.sample,template_type:"
+msgid "Report Template Type"
+msgstr "Tipo de Plantilla de Informe"
+
+msgctxt "field:lims.sample,diagnosis_template:"
+msgid "Diagnosis Template"
+msgstr "Plantilla de Diagnóstico"
+
+msgctxt "field:lims.sample,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "field:lims.samples_comparator,lines:"
+msgid "Lines"
+msgstr "Líneas"
+
+msgctxt "field:lims.samples_comparator,notebook1:"
+msgid "Sample 1"
+msgstr "Muestra 1"
+
+msgctxt "field:lims.samples_comparator,notebook1_diagnosis:"
+msgid "Diagnosis 1"
+msgstr "Diagnóstico 1"
+
+msgctxt "field:lims.samples_comparator,notebook2:"
+msgid "Sample 2"
+msgstr "Muestra 2"
+
+msgctxt "field:lims.samples_comparator,notebook2_diagnosis:"
+msgid "Diagnosis 2"
+msgstr "Diagnóstico 2"
+
+msgctxt "field:lims.samples_comparator,notebook3:"
+msgid "Sample 3"
+msgstr "Muestra 3"
+
+msgctxt "field:lims.samples_comparator,notebook3_diagnosis:"
+msgid "Diagnosis 3"
+msgstr "Diagnóstico 3"
+
+msgctxt "field:lims.samples_comparator,notebook:"
+msgid "Sample"
+msgstr "Muestra"
+
+msgctxt "field:lims.samples_comparator,notebook_diagnosis:"
+msgid "Diagnosis"
+msgstr "Diagnóstico"
+
+msgctxt "field:lims.samples_comparator.ask,notebook:"
+msgid "Sample"
+msgstr "Muestra"
+
+msgctxt "field:lims.samples_comparator.line,analysis:"
+msgid "Analysis"
+msgstr "Análisis"
+
+msgctxt "field:lims.samples_comparator.line,converted_result:"
+msgid "Converted result"
+msgstr "Resultado convertido"
+
+msgctxt "field:lims.samples_comparator.line,final_unit:"
+msgid "Final unit"
+msgstr "Unidad final"
+
+msgctxt "field:lims.samples_comparator.line,initial_unit:"
+msgid "Initial unit"
+msgstr "Unidad inicial"
+
+msgctxt "field:lims.samples_comparator.line,notebook1_result:"
+msgid "Sample 1"
+msgstr "Muestra 1"
+
+msgctxt "field:lims.samples_comparator.line,notebook2_result:"
+msgid "Sample 2"
+msgstr "Muestra 2"
+
+msgctxt "field:lims.samples_comparator.line,notebook3_result:"
+msgid "Sample 3"
+msgstr "Muestra 3"
+
+msgctxt "field:lims.samples_comparator.line,notebook_line:"
+msgid "Notebook Line"
+msgstr "Línea de cuaderno"
+
+msgctxt "field:lims.samples_comparator.line,repetition:"
+msgid "Repetition"
+msgstr "Repetición"
+
+msgctxt "field:lims.samples_comparator.line,result:"
+msgid "Result"
+msgstr "Resultado"
+
+msgctxt "field:lims.samples_comparator.line,sample:"
+msgid "Sample"
+msgstr "Muestra"
+
+msgctxt "field:party.party,diagnosis_template:"
+msgid "Diagnosis Template"
+msgstr "Plantilla de Diagnóstico"
+
+msgctxt "field:party.party,diagnostician:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "help:lims.analysis,not_block_diagnosis:"
+msgid "This analysis is not necessary to begin diagnosing the sample"
+msgstr "Este análisis no es necesario para comenzar a diagnosticar la muestra"
+
+msgctxt "help:lims.notebook.line.repeat_analysis.start,notify_acceptance:"
+msgid "Notify when analysis is ready"
+msgstr "Notificar cuando el análisis esté terminado"
+
+msgctxt "help:lims.notebook.repeat_analysis.start,notify_acceptance:"
+msgid "Notify when analysis is ready"
+msgstr "Notificar cuando el análisis esté terminado"
+
+msgctxt "help:lims.report.template,diagnosis_length:"
+msgid "Maximum number of characters in diagnosis"
+msgstr "Cantidad máxima de caracteres en diagnóstico"
+
+msgctxt "model:ir.action,name:act_diagnosis_state_list"
+msgid "Diagnosis States"
+msgstr "Estados de Diagnóstico"
+
+msgctxt "model:ir.action,name:act_diagnostician_list"
+msgid "Diagnosticians"
+msgstr "Diagnosticadores"
+
+msgctxt "model:ir.action,name:act_html_diagnosis_template_list"
+msgid "Diagnosis Templates"
+msgstr "Plantillas de Diagnóstico"
+
+msgctxt "model:ir.action,name:act_samples_comparator"
+msgid "Samples Comparator"
+msgstr "Comparador de muestras"
+
+msgctxt "model:ir.action,name:wiz_notebook_change_diagnostician"
+msgid "Change Sample Diagnostician"
+msgstr "Cambiar Diagnosticador"
+
+msgctxt "model:ir.action,name:wiz_open_samples_comparator"
+msgid "Samples Comparator"
+msgstr "Comparador de muestras"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_lims_results_report_version_detail_domain_diagnosed"
+msgid "Diagnosed"
+msgstr "Diagnosticado"
+
+msgctxt "model:ir.message,text:lbl_line_acceptance"
+msgid "Notebook Line Acceptance"
+msgstr "Aceptación de Línea de cuaderno"
+
+msgctxt "model:ir.message,text:msg_invalid_diagnosis_length"
+msgid ""
+"The diagnosis has more characters (%(length)s) than the allowed one "
+"(%(allowed)s)."
+msgstr ""
+"El diagnóstico tiene más caracteres (%(length)s) que el permitido "
+"(%(allowed)s)."
+
+msgctxt "model:ir.message,text:msg_invalid_diagnosis_state"
+msgid "Missing diagnosis states"
+msgstr "Faltan estados de diagnóstico"
+
+msgctxt "model:ir.ui.menu,name:lims_open_samples_comparator_menu"
+msgid "Samples Comparator"
+msgstr "Comparador de muestras"
+
+msgctxt "model:ir.ui.menu,name:menu_diagnosis_state_list"
+msgid "Diagnosis States"
+msgstr "Estados de Diagnóstico"
+
+msgctxt "model:ir.ui.menu,name:menu_diagnostician_list"
+msgid "Diagnosticians"
+msgstr "Diagnosticadores"
+
+msgctxt "model:ir.ui.menu,name:menu_html_diagnosis_template_list"
+msgid "Diagnosis Templates"
+msgstr "Plantillas de Diagnóstico"
+
+msgctxt "model:lims.diagnosis.state,name:"
+msgid "Diagnosis State"
+msgstr "Estado de Diagnóstico"
+
+msgctxt "model:lims.diagnosis.state.image,name:"
+msgid "Diagnosis State Image"
+msgstr "Imagen de Estado de diagnóstico"
+
+msgctxt "model:lims.diagnosis.template,name:"
+msgid "Diagnosis Template"
+msgstr "Plantilla de Diagnóstico"
+
+msgctxt "model:lims.diagnosis.template-diagnosis.state,name:"
+msgid "Diagnosis Template - State"
+msgstr "Plantilla de Diagnóstico - Estado"
+
+msgctxt "model:lims.diagnostician,name:"
+msgid "Diagnostician"
+msgstr "Diagnosticador"
+
+msgctxt "model:lims.notebook.change_diagnostician.start,name:"
+msgid "Change Sample Diagnostician"
+msgstr "Cambiar Diagnosticador"
+
+msgctxt "model:lims.samples_comparator,name:"
+msgid "Samples Comparator"
+msgstr "Comparador de muestras"
+
+msgctxt "model:lims.samples_comparator.ask,name:"
+msgid "Samples Comparator"
+msgstr "Comparador de muestras"
+
+msgctxt "model:lims.samples_comparator.line,name:"
+msgid "Samples Comparator Line"
+msgstr "Línea de Comparador de muestras"
+
+msgctxt "model:res.group,name:group_diagnostician"
+msgid "Lims Diagnostician"
+msgstr "Lims Diagnosticador"
+
+msgctxt "model:res.group,name:group_diagnostician_admin"
+msgid "Lims Diagnostician Admin"
+msgstr "Lims Diagnosticador Admin"
+
+msgctxt "selection:ir.cron,method:"
+msgid "Delete Samples comparison records"
+msgstr "Eliminar registros de Comparación de muestras"
+
+msgctxt "selection:lims.results_report.version.detail,state:"
+msgid "Diagnosed"
+msgstr "Diagnosticado"
+
+msgctxt "selection:lims.results_report.version.detail.sample,template_type:"
+msgid "HTML"
+msgstr "HTML"
+
+msgctxt "selection:lims.results_report.version.detail.sample,template_type:"
+msgid "HTML - Footer"
+msgstr "HTML - Pie de página"
+
+msgctxt "selection:lims.results_report.version.detail.sample,template_type:"
+msgid "HTML - Header"
+msgstr "HTML - Encabezado"
+
+msgctxt "view:lims.diagnosis.state:"
+msgid "Options"
+msgstr "Opciones"
+
+msgctxt "view:lims.diagnostician:"
+msgid "Signature"
+msgstr "Firma"
+
+msgctxt "view:lims.plant:"
+msgid "Diagnosis"
+msgstr "Diagnóstico"
+
+msgctxt "view:lims.results_report.version.detail.sample:"
+msgid "Diagnosis"
+msgstr "Diagnóstico"
+
+msgctxt "view:lims.results_report.version.detail:"
+msgid "Diagnosed"
+msgstr "Diagnosticado"
+
+msgctxt "view:lims.samples_comparator:"
+msgid "Diagnostics"
+msgstr "Diagnósticos"
+
+msgctxt "wizard_button:lims.notebook.change_diagnostician,start,change:"
+msgid "Change"
+msgstr "Cambiar"
+
+msgctxt "wizard_button:lims.notebook.change_diagnostician,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.samples_comparator.open,ask,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.samples_comparator.open,ask,open_:"
+msgid "Open"
+msgstr "Abrir"

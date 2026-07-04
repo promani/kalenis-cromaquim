@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<form>
+    <group id="description" colspan="4" col="4">
+        <label name="description"/>
+        <field name="description"/>
+        <label name="code"/>
+        <field name="code" xexpand="0" width="100"/>
+    </group>
+    <label name="type"/>
+    <field name="type"/>
+    <label name="behavior"/>
+    <field name="behavior"/>
+    <group id="result_formula" colspan="2" col="3">
+        <label name="result_formula"/>
+        <field name="result_formula" xexpand="1"/>
+        <image name="result_formula_icon" xexpand="0" size="30"/>
+    </group>
+    <group id="converted_result_formula" colspan="2" col="3">
+        <label name="converted_result_formula"/>
+        <field name="converted_result_formula" xexpand="1"/>
+        <image name="converted_result_formula_icon" xexpand="0" size="30"/>
+    </group>
+    <group id="literal_result_formula" colspan="4" col="3">
+        <label name="literal_result_formula"/>
+        <field name="literal_result_formula" xexpand="1"/>
+        <image name="literal_result_formula_icon" xexpand="0" size="30"/>
+    </group>
+    <label name="product"/>
+    <field name="product"/>
+    <label name="order"/>
+    <field name="order" width="200"/>
+    <label name="formula"/>
+    <field name="formula"/>
+    <label name="planning_legend"/>
+    <field name="planning_legend"/>
+    <group id="automatic_acquisition" colspan="2" col="2">
+        <label name="automatic_acquisition" />
+        <field name="automatic_acquisition" xexpand="0"/>
+    </group>
+    <group id="disable_as_individual" colspan="2" col="2">
+        <label name="disable_as_individual"/>
+        <field name="disable_as_individual" xexpand="0"/>
+    </group>
+    <group id="validate_limits_after_calculation" colspan="2" col="2">
+        <label name="validate_limits_after_calculation"/>
+        <field name="validate_limits_after_calculation" xexpand="0"/>
+    </group>
+    <notebook>
+        <page string="Laboratories" id="laboratories" >
+            <field name="laboratories" colspan="4"/>
+            <field name="laboratory_domain" colspan="4" invisible="1"/>
+        </page>
+        <page string="Methods" id="methods" >
+            <field name="methods" colspan="4"/>
+        </page>
+        <page string="Devices" id="devices" >
+            <field name="devices" colspan="4"/>
+        </page>
+        <page string="Included analysis" id="included_analysis" >
+            <field name="included_analysis" colspan="4"/>
+            <group col="6" colspan="4" id="button_holder">
+                <button name="relate_analysis" string="Relate analysis"/>
+             </group>
+        </page>
+        <page string="Warnings/Comments" id="comments" >
+            <field name="comments" colspan="4"/>
+        </page>
+        <page id="times" string="Times">
+            <label name="estimated_waiting_laboratory"/>
+            <field name="estimated_waiting_laboratory"/>
+            <label name="estimated_waiting_report"/>
+            <field name="estimated_waiting_report"/>
+        </page>
+    </notebook>
+    <group id="buttons" colspan="4" col="10">
+        <label name="state"/>
+        <field name="state"/>
+        <button name="activate" string="Activate"/>
+        <button name="disable" string="Disable"/>
+        <button name="reactivate" string="Reactivate"/>
+        <label name="start_date"/>
+        <field name="start_date"/>
+        <label name="end_date"/>
+        <field name="end_date"/>
+    </group>
+</form>

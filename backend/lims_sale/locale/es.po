@@ -1,0 +1,463 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.invoice.line,lims_sale_line_origin:"
+msgid "Quote line"
+msgstr "Línea de Presupuesto"
+
+msgctxt "field:lims.configuration,entry_use_sale_contacts:"
+msgid "Use the sales contacts in entries"
+msgstr "Usar contactos de la venta en ingresos"
+
+msgctxt "field:lims.create_sample.start,sale_lines:"
+msgid "Quotes"
+msgstr "Presupuestos"
+
+msgctxt "field:lims.create_sample.start,sale_lines_domain:"
+msgid "Quotes domain"
+msgstr "Dominio para Presupuestos"
+
+msgctxt ""
+"field:lims.create_sample.start,sale_lines_filter_product_type_matrix:"
+msgid "Filter Quotes by Product type and Matrix"
+msgstr "Filtrar Presupuestos por Tipo de producto y Matriz"
+
+msgctxt "field:lims.entry,allow_services_without_quotation:"
+msgid "Allow services without quotation"
+msgstr "Permitir servicios sin presupuesto"
+
+msgctxt "field:lims.fraction.add_service.start,sale_lines:"
+msgid "Quotes"
+msgstr "Presupuestos"
+
+msgctxt "field:lims.fraction.add_service.start,sale_lines_domain:"
+msgid "Quotes domain"
+msgstr "Dominio para Presupuestos"
+
+msgctxt ""
+"field:lims.fraction.add_service.start,sale_lines_filter_product_type_matrix:"
+msgid "Filter Quotes by Product type and Matrix"
+msgstr "Filtrar Presupuestos por Tipo de producto y Matriz"
+
+msgctxt "field:lims.report.template,clause_template:"
+msgid "Clauses Template"
+msgstr "Plantilla de Cláusulas"
+
+msgctxt "field:lims.sample,sale_lines:"
+msgid "Quotes"
+msgstr "Presupuestos"
+
+msgctxt "field:lims.sample.add_service.start,party:"
+msgid "Party"
+msgstr "Entidad"
+
+msgctxt "field:lims.sample.add_service.start,sale_lines:"
+msgid "Quotes"
+msgstr "Presupuestos"
+
+msgctxt "field:lims.sample.add_service.start,sale_lines_domain:"
+msgid "Quotes domain"
+msgstr "Dominio para Presupuestos"
+
+msgctxt ""
+"field:lims.sample.add_service.start,sale_lines_filter_product_type_matrix:"
+msgid "Filter Quotes by Product type and Matrix"
+msgstr "Filtrar Presupuestos por Tipo de producto y Matriz"
+
+msgctxt "field:lims.service,matching_quote_removed:"
+msgid "Matching quote removed"
+msgstr "Presupuesto coincidente no aplicado"
+
+msgctxt "field:lims.service,sale_lines:"
+msgid "Quotes"
+msgstr "Presupuestos"
+
+msgctxt "field:lims.service-sale.line,sale_line:"
+msgid "Sale Line"
+msgstr "Línea de venta"
+
+msgctxt "field:lims.service-sale.line,service:"
+msgid "Service"
+msgstr "Servicios"
+
+msgctxt "field:party.party,allow_services_without_quotation:"
+msgid "Allow services without quotation"
+msgstr "Permitir servicios sin presupuesto"
+
+msgctxt "field:party.party,internal_code:"
+msgid "Internal Code"
+msgstr "Código interno"
+
+msgctxt "field:party.party,purchase_order_required:"
+msgid "Purchase order required"
+msgstr "Orden de compra requerida"
+
+msgctxt "field:sale.clause.template,content:"
+msgid "Content"
+msgstr "Contenido"
+
+msgctxt "field:sale.clause.template,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:sale.configuration,allow_services_without_quotation:"
+msgid "Allow services without quotation"
+msgstr "Permitir servicios sin presupuesto"
+
+msgctxt "field:sale.configuration,email_quotation_body:"
+msgid "Body of the quotation email"
+msgstr "Cuerpo del email de presupuesto"
+
+msgctxt "field:sale.configuration,email_quotation_subject:"
+msgid "Subject of the quotation email"
+msgstr "Asunto del email de presupuesto"
+
+msgctxt "field:sale.configuration,sale_lines_filter_product_type_matrix:"
+msgid "Filter Quotes by Product type and Matrix"
+msgstr "Filtrar Presupuestos por Tipo de producto y Matriz"
+
+msgctxt "field:sale.line,additional_origin:"
+msgid "Origin of additional"
+msgstr "Origen de adicional"
+
+msgctxt "field:sale.line,entry_origin:"
+msgid "Origin Entry"
+msgstr "Ingreso origen"
+
+msgctxt "field:sale.line,analysis:"
+msgid "Service"
+msgstr "Servicio"
+
+msgctxt "field:sale.line,analysis_domain:"
+msgid "Analysis domain"
+msgstr "Dominio para Análisis"
+
+msgctxt "field:sale.line,certifications:"
+msgid "Accreditations / Certifications"
+msgstr "Acreditaciones / Certificaciones"
+
+msgctxt "field:sale.line,expiration_date:"
+msgid "Expiration date"
+msgstr "Fecha de vencimiento"
+
+msgctxt "field:sale.line,lims_invoice_lines:"
+msgid "Invoice Lines"
+msgstr "Líneas de factura"
+
+msgctxt "field:sale.line,matrix:"
+msgid "Matrix"
+msgstr "Matriz"
+
+msgctxt "field:sale.line,matrix_domain:"
+msgid "Matrix domain"
+msgstr "Dominio para Matriz"
+
+msgctxt "field:sale.line,method:"
+msgid "Method"
+msgstr "Método"
+
+msgctxt "field:sale.line,method_domain:"
+msgid "Method domain"
+msgstr "Dominio para Método"
+
+msgctxt "field:sale.line,method_invisible:"
+msgid "Method invisible"
+msgstr "Método invisible"
+
+msgctxt "field:sale.line,print_price:"
+msgid "Print price on quotation"
+msgstr "Imprimir precio en presupuesto"
+
+msgctxt "field:sale.line,print_service_detail:"
+msgid "Print service detail"
+msgstr "Imprimir detalle de servicio"
+
+msgctxt "field:sale.line,print_service_detail_invisible:"
+msgid "Print service detail invisible"
+msgstr "Imprimir detalle de servicio invisible"
+
+msgctxt "field:sale.line,product_type:"
+msgid "Product type"
+msgstr "Tipo de producto"
+
+msgctxt "field:sale.line,product_type_domain:"
+msgid "Product type domain"
+msgstr "Dominio para Tipo de producto"
+
+msgctxt "field:sale.line,purchase_order:"
+msgid "PO Nº"
+msgstr "OC Nº"
+
+msgctxt "field:sale.line,services:"
+msgid "Services"
+msgstr "Servicios"
+
+msgctxt "field:sale.line,services_available:"
+msgid "Services available"
+msgstr "Servicios disponibles"
+
+msgctxt "field:sale.line,services_completed:"
+msgid "Services completed"
+msgstr "Servicios completados"
+
+msgctxt "field:sale.line,services_completed_icon:"
+msgid "Services completed Icon"
+msgstr "Icono Servicios completados"
+
+msgctxt "field:sale.line,unlimited_quantity:"
+msgid "Unlimited quantity"
+msgstr "Cantidad ilimitada"
+
+msgctxt "field:sale.load_services.start,entry:"
+msgid "Entry"
+msgstr "Ingreso"
+
+msgctxt "field:sale.load_services.start,load_all:"
+msgid "Load Product Type, Matrix and Analysis"
+msgstr "Cargar Tipo de producto, Matriz y Análisis"
+
+msgctxt "field:sale.load_services.start,party:"
+msgid "Party"
+msgstr "Entidad"
+
+msgctxt "field:sale.load_set_group.start,analysis:"
+msgid "Set/Group"
+msgstr "Set/Grupo"
+
+msgctxt "field:sale.sale,clause_template:"
+msgid "Clauses Template"
+msgstr "Plantilla de Cláusulas"
+
+msgctxt "field:sale.sale,clauses:"
+msgid "Clauses"
+msgstr "Cláusulas"
+
+msgctxt "field:sale.sale,completion_percentage:"
+msgid "Complete"
+msgstr "Completo"
+
+msgctxt "field:sale.sale,expiration_date:"
+msgid "Expiration date"
+msgstr "Fecha de vencimiento"
+
+msgctxt "field:sale.sale,following_sections:"
+msgid "Following Sections"
+msgstr "Secciones siguientes"
+
+msgctxt "field:sale.sale,invoice_party_domain:"
+msgid "Invoice party domain"
+msgstr "Dominio para Tercero de facturación"
+
+msgctxt "field:sale.sale,previous_sections:"
+msgid "Previous Sections"
+msgstr "Secciones anteriores"
+
+msgctxt "field:sale.sale,purchase_order:"
+msgid "Purchase order"
+msgstr "Orden de compra"
+
+msgctxt "field:sale.sale,sections:"
+msgid "Sections"
+msgstr "Secciones"
+
+msgctxt "field:sale.sale,send_email:"
+msgid "Send automatically by Email"
+msgstr "Enviar automáticamente por email"
+
+msgctxt "field:sale.sale,services_completed:"
+msgid "Services completed"
+msgstr "Servicios completados"
+
+msgctxt "field:sale.sale,services_completed_manual:"
+msgid "Manually completed services"
+msgstr "Servicios completados manualmente"
+
+msgctxt "field:sale.sale,template:"
+msgid "Sale Template"
+msgstr "Plantilla de Presupuesto"
+
+msgctxt "field:sale.sale,unlimited_quantity:"
+msgid "Lines with unlimited quantity"
+msgstr "Líneas con cantidad ilimitada"
+
+msgctxt "field:sale.sale.section,data:"
+msgid "File"
+msgstr "Archivo"
+
+msgctxt "field:sale.sale.section,data_id:"
+msgid "File ID"
+msgstr "ID Archivo"
+
+msgctxt "field:sale.sale.section,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:sale.sale.section,order:"
+msgid "Order"
+msgstr "Orden"
+
+msgctxt "field:sale.sale.section,position:"
+msgid "Position"
+msgstr "Posición"
+
+msgctxt "field:sale.sale.section,sale:"
+msgid "Sale"
+msgstr "Venta"
+
+msgctxt "model:ir.action,name:"
+msgid "Clauses"
+msgstr "Cláusulas"
+
+msgctxt "model:ir.action,name:act_sale_clause_template"
+msgid "Sale Clauses Templates"
+msgstr "Plantillas de Cláusulas de presupuesto"
+
+msgctxt "model:ir.action,name:act_sale_report_template"
+msgid "Sale Report Templates"
+msgstr "Plantillas de Presupuesto"
+
+msgctxt "model:ir.action,name:report_sale_html"
+msgid "Sale"
+msgstr "Presupuesto"
+
+msgctxt "model:ir.action,name:wiz_notebook_open_sale"
+msgid "Sample Sale"
+msgstr "Presupuesto de la Muestra"
+
+msgctxt "model:ir.action,name:wiz_results_detail_open_sale"
+msgid "Results Report Sales"
+msgstr "Presupuestos del Informe de resultados"
+
+msgctxt "model:ir.action,name:wiz_sale_load_services"
+msgid "Load Services from Entry"
+msgstr "Cargar servicios desde ingreso"
+
+msgctxt "model:ir.action,name:wiz_sale_load_set_group"
+msgid "Load Analysis from Set/Group"
+msgstr "Cargar análisis desde Set/Grupo"
+
+msgctxt "model:ir.action.act_window.domain,name:act_sale_form_domain_expired"
+msgid "Expired"
+msgstr "Vencida"
+
+msgctxt "model:ir.message,text:msg_party_services_without_quotation"
+msgid "This party does not allow services without quotation."
+msgstr "Esta entidad no permite servicios sin presupuesto."
+
+msgctxt "model:ir.message,text:msg_adding_services_without_quotation"
+msgid "Services without quotation will be added."
+msgstr "Se añadirán servicios sin presupuesto."
+
+msgctxt "model:ir.message,text:msg_sale_completed_manual"
+msgid "The quote will change to 'done' with all services completed."
+msgstr ""
+"El presupuesto pasará a 'realizado' con todos los servicios completados."
+
+msgctxt "model:ir.message,text:msg_sale_line_analysis_product"
+msgid "Product \"%(product)s\" does not correspond to analysis \"%(analysis)s\"."
+msgstr "El producto \"%(product)s\" no corresponde al análisis \"%(analysis)s\"."
+
+msgctxt "model:ir.message,text:msg_services_without_quotation"
+msgid "This entry exceeds the amount of quoted services."
+msgstr "Este ingreso excede la cantidad de servicios presupuestados."
+
+msgctxt "model:ir.model.button,string:sale_load_services_button"
+msgid "Load Services from Entry"
+msgstr "Cargar servicios desde partida"
+
+msgctxt "model:ir.model.button,string:sale_load_set_group_button"
+msgid "Load Analysis from Set/Group"
+msgstr "Cargar análisis desde Set/Grupo"
+
+msgctxt "model:ir.ui.menu,name:menu_sale_clause_template"
+msgid "Sale Clauses Templates"
+msgstr "Plantillas de Cláusulas de presupuesto"
+
+msgctxt "model:ir.ui.menu,name:menu_sale_report_template"
+msgid "Sale Report Templates"
+msgstr "Plantillas de Presupuesto"
+
+msgctxt "model:lims.service-sale.line,name:"
+msgid "Service - Sale Line"
+msgstr "Servicio - Línea de venta"
+
+msgctxt "model:res.group,name:group_sale_services_completed_manual"
+msgid "Manually complete services in sales"
+msgstr "Completar manualmente servicios en ventas"
+
+msgctxt "model:sale.clause.template,name:"
+msgid "Sale Clause Template"
+msgstr "Plantilla de Cláusulas de presupuesto"
+
+msgctxt "model:sale.load_services.start,name:"
+msgid "Load Services from Entry"
+msgstr "Cargar servicios desde ingreso"
+
+msgctxt "model:sale.load_set_group.start,name:"
+msgid "Load Analysis from Set/Group"
+msgstr "Cargar análisis desde Set/Grupo"
+
+msgctxt "model:sale.sale.section,name:"
+msgid "Sale Section"
+msgstr "Sección de Presupuesto"
+
+msgctxt "selection:ir.cron,method:"
+msgid "Update Expired Sales Status"
+msgstr "Actualizar estado de ventas vencidas"
+
+msgctxt "selection:sale.sale,invoice_method:"
+msgid "On Entry Confirmed"
+msgstr "Al confirmar servicio"
+
+msgctxt "selection:sale.sale,state:"
+msgid "Expired"
+msgstr "Vencida"
+
+msgctxt "selection:sale.sale.section,position:"
+msgid "Following"
+msgstr "Siguiente"
+
+msgctxt "selection:sale.sale.section,position:"
+msgid "Previous"
+msgstr "Anterior"
+
+msgctxt "view:lims.report.template:"
+msgid "Header and Footer"
+msgstr "Encabezado y Pie de página"
+
+msgctxt "view:party.party:"
+msgid "Sale"
+msgstr "Venta"
+
+msgctxt "view:sale.line:"
+msgid "Samples"
+msgstr "Muestras"
+
+msgctxt "view:sale.load_services.start:"
+msgid "Load Services from Entry"
+msgstr "Cargar servicios desde ingreso"
+
+msgctxt "view:sale.sale:"
+msgid "Load Services from Entry"
+msgstr "Cargar servicios desde ingreso"
+
+msgctxt "view:sale.sale:"
+msgid "Printing"
+msgstr "Impresión"
+
+msgctxt "wizard_button:sale.load_services,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:sale.load_services,start,load:"
+msgid "Load"
+msgstr "Cargar"
+
+msgctxt "wizard_button:sale.load_set_group,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:sale.load_set_group,start,load:"
+msgid "Load"
+msgstr "Cargar"

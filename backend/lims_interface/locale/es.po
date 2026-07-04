@@ -1,0 +1,1512 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:lims.interface,analysis_field:"
+msgid "Analysis field"
+msgstr "Campo Análisis"
+
+msgctxt "field:lims.interface,charset:"
+msgid "Charset"
+msgstr "Conjunto de caracteres"
+
+msgctxt "field:lims.interface,columns:"
+msgid "Columns"
+msgstr "Columnas"
+
+msgctxt "field:lims.interface,controller_name:"
+msgid "Controller Name"
+msgstr "Controlador"
+
+msgctxt "field:lims.interface,field_separator:"
+msgid "Field separator"
+msgstr "Separador de campos"
+
+msgctxt "field:lims.interface,field_separator_other:"
+msgid "Other"
+msgstr "Otro"
+
+msgctxt "field:lims.interface,first_row:"
+msgid "First Row"
+msgstr "Primera fila"
+
+msgctxt "field:lims.interface,form_col:"
+msgid "Form Columns"
+msgstr "Columnas en formulario"
+
+msgctxt "field:lims.interface,fraction_field:"
+msgid "Fraction field"
+msgstr "Campo Fracción"
+
+msgctxt "field:lims.interface,grouped_repetitions:"
+msgid "Grouped repetitions"
+msgstr "Repeticiones de columnas agrupadas"
+
+msgctxt "field:lims.interface,kind:"
+msgid "Kind"
+msgstr "Tipo"
+
+msgctxt "field:lims.interface,language:"
+msgid "Language"
+msgstr "Idioma"
+
+msgctxt "field:lims.interface,method_field:"
+msgid "Method field"
+msgstr "Campo Método"
+
+msgctxt "field:lims.interface,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface,repetition_field:"
+msgid "Repetition field"
+msgstr "Campo Repetición"
+
+msgctxt "field:lims.interface,revision:"
+msgid "Revision"
+msgstr "Revisión"
+
+msgctxt "field:lims.interface,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:lims.interface,table:"
+msgid "Table"
+msgstr "Tabla"
+
+msgctxt "field:lims.interface,template_type:"
+msgid "Template Type"
+msgstr "Tipo de plantilla"
+
+msgctxt "field:lims.interface,views:"
+msgid "Views"
+msgstr "Vistas"
+
+msgctxt "field:lims.interface.column,alias:"
+msgid "Alias"
+msgstr "Alias"
+
+msgctxt "field:lims.interface.column,colspan:"
+msgid "Colspan"
+msgstr "Columnas"
+
+msgctxt "field:lims.interface.column,default_value:"
+msgid "Default value"
+msgstr "Valor por defecto"
+
+msgctxt "field:lims.interface.column,default_width:"
+msgid "Default Width"
+msgstr "Ancho por defecto"
+
+msgctxt "field:lims.interface.column,digits:"
+msgid "Digits"
+msgstr "Dígitos"
+
+msgctxt "field:lims.interface.column,domain:"
+msgid "Domain Value"
+msgstr "Dominio"
+
+msgctxt "field:lims.interface.column,evaluation_order:"
+msgid "Evaluation order"
+msgstr "Orden de evaluación"
+
+msgctxt "field:lims.interface.column,expression:"
+msgid "Formula"
+msgstr "Fórmula"
+
+msgctxt "field:lims.interface.column,expression_icon:"
+msgid "Expression Icon"
+msgstr "Icono"
+
+msgctxt "field:lims.interface.column,group:"
+msgid "Group"
+msgstr "Grupo"
+
+msgctxt "field:lims.interface.column,group_col:"
+msgid "Group Col"
+msgstr "Columna en Grupo"
+
+msgctxt "field:lims.interface.column,group_colspan:"
+msgid "Group Colspan"
+msgstr "Columnas del grupo"
+
+msgctxt "field:lims.interface.column,group_name:"
+msgid "Group Name"
+msgstr "Nombre de Grupo"
+
+msgctxt "field:lims.interface.column,interface:"
+msgid "Interface"
+msgstr "Interfaz"
+
+msgctxt "field:lims.interface.column,interface_state:"
+msgid "Interface State"
+msgstr "Estado interfaz"
+
+msgctxt "field:lims.interface.column,invisible:"
+msgid "Invisible"
+msgstr "Invisible"
+
+msgctxt "field:lims.interface.column,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.column,readonly:"
+msgid "Read only"
+msgstr "Sólo lectura"
+
+msgctxt "field:lims.interface.column,related_group:"
+msgid "Related Group"
+msgstr "Grupo Relacionado"
+
+msgctxt "field:lims.interface.column,related_line_field:"
+msgid "Related field"
+msgstr "Campo relacionado"
+
+msgctxt "field:lims.interface.column,related_model:"
+msgid "Related Model"
+msgstr "Modelo relacionado"
+
+msgctxt "field:lims.interface.column,required:"
+msgid "Required"
+msgstr "Obligatorio"
+
+msgctxt "field:lims.interface.column,required_when_annulled:"
+msgid "Required when annulled"
+msgstr "Obligatorio para anular resultado"
+
+msgctxt "field:lims.interface.column,selection:"
+msgid "Selection"
+msgstr "Selección"
+
+msgctxt "field:lims.interface.column,singleton:"
+msgid "Is a singleton value"
+msgstr "Es un valor único"
+
+msgctxt "field:lims.interface.column,source_column:"
+msgid "Column"
+msgstr "Columna"
+
+msgctxt "field:lims.interface.column,source_end:"
+msgid "Field end"
+msgstr "Campo fin"
+
+msgctxt "field:lims.interface.column,source_row:"
+msgid "Row"
+msgstr "Fila"
+
+msgctxt "field:lims.interface.column,source_start:"
+msgid "Field start"
+msgstr "Campo inicio"
+
+msgctxt "field:lims.interface.column,transfer_field:"
+msgid "Transfer field"
+msgstr "Trasladar dato"
+
+msgctxt "field:lims.interface.column,transfer_to_translation:"
+msgid "Transfer to Translation"
+msgstr "Trasladar a traducción"
+
+msgctxt "field:lims.interface.column,translation_language:"
+msgid "Translation Language"
+msgstr "Idioma traducción"
+
+msgctxt "field:lims.interface.column,type_:"
+msgid "Field Type"
+msgstr "Tipo de campo"
+
+msgctxt "field:lims.interface.compilation,date_time:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:lims.interface.compilation,device:"
+msgid "Device"
+msgstr "Equipo"
+
+msgctxt "field:lims.interface.compilation,interface:"
+msgid "Device Interface"
+msgstr "Interfaz"
+
+msgctxt "field:lims.interface.compilation,origins:"
+msgid "Origins"
+msgstr "Orígenes"
+
+msgctxt "field:lims.interface.compilation,revision:"
+msgid "Revision"
+msgstr "Revisión"
+
+msgctxt "field:lims.interface.compilation,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:lims.interface.compilation,table:"
+msgid "Table"
+msgstr "Tabla"
+
+msgctxt "field:lims.interface.compilation.origin,compilation:"
+msgid "Compilation"
+msgstr "Compilación"
+
+msgctxt "field:lims.interface.compilation.origin,file_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.compilation.origin,imported:"
+msgid "Imported"
+msgstr "Importado"
+
+msgctxt "field:lims.interface.compilation.origin,origin_file:"
+msgid "Origin File"
+msgstr "Archivo origen"
+
+msgctxt "field:lims.interface.compilation.origin,origin_file_id:"
+msgid "Origin File ID"
+msgstr "ID de archivo origen"
+
+msgctxt "field:lims.interface.constant,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.constant,parameter1:"
+msgid "Parameter 1"
+msgstr "Parámetro 1"
+
+msgctxt "field:lims.interface.constant,parameter2:"
+msgid "Parameter 2"
+msgstr "Parámetro 2"
+
+msgctxt "field:lims.interface.constant,parameter3:"
+msgid "Parameter 3"
+msgstr "Parámetro 3"
+
+msgctxt "field:lims.interface.constant,value1:"
+msgid "Value 1"
+msgstr "Valor 1"
+
+msgctxt "field:lims.interface.constant,value2:"
+msgid "Value 2"
+msgstr "Valor 2"
+
+msgctxt "field:lims.interface.constant,value3:"
+msgid "Value 3"
+msgstr "Valor 3"
+
+msgctxt "field:lims.interface.constant,value4:"
+msgid "Value 4"
+msgstr "Valor 4"
+
+msgctxt "field:lims.interface.constant,value5:"
+msgid "Value 5"
+msgstr "Valor 5"
+
+msgctxt "field:lims.interface.constant,value6:"
+msgid "Value 6"
+msgstr "Valor 6"
+
+msgctxt "field:lims.interface.constant,value7:"
+msgid "Value 7"
+msgstr "Valor 7"
+
+msgctxt "field:lims.interface.constant,value8:"
+msgid "Value 8"
+msgstr "Valor 8"
+
+msgctxt "field:lims.interface.constant,value9:"
+msgid "Value 9"
+msgstr "Valor 9"
+
+msgctxt "field:lims.interface.copy_column.start,origin_interface:"
+msgid "Origin Interface"
+msgstr "Interfaz origen"
+
+msgctxt "field:lims.interface.data,annulled:"
+msgid "Annulled"
+msgstr "Anulado"
+
+msgctxt "field:lims.interface.data,compilation:"
+msgid "Compilation"
+msgstr "Compilación"
+
+msgctxt "field:lims.interface.data,notebook_line:"
+msgid "Notebook Line"
+msgstr "Línea de cuaderno"
+
+msgctxt "field:lims.interface.formula.test,expression:"
+msgid "Formula"
+msgstr "Fórmula"
+
+msgctxt "field:lims.interface.formula.test,expression_column:"
+msgid "Formula Column"
+msgstr "Columna de Fórmula"
+
+msgctxt "field:lims.interface.formula.test,expression_column_domain:"
+msgid "Formula column domain"
+msgstr "Dominio para Columna de Fórmula"
+
+msgctxt "field:lims.interface.formula.test,expression_icon:"
+msgid "Expression Icon"
+msgstr "Icono"
+
+msgctxt "field:lims.interface.formula.test,result:"
+msgid "Result"
+msgstr "Resultado"
+
+msgctxt "field:lims.interface.formula.test,variables:"
+msgid "Variables"
+msgstr "Variables"
+
+msgctxt "field:lims.interface.formula.test.variable,value:"
+msgid "Value"
+msgstr "Valor"
+
+msgctxt "field:lims.interface.formula.test.variable,variable:"
+msgid "Variable"
+msgstr "Variable"
+
+msgctxt "field:lims.interface.function,help:"
+msgid "Help"
+msgstr "Ayuda"
+
+msgctxt "field:lims.interface.function,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.function,parameters:"
+msgid "Parameters"
+msgstr "Parámetros"
+
+msgctxt "field:lims.interface.grouped_data,data:"
+msgid "Data"
+msgstr "Datos"
+
+msgctxt "field:lims.interface.grouped_data,iteration:"
+msgid "Iteration"
+msgstr "Iteración"
+
+msgctxt "field:lims.interface.grouped_data,notebook_line:"
+msgid "Notebook Line"
+msgstr "Línea de cuaderno"
+
+msgctxt "field:lims.interface.grouped_repetition,colspan:"
+msgid "Colspan"
+msgstr "Columnas"
+
+msgctxt "field:lims.interface.grouped_repetition,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:lims.interface.grouped_repetition,group:"
+msgid "Group"
+msgstr "Grupo"
+
+msgctxt "field:lims.interface.grouped_repetition,interface:"
+msgid "Interface"
+msgstr "Interfaz"
+
+msgctxt "field:lims.interface.grouped_repetition,repetitions:"
+msgid "Repetitions of grouped columns"
+msgstr "Repeticiones en columnas agrupadas"
+
+msgctxt "field:lims.interface.import_column.map,cells:"
+msgid "Cells"
+msgstr "Celdas"
+
+msgctxt "field:lims.interface.import_column.map.cell,alias:"
+msgid "Alias"
+msgstr "Alias"
+
+msgctxt "field:lims.interface.import_column.map.cell,cell:"
+msgid "Cell"
+msgstr "Celda"
+
+msgctxt "field:lims.interface.import_column.map.cell,expression:"
+msgid "Formula"
+msgstr "Fórmula"
+
+msgctxt "field:lims.interface.import_column.map.cell,group:"
+msgid "Group"
+msgstr "Grupo"
+
+msgctxt "field:lims.interface.import_column.map.cell,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.import_column.start,cells:"
+msgid "Cells"
+msgstr "Celdas"
+
+msgctxt "field:lims.interface.import_column.start,file_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.import_column.start,origin_file:"
+msgid "Origin File"
+msgstr "Archivo origen"
+
+msgctxt "field:lims.interface.show_view.ask,notebook_line:"
+msgid "Notebook line"
+msgstr "Línea de cuaderno"
+
+msgctxt "field:lims.interface.show_view.start,data:"
+msgid "Data"
+msgstr "Datos"
+
+msgctxt "field:lims.interface.table,fields_:"
+msgid "Fields"
+msgstr "Campos"
+
+msgctxt "field:lims.interface.table,grouped_fields_:"
+msgid "Grouped Fields"
+msgstr "Campos agrupados"
+
+msgctxt "field:lims.interface.table,grouped_views:"
+msgid "Grouped Views"
+msgstr "Vistas agrupadas"
+
+msgctxt "field:lims.interface.table,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.table,views:"
+msgid "Views"
+msgstr "Vistas"
+
+msgctxt "field:lims.interface.table.field,colspan:"
+msgid "Colspan"
+msgstr "Columnas"
+
+msgctxt "field:lims.interface.table.field,default_width:"
+msgid "Default Width"
+msgstr "Ancho por defecto"
+
+msgctxt "field:lims.interface.table.field,digits:"
+msgid "Digits"
+msgstr "Dígitos"
+
+msgctxt "field:lims.interface.table.field,domain:"
+msgid "Domain Value"
+msgstr "Dominio"
+
+msgctxt "field:lims.interface.table.field,formula:"
+msgid "On Change With Formula"
+msgstr "Fórmula de cálculo"
+
+msgctxt "field:lims.interface.table.field,group:"
+msgid "Group"
+msgstr "Grupo"
+
+msgctxt "field:lims.interface.table.field,group_col:"
+msgid "Group Col"
+msgstr "Columnas en Grupo"
+
+msgctxt "field:lims.interface.table.field,group_colspan:"
+msgid "Group Colspan"
+msgstr "Columnas de grupo"
+
+msgctxt "field:lims.interface.table.field,group_name:"
+msgid "Group Name"
+msgstr "Nombre del grupo"
+
+msgctxt "field:lims.interface.table.field,help:"
+msgid "Help"
+msgstr "Ayuda"
+
+msgctxt "field:lims.interface.table.field,inputs:"
+msgid "On Change With Inputs"
+msgstr "Valores de entrada"
+
+msgctxt "field:lims.interface.table.field,invisible:"
+msgid "Invisible"
+msgstr "Invisible"
+
+msgctxt "field:lims.interface.table.field,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.table.field,readonly:"
+msgid "Read only"
+msgstr "Sólo lectura"
+
+msgctxt "field:lims.interface.table.field,related_group:"
+msgid "Related Group"
+msgstr "Grupo relacionado"
+
+msgctxt "field:lims.interface.table.field,related_line_field:"
+msgid "Related Field"
+msgstr "Campo relacionado"
+
+msgctxt "field:lims.interface.table.field,related_model:"
+msgid "Related Model"
+msgstr "Modelo relacionado"
+
+msgctxt "field:lims.interface.table.field,required:"
+msgid "Required"
+msgstr "Obligatorio"
+
+msgctxt "field:lims.interface.table.field,required_when_annulled:"
+msgid "Required when annulled"
+msgstr "Obligatorio para anular resultado"
+
+msgctxt "field:lims.interface.table.field,selection:"
+msgid "Selection"
+msgstr "Selección"
+
+msgctxt "field:lims.interface.table.field,string:"
+msgid "String"
+msgstr "Etiqueta"
+
+msgctxt "field:lims.interface.table.field,table:"
+msgid "Table"
+msgstr "Tabla"
+
+msgctxt "field:lims.interface.table.field,transfer_field:"
+msgid "Is a transfer field"
+msgstr "Trasladar dato a registro"
+
+msgctxt "field:lims.interface.table.field,transfer_to_translation:"
+msgid "Transfer to Translation"
+msgstr "Trasladar a traducción"
+
+msgctxt "field:lims.interface.table.field,translation_language:"
+msgid "Translation Language"
+msgstr "Idioma traducción"
+
+msgctxt "field:lims.interface.table.field,type:"
+msgid "Field Type"
+msgstr "Tipo de campo"
+
+msgctxt "field:lims.interface.table.grouped_field,default_width:"
+msgid "Default Width"
+msgstr "Ancho por defecto"
+
+msgctxt "field:lims.interface.table.grouped_field,digits:"
+msgid "Digits"
+msgstr "Dígitos"
+
+msgctxt "field:lims.interface.table.grouped_field,domain:"
+msgid "Domain Value"
+msgstr "Dominio"
+
+msgctxt "field:lims.interface.table.grouped_field,formula:"
+msgid "On Change With Formula"
+msgstr "Fórmula de cálculo"
+
+msgctxt "field:lims.interface.table.grouped_field,group:"
+msgid "Group"
+msgstr "Grupo"
+
+msgctxt "field:lims.interface.table.grouped_field,help:"
+msgid "Help"
+msgstr "Ayuda"
+
+msgctxt "field:lims.interface.table.grouped_field,inputs:"
+msgid "On Change With Inputs"
+msgstr "Valores de entrada"
+
+msgctxt "field:lims.interface.table.grouped_field,invisible:"
+msgid "Invisible"
+msgstr "Invisible"
+
+msgctxt "field:lims.interface.table.grouped_field,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.table.grouped_field,readonly:"
+msgid "Read only"
+msgstr "Sólo lectura"
+
+msgctxt "field:lims.interface.table.grouped_field,related_model:"
+msgid "Related Model"
+msgstr "Modelo relacionado"
+
+msgctxt "field:lims.interface.table.grouped_field,required:"
+msgid "Required"
+msgstr "Obligatorio"
+
+msgctxt "field:lims.interface.table.grouped_field,selection:"
+msgid "Selection"
+msgstr "Selección"
+
+msgctxt "field:lims.interface.table.grouped_field,string:"
+msgid "String"
+msgstr "Etiqueta"
+
+msgctxt "field:lims.interface.table.grouped_field,table:"
+msgid "Table"
+msgstr "Tabla"
+
+msgctxt "field:lims.interface.table.grouped_field,type:"
+msgid "Field Type"
+msgstr "Tipo de campo"
+
+msgctxt "field:lims.interface.table.grouped_view,arch:"
+msgid "Arch"
+msgstr "Arch"
+
+msgctxt "field:lims.interface.table.grouped_view,field_childs:"
+msgid "Field Childs"
+msgstr "Hijos"
+
+msgctxt "field:lims.interface.table.grouped_view,field_names:"
+msgid "Fields"
+msgstr "Campos"
+
+msgctxt "field:lims.interface.table.grouped_view,group:"
+msgid "Group"
+msgstr "Grupo"
+
+msgctxt "field:lims.interface.table.grouped_view,table:"
+msgid "Table"
+msgstr "Tabla"
+
+msgctxt "field:lims.interface.table.grouped_view,type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:lims.interface.table.view,arch:"
+msgid "Arch"
+msgstr "Arch"
+
+msgctxt "field:lims.interface.table.view,field_childs:"
+msgid "Field Childs"
+msgstr "Hijos"
+
+msgctxt "field:lims.interface.table.view,field_names:"
+msgid "Fields"
+msgstr "Campos"
+
+msgctxt "field:lims.interface.table.view,table:"
+msgid "Table"
+msgstr "Tabla"
+
+msgctxt "field:lims.interface.table.view,type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:lims.interface.variable,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.variable,values:"
+msgid "Values"
+msgstr "Valores"
+
+msgctxt "field:lims.interface.variable.value,analysis:"
+msgid "Analysis"
+msgstr "Análisis"
+
+msgctxt "field:lims.interface.variable.value,matrix:"
+msgid "Matrix"
+msgstr "Matriz"
+
+msgctxt "field:lims.interface.variable.value,method:"
+msgid "Method"
+msgstr "Método"
+
+msgctxt "field:lims.interface.variable.value,laboratory:"
+msgid "Laboratory"
+msgstr "Laboratorio"
+
+msgctxt "field:lims.interface.variable.value,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.variable.value,product_type:"
+msgid "Product type"
+msgstr "Tipo de producto"
+
+msgctxt "field:lims.interface.variable.value,value:"
+msgid "Value"
+msgstr "Valor"
+
+msgctxt "field:lims.interface.variable.value,variable:"
+msgid "Variable"
+msgstr "Variable"
+
+msgctxt "field:lims.interface.view,columns:"
+msgid "Columns"
+msgstr "Columnas"
+
+msgctxt "field:lims.interface.view,interface:"
+msgid "Interface"
+msgstr "Interfaz"
+
+msgctxt "field:lims.interface.view,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.interface.view.column,analysis_field:"
+msgid "Analysis field"
+msgstr "Campo Análisis"
+
+msgctxt "field:lims.interface.view.column,analysis_specific:"
+msgid "Analysis specific"
+msgstr "Específica de Análisis"
+
+msgctxt "field:lims.interface.view.column,column:"
+msgid "Column"
+msgstr "Columna"
+
+msgctxt "field:lims.interface.view.column,view:"
+msgid "View"
+msgstr "Vista"
+
+msgctxt "field:lims.laboratory,automatic_accept_result:"
+msgid "Automatic Accept Result"
+msgstr "Aceptación de Resultados Automática"
+
+msgctxt "field:lims.notebook.line,compilation:"
+msgid "Compilation"
+msgstr "Compilación"
+
+msgctxt "help:lims.interface.column,expression:"
+msgid ""
+"In grouped columns the suffix _XX will be replaced by the corresponding "
+"repetition"
+msgstr ""
+"En columnas agrupadas el sufijo _XX será reemplazado por la repetición "
+"correspondiente"
+
+msgctxt "help:lims.interface.column,selection:"
+msgid "A couple of key and label separated by \":\" per line."
+msgstr "Una pareja de claves y valores separados por \":\" en cada línea."
+
+msgctxt "help:lims.interface.column,singleton:"
+msgid "Is a fixed value (column:row) in source file"
+msgstr "Es un campo fijo (columna:fila) en el archivo de origen"
+
+msgctxt "help:lims.interface.column,source_column:"
+msgid "Mapped column in source file"
+msgstr "Columna correspondiente en el archivo de origen"
+
+msgctxt "help:lims.interface.column,transfer_field:"
+msgid "Check if value have to be transferred to notebook line"
+msgstr "Marcar si se debe trasladar el dato a la línea de cuaderno"
+
+msgctxt "model:ir.action,name:act_interface_constant_list"
+msgid "Interface Constants"
+msgstr "Constantes de Interfaz"
+
+msgctxt "model:ir.action,name:act_interface_function_list"
+msgid "Interface Functions"
+msgstr "Funciones de Interfaz"
+
+msgctxt "model:ir.action,name:act_interface_variable_list"
+msgid "Interface Variables"
+msgstr "Variables de Interfaz"
+
+msgctxt "model:ir.action,name:act_interface_variable_value_list"
+msgid "Interface Variable Values"
+msgstr "Valores"
+
+msgctxt "model:ir.action,name:act_lims_interface_compilation_list"
+msgid "Interface Compilations"
+msgstr "Compilaciones"
+
+msgctxt "model:ir.action,name:act_lims_interface_list"
+msgid "Interfaces"
+msgstr "Interfaces"
+
+msgctxt "model:ir.action,name:act_open_compilation_data"
+msgid "Compilation Data"
+msgstr "Datos"
+
+msgctxt "model:ir.action,name:wiz_compilation_open_data"
+msgid "Open Compilation Data"
+msgstr "Abrir datos"
+
+msgctxt "model:ir.action,name:wiz_interface_copy_column"
+msgid "Copy Interface Column"
+msgstr "Copiar columna"
+
+msgctxt "model:ir.action,name:wiz_interface_formula_test"
+msgid "Test Formula"
+msgstr "Probar Fórmula"
+
+msgctxt "model:ir.action,name:wiz_interface_import_column"
+msgid "Import Interface Column"
+msgstr "Importar columnas desde Excel"
+
+msgctxt "model:ir.action,name:wiz_interface_show_view"
+msgid "Show Interface View"
+msgstr "Mostrar vista de interfaz"
+
+msgctxt "model:ir.action,name:wiz_referral_open_compilation"
+msgid "Interface Compilations"
+msgstr "Compilaciones desde interfaz"
+
+msgctxt "model:ir.message,text:delete_done_compilation"
+msgid "You cannot delete a Compilation in \"Done\" state"
+msgstr "No puede eliminar una Compilación en estado \"Realizada\""
+
+msgctxt "model:ir.message,text:duplicated_origin_file"
+msgid "File \"%(file_name)s\" already exists as origin."
+msgstr "El archivo \"%(file_name)s\" ya existe como origen de datos."
+
+msgctxt "model:ir.message,text:invalid_alias"
+msgid "Invalid symbol \"%(symbol)s\" in column \"%(name)s\"."
+msgstr "El símbolo \"%(symbol)s\" en la columna \"%(name)s\" es inválido."
+
+msgctxt "model:ir.message,text:invalid_default_value"
+msgid "Default value \"%(value)s\" in \"%(name)s\" is invalid according to its type."
+msgstr "El valor por defecto \"%(value)s\" en \"%(name)s\" es inválido según su tipo."
+
+msgctxt "model:ir.message,text:invalid_default_value_boolean"
+msgid ""
+"In \"%(name)s\" default value use 0 for False, and any other integer for "
+"True."
+msgstr ""
+"En el valor por defecto de \"%(name)s\" utilice 0 para indicar Falso, y "
+"cualquier otro número entero para Verdadero."
+
+msgctxt "model:ir.message,text:invalid_default_value_date"
+msgid ""
+"Default date value in \"%(name)s\" is not valid. Check locale format and "
+"configure the template language."
+msgstr ""
+"El valor por defecto de la fecha en \"%(name)s\" no es válido. Verifique el "
+"formato que corresponde a la localización de su sistema y configure el "
+"idioma en la plantilla de la interfaz."
+
+msgctxt "model:ir.message,text:invalid_default_value_many2one"
+msgid ""
+"The resource set as default value in \"%(name)s\" is not valid or it does "
+"not exist."
+msgstr ""
+"El recurso definido como valor por defecto en \"%(name)s\" no es válido o no"
+" existe."
+
+msgctxt "model:ir.message,text:invalid_default_value_many2one_id"
+msgid ""
+"Default value in \"%(name)s\" should be the id of a valid resource of the "
+"model picked in 'Related model'."
+msgstr ""
+"El valor por defecto en \"%(name)s\" debería ser el 'id' de un recurso o "
+"registro del modelo seleccionado en 'Modelo relacionado'."
+
+msgctxt "model:ir.message,text:invalid_default_value_type"
+msgid "The field type in \"%(name)s\" is not valid for default values."
+msgstr "El Tipo de campo en \"%(name)s\" no permite valores por defecto."
+
+msgctxt "model:ir.message,text:invalid_domain"
+msgid "Invalid domain in column \"%(name)s\"."
+msgstr "El dominio en la columna \"%(name)s\" es inválido."
+
+msgctxt "model:ir.message,text:invalid_interface_charset"
+msgid ""
+"The charset of the file does not match the one defined in the interface."
+msgstr ""
+"El conjunto de caracteres del archivo no coincide con el definido en la "
+"interfaz."
+
+msgctxt "model:ir.message,text:invalid_selection"
+msgid "Invalid selection in column \"%(name)s\"."
+msgstr "Las opciones de selección en la columna \"%(name)s\" son inválidas."
+
+msgctxt "model:ir.message,text:missing_required_field"
+msgid "The \"%(field)s\" field is required."
+msgstr "El campo \"%(field)s\" es obligatorio."
+
+msgctxt "model:ir.message,text:msg_analysis_specific"
+msgid "There cannot be more than one column per analysis in view \"%(view)s\""
+msgstr "No puede haber más de una columna por análisis en la vista \"%(view)s\""
+
+msgctxt "model:ir.message,text:msg_interface_column_alias_unique"
+msgid "There cannot be two columns with the same alias in an interface."
+msgstr "No puede haber dos columnas con el mismo alias en una interfaz."
+
+msgctxt "model:ir.message,text:msg_line_not_annulled"
+msgid "Notebook line \"%(notebook_line)s\" is not annulled."
+msgstr "La línea de cuaderno \"%(notebook_line)s\" no está anulada."
+
+msgctxt "model:ir.model.button,string:lims_interface_activate_button"
+msgid "Activate"
+msgstr "Activar"
+
+msgctxt ""
+"model:ir.model.button,string:lims_interface_compilation_activate_button"
+msgid "Activate"
+msgstr "Activar"
+
+msgctxt ""
+"model:ir.model.button,string:lims_interface_compilation_collect_button"
+msgid "Collect"
+msgstr "Importar datos"
+
+msgctxt ""
+"model:ir.model.button,string:lims_interface_compilation_confirm_button"
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgctxt "model:ir.model.button,string:lims_interface_compilation_draft_button"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt ""
+"model:ir.model.button,string:lims_interface_compilation_validate_button"
+msgid "Validate"
+msgstr "Validar"
+
+msgctxt ""
+"model:ir.model.button,string:lims_interface_compilation_view_data_button"
+msgid "View data"
+msgstr "Ver datos"
+
+msgctxt "model:ir.model.button,string:lims_interface_draft_button"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "model:ir.ui.menu,name:lims_interface_compilation_menu"
+msgid "Interface Compilations"
+msgstr "Compilaciones desde interfaz"
+
+msgctxt "model:ir.ui.menu,name:lims_interface_constant_menu"
+msgid "Interface Constants"
+msgstr "Constantes"
+
+msgctxt "model:ir.ui.menu,name:lims_interface_function_menu"
+msgid "Interface Functions"
+msgstr "Funciones"
+
+msgctxt "model:ir.ui.menu,name:lims_interface_menu"
+msgid "Interfaces"
+msgstr "Interfaces"
+
+msgctxt "model:ir.ui.menu,name:lims_interface_variable_menu"
+msgid "Interface Variables"
+msgstr "Variables"
+
+msgctxt "model:ir.ui.menu,name:lims_interface_variable_value_menu"
+msgid "Interface Variable Values"
+msgstr "Valores"
+
+msgctxt "model:lims.interface,name:"
+msgid "Interface"
+msgstr "Interfaz"
+
+msgctxt "model:lims.interface.column,name:"
+msgid "Column"
+msgstr "Columna"
+
+msgctxt "model:lims.interface.compilation,name:"
+msgid "Interface Compilation"
+msgstr "Compilación desde interfaz"
+
+msgctxt "model:lims.interface.compilation.origin,name:"
+msgid "Compilation Origin"
+msgstr "Origen de datos"
+
+msgctxt "model:lims.interface.constant,name:"
+msgid "Interface Constant"
+msgstr "Constante de interfaz"
+
+msgctxt "model:lims.interface.copy_column.start,name:"
+msgid "Copy Interface Column"
+msgstr "Copiar columna"
+
+msgctxt "model:lims.interface.data,name:"
+msgid "Lims Interface Data"
+msgstr "Datos"
+
+msgctxt "model:lims.interface.formula.test,name:"
+msgid "Test Formula"
+msgstr "Probar Fórmula"
+
+msgctxt "model:lims.interface.formula.test.variable,name:"
+msgid "Test Formula"
+msgstr "Probar Fórmula"
+
+msgctxt "model:lims.interface.function,name:"
+msgid "Interface Function"
+msgstr "Función de interfaz"
+
+msgctxt "model:lims.interface.grouped_data,name:"
+msgid "Grouped Data"
+msgstr "Datos agrupados"
+
+msgctxt "model:lims.interface.grouped_repetition,name:"
+msgid "Grouped Repetition"
+msgstr "Repeticiones Agrupadas"
+
+msgctxt "model:lims.interface.import_column.map,name:"
+msgid "Import Interface Column Map"
+msgstr "Importar columnas desde Excel"
+
+msgctxt "model:lims.interface.import_column.map.cell,name:"
+msgid "Import Interface Column Map Cell"
+msgstr ""
+
+msgctxt "model:lims.interface.import_column.start,name:"
+msgid "Import Interface Column Start"
+msgstr "Importar columnas desde Excel"
+
+msgctxt "model:lims.interface.show_view.ask,name:"
+msgid "Show Interface View"
+msgstr "Mostrar vista de interfaz"
+
+msgctxt "model:lims.interface.show_view.start,name:"
+msgid "Show Interface View"
+msgstr "Mostrar vista de interfaz"
+
+msgctxt "model:lims.interface.table,name:"
+msgid "Interface Table"
+msgstr "Tabla de interfaz"
+
+msgctxt "model:lims.interface.table.field,name:"
+msgid "Interface Table Field"
+msgstr "Campo de Tabla de interfaz"
+
+msgctxt "model:lims.interface.table.grouped_field,name:"
+msgid "Interface Table Grouped Field"
+msgstr "Campo agrupado de Tabla de interfaz"
+
+msgctxt "model:lims.interface.table.grouped_view,name:"
+msgid "Interface Table Grouped View"
+msgstr "Vista agrupada de Tabla de interfaz"
+
+msgctxt "model:lims.interface.table.view,name:"
+msgid "Interface Table View"
+msgstr "Vista de Tabla de interfaz"
+
+msgctxt "model:lims.interface.variable,name:"
+msgid "Interface Variable"
+msgstr "Variable de Interfaz"
+
+msgctxt "model:lims.interface.variable.value,name:"
+msgid "Interface Variable Value"
+msgstr "Valor de Variable de Interfaz"
+
+msgctxt "model:lims.interface.view,name:"
+msgid "View"
+msgstr "Vista"
+
+msgctxt "model:lims.interface.view.column,name:"
+msgid "View Column"
+msgstr "Columna de Vista"
+
+msgctxt "selection:lims.interface,charset:"
+msgid "ISO-8859-1"
+msgstr "ISO-8859-1"
+
+msgctxt "selection:lims.interface,charset:"
+msgid "UTF-8"
+msgstr "UTF-8"
+
+msgctxt "selection:lims.interface,field_separator:"
+msgid "Colon (:)"
+msgstr "Dos puntos (:)"
+
+msgctxt "selection:lims.interface,field_separator:"
+msgid "Comma (,)"
+msgstr "Coma (,)"
+
+msgctxt "selection:lims.interface,field_separator:"
+msgid "Other"
+msgstr "Otro"
+
+msgctxt "selection:lims.interface,field_separator:"
+msgid "Semicolon (;)"
+msgstr "Punto y coma (;)"
+
+msgctxt "selection:lims.interface,field_separator:"
+msgid "Space"
+msgstr "Espacio"
+
+msgctxt "selection:lims.interface,field_separator:"
+msgid "Tab"
+msgstr "Tabulador"
+
+msgctxt "selection:lims.interface,kind:"
+msgid "Controller"
+msgstr "Controlador"
+
+msgctxt "selection:lims.interface,kind:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "selection:lims.interface,state:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "selection:lims.interface,state:"
+msgid "Cancelled"
+msgstr "Cancelado"
+
+msgctxt "selection:lims.interface,state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:lims.interface,template_type:"
+msgid "Comma Separated Values"
+msgstr "Valores separados por coma (.csv)"
+
+msgctxt "selection:lims.interface,template_type:"
+msgid "Excel"
+msgstr "Excel"
+
+msgctxt "selection:lims.interface,template_type:"
+msgid "Text File"
+msgstr "Archivo de texto"
+
+msgctxt "selection:lims.interface.column,interface_state:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "selection:lims.interface.column,interface_state:"
+msgid "Cancelled"
+msgstr "Cancelado"
+
+msgctxt "selection:lims.interface.column,interface_state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Boolean"
+msgstr "Booleano"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Date Time"
+msgstr "Fecha y hora"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "File"
+msgstr "Archivo"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Float"
+msgstr "Float"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Icon"
+msgstr "Icono"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Image"
+msgstr "Imagen"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Integer"
+msgstr "Entero"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Link To Kalenis"
+msgstr "Enlace a Kalenis"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Numeric"
+msgstr "Numérico"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Reference"
+msgstr "Referencia"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Selection"
+msgstr "Selección"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Text (multi-line)"
+msgstr "Texto (multi-línea)"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Text (single-line)"
+msgstr "Texto (línea simple)"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Time"
+msgstr "Tiempo"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Time Interval"
+msgstr "Intervalo de tiempo"
+
+msgctxt "selection:lims.interface.column,type_:"
+msgid "Timestamp"
+msgstr "Timestamp"
+
+msgctxt "selection:lims.interface.compilation,state:"
+msgid "Active"
+msgstr "Activa"
+
+msgctxt "selection:lims.interface.compilation,state:"
+msgid "Annulled"
+msgstr "Anulada"
+
+msgctxt "selection:lims.interface.compilation,state:"
+msgid "Done"
+msgstr "Realizada"
+
+msgctxt "selection:lims.interface.compilation,state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:lims.interface.compilation,state:"
+msgid "Validated"
+msgstr "Validada"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Boolean"
+msgstr "Booleano"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Date Time"
+msgstr "Fecha y hora"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "File"
+msgstr "Archivo"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Float"
+msgstr "Float"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Icon"
+msgstr "Icono"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Image"
+msgstr "Imagen"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Integer"
+msgstr "Entero"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Link To Kalenis"
+msgstr "Enlace a Kalenis"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Numeric"
+msgstr "Numérico"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "One2Many"
+msgstr "One2Many"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Reference"
+msgstr "Referencia"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Selection"
+msgstr "Selección"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Text (multi-line)"
+msgstr "Texto (multi-línea)"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Text (single-line)"
+msgstr "Texto (línea simple)"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Time"
+msgstr "Tiempo"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Time Interval"
+msgstr "Intervalo de tiempo"
+
+msgctxt "selection:lims.interface.table.field,type:"
+msgid "Timestamp"
+msgstr "Timestamp"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Boolean"
+msgstr "Booleano"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Date Time"
+msgstr "Fecha y hora"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "File"
+msgstr "Archivo"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Float"
+msgstr "Float"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Icon"
+msgstr "Icono"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Image"
+msgstr "Imagen"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Integer"
+msgstr "Entero"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Link To Kalenis"
+msgstr "Enlace a Kalenis"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Numeric"
+msgstr "Numérico"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Reference"
+msgstr "Referencia"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Selection"
+msgstr "Selección"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Text (multi-line)"
+msgstr "Texto (multi-línea)"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Text (single-line)"
+msgstr "Texto (línea simple)"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Time"
+msgstr "Tiempo"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Time Interval"
+msgstr "Intervalo de tiempo"
+
+msgctxt "selection:lims.interface.table.grouped_field,type:"
+msgid "Timestamp"
+msgstr "Timestamp"
+
+msgctxt "selection:lims.interface.view.column,analysis_field:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "selection:lims.interface.view.column,analysis_field:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "view:lims.interface.column:"
+msgid "Import:"
+msgstr "Importación:"
+
+msgctxt "view:lims.interface.column:"
+msgid "Storage:"
+msgstr "Almacenamiento:"
+
+msgctxt "view:lims.interface.compilation:"
+msgid "Activate"
+msgstr "Activar"
+
+msgctxt "view:lims.interface.compilation:"
+msgid "Collect"
+msgstr "Importar datos"
+
+msgctxt "view:lims.interface.compilation:"
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgctxt "view:lims.interface.compilation:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "view:lims.interface.compilation:"
+msgid "Origins"
+msgstr "Orígenes"
+
+msgctxt "view:lims.interface.compilation:"
+msgid "Time"
+msgstr "Hora"
+
+msgctxt "view:lims.interface.compilation:"
+msgid "Validate"
+msgstr "Validar"
+
+msgctxt "view:lims.interface.compilation:"
+msgid "View data"
+msgstr "Ver datos"
+
+msgctxt "view:lims.interface:"
+msgid "Activate"
+msgstr "Activar"
+
+msgctxt "view:lims.interface:"
+msgid "Columns"
+msgstr "Columnas"
+
+msgctxt "view:lims.interface:"
+msgid "Controller"
+msgstr "Controlador"
+
+msgctxt "view:lims.interface:"
+msgid "Copy Columns"
+msgstr "Copiar columnas"
+
+msgctxt "view:lims.interface:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "view:lims.interface:"
+msgid "Fields"
+msgstr "Campos"
+
+msgctxt "view:lims.interface:"
+msgid "Show View"
+msgstr "Mostrar vista"
+
+msgctxt "view:lims.interface:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "view:lims.interface:"
+msgid "Views"
+msgstr "Vistas"
+
+msgctxt "wizard_button:lims.interface.copy_column,ask,copy:"
+msgid "Copy"
+msgstr "Copiar"
+
+msgctxt "wizard_button:lims.interface.copy_column,ask,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.interface.formula.test,test,end:"
+msgid "Close"
+msgstr "Cerrar"
+
+msgctxt "wizard_button:lims.interface.import_column,ask,collect:"
+msgid "Collect"
+msgstr "Obtener datos"
+
+msgctxt "wizard_button:lims.interface.import_column,ask,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.interface.import_column,map_,create_:"
+msgid "Create"
+msgstr "Crear"
+
+msgctxt "wizard_button:lims.interface.import_column,map_,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.interface.show_view,ask,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.interface.show_view,ask,start:"
+msgid "Show"
+msgstr "Mostrar"
+
+msgctxt "wizard_button:lims.interface.show_view,start,end:"
+msgid "Close"
+msgstr "Cerrar"

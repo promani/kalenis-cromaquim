@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<form>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="name"/>
+    <field name="name" xexpand="1"/>
+    <label name="version"/>
+    <field name="version"/>
+    <label name="reference"/>
+    <field name="reference"/>
+    <label name="determination"/>
+    <field name="determination"/>
+    <label name="requalification_months"/>
+    <field name="requalification_months"/>
+    <label name="supervised_requalification"/>
+    <field name="supervised_requalification"/>
+    <label name="deprecated_since"/>
+    <field name="deprecated_since"/>
+    <label name="pnt"/>
+    <field name="pnt"/>
+    <label name="equivalence_code"/>
+    <field name="equivalence_code"/>
+    <label name="non_standardized_method"/>
+    <field name="non_standardized_method"/>
+    <newline/>
+    <label name="report_legend"/>
+    <field name="report_legend" colspan="3"/>
+    <label name="results_estimated_waiting"/>
+    <field name="results_estimated_waiting"/>
+</form>

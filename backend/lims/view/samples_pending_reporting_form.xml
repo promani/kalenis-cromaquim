@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<form>
+    <label name="fraction"/>
+    <field name="fraction"/>
+    <label name="party"/>
+    <field name="party"/>
+    <label name="product_type"/>
+    <field name="product_type"/>
+    <label name="matrix"/>
+    <field name="matrix"/>
+    <label name="label"/>
+    <field name="label"/>
+    <label name="fraction_type"/>
+    <field name="fraction_type"/>
+    <label name="department"/>
+    <field name="department"/>
+    <label name="date2"/>
+    <field name="date2" widget="date"/>
+    <notebook>
+        <page id="lines_pending_reporting" string="Lines Pending Reporting">
+            <field name="lines_pending_reporting" colspan="4" mode="tree,form"
+                view_ids="lims.lims_notebook_line_generate_results_view_list,lims.lims_notebook_line_view_form"/>
+        </page>
+        <page id="lines" string="All Lines">
+            <field name="lines" colspan="4" mode="tree,form"
+                view_ids="lims.lims_notebook_line_generate_results_view_list,lims.lims_notebook_line_view_form"/>
+        </page>
+    </notebook>
+</form>

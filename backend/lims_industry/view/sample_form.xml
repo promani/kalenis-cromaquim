@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/notebook/page[@id='general']/field[@name='variety']"
+        position="after">
+        <newline/>
+        <group id="oil_fields" colspan="4" col="8">
+            <group id="ind_equipment" colspan="2" col="3">
+                <label name="ind_equipment"/>
+                <field name="ind_equipment_uom" xexpand="0" width="60"/>
+                <field name="ind_equipment" width="80"/>
+            </group>
+            <group id="ind_component" colspan="2" col="3">
+                <label name="ind_component"/>
+                <field name="ind_component_uom" xexpand="0" width="60"/>
+                <field name="ind_component" width="80"/>
+            </group>
+            <group id="ind_oil" colspan="2" col="3">
+                <label name="ind_oil"/>
+                <field name="ind_oil_uom" xexpand="0" width="60"/>
+                <field name="ind_oil" width="80"/>
+            </group>
+            <label name="oil_added"/>
+            <field name="oil_added" width="80"/>
+            <label name="oil_changed"/>
+            <field name="oil_changed" xexpand="0" width="80"/>
+            <label name="oil_filter_changed"/>
+            <field name="oil_filter_changed" xexpand="0" width="80"/>
+            <label name="air_filter_changed"/>
+            <field name="air_filter_changed" xexpand="0" width="80"/>
+        </group>
+    </xpath>
+    <xpath expr="/form/notebook/page[@id='general']" position="after">
+        <page id="industry" string="Industry">
+            <label name="equipment"/>
+            <field name="equipment"/>
+            <label name="component"/>
+            <field name="component"/>
+            <label name="comercial_product"/>
+            <field name="comercial_product"/>
+            <label name="ind_sampling_date"/>
+            <field name="ind_sampling_date"/>
+            <label name="ind_volume"/>
+            <field name="ind_volume"/>
+            <label name="sampling_type"/>
+            <field name="sampling_type"/>
+            <label name="missing_data"/>
+            <field name="missing_data"/>
+            <label name="dangerous"/>
+            <field name="dangerous"/>
+            <newline/>
+            <group id="ind_operational_detail" colspan="2" col="1">
+                <separator id="ind_operational_detail"
+                    string="Operational detail"/>
+                <field name="ind_operational_detail"/>
+            </group>
+            <group id="ind_work_environment" colspan="2" col="1">
+                <separator id="ind_work_environment"
+                    string="Work environment"/>
+                <field name="ind_work_environment"/>
+            </group>
+            <group id="ind_analysis_reason" colspan="2" col="1">
+                <separator id="ind_analysis_reason"
+                    string="Reason for analysis"/>
+                <field name="ind_analysis_reason"/>
+            </group>
+            <group id="sample_photo" string="Sample Photo" colspan="2" col="1">
+                <field name="sample_photo" widget="image"/>
+            </group>
+            <group id="label_photo" string="Label Photo" colspan="2" col="1">
+                <field name="label_photo" widget="image"/>
+            </group>
+            <newline/>
+            <field name="attributes_domain" colspan="4" invisible="1"/>
+        </page>
+    </xpath>
+    <xpath expr="/form/notebook/page[@id='comments']" position="after">
+        <page id="edition_log" string="Edition log">
+            <field name="edition_log" colspan="4"/>
+        </page>
+    </xpath>
+</data>

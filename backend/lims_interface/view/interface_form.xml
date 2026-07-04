@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<form>
+    <group id="name" colspan="2" col="4">
+        <label name="name"/>
+        <field name="name"/>
+        <label name="revision"/>
+        <field name="revision"/>
+    </group>
+    <label name="kind"/>
+    <field name="kind"/>
+    <notebook>
+        <page id="columns" string="Columns">
+            <button name="copy_columns" string="Copy Columns" colspan="4"/>
+            <button name="show_view" string="Show View" colspan="4"/>
+            <field name="columns" colspan="4"/>
+        </page>
+        <page id="fields" string="Fields">
+            <label name="fraction_field"/>
+            <field name="fraction_field"/>
+            <label name="analysis_field"/>
+            <field name="analysis_field"/>
+            <label name="method_field"/>
+            <field name="method_field"/>
+            <label name="repetition_field"/>
+            <field name="repetition_field"/>
+            <label name="form_col"/>
+            <field name="form_col"/>
+            <field name="grouped_repetitions" colspan="4"/>
+        </page>
+        <page id="template" string="Template">
+            <label name="template_type"/>
+            <field name="template_type"/>
+            <label name="first_row"/>
+            <field name="first_row"/>
+            <label name="charset"/>
+            <field name="charset"/>
+            <label name="language"/>
+            <field name="language" widget="selection"/>
+            <group id="separators" colspan="4" col="4">
+                <label name="field_separator"/>
+                <field name="field_separator"/>
+                <label name="field_separator_other"/>
+                <field name="field_separator_other"/>
+            </group>
+        </page>
+        <page id="controller" string="Controller">
+            <label name="controller_name"/>
+            <field name="controller_name"/>
+            <label name="language"/>
+            <field name="language" widget="selection"/>
+        </page>
+        <page id="views" string="Views">
+            <field name="views" colspan="4"/>
+        </page>
+    </notebook>
+    <label name="state"/>
+    <field name="state"/>
+    <group id="buttons" colspan="2" col="4">
+        <button name="draft" string="Draft"/>
+        <button name="activate" string="Activate"/>
+    </group>
+</form>

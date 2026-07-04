@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<form>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="description"/>
+    <field name="description"/>
+    <group col="2" colspan="2" id="max_storage_time">
+        <label name="max_storage_time"/>
+        <field name="max_storage_time"/>
+    </group>
+    <label name="requalify"/>
+    <field name="requalify"/>
+    <label name="default_storage_location"/>
+    <field name="default_storage_location"/>
+    <label name="default_package_type"/>
+    <field name="default_package_type"/>
+    <label name="default_fraction_state"/>
+    <field name="default_fraction_state"/>
+    <label name="plannable"/>
+    <field name="plannable"/>
+    <label name="cie_fraction_type"/>
+    <field name="cie_fraction_type"/>
+    <label name="control_charts"/>
+    <field name="control_charts"/>
+    <label name="report"/>
+    <field name="report"/>
+    <label name="without_services"/>
+    <field name="without_services"/>
+    <label name="active"/>
+    <field name="active"/>
+</form>

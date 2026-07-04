@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="type"/>
+    <field name="description"/>
+    <field name="responsible"/>
+    <field name="latest_date"/>
+</tree>

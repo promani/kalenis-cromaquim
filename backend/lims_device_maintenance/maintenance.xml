@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Menu -->
+
+        <!-- Devices Maintenance -->
+        <menuitem name="Devices Maintenance" id="menu_device_maintenance"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_device_maintenance_group_device_maintenance">
+            <field name="menu" ref="menu_device_maintenance"/>
+            <field name="group" ref="group_device_maintenance"/>
+        </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_device_maintenance_group_device_maintenance_admin">
+            <field name="menu" ref="menu_device_maintenance"/>
+            <field name="group" ref="group_device_maintenance_admin"/>
+        </record>
+
+        <!-- Devices Maintenance / Configuration -->
+        <menuitem name="Configuration" id="menu_device_maintenance_config"
+            parent="menu_device_maintenance" sequence="10"
+            icon="lims-configuration"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_device_maintenance_config_group_device_maintenance_admin">
+            <field name="menu" ref="menu_device_maintenance_config"/>
+            <field name="group" ref="group_device_maintenance_admin"/>
+        </record>
+
+        <menuitem action="lims.act_lims_lab_device_list"
+            id="menu_device_maintenance_device"
+            parent="menu_device_maintenance" sequence="20"/>
+
+<!-- Laboratory Device -->
+
+        <record model="ir.ui.view" id="lab_device_view_form">
+            <field name="model">lims.lab.device</field>
+            <field name="inherit" ref="lims.lims_lab_device_view_form"/>
+            <field name="name">lab_device_form</field>
+        </record>
+
+<!-- Laboratory Device - Related -->
+
+        <record model="ir.action.act_window"
+            id="act_lab_device_maintenance_calendar_related">
+            <field name="name">Maintenance Calendar</field>
+            <field name="res_model">lims.lab.device.maintenance</field>
+            <field name="domain" eval="[('device', 'in', Eval('active_ids'))]"
+                pyson="1"/>
+        </record>
+
+        <record model="ir.action.keyword"
+            id="act_lab_device_maintenance_calendar_related_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.lab.device,-1</field>
+            <field name="action" ref="act_lab_device_maintenance_calendar_related"/>
+        </record>
+
+<!-- Device Maintenance Type -->
+
+        <record model="ir.ui.view" id="lab_device_maintenance_type_view_form">
+            <field name="model">lims.lab.device.maintenance.type</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_maintenance_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="lab_device_maintenance_type_view_list">
+            <field name="model">lims.lab.device.maintenance.type</field>
+            <field name="type">tree</field>
+            <field name="name">lab_device_maintenance_type_list</field>
+        </record>
+
+        <record model="ir.action.act_window"
+            id="act_lab_device_maintenance_type_list">
+            <field name="name">Device Maintenance Types</field>
+            <field name="res_model">lims.lab.device.maintenance.type</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_type_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lab_device_maintenance_type_view_list"/>
+            <field name="act_window" ref="act_lab_device_maintenance_type_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_type_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lab_device_maintenance_type_view_form"/>
+            <field name="act_window" ref="act_lab_device_maintenance_type_list"/>
+        </record>
+
+        <menuitem name="Maintenance Types"
+            action="act_lab_device_maintenance_type_list"
+            id="menu_device_maintenance_type"
+            parent="menu_device_maintenance_config" sequence="10"/>
+
+<!-- Device Maintenance Activity -->
+
+        <record model="ir.ui.view" id="lab_device_maintenance_activity_view_form">
+            <field name="model">lims.lab.device.maintenance.activity</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_maintenance_activity_form</field>
+        </record>
+        <record model="ir.ui.view" id="lab_device_maintenance_activity_view_list">
+            <field name="model">lims.lab.device.maintenance.activity</field>
+            <field name="type">tree</field>
+            <field name="name">lab_device_maintenance_activity_list</field>
+        </record>
+
+        <record model="ir.action.act_window"
+            id="act_lab_device_maintenance_activity_list">
+            <field name="name">Device Maintenance Activities</field>
+            <field name="res_model">lims.lab.device.maintenance.activity</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_activity_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lab_device_maintenance_activity_view_list"/>
+            <field name="act_window" ref="act_lab_device_maintenance_activity_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_activity_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lab_device_maintenance_activity_view_form"/>
+            <field name="act_window" ref="act_lab_device_maintenance_activity_list"/>
+        </record>
+
+        <menuitem name="Activities"
+            action="act_lab_device_maintenance_activity_list"
+            id="menu_device_maintenance_activity"
+            parent="menu_device_maintenance_config" sequence="20"/>
+
+<!-- Device Maintenance Program -->
+
+        <record model="ir.ui.view" id="lab_device_maintenance_program_view_form">
+            <field name="model">lims.lab.device.maintenance.program</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_maintenance_program_form</field>
+        </record>
+        <record model="ir.ui.view" id="lab_device_maintenance_program_view_list">
+            <field name="model">lims.lab.device.maintenance.program</field>
+            <field name="type">tree</field>
+            <field name="name">lab_device_maintenance_program_list</field>
+        </record>
+
+        <record model="ir.action.act_window"
+            id="act_lab_device_maintenance_program_list">
+            <field name="name">Device Maintenance Programs</field>
+            <field name="res_model">lims.lab.device.maintenance.program</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_program_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lab_device_maintenance_program_view_list"/>
+            <field name="act_window" ref="act_lab_device_maintenance_program_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_program_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lab_device_maintenance_program_view_form"/>
+            <field name="act_window" ref="act_lab_device_maintenance_program_list"/>
+        </record>
+
+        <menuitem name="Maintenance Programs"
+            action="act_lab_device_maintenance_program_list"
+            id="menu_device_maintenance_program"
+            parent="menu_device_maintenance" sequence="30"/>
+
+        <record model="ir.model.button"
+            id="maintenance_program_create_maintenances_button">
+            <field name="name">create_maintenances</field>
+            <field name="string">Generate</field>
+            <field name="confirm">Are you sure you want to generate new maintenance programs?</field>
+            <field name="help">Generate maintenance programs</field>
+            <field name="model"
+                search="[('model', '=', 'lims.lab.device.maintenance.program')]"/>
+        </record>
+
+<!-- Wizard Generate Device Maintenance Calendar -->
+
+        <record model="ir.action.wizard" id="wizard_device_generate_maintenance_calendar">
+            <field name="name">Generate Maintenance Calendar</field>
+            <field name="wiz_name">lims.lab.device.maintenance.generate</field>
+        </record>
+
+<!-- Wizard Edit Pending Device Maintenance -->
+
+        <record model="ir.ui.view" id="device_edit_maintenance_start_view_form">
+            <field name="model">lims.lab.device.maintenance</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_edit_maintenance_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_device_edit_maintenance">
+            <field name="name">Edit Pending Maintenance</field>
+            <field name="wiz_name">lims.lab.device.maintenance.edit</field>
+        </record>
+        <record model="ir.action.keyword" id="wizard_device_edit_maintenance_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.lab.device.maintenance,-1</field>
+            <field name="action" ref="wizard_device_edit_maintenance"/>
+        </record>
+
+<!-- Device Maintenance Calendar -->
+
+        <record model="ir.ui.view" id="lab_device_maintenance_calendar_view_form">
+            <field name="model">lims.lab.device.maintenance</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_maintenance_calendar_form</field>
+        </record>
+        <record model="ir.ui.view" id="lab_device_maintenance_calendar_view_list">
+            <field name="model">lims.lab.device.maintenance</field>
+            <field name="type">tree</field>
+            <field name="name">lab_device_maintenance_calendar_list</field>
+        </record>
+        <record model="ir.ui.view" id="lab_device_maintenance_calendar_view_calendar">
+            <field name="model">lims.lab.device.maintenance</field>
+            <field name="type">calendar</field>
+            <field name="name">lab_device_maintenance_calendar_calendar</field>
+        </record>
+
+        <record model="ir.action.act_window"
+            id="act_lab_device_maintenance_calendar_list">
+            <field name="name">Device Maintenance Calendar</field>
+            <field name="res_model">lims.lab.device.maintenance</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_calendar_view_calendar">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lab_device_maintenance_calendar_view_calendar"/>
+            <field name="act_window" ref="act_lab_device_maintenance_calendar_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_calendar_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lab_device_maintenance_calendar_view_form"/>
+            <field name="act_window" ref="act_lab_device_maintenance_calendar_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_calendar_view_list">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="lab_device_maintenance_calendar_view_list"/>
+            <field name="act_window" ref="act_lab_device_maintenance_calendar_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lab_device_maintenance_calendar_view_form2">
+            <field name="sequence" eval="40"/>
+            <field name="view" ref="lab_device_maintenance_calendar_view_form"/>
+            <field name="act_window" ref="act_lab_device_maintenance_calendar_list"/>
+        </record>
+
+        <menuitem name="Calendar"
+            action="act_lab_device_maintenance_calendar_list"
+            id="menu_device_maintenance_calendar"
+            parent="menu_device_maintenance" sequence="50"/>
+
+        <record model="ir.model.button" id="device_maintenance_pending_button">
+            <field name="name">pending</field>
+            <field name="model" search="[('model', '=', 'lims.lab.device.maintenance')]"/>
+        </record>
+        <record model="ir.model.button" id="device_maintenance_do_button">
+            <field name="name">do</field>
+            <field name="model" search="[('model', '=', 'lims.lab.device.maintenance')]"/>
+        </record>
+        <record model="ir.model.button" id="device_maintenance_discard_button">
+            <field name="name">discard</field>
+            <field name="model" search="[('model', '=', 'lims.lab.device.maintenance')]"/>
+        </record>
+
+<!-- My Device Maintenances -->
+
+        <record model="ir.action.act_window" id="act_device_maintenance_calendar_mine">
+            <field name="name">My Device Maintenances</field>
+            <field name="res_model">lims.lab.device.maintenance</field>
+            <field name="domain" pyson="1"
+                eval="[('responsible.employee.id', '=', Eval('context', {}).get('employee', -1))]"/>
+        </record>
+        <record model="ir.action.act_window.view"
+                id="act_device_maintenance_calendar_mine_view_calendar">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lab_device_maintenance_calendar_view_calendar"/>
+            <field name="act_window" ref="act_device_maintenance_calendar_mine"/>
+        </record>
+        <record model="ir.action.act_window.view"
+                id="act_device_maintenance_calendar_mine_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lab_device_maintenance_calendar_view_form"/>
+            <field name="act_window" ref="act_device_maintenance_calendar_mine"/>
+        </record>
+        <record model="ir.action.act_window.view"
+                id="act_device_maintenance_calendar_mine_view_list">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="lab_device_maintenance_calendar_view_list"/>
+            <field name="act_window" ref="act_device_maintenance_calendar_mine"/>
+        </record>
+        <record model="ir.action.act_window.view"
+                id="act_device_maintenance_calendar_mine_view_form2">
+            <field name="sequence" eval="40"/>
+            <field name="view" ref="lab_device_maintenance_calendar_view_form"/>
+            <field name="act_window" ref="act_device_maintenance_calendar_mine"/>
+        </record>
+
+        <menuitem action="act_device_maintenance_calendar_mine"
+            id="menu_device_maintenance_calendar_mine"
+            parent="menu_device_maintenance" sequence="40"/>
+
+<!-- Cron -->
+
+        <record model="ir.cron" id="cron_device_maintenance_send_notice">
+            <field name="interval_number" eval="1"/>
+            <field name="interval_type">days</field>
+            <field name="method">lims.lab.device.maintenance|send_notice</field>
+        </record>
+
+    </data>
+</tryton>

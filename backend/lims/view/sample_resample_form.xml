@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<form col="6">
+    <label name="date"/>
+    <field name="date"/>
+    <label name="label"/>
+    <field name="label"/>
+    <label name="new_entry"/>
+    <field name="new_entry" xexpand="0" width="25"/>
+    <field name="analysis" colspan="6"/>
+</form>

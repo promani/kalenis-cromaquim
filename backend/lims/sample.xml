@@ -1,0 +1,1463 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Sequences for Sample -->
+
+        <record model="ir.sequence.type" id="seq_type_sample">
+            <field name="name">Sample</field>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="seq_type_sample_group_admin">
+            <field name="sequence_type" ref="seq_type_sample"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+        <record model="ir.sequence" id="seq_sample">
+            <field name="name">Sample</field>
+            <field name="sequence_type" ref="seq_type_sample"/>
+            <field eval="7" name="padding"/>
+        </record>
+
+<!-- Sequences for Service -->
+
+        <record model="ir.sequence.type" id="seq_type_service">
+            <field name="name">Service</field>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="seq_type_service_group_admin">
+            <field name="sequence_type" ref="seq_type_service"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+        <record model="ir.sequence" id="seq_service">
+            <field name="name">Service</field>
+            <field name="sequence_type" ref="seq_type_service"/>
+            <field eval="8" name="padding"/>
+        </record>
+
+<!-- Sequences for Referral -->
+
+        <record model="ir.sequence.type" id="seq_type_referral">
+            <field name="name">Referral</field>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="seq_type_referral_group_admin">
+            <field name="sequence_type" ref="seq_type_referral"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+        <record model="ir.sequence" id="seq_referral">
+            <field name="name">Referral</field>
+            <field name="sequence_type" ref="seq_type_referral"/>
+        </record>
+
+<!-- Packaging Type -->
+
+        <record model="ir.ui.view" id="lims_packaging_type_view_form">
+            <field name="model">lims.packaging.type</field>
+            <field name="type">form</field>
+            <field name="name">packaging_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_packaging_type_view_list">
+            <field name="model">lims.packaging.type</field>
+            <field name="type">tree</field>
+            <field name="name">packaging_type_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_packaging_type_list">
+            <field name="name">Packaging Types</field>
+            <field name="res_model">lims.packaging.type</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_packaging_type_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_packaging_type_view_list"/>
+            <field name="act_window" ref="act_lims_packaging_type_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_packaging_type_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_packaging_type_view_form"/>
+            <field name="act_window" ref="act_lims_packaging_type_list"/>
+        </record>
+
+        <menuitem action="act_lims_packaging_type_list"
+            id="lims_packaging_type_menu"
+            parent="lims_config_entry" sequence="10"/>
+
+        <record model="ir.model.access" id="access_packaging_type">
+            <field name="model" search="[('model', '=', 'lims.packaging.type')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_packaging_type_group_conf_entry_admin">
+            <field name="model" search="[('model', '=', 'lims.packaging.type')]"/>
+            <field name="group" ref="group_lims_conf_entry_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Fraction Type -->
+
+        <record model="ir.ui.view" id="lims_fraction_type_view_form">
+            <field name="model">lims.fraction.type</field>
+            <field name="type">form</field>
+            <field name="name">fraction_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_fraction_type_view_list">
+            <field name="model">lims.fraction.type</field>
+            <field name="type">tree</field>
+            <field name="name">fraction_type_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_fraction_type_list">
+            <field name="name">Fraction Types</field>
+            <field name="res_model">lims.fraction.type</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_fraction_type_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_fraction_type_view_list"/>
+            <field name="act_window" ref="act_lims_fraction_type_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_fraction_type_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_fraction_type_view_form"/>
+            <field name="act_window" ref="act_lims_fraction_type_list"/>
+        </record>
+
+        <menuitem action="act_lims_fraction_type_list"
+            id="lims_fraction_type_menu"
+            parent="lims_config_base_tables" sequence="70"/>
+
+        <record model="ir.model.access" id="access_fraction_type">
+            <field name="model" search="[('model', '=', 'lims.fraction.type')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_fraction_type_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.fraction.type')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Sample Attribute -->
+
+        <record model="ir.ui.view" id="sample_attribute_view_list">
+            <field name="model">lims.sample.attribute</field>
+            <field name="type">tree</field>
+            <field name="name">sample_attribute_list</field>
+        </record>
+        <record model="ir.ui.view" id="sample_attribute_view_form">
+            <field name="model">lims.sample.attribute</field>
+            <field name="type">form</field>
+            <field name="name">sample_attribute_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_sample_attribute">
+            <field name="name">Sample Attributes</field>
+            <field name="res_model">lims.sample.attribute</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_sample_attribute_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="sample_attribute_view_list"/>
+            <field name="act_window" ref="act_sample_attribute"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_sample_attribute_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="sample_attribute_view_form"/>
+            <field name="act_window" ref="act_sample_attribute"/>
+        </record>
+
+        <menuitem action="act_sample_attribute" id="menu_sample_attribute"
+            parent="lims_config_entry" sequence="70"/>
+
+<!-- Service -->
+
+        <record model="ir.ui.view" id="lims_service_view_form">
+            <field name="model">lims.service</field>
+            <field name="type">form</field>
+            <field name="name">service_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_service_view_list">
+            <field name="model">lims.service</field>
+            <field name="type">tree</field>
+            <field name="name">service_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_service2_view_list">
+            <field name="model">lims.service</field>
+            <field name="type">tree</field>
+            <field name="name">service2_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_service_list">
+            <field name="name">Services</field>
+            <field name="res_model">lims.service</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_service_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_service_view_list"/>
+            <field name="act_window" ref="act_lims_service_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_service_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_service_view_form"/>
+            <field name="act_window" ref="act_lims_service_list"/>
+        </record>
+
+        <menuitem action="act_lims_service_list" id="lims_service_menu"
+            parent="lims_entry_board_menu" sequence="50"/>
+
+        <record model="ir.ui.menu-res.group" id="menu_service_group_entry_readonly">
+            <field name="menu" ref="lims_service_menu"/>
+            <field name="group" ref="group_lims_entry_readonly"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_service_group_entry_update">
+            <field name="menu" ref="lims_service_menu"/>
+            <field name="group" ref="group_lims_entry_update"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_service_group_entry">
+            <field name="menu" ref="lims_service_menu"/>
+            <field name="group" ref="group_lims_entry"/>
+        </record>
+
+        <record model="ir.model.access" id="access_service">
+            <field name="model" search="[('model', '=', 'lims.service')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_service_group_entry_update">
+            <field name="model" search="[('model', '=', 'lims.service')]"/>
+            <field name="group" ref="group_lims_entry_update"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_service_group_entry">
+            <field name="model" search="[('model', '=', 'lims.service')]"/>
+            <field name="group" ref="group_lims_entry"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access" id="access_lims_service_analysis_detail">
+            <field name="field"
+                search="[('name', '=', 'analysis_detail'), ('model.model', '=', 'lims.service')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+<!-- Fraction -->
+
+        <record model="ir.ui.view" id="lims_fraction_view_form">
+            <field name="model">lims.fraction</field>
+            <field name="type">form</field>
+            <field name="name">fraction_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_fraction_view_list">
+            <field name="model">lims.fraction</field>
+            <field name="type">tree</field>
+            <field name="name">fraction_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_fraction_list">
+            <field name="name">Fractions</field>
+            <field name="res_model">lims.fraction</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_fraction_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_fraction_view_list"/>
+            <field name="act_window" ref="act_lims_fraction_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_fraction_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_fraction_view_form"/>
+            <field name="act_window" ref="act_lims_fraction_list"/>
+        </record>
+
+        <menuitem action="act_lims_fraction_list" id="lims_fraction_menu"
+            parent="lims_entry_board_menu" sequence="40"/>
+
+        <record model="ir.ui.menu-res.group" id="menu_fraction_group_entry_readonly">
+            <field name="menu" ref="lims_fraction_menu"/>
+            <field name="group" ref="group_lims_entry_readonly"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_fraction_group_entry_update">
+            <field name="menu" ref="lims_fraction_menu"/>
+            <field name="group" ref="group_lims_entry_update"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_fraction_group_entry">
+            <field name="menu" ref="lims_fraction_menu"/>
+            <field name="group" ref="group_lims_entry"/>
+        </record>
+
+        <record model="ir.model.button" id="fraction_load_services_button">
+            <field name="name">load_services</field>
+            <field name="model" search="[('model', '=', 'lims.fraction')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="fraction_load_services_button_group_blind_sample">
+            <field name="button" ref="fraction_load_services_button"/>
+            <field name="group" ref="group_lims_blind_sample"/>
+        </record>
+
+        <record model="ir.model.button" id="fraction_manage_services_button">
+            <field name="name">manage_services</field>
+            <field name="model" search="[('model', '=', 'lims.fraction')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="fraction_manage_services_button_group_lims_entry">
+            <field name="button" ref="fraction_manage_services_button"/>
+            <field name="group" ref="group_lims_entry"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="fraction_manage_services_button_group_lims_entry_update">
+            <field name="button" ref="fraction_manage_services_button"/>
+            <field name="group" ref="group_lims_entry_update"/>
+        </record>
+
+        <record model="ir.model.button" id="fraction_complete_services_button">
+            <field name="name">complete_services</field>
+            <field name="model" search="[('model', '=', 'lims.fraction')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="fraction_complete_services_button_group_lims_entry">
+            <field name="button" ref="fraction_complete_services_button"/>
+            <field name="group" ref="group_lims_entry"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="fraction_complete_services_button_group_lims_entry_update">
+            <field name="button" ref="fraction_complete_services_button"/>
+            <field name="group" ref="group_lims_entry_update"/>
+        </record>
+
+        <record model="ir.model.button" id="fraction_confirm_button">
+            <field name="name">confirm</field>
+            <field name="model" search="[('model', '=', 'lims.fraction')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="fraction_confirm_button_group_lims_entry">
+            <field name="button" ref="fraction_confirm_button"/>
+            <field name="group" ref="group_lims_entry"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="fraction_confirm_button_group_lims_entry_update">
+            <field name="button" ref="fraction_confirm_button"/>
+            <field name="group" ref="group_lims_entry_update"/>
+        </record>
+
+        <record model="ir.model.access" id="access_fraction">
+            <field name="model" search="[('model', '=', 'lims.fraction')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_fraction_group_entry_update">
+            <field name="model" search="[('model', '=', 'lims.fraction')]"/>
+            <field name="group" ref="group_lims_entry_update"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_fraction_group_entry">
+            <field name="model" search="[('model', '=', 'lims.fraction')]"/>
+            <field name="group" ref="group_lims_entry"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_fraction_cie_fraction_type">
+            <field name="field"
+                search="[('name', '=', 'cie_fraction_type'), ('model.model', '=', 'lims.fraction')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_fraction_cie_fraction_type_group_blind_sample_readonly">
+            <field name="field"
+                search="[('name', '=', 'cie_fraction_type'), ('model.model', '=', 'lims.fraction')]"/>
+            <field name="group" ref="group_lims_blind_sample_readonly"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_fraction_cie_fraction_type_group_blind_sample">
+            <field name="field"
+                search="[('name', '=', 'cie_fraction_type'), ('model.model', '=', 'lims.fraction')]"/>
+            <field name="group" ref="group_lims_blind_sample"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_fraction_cie_original_fraction_group_blind_sample_readonly">
+            <field name="field"
+                search="[('name', '=', 'cie_original_fraction'), ('model.model', '=', 'lims.fraction')]"/>
+            <field name="group" ref="group_lims_blind_sample_readonly"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+<!-- Sample -->
+
+        <record model="ir.ui.view" id="lims_sample_view_form">
+            <field name="model">lims.sample</field>
+            <field name="type">form</field>
+            <field name="name">sample_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_sample_view_list">
+            <field name="model">lims.sample</field>
+            <field name="type">tree</field>
+            <field name="name">sample_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_sample_list">
+            <field name="name">Samples</field>
+            <field name="res_model">lims.sample</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_sample_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_sample_view_list"/>
+            <field name="act_window" ref="act_lims_sample_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_sample_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_sample_view_form"/>
+            <field name="act_window" ref="act_lims_sample_list"/>
+        </record>
+
+        <menuitem action="act_lims_sample_list" id="lims_sample_menu"
+            parent="lims_entry_board_menu" sequence="30"/>
+
+        <record model="ir.ui.menu-res.group" id="menu_sample_group_entry_readonly">
+            <field name="menu" ref="lims_sample_menu"/>
+            <field name="group" ref="group_lims_entry_readonly"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_sample_group_entry_update">
+            <field name="menu" ref="lims_sample_menu"/>
+            <field name="group" ref="group_lims_entry_update"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_sample_group_entry">
+            <field name="menu" ref="lims_sample_menu"/>
+            <field name="group" ref="group_lims_entry"/>
+        </record>
+
+        <record model="ir.model.button" id="sample_confirm_button">
+            <field name="name">confirm</field>
+            <field name="model" search="[('model', '=', 'lims.sample')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="sample_confirm_button_group_lims_entry">
+            <field name="button" ref="sample_confirm_button"/>
+            <field name="group" ref="group_lims_entry"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="sample_confirm_button_group_lims_entry_update">
+            <field name="button" ref="sample_confirm_button"/>
+            <field name="group" ref="group_lims_entry_update"/>
+        </record>
+
+        <record model="ir.model.access" id="access_sample">
+            <field name="model" search="[('model', '=', 'lims.sample')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_sample_group_entry_update">
+            <field name="model" search="[('model', '=', 'lims.sample')]"/>
+            <field name="group" ref="group_lims_entry_update"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_sample_group_entry">
+            <field name="model" search="[('model', '=', 'lims.sample')]"/>
+            <field name="group" ref="group_lims_entry"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Sample Package -->
+
+        <record model="ir.ui.view" id="sample_package_view_form">
+            <field name="model">lims.sample.package</field>
+            <field name="type">form</field>
+            <field name="name">sample_package_form</field>
+        </record>
+        <record model="ir.ui.view" id="sample_package_view_list">
+            <field name="model">lims.sample.package</field>
+            <field name="type">tree</field>
+            <field name="name">sample_package_list</field>
+        </record>
+
+<!-- Zone -->
+
+        <record model="ir.ui.view" id="lims_zone_view_form">
+            <field name="model">lims.zone</field>
+            <field name="type">form</field>
+            <field name="name">zone_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_zone_view_list">
+            <field name="model">lims.zone</field>
+            <field name="type">tree</field>
+            <field name="name">zone_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_zone_list">
+            <field name="name">Zones/Regions</field>
+            <field name="res_model">lims.zone</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_zone_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_zone_view_list"/>
+            <field name="act_window" ref="act_lims_zone_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_zone_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_zone_view_form"/>
+            <field name="act_window" ref="act_lims_zone_list"/>
+        </record>
+
+        <menuitem action="act_lims_zone_list" id="lims_zone_menu"
+            parent="lims_config_entry" sequence="40"/>
+
+        <record model="ir.model.access" id="access_zone">
+            <field name="model" search="[('model', '=', 'lims.zone')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_zone_group_conf_entry_admin">
+            <field name="model" search="[('model', '=', 'lims.zone')]"/>
+            <field name="group" ref="group_lims_conf_entry_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Variety -->
+
+        <record model="ir.ui.view" id="lims_variety_view_form">
+            <field name="model">lims.variety</field>
+            <field name="type">form</field>
+            <field name="name">variety_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_variety_view_list">
+            <field name="model">lims.variety</field>
+            <field name="type">tree</field>
+            <field name="name">variety_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_variety_list">
+            <field name="name">Varieties</field>
+            <field name="res_model">lims.variety</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_variety_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_variety_view_list"/>
+            <field name="act_window" ref="act_lims_variety_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_variety_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_variety_view_form"/>
+            <field name="act_window" ref="act_lims_variety_list"/>
+        </record>
+
+        <menuitem action="act_lims_variety_list"
+            id="lims_variety_menu"
+            parent="lims_config_entry" sequence="30"/>
+
+        <record model="ir.model.access" id="access_variety">
+            <field name="model" search="[('model', '=', 'lims.variety')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_variety_group_conf_entry_admin">
+            <field name="model" search="[('model', '=', 'lims.variety')]"/>
+            <field name="group" ref="group_lims_conf_entry_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Matrix Variety -->
+
+        <record model="ir.ui.view" id="lims_matrix_variety_view_form">
+            <field name="model">lims.matrix.variety</field>
+            <field name="type">form</field>
+            <field name="name">matrix_variety_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_matrix_variety_view_list">
+            <field name="model">lims.matrix.variety</field>
+            <field name="type">tree</field>
+            <field name="name">matrix_variety_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_matrix_variety_list">
+            <field name="name">Product Type - Matrix - Variety</field>
+            <field name="res_model">lims.matrix.variety</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_matrix_variety_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_matrix_variety_view_list"/>
+            <field name="act_window" ref="act_lims_matrix_variety_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_matrix_variety_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_matrix_variety_view_form"/>
+            <field name="act_window" ref="act_lims_matrix_variety_list"/>
+        </record>
+
+<!-- Packaging Integrity -->
+
+        <record model="ir.ui.view" id="lims_packaging_integrity_view_form">
+            <field name="model">lims.packaging.integrity</field>
+            <field name="type">form</field>
+            <field name="name">packaging_integrity_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_packaging_integrity_view_list">
+            <field name="model">lims.packaging.integrity</field>
+            <field name="type">tree</field>
+            <field name="name">packaging_integrity_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_packaging_integrity_list">
+            <field name="name">Packaging Integrities</field>
+            <field name="res_model">lims.packaging.integrity</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_packaging_integrity_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_packaging_integrity_view_list"/>
+            <field name="act_window" ref="act_lims_packaging_integrity_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_packaging_integrity_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_packaging_integrity_view_form"/>
+            <field name="act_window" ref="act_lims_packaging_integrity_list"/>
+        </record>
+
+        <menuitem action="act_lims_packaging_integrity_list"
+            id="lims_packaging_integrity_menu"
+            parent="lims_config_entry" sequence="20"/>
+
+        <record model="ir.model.access" id="access_packaging_integrity">
+            <field name="model" search="[('model', '=', 'lims.packaging.integrity')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_packaging_integrity_group_conf_entry_admin">
+            <field name="model" search="[('model', '=', 'lims.packaging.integrity')]"/>
+            <field name="group" ref="group_lims_conf_entry_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Sample actions related -->
+
+        <record model="ir.action.act_window" id="act_lims_fraction_related2">
+            <field name="name">1. Fractions</field>
+            <field name="res_model">lims.fraction</field>
+            <field name="domain" eval="[('sample', 'in', Eval('active_ids'))]" pyson="1"/>
+        </record>
+        <record model="ir.action.keyword" id="act_open_fraction_keyword2">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="act_lims_fraction_related2"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_service_related2">
+            <field name="name">2. Services</field>
+            <field name="res_model">lims.service</field>
+            <field name="domain" eval="[('sample', 'in', Eval('active_ids'))]" pyson="1"/>
+        </record>
+        <record model="ir.action.keyword" id="act_open_service_keyword2">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="act_lims_service_related2"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_entry_detail_analysis_related2">
+            <field name="name">3. Entry Detail Analysis</field>
+            <field name="res_model">lims.entry.detail.analysis</field>
+            <field name="domain" eval="[('sample', 'in', Eval('active_ids'))]" pyson="1"/>
+        </record>
+        <record model="ir.action.keyword" id="act_open_entry_detail_analysis_keyword2">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="act_lims_entry_detail_analysis_related2"/>
+        </record>
+
+<!-- Fraction actions related -->
+
+        <record model="ir.action.act_window" id="act_lims_service_related3">
+            <field name="name">1. Services</field>
+            <field name="res_model">lims.service</field>
+            <field name="domain" eval="[('fraction', 'in', Eval('active_ids'))]" pyson="1"/>
+        </record>
+        <record model="ir.action.keyword" id="act_open_service_keyword3">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="act_lims_service_related3"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_entry_detail_analysis_related3">
+            <field name="name">2. Entry Detail Analysis</field>
+            <field name="res_model">lims.entry.detail.analysis</field>
+            <field name="domain" eval="[('fraction', 'in', Eval('active_ids'))]" pyson="1"/>
+        </record>
+        <record model="ir.action.keyword" id="act_open_entry_detail_analysis_keyword3">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="act_lims_entry_detail_analysis_related3"/>
+        </record>
+
+<!-- Service actions related -->
+
+        <record model="ir.action.act_window" id="act_lims_entry_detail_analysis_related4">
+            <field name="name">1. Entry Detail Analysis</field>
+            <field name="res_model">lims.entry.detail.analysis</field>
+            <field name="domain" eval="[('service', 'in', Eval('active_ids'))]" pyson="1"/>
+        </record>
+        <record model="ir.action.keyword" id="act_open_entry_detail_analysis_keyword4">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.service,-1</field>
+            <field name="action" ref="act_lims_entry_detail_analysis_related4"/>
+        </record>
+
+<!-- Wizard Copy Fraction -->
+
+        <record model="ir.ui.view" id="lims_duplicate_fraction_start_view_form">
+            <field name="model">lims.fraction.duplicate.start</field>
+            <field name="type">form</field>
+            <field name="name">fraction_duplicate_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_duplicate_fraction">
+            <field name="name">Copy Fraction</field>
+            <field name="wiz_name">lims.fraction.duplicate</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_duplicate_fraction_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_lims_duplicate_fraction"/>
+        </record>
+
+<!-- Wizard Copy Sample -->
+
+        <record model="ir.ui.view" id="lims_duplicate_sample_start_view_form">
+            <field name="model">lims.sample.duplicate.start</field>
+            <field name="type">form</field>
+            <field name="name">sample_duplicate_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_duplicate_sample">
+            <field name="name">Copy Sample</field>
+            <field name="wiz_name">lims.sample.duplicate</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_duplicate_sample_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="wiz_lims_duplicate_sample"/>
+        </record>
+
+<!-- Wizard Copy Sample From Entry -->
+
+        <record model="ir.ui.view" id="lims_duplicate_sample_from_entry_start_view_form">
+            <field name="model">lims.entry.duplicate_sample.start</field>
+            <field name="type">form</field>
+            <field name="name">entry_duplicate_sample_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_duplicate_sample_from_entry">
+            <field name="name">Copy Sample</field>
+            <field name="wiz_name">lims.entry.duplicate_sample</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_duplicate_sample_from_entry_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.entry,-1</field>
+            <field name="action" ref="wiz_lims_duplicate_sample_from_entry"/>
+        </record>
+
+<!-- Wizard Resample -->
+
+        <record model="ir.ui.view" id="lims_resample_start_view_form">
+            <field name="model">lims.sample.resample.start</field>
+            <field name="type">form</field>
+            <field name="name">sample_resample_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_resample">
+            <field name="name">Resample</field>
+            <field name="wiz_name">lims.sample.resample</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_resample_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="wiz_lims_resample"/>
+        </record>
+
+<!-- Wizard Manage Services -->
+
+        <record model="ir.ui.view" id="lims_manage_services_view_form">
+            <field name="model">lims.fraction</field>
+            <field name="type">form</field>
+            <field name="name">fraction_manage_services_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_manage_services_ack_of_receipt_view_form">
+            <field name="model">lims.manage_services.ack_of_receipt</field>
+            <field name="type">form</field>
+            <field name="name">fraction_manage_services_ack_of_receipt_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_manage_services">
+            <field name="name">Manage Services</field>
+            <field name="wiz_name">lims.manage_services</field>
+        </record>
+
+<!-- Wizard Complete Services -->
+
+        <record model="ir.action.wizard" id="wiz_lims_complete_services">
+            <field name="name">Complete Services</field>
+            <field name="wiz_name">lims.complete_services</field>
+        </record>
+
+<!-- Wizard Load Services -->
+
+        <record model="ir.action.wizard" id="wiz_lims_load_services">
+            <field name="name">Load Services</field>
+            <field name="wiz_name">lims.load_services</field>
+        </record>
+
+<!-- Wizard Add Fraction Services -->
+
+        <record model="ir.ui.view" id="add_fraction_service_start_view_form">
+            <field name="model">lims.fraction.add_service.start</field>
+            <field name="type">form</field>
+            <field name="name">fraction_add_services_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_add_fraction_service">
+            <field name="name">Add Fraction Services</field>
+            <field name="wiz_name">lims.fraction.add_service</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_add_fraction_service_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_add_fraction_service"/>
+        </record>
+
+<!-- Wizard Edit Fraction Services -->
+
+        <record model="ir.ui.view" id="edit_fraction_service_start_view_form">
+            <field name="model">lims.fraction.edit_service.start</field>
+            <field name="type">form</field>
+            <field name="name">fraction_edit_services_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_edit_fraction_service">
+            <field name="name">Edit Fraction Services</field>
+            <field name="wiz_name">lims.fraction.edit_service</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_edit_fraction_service_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_edit_fraction_service"/>
+        </record>
+
+<!-- Fractions by Locations -->
+
+        <record model="ir.action.act_window" id="act_lims_fractions_by_locations">
+            <field name="name">Fractions</field>
+            <field name="res_model">lims.fraction</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_fractions_by_locations_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_fraction_view_list"/>
+            <field name="act_window" ref="act_lims_fractions_by_locations"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_fractions_by_locations_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_fraction_view_form"/>
+            <field name="act_window" ref="act_lims_fractions_by_locations"/>
+        </record>
+
+        <record model="ir.ui.view" id="fractions_by_locations_start_view_form">
+            <field name="model">lims.fractions_by_locations.start</field>
+            <field name="type">form</field>
+            <field name="name">fractions_by_locations_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_fractions_by_locations">
+            <field name="name">Fractions by Locations</field>
+            <field name="wiz_name">lims.fractions_by_locations</field>
+        </record>
+
+        <menuitem action="wizard_fractions_by_locations"
+            id="lims_fractions_by_locations_menu"
+            parent="lims_fraction_menu" sequence="10"/>
+
+        <record model="ir.ui.menu-res.group" id="menu_fractions_by_locations_group_entry_readonly">
+            <field name="menu" ref="lims_fractions_by_locations_menu"/>
+            <field name="group" ref="group_lims_entry_readonly"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_fractions_by_locations_group_entry">
+            <field name="menu" ref="lims_fractions_by_locations_menu"/>
+            <field name="group" ref="group_lims_entry"/>
+        </record>
+
+<!-- Wizard Countersamples Storage -->
+
+        <record model="ir.ui.view" id="lims_countersample_storage_start_view_form">
+            <field name="model">lims.countersample.storage.start</field>
+            <field name="type">form</field>
+            <field name="name">countersample_storage_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_countersample_storage_empty_view_form">
+            <field name="model">lims.countersample.storage.empty</field>
+            <field name="type">form</field>
+            <field name="name">countersample_storage_empty_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_countersample_storage_result_view_form">
+            <field name="model">lims.countersample.storage.result</field>
+            <field name="type">form</field>
+            <field name="name">countersample_storage_result_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_countersample_storage">
+            <field name="name">Countersamples Storage</field>
+            <field name="wiz_name">lims.countersample.storage</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_countersample_storage_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_lims_countersample_storage"/>
+        </record>
+
+<!-- Wizard Revert Countersamples Storage -->
+
+        <record model="ir.ui.view" id="lims_countersample_storage_revert_start_view_form">
+            <field name="model">lims.countersample.storage_revert.start</field>
+            <field name="type">form</field>
+            <field name="name">countersample_storage_revert_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_countersample_storage_revert_empty_view_form">
+            <field name="model">lims.countersample.storage_revert.empty</field>
+            <field name="type">form</field>
+            <field name="name">countersample_storage_revert_empty_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_countersample_storage_revert_result_view_form">
+            <field name="model">lims.countersample.storage_revert.result</field>
+            <field name="type">form</field>
+            <field name="name">countersample_storage_revert_result_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_countersample_storage_revert">
+            <field name="name">Revert Countersamples Storage</field>
+            <field name="wiz_name">lims.countersample.storage_revert</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_countersample_storage_revert_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_lims_countersample_storage_revert"/>
+        </record>
+
+<!-- Wizard Countersamples Discharge -->
+
+        <record model="ir.ui.view" id="lims_countersample_discharge_start_view_form">
+            <field name="model">lims.countersample.discharge.start</field>
+            <field name="type">form</field>
+            <field name="name">countersample_discharge_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_countersample_discharge_empty_view_form">
+            <field name="model">lims.countersample.discharge.empty</field>
+            <field name="type">form</field>
+            <field name="name">countersample_discharge_empty_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_countersample_discharge_result_view_form">
+            <field name="model">lims.countersample.discharge.result</field>
+            <field name="type">form</field>
+            <field name="name">countersample_discharge_result_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_countersample_discharge">
+            <field name="name">Countersamples Discharge</field>
+            <field name="wiz_name">lims.countersample.discharge</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_countersample_discharge_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_lims_countersample_discharge"/>
+        </record>
+
+<!-- Wizard Fractions Discharge -->
+
+        <record model="ir.ui.view" id="lims_fraction_discharge_start_view_form">
+            <field name="model">lims.fraction.discharge.start</field>
+            <field name="type">form</field>
+            <field name="name">fraction_discharge_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_fraction_discharge_empty_view_form">
+            <field name="model">lims.fraction.discharge.empty</field>
+            <field name="type">form</field>
+            <field name="name">fraction_discharge_empty_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_fraction_discharge_result_view_form">
+            <field name="model">lims.fraction.discharge.result</field>
+            <field name="type">form</field>
+            <field name="name">fraction_discharge_result_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_fraction_discharge">
+            <field name="name">Fractions Discharge</field>
+            <field name="wiz_name">lims.fraction.discharge</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_fraction_discharge_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_lims_fraction_discharge"/>
+        </record>
+
+<!-- Wizard Revert Fractions Discharge -->
+
+        <record model="ir.ui.view" id="lims_fraction_discharge_revert_start_view_form">
+            <field name="model">lims.fraction.discharge_revert.start</field>
+            <field name="type">form</field>
+            <field name="name">fraction_discharge_revert_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_fraction_discharge_revert_empty_view_form">
+            <field name="model">lims.fraction.discharge_revert.empty</field>
+            <field name="type">form</field>
+            <field name="name">fraction_discharge_revert_empty_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_fraction_discharge_revert_result_view_form">
+            <field name="model">lims.fraction.discharge_revert.result</field>
+            <field name="type">form</field>
+            <field name="name">fraction_discharge_revert_result_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_fraction_discharge_revert">
+            <field name="name">Revert Fractions Discharge</field>
+            <field name="wiz_name">lims.fraction.discharge_revert</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_fraction_discharge_revert_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_lims_fraction_discharge_revert"/>
+        </record>
+
+<!-- Wizard Create Sample -->
+
+        <record model="ir.ui.view" id="lims_create_sample_start_view_form">
+            <field name="model">lims.create_sample.start</field>
+            <field name="type">form</field>
+            <field name="name">create_sample_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_create_sample_service_view_list">
+            <field name="model">lims.create_sample.service</field>
+            <field name="type">tree</field>
+            <field name="name">create_sample_service_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_create_sample_service_view_form">
+            <field name="model">lims.create_sample.service</field>
+            <field name="type">form</field>
+            <field name="name">create_sample_service_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_create_sample">
+            <field name="name">Enter Samples</field>
+            <field name="wiz_name">lims.create_sample</field>
+        </record>
+
+        <record model="ir.module.config_wizard.item"
+            id="config_wizard_module">
+            <field name="action" ref="ir.act_module_form"/>
+        </record>
+
+<!-- Wizard Edit Samples -->
+
+        <record model="ir.ui.view" id="edit_sample_start_view_form">
+            <field name="model">lims.sample.edit.start</field>
+            <field name="type">form</field>
+            <field name="name">sample_edit_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_edit_sample">
+            <field name="name">Edit Samples</field>
+            <field name="wiz_name">lims.sample.edit</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_edit_sample_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="wiz_edit_sample"/>
+        </record>
+
+<!-- Wizard Add Sample Services -->
+
+        <record model="ir.ui.view" id="add_sample_service_start_view_form">
+            <field name="model">lims.sample.add_service.start</field>
+            <field name="type">form</field>
+            <field name="name">sample_add_services_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="add_sample_service_ack_of_receipt_view_form">
+            <field name="model">lims.sample.add_service.ack_of_receipt</field>
+            <field name="type">form</field>
+            <field name="name">sample_add_services_ack_of_receipt_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_add_sample_service">
+            <field name="name">Add Sample Services</field>
+            <field name="wiz_name">lims.sample.add_service</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_add_sample_service_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="wiz_add_sample_service"/>
+        </record>
+
+<!-- Wizard Edit Sample Services -->
+
+        <record model="ir.ui.view" id="edit_sample_service_start_view_form">
+            <field name="model">lims.sample.edit_service.start</field>
+            <field name="type">form</field>
+            <field name="name">sample_edit_services_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="edit_sample_service_ack_of_receipt_view_form">
+            <field name="model">lims.sample.edit_service.ack_of_receipt</field>
+            <field name="type">form</field>
+            <field name="name">sample_edit_services_ack_of_receipt_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_edit_sample_service">
+            <field name="name">Edit Sample Services</field>
+            <field name="wiz_name">lims.sample.edit_service</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_edit_sample_service_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="wiz_edit_sample_service"/>
+        </record>
+
+<!-- Countersamples Storage Report -->
+
+        <record model="ir.action.report" id="report_countersample_storage">
+            <field name="name">Countersamples Storage Report</field>
+            <field name="report_name">lims.countersample.storage.report</field>
+            <field name="report">lims/report/countersample_storage_report.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+
+        <record model="ir.ui.view" id="lims_countersample_storage_print_start_view_form">
+            <field name="model">lims.countersample.storage.print.start</field>
+            <field name="type">form</field>
+            <field name="name">countersample_storage_print_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_countersample_storage_print">
+            <field name="name">Countersamples Storage Report</field>
+            <field name="wiz_name">lims.countersample.storage.print</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_countersample_storage_print_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_lims_countersample_storage_print"/>
+        </record>
+
+<!-- Countersamples Discharge Report -->
+
+        <record model="ir.action.report" id="report_countersample_discharge">
+            <field name="name">Countersamples Discharge Report</field>
+            <field name="report_name">lims.countersample.discharge.report</field>
+            <field name="report">lims/report/countersample_discharge_report.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+
+        <record model="ir.ui.view" id="lims_countersample_discharge_print_start_view_form">
+            <field name="model">lims.countersample.discharge.print.start</field>
+            <field name="type">form</field>
+            <field name="name">countersample_discharge_print_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_countersample_discharge_print">
+            <field name="name">Countersamples Discharge Report</field>
+            <field name="wiz_name">lims.countersample.discharge.print</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_countersample_discharge_print_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_lims_countersample_discharge_print"/>
+        </record>
+
+<!-- Referral of Services -->
+
+        <record model="ir.ui.view" id="referral_service_line_view_list">
+            <field name="model">lims.entry.detail.analysis</field>
+            <field name="type">tree</field>
+            <field name="name">referral_service_line_list</field>
+        </record>
+
+        <record model="ir.ui.view" id="referral_view_form">
+            <field name="model">lims.referral</field>
+            <field name="type">form</field>
+            <field name="name">referral_form</field>
+        </record>
+        <record model="ir.ui.view" id="referral_view_list">
+            <field name="model">lims.referral</field>
+            <field name="type">tree</field>
+            <field name="name">referral_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_referral_list">
+            <field name="name">Referrals</field>
+            <field name="res_model">lims.referral</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_referral_list_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="referral_view_list"/>
+            <field name="act_window" ref="act_referral_list"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_referral_list_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="referral_view_form"/>
+            <field name="act_window" ref="act_referral_list"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_referral_list_domain_draft">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('state', '=', 'draft')]"
+                pyson="1"/>
+            <field name="act_window" ref="act_referral_list"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_referral_list_domain_sent">
+            <field name="name">Sent</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain"
+                eval="[('state', '=', 'sent')]"
+                pyson="1"/>
+            <field name="act_window" ref="act_referral_list"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_referral_list_domain_done">
+            <field name="name">Done</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain"
+                eval="[('state', '=', 'done')]"
+                pyson="1"/>
+            <field name="act_window" ref="act_referral_list"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_referral_list_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain"
+                eval="[]"
+                pyson="1"/>
+            <field name="act_window" ref="act_referral_list"/>
+        </record>
+
+        <menuitem action="act_referral_list" id="menu_referral_list"
+            parent="menu_entry_board_referrals" sequence="20"
+            icon="tryton-list"/>
+
+        <record model="ir.model.button" id="button_referral_send">
+            <field name="name">send</field>
+            <field name="model" search="[('model', '=', 'lims.referral')]"/>
+        </record>
+
+        <record model="ir.model.field.access" id="access_referral_services">
+            <field name="field"
+                search="[('name', '=', 'services'), ('model.model', '=', 'lims.referral')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+<!-- New Referral -->
+
+        <record model="ir.action.act_window" id="act_referral_form">
+            <field name="name">New Referral</field>
+            <field name="res_model">lims.referral</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_referral_form_view_form">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="referral_view_form"/>
+            <field name="act_window" ref="act_referral_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_referral_form_view_list">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="referral_view_list"/>
+            <field name="act_window" ref="act_referral_form"/>
+        </record>
+
+        <menuitem action="act_referral_form" id="menu_referral_form"
+            parent="menu_entry_board_referrals" sequence="10"
+            icon="tryton-form"/>
+
+<!-- Referral of Services Report -->
+
+        <record model="ir.action.report" id="report_referral">
+            <field name="name">Referral Report</field>
+            <field name="model">lims.referral</field>
+            <field name="report_name">lims.referral.report</field>
+            <field name="report">lims/report/referral.fods</field>
+        </record>
+
+        <record model="ir.action.keyword" id="key_report_referral">
+            <field name="keyword">form_print</field>
+            <field name="model">lims.referral,-1</field>
+            <field name="action" ref="report_referral"/>
+        </record>
+
+<!-- Services Pending Referral -->
+
+        <record model="ir.action.act_window" id="act_service_pending_referral_list">
+            <field name="name">Services Pending Referral</field>
+            <field name="res_model">lims.entry.detail.analysis</field>
+            <field name="domain"
+                eval="[('referable', '=', True), ('referral', '=', None), ('state', '=', 'unplanned')]"
+                pyson="1"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_service_pending_referral_list_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="referral_service_line_view_list"/>
+            <field name="act_window" ref="act_service_pending_referral_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_service_pending_referral_list_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_entry_detail_analysis_view_form"/>
+            <field name="act_window" ref="act_service_pending_referral_list"/>
+        </record>
+
+        <menuitem action="act_service_pending_referral_list"
+            id="menu_service_pending_referral_list"
+            parent="menu_entry_board_referrals" sequence="30"
+            icon="tryton-list"/>
+
+<!-- Referred Services Pending Result -->
+
+        <record model="ir.action.act_window" id="act_service_referred_pending_result_list">
+            <field name="name">Referred Services Pending Result</field>
+            <field name="res_model">lims.entry.detail.analysis</field>
+            <field name="domain"
+                eval="[('referral', '!=', None), ('state', '=', 'referred')]"
+                pyson="1"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_service_referred_pending_result_list_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="referral_service_line_view_list"/>
+            <field name="act_window" ref="act_service_referred_pending_result_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_service_referred_pending_result_list_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_entry_detail_analysis_view_form"/>
+            <field name="act_window" ref="act_service_referred_pending_result_list"/>
+        </record>
+
+        <menuitem action="act_service_referred_pending_result_list"
+            id="menu_act_service_referred_pending_result_list"
+            parent="menu_entry_board_referrals" sequence="40"
+            icon="tryton-list"/>
+
+<!-- Wizard Refer Service -->
+
+        <record model="ir.ui.view" id="referral_service_start_form">
+            <field name="model">lims.referral.service.start</field>
+            <field name="type">form</field>
+            <field name="name">referral_service_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_referral_service">
+            <field name="name">Refer Service</field>
+            <field name="wiz_name">lims.referral.service</field>
+        </record>
+
+        <record model="ir.action.keyword" id="key_wiz_referral_service">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.entry.detail.analysis,-1</field>
+            <field name="action" ref="wiz_referral_service"/>
+        </record>
+
+<!-- Wizard Change Storage Time -->
+
+        <record model="ir.ui.view" id="change_storage_time_start_view_form">
+            <field name="model">lims.change_storage_time.start</field>
+            <field name="type">form</field>
+            <field name="name">change_storage_time_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_change_storage_time">
+            <field name="name">Change Storage Time</field>
+            <field name="wiz_name">lims.change_storage_time</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_change_storage_time_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_change_storage_time"/>
+        </record>
+
+    </data>
+</tryton>

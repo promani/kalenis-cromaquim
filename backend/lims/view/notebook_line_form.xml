@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<form>
+    <label name="analysis"/>
+    <field name="analysis"/>
+    <label name="repetition"/>
+    <field name="repetition"/>
+    <label name="repetition_reason_coded"/>
+    <field name="repetition_reason_coded" widget="selection"/>
+    <label name="repetition_reason"/>
+    <field name="repetition_reason"/>
+    <label name="start_date"/>
+    <field name="start_date"/>
+    <label name="end_date"/>
+    <field name="end_date"/>
+    <label name="laboratory"/>
+    <field name="laboratory"/>
+    <label name="method"/>
+    <field name="method"/>
+    <label name="device"/>
+    <field name="device"/>
+    <label name="service"/>
+    <field name="service"/>
+    <label name="analysis_origin"/>
+    <field name="analysis_origin"/>
+    <group id="priority" colspan="2" col="4">
+        <label name="urgent"/>
+        <field name="urgent"/>
+        <label name="priority"/>
+        <field name="priority"/>
+    </group>
+    <label name="laboratory_date"/>
+    <field name="laboratory_date"/>
+    <label name="report_date"/>
+    <field name="report_date"/>
+    <label name="initial_concentration"/>
+    <field name="initial_concentration"/>
+    <label name="final_concentration"/>
+    <field name="final_concentration"/>
+    <label name="literal_final_concentration"/>
+    <field name="literal_final_concentration"/>
+    <newline/>
+    <field name="laboratory_professionals" colspan="2"/>
+    <field name="controls" colspan="2"/>
+    <label name="initial_unit"/>
+    <field name="initial_unit"/>
+    <label name="final_unit"/>
+    <field name="final_unit"/>
+    <group id="result_modifier" colspan="2" col="2">
+        <label name="result_modifier"/>
+        <field name="result_modifier" widget="selection"/>
+    </group>
+    <group id="converted_result_modifier" colspan="2" col="2">
+        <label name="converted_result_modifier"/>
+        <field name="converted_result_modifier" widget="selection"/>
+    </group>
+    <label name="result"/>
+    <field name="result"/>
+    <label name="converted_result"/>
+    <field name="converted_result"/>
+    <label name="detection_limit"/>
+    <field name="detection_limit"/>
+    <label name="quantification_limit"/>
+    <field name="quantification_limit"/>
+    <label name="lower_limit"/>
+    <field name="lower_limit"/>
+    <label name="upper_limit"/>
+    <field name="upper_limit"/>
+    <group col="2" colspan="2" id="check_result_limits">
+        <label name="check_result_limits"/>
+        <field name="check_result_limits"/>
+    </group>
+    <newline/>
+    <label name="dilution_factor"/>
+    <field name="dilution_factor"/>
+    <label name="chromatogram"/>
+    <field name="chromatogram"/>
+    <field name="professionals" colspan="4"/>
+    <label name="comments"/>
+    <field name="comments" colspan="4"/>
+    <label name="theoretical_concentration"/>
+    <field name="theoretical_concentration"/>
+    <label name="concentration_level"/>
+    <field name="concentration_level"/>
+    <group id="decimals" colspan="4" col="6">
+        <label name="decimals"/>
+        <field name="decimals"/>
+        <label name="significant_digits"/>
+        <field name="significant_digits"/>
+        <label name="scientific_notation"/>
+        <field name="scientific_notation"/>
+    </group>
+    <label name="backup"/>
+    <field name="backup"/>
+    <label name="reference"/>
+    <field name="reference"/>
+    <label name="literal_result"/>
+    <field name="literal_result"/>
+    <label name="rm_correction_formula"/>
+    <field name="rm_correction_formula"/>
+    <label name="uncertainty"/>
+    <field name="uncertainty"/>
+    <label name="verification"/>
+    <field name="verification"/>
+    <group id="acceptance_annulment" colspan="4" col="8">
+        <label name="accepted"/>
+        <field name="accepted"/>
+        <label name="acceptance_date"/>
+        <field name="acceptance_date"/>
+        <label name="annulled"/>
+        <field name="annulled"/>
+        <label name="annulment_date"/>
+        <field name="annulment_date"/>
+    </group>
+    <field name="not_accepted_message" colspan="4" yexpand="0"/>
+    <field name="annulment_reason" colspan="4" yexpand="0"/>
+    <label name="planification"/>
+    <field name="planification"/>
+    <label name="referral"/>
+    <field name="referral"/>
+    <group id="results_estimated_waiting" colspan="2" col="2">
+        <label name="results_estimated_waiting"/>
+        <field name="results_estimated_waiting"/>
+    </group>
+    <group id="results_estimated_date" colspan="2" col="2">
+        <label name="results_estimated_date"/>
+        <field name="results_estimated_date"/>
+    </group>
+    <label name="report"/>
+    <field name="report"/>
+    <label name="results_report"/>
+    <field name="results_report"/>
+    <label name="department"/>
+    <field name="department"/>
+    <group id="exceptional_load" colspan="2" col="2">
+        <label name="exceptional_load"/>
+        <field name="exceptional_load"/>
+    </group>
+    <label name="exceptional_load_uid"/>
+    <field name="exceptional_load_uid"/>
+    <label name="trace_report"/>
+    <field name="trace_report"/>
+    <group id="certifications_annulled" colspan="2" col="2">
+        <label name="certifications_annulled"/>
+        <field name="certifications_annulled"/>
+    </group>
+</form>

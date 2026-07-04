@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/field[@name='subdivision']" position="after">
+        <newline/>
+        <label name="email"/>
+        <field name="email"/>
+        <group id="entry_contacts" colspan="6" col="3">
+            <group id="report_contact" colspan="1" col="2">
+                <label name="report_contact"/>
+                <field name="report_contact"/>
+                <label name="report_contact_default"/>
+                <field name="report_contact_default"/>
+            </group>
+            <group id="acknowledgment_contact" colspan="1" col="2">
+                <label name="acknowledgment_contact"/>
+                <field name="acknowledgment_contact"/>
+                <label name="acknowledgment_contact_default"/>
+                <field name="acknowledgment_contact_default"/>
+            </group>
+            <group id="invoice_contact" colspan="1" col="2">
+                <label name="invoice_contact"/>
+                <field name="invoice_contact"/>
+                <label name="invoice_contact_default"/>
+                <field name="invoice_contact_default"/>
+            </group>
+        </group>
+    </xpath>
+    <xpath expr="/form/group[@id='checkboxes']/field[@name='active']" position="after">
+        <label name="report"/>
+        <field name="report" xexpand="0" width="25"/>
+    </xpath>
+</data>

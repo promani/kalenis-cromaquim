@@ -1,0 +1,705 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Typification -->
+
+        <record model="ir.ui.view" id="lims_typification_view_form">
+            <field name="model">lims.typification</field>
+            <field name="type">form</field>
+            <field name="name">typification_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_typification_view_list">
+            <field name="model">lims.typification</field>
+            <field name="type">tree</field>
+            <field name="name">typification_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_typification_list">
+            <field name="name">Typifications</field>
+            <field name="res_model">lims.typification</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_typification_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_typification_view_list"/>
+            <field name="act_window" ref="act_lims_typification_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_typification_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_typification_view_form"/>
+            <field name="act_window" ref="act_lims_typification_list"/>
+        </record>
+
+        <menuitem action="act_lims_typification_list"
+            id="lims_typification_menu"
+            parent="lims_config_base_tables" sequence="60"/>
+
+        <record model="ir.model.access" id="access_typification">
+            <field name="model" search="[('model', '=', 'lims.typification')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_typification_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.typification')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Typification Read Only -->
+
+        <record model="ir.ui.view" id="lims_typification_readonly_view_list">
+            <field name="model">lims.typification.readonly</field>
+            <field name="type">tree</field>
+            <field name="name">typification_readonly_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_typification_readonly_list">
+            <field name="name">Typifications</field>
+            <field name="res_model">lims.typification.readonly</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_typification_readonly_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_typification_readonly_view_list"/>
+            <field name="act_window" ref="act_lims_typification_readonly_list"/>
+        </record>
+
+        <record model="ir.model.access" id="access_typification_readonly">
+            <field name="model" search="[('model', '=', 'lims.typification.readonly')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+<!-- Calculated Typification Read Only -->
+
+        <record model="ir.ui.view" id="lims_typification_calculated_readonly_view_list">
+            <field name="model">lims.typification.calculated.readonly</field>
+            <field name="type">tree</field>
+            <field name="name">typification_calculated_readonly_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_typification_calculated_readonly_list">
+            <field name="name">Sets/Groups Typifications</field>
+            <field name="res_model">lims.typification.calculated.readonly</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_typification_calculated_readonly_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_typification_calculated_readonly_view_list"/>
+            <field name="act_window" ref="act_lims_typification_calculated_readonly_list"/>
+        </record>
+
+        <menuitem action="act_lims_typification_calculated_readonly_list"
+            id="lims_typification_calculated_menu"
+            parent="lims_typification_menu" sequence="10"/>
+
+        <record model="ir.model.access" id="access_typification_calculated_readonly">
+            <field name="model" search="[('model', '=', 'lims.typification.calculated.readonly')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+<!-- Product type -->
+
+        <record model="ir.ui.view" id="lims_product_type_view_form">
+            <field name="model">lims.product.type</field>
+            <field name="type">form</field>
+            <field name="name">product_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_product_type_view_list">
+            <field name="model">lims.product.type</field>
+            <field name="type">tree</field>
+            <field name="name">product_type_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_product_type_list">
+            <field name="name">Product types</field>
+            <field name="res_model">lims.product.type</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_product_type_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_product_type_view_list"/>
+            <field name="act_window" ref="act_lims_product_type_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_product_type_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_product_type_view_form"/>
+            <field name="act_window" ref="act_lims_product_type_list"/>
+        </record>
+
+        <menuitem action="act_lims_product_type_list"
+            id="lims_product_type_menu"
+            parent="lims_config_base_tables" sequence="10"/>
+
+        <record model="ir.model.access" id="access_product_type">
+            <field name="model" search="[('model', '=', 'lims.product.type')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_product_type_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.product.type')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Matrix -->
+
+        <record model="ir.ui.view" id="lims_matrix_view_form">
+            <field name="model">lims.matrix</field>
+            <field name="type">form</field>
+            <field name="name">matrix_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_matrix_view_list">
+            <field name="model">lims.matrix</field>
+            <field name="type">tree</field>
+            <field name="name">matrix_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_matrix_list">
+            <field name="name">Matrix</field>
+            <field name="res_model">lims.matrix</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_matrix_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_matrix_view_list"/>
+            <field name="act_window" ref="act_lims_matrix_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_matrix_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_matrix_view_form"/>
+            <field name="act_window" ref="act_lims_matrix_list"/>
+        </record>
+
+        <menuitem action="act_lims_matrix_list" id="lims_matrix_menu"
+            parent="lims_config_base_tables" sequence="20"/>
+
+        <record model="ir.model.access" id="access_matrix">
+            <field name="model" search="[('model', '=', 'lims.matrix')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_matrix_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.matrix')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Objective Description -->
+
+        <record model="ir.ui.view" id="lims_objective_description_view_form">
+            <field name="model">lims.objective_description</field>
+            <field name="type">form</field>
+            <field name="name">objective_description_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_objective_description_view_list">
+            <field name="model">lims.objective_description</field>
+            <field name="type">tree</field>
+            <field name="name">objective_description_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_objective_description_list">
+            <field name="name">Objective Descriptions</field>
+            <field name="res_model">lims.objective_description</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_objective_description_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_objective_description_view_list"/>
+            <field name="act_window" ref="act_lims_objective_description_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_objective_description_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_objective_description_view_form"/>
+            <field name="act_window" ref="act_lims_objective_description_list"/>
+        </record>
+
+        <menuitem action="act_lims_objective_description_list"
+            id="lims_objective_description_menu"
+            parent="lims_config_base_tables" sequence="25"/>
+
+        <record model="ir.model.access" id="access_objective_description">
+            <field name="model" search="[('model', '=', 'lims.objective_description')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_objective_description_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.objective_description')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Formula -->
+
+        <record model="ir.ui.view" id="lims_formula_view_form">
+            <field name="model">lims.formula</field>
+            <field name="type">form</field>
+            <field name="name">formula_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_formula_view_list">
+            <field name="model">lims.formula</field>
+            <field name="type">tree</field>
+            <field name="name">formula_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_formula_list">
+            <field name="name">Formulas</field>
+            <field name="res_model">lims.formula</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_formula_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_formula_view_list"/>
+            <field name="act_window" ref="act_lims_formula_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_formula_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_formula_view_form"/>
+            <field name="act_window" ref="act_lims_formula_list"/>
+        </record>
+
+        <menuitem action="act_lims_formula_list" id="lims_formula_list_menu"
+            parent="lims_config_base_tables" sequence="40"/>
+
+        <record model="ir.model.access" id="access_formula">
+            <field name="model" search="[('model', '=', 'lims.formula')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_formula_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.formula')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Formula Variable -->
+
+        <record model="ir.ui.view" id="lims_formula_variable_view_form">
+            <field name="model">lims.formula.variable</field>
+            <field name="type">form</field>
+            <field name="name">formula_variable_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_formula_variable_view_list">
+            <field name="model">lims.formula.variable</field>
+            <field name="type">tree</field>
+            <field name="name">formula_variable_list</field>
+        </record>
+
+<!-- Analysis/Set/Group -->
+
+        <record model="ir.ui.view" id="lims_analysis_view_form">
+            <field name="model">lims.analysis</field>
+            <field name="type">form</field>
+            <field name="name">analysis_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_analysis_view_list">
+            <field name="model">lims.analysis</field>
+            <field name="type">tree</field>
+            <field name="name">analysis_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_analysis_pending_view_list">
+            <field name="model">lims.analysis</field>
+            <field name="type">tree</field>
+            <field name="name">analysis_pending_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_analysis_list">
+            <field name="name">Analysis/Sets/Groups</field>
+            <field name="res_model">lims.analysis</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_analysis_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_analysis_view_list"/>
+            <field name="act_window" ref="act_lims_analysis_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_analysis_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_analysis_view_form"/>
+            <field name="act_window" ref="act_lims_analysis_list"/>
+        </record>
+
+        <menuitem action="act_lims_analysis_list" id="lims_analysis_menu"
+            parent="lims_config_base_tables" sequence="50"/>
+
+        <record model="ir.model.button" id="analysis_disable_button">
+            <field name="name">disable</field>
+            <field name="model" search="[('model', '=', 'lims.analysis')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="analysis_disable_button_group_admin">
+            <field name="button" ref="analysis_disable_button"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+
+        <record model="ir.model.button" id="analysis_activate_button">
+            <field name="name">activate</field>
+            <field name="model" search="[('model', '=', 'lims.analysis')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="analysis_activate_button_group_group_lims_conf_base_tables_admin">
+            <field name="button" ref="analysis_activate_button"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+        </record>
+
+        <record model="ir.model.button" id="analysis_reactivate_button">
+            <field name="name">reactivate</field>
+            <field name="model" search="[('model', '=', 'lims.analysis')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="analysis_reactivate_button_group_group_lims_conf_base_tables_admin">
+            <field name="button" ref="analysis_reactivate_button"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+        </record>
+
+        <record model="ir.model.button" id="analysis_relate_analysis_button">
+            <field name="name">relate_analysis</field>
+            <field name="model" search="[('model', '=', 'lims.analysis')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="analysis_relate_analysis_button_group_group_lims_conf_base_tables_admin">
+            <field name="button" ref="analysis_relate_analysis_button"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+        </record>
+
+        <record model="ir.model.access" id="access_analysis">
+            <field name="model" search="[('model', '=', 'lims.analysis')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_analysis_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.analysis')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Included Analysis -->
+
+        <record model="ir.ui.view" id="lims_analysis_included_view_form">
+            <field name="model">lims.analysis.included</field>
+            <field name="type">form</field>
+            <field name="name">analysis_included_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_analysis_included_view_list">
+            <field name="model">lims.analysis.included</field>
+            <field name="type">tree</field>
+            <field name="name">analysis_included_list</field>
+        </record>
+
+<!-- Analysis Device -->
+
+        <record model="ir.ui.view" id="lims_analysis_device_view_form">
+            <field name="model">lims.analysis.device</field>
+            <field name="type">form</field>
+            <field name="name">analysis_device_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_analysis_device_view_list">
+            <field name="model">lims.analysis.device</field>
+            <field name="type">tree</field>
+            <field name="name">analysis_device_list</field>
+        </record>
+
+<!-- Analysis Laboratory -->
+
+        <record model="ir.ui.view" id="lims_analysis_laboratory_view_form">
+            <field name="model">lims.analysis-laboratory</field>
+            <field name="type">form</field>
+            <field name="name">analysis_laboratory_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_analysis_laboratory_view_list">
+            <field name="model">lims.analysis-laboratory</field>
+            <field name="type">tree</field>
+            <field name="name">analysis_laboratory_list</field>
+        </record>
+
+<!-- Wizard Open All Included Analysis -->
+
+        <record model="ir.action.wizard" id="wiz_analysis_open_all_included_analysis">
+            <field name="name">All Included Analysis</field>
+            <field name="wiz_name">lims.analysis.open_all_included_analysis</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_analysis_open_all_included_analysis_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.analysis,-1</field>
+            <field name="action" ref="wiz_analysis_open_all_included_analysis"/>
+        </record>
+
+<!-- Typification actions related -->
+
+        <record model="ir.action.act_window" id="act_lims_technical_scope_version_related1">
+            <field name="name">Technical Scope Versions</field>
+            <field name="res_model">lims.technical.scope.version</field>
+            <field name="domain"
+                eval="[('version_lines.id', 'in', Eval('active_ids', []))]"
+                pyson="1"/>
+        </record>
+        <record model="ir.action.keyword" id="act_open_technical_scope_version_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.typification,-1</field>
+            <field name="action" ref="act_lims_technical_scope_version_related1"/>
+        </record>
+
+<!-- Wizard Copy/Move Typification -->
+
+        <record model="ir.ui.view" id="lims_copy_typification_start_view_form">
+            <field name="model">lims.typification.copy.start</field>
+            <field name="type">form</field>
+            <field name="name">typification_copy_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_copy_typification_confirm_view_form">
+            <field name="model">lims.typification.copy.confirm</field>
+            <field name="type">form</field>
+            <field name="name">typification_copy_confirm_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_copy_typification_error_view_form">
+            <field name="model">lims.typification.copy.error</field>
+            <field name="type">form</field>
+            <field name="name">typification_copy_error_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_copy_typification_result_view_form">
+            <field name="model">lims.typification.copy.result</field>
+            <field name="type">form</field>
+            <field name="name">typification_copy_result_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_copy_typification">
+            <field name="name">Copy/Move Typification</field>
+            <field name="wiz_name">lims.typification.copy</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_copy_typification_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.typification,-1</field>
+            <field name="action" ref="wiz_lims_copy_typification"/>
+        </record>
+
+        <record model="ir.action-res.group"
+            id="wiz_copy_typification-group_conf_base_tables_admin">
+            <field name="action" ref="wiz_lims_copy_typification"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+        </record>
+
+<!-- Typifications Copied/Moved -->
+
+        <record model="ir.action.report" id="report_typification_copy_spreadsheet">
+            <field name="name">Typifications Copied/Moved</field>
+            <field name="report_name">lims.report_typification_copy.spreadsheet</field>
+            <field name="report">lims/report/typification_copy_spreadsheet.fods</field>
+            <field name="extension">xls</field>
+        </record>
+
+<!-- Wizard Copy Calculated Typification -->
+
+        <record model="ir.ui.view" id="lims_copy_calculated_typification_start_view_form">
+            <field name="model">lims.typification.calculated.copy.start</field>
+            <field name="type">form</field>
+            <field name="name">typification_calculated_copy_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_copy_calculated_typification_confirm_view_form">
+            <field name="model">lims.typification.calculated.copy.confirm</field>
+            <field name="type">form</field>
+            <field name="name">typification_calculated_copy_confirm_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_copy_calculated_typification_error_view_form">
+            <field name="model">lims.typification.calculated.copy.error</field>
+            <field name="type">form</field>
+            <field name="name">typification_calculated_copy_error_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_copy_calculated_typification_result_view_form">
+            <field name="model">lims.typification.calculated.copy.result</field>
+            <field name="type">form</field>
+            <field name="name">typification_calculated_copy_result_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_copy_calculated_typification">
+            <field name="name">Copy Typification</field>
+            <field name="wiz_name">lims.typification.calculated.copy</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_copy_calculated_typification_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.typification.calculated.readonly,-1</field>
+            <field name="action" ref="wiz_lims_copy_calculated_typification"/>
+        </record>
+
+        <record model="ir.action-res.group"
+            id="wiz_copy_calculated_typification-group_conf_base_tables_admin">
+            <field name="action" ref="wiz_lims_copy_calculated_typification"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+        </record>
+
+<!-- Wizard Update Typification -->
+
+        <record model="ir.ui.view" id="update_typification_start_form">
+            <field name="model">lims.typification.update.start</field>
+            <field name="type">form</field>
+            <field name="name">typification_update_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_update_typification">
+            <field name="name">Update Typification</field>
+            <field name="wiz_name">lims.typification.update</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_update_typification_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.typification,-1</field>
+            <field name="action" ref="wiz_update_typification"/>
+        </record>
+
+        <record model="ir.action-res.group"
+            id="wiz_update_typification-group_conf_base_tables_admin">
+            <field name="action" ref="wiz_update_typification"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+        </record>
+
+<!-- Wizard Relate Analysis -->
+
+        <record model="ir.ui.view" id="lims_relate_analysis_start_view_form">
+            <field name="model">lims.relate_analysis.start</field>
+            <field name="type">form</field>
+            <field name="name">analysis_relate_analysis_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_relate_analysis">
+            <field name="name">Relate Analysis</field>
+            <field name="wiz_name">lims.relate_analysis</field>
+        </record>
+
+<!-- Wizard Relate Method -->
+
+        <record model="ir.ui.view" id="lims_relate_method_start_view_form">
+            <field name="model">lims.relate_method.start</field>
+            <field name="type">form</field>
+            <field name="name">analysis_relate_method_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_relate_method">
+            <field name="name">Relate Method</field>
+            <field name="wiz_name">lims.relate_method</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_relate_method_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.analysis,-1</field>
+            <field name="action" ref="wiz_lims_relate_method"/>
+        </record>
+
+<!-- Wizard Create Analysis Product -->
+
+        <record model="ir.action.wizard" id="wiz_lims_create_analysis_product">
+            <field name="name">Create Analysis Product</field>
+            <field name="wiz_name">lims.create_analysis_product</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_create_analysis_product_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.analysis,-1</field>
+            <field name="action" ref="wiz_lims_create_analysis_product"/>
+        </record>
+
+<!-- Wizard Open Analysis Not Typified -->
+
+        <record model="ir.ui.view" id="analysis_open_not_typified_start_form">
+            <field name="model">lims.analysis.open_not_typified.start</field>
+            <field name="type">form</field>
+            <field name="name">analysis_open_not_typified_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_analysis_open_not_typified">
+            <field name="name">Open Analysis Not Typified</field>
+            <field name="wiz_name">lims.analysis.open_not_typified</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_analysis_open_not_typified_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.analysis,-1</field>
+            <field name="action" ref="wiz_analysis_open_not_typified"/>
+        </record>
+
+<!-- Wizard Update Calculated Typifications -->
+
+        <record model="ir.ui.view" id="update_typification_calculated_start_form">
+            <field name="model">lims.update_typification_calculated.start</field>
+            <field name="type">form</field>
+            <field name="name">update_typification_calculated_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_update_typification_calculated">
+            <field name="name">Update Calculated Typifications</field>
+            <field name="wiz_name">lims.update_typification_calculated</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_update_typification_calculated_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.analysis,-1</field>
+            <field name="action" ref="wiz_update_typification_calculated"/>
+        </record>
+
+<!-- Wizard Open Typifications -->
+
+        <record model="ir.action.wizard" id="act_open_typifications">
+            <field name="name">Typifications</field>
+            <field name="wiz_name">lims.scope_version.open_typifications</field>
+            <field name="model">lims.technical.scope.version</field>
+        </record>
+
+<!-- Wizard Add Typifications -->
+
+        <record model="ir.ui.view" id="scope_version_add_typifications_start_view_form">
+            <field name="model">lims.scope_version.add_typifications.start</field>
+            <field name="type">form</field>
+            <field name="name">scope_version_add_typifications_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="act_add_typifications">
+            <field name="name">Add Typifications</field>
+            <field name="wiz_name">lims.scope_version.add_typifications</field>
+            <field name="model">lims.technical.scope.version</field>
+        </record>
+
+<!-- Wizard Remove Typifications -->
+
+        <record model="ir.ui.view" id="scope_version_remove_typifications_start_view_form">
+            <field name="model">lims.scope_version.remove_typifications.start</field>
+            <field name="type">form</field>
+            <field name="name">scope_version_remove_typifications_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="act_remove_typifications">
+            <field name="name">Remove Typifications</field>
+            <field name="wiz_name">lims.scope_version.remove_typifications</field>
+            <field name="model">lims.technical.scope.version</field>
+        </record>
+
+    </data>
+</tryton>

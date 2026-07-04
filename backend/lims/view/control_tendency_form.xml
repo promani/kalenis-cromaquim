@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<form>
+    <label name="fraction_type"/>
+    <field name="fraction_type"/>
+    <label name="family"/>
+    <field name="family"/>
+    <label name="product_type"/>
+    <field name="product_type"/>
+    <label name="matrix"/>
+    <field name="matrix"/>
+    <label name="analysis"/>
+    <field name="analysis"/>
+    <label name="concentration_level"/>
+    <field name="concentration_level"/>
+    <label name="mean"/>
+    <field name="mean"/>
+    <label name="deviation"/>
+    <field name="deviation"/>
+    <group col="8" colspan="4" id="filters">
+        <separator string="Filters" colspan="8" id="filters"/>
+        <label name="date_from"/>
+        <field name="date_from"/>
+        <label name="date_to"/>
+        <field name="date_to"/>
+        <label name="range_min"/>
+        <field name="range_min"/>
+        <label name="range_max"/>
+        <field name="range_max"/>
+    </group>
+</form>

@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Planification -->
+
+        <record model="ir.ui.view" id="planification_view_form">
+            <field name="model">lims.planification</field>
+            <field name="inherit" ref="lims.lims_planification_view_form"/>
+            <field name="name">planification_form</field>
+        </record>
+
+        <record model="ir.model.button" id="button_planification_search_analysis_sheet">
+            <field name="name">search_analysis_sheet</field>
+            <field name="model" search="[('model', '=', 'lims.planification')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="button_planification_search_analysis_sheet_group_lims_planification">
+            <field name="button" ref="button_planification_search_analysis_sheet"/>
+            <field name="group" ref="lims.group_lims_planification"/>
+        </record>
+
+<!-- Planification - Analysis Sheets -->
+
+        <record model="ir.ui.view" id="planification_analysis_sheet_view_list">
+            <field name="model">lims.planification.analysis_sheet</field>
+            <field name="type">tree</field>
+            <field name="name">planification_analysis_sheet_list</field>
+        </record>
+        <record model="ir.ui.view" id="planification_analysis_sheet_view_graph">
+            <field name="model">lims.planification.analysis_sheet</field>
+            <field name="type">form</field>
+            <field name="name">planification_analysis_sheet_form</field>
+        </record>
+
+<!-- Wizard Search Analysis Sheets -->
+
+        <record model="ir.ui.view" id="planification_search_analysis_sheet_start_view_form">
+            <field name="model">lims.planification.search_analysis_sheet.start</field>
+            <field name="type">form</field>
+            <field name="name">planification_search_analysis_sheet_start_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="planification_search_analysis_sheet_next_view_form">
+            <field name="model">lims.planification.search_analysis_sheet.next</field>
+            <field name="type">form</field>
+            <field name="name">planification_search_analysis_sheet_next_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_search_analysis_sheet">
+            <field name="name">Search Analysis Sheets</field>
+            <field name="wiz_name">lims.planification.search_analysis_sheet</field>
+        </record>
+
+<!-- Wizard Relate Technicians -->
+
+        <record model="ir.ui.view" id="planification_relate_technicians_result_view_form">
+            <field name="model">lims.planification.relate_technicians.result</field>
+            <field name="inherit" ref="lims.lims_relate_technicians_result_view_form"/>
+            <field name="name">planification_relate_technicians_result_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="lims_relate_technicians_detail4_view_form">
+            <field name="model">lims.planification.relate_technicians.detail4</field>
+            <field name="type">form</field>
+            <field name="name">planification_relate_technicians_detail4_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_relate_technicians_detail4_view_list">
+            <field name="model">lims.planification.relate_technicians.detail4</field>
+            <field name="type">tree</field>
+            <field name="name">planification_relate_technicians_detail4_list</field>
+        </record>
+
+<!-- Planification Professional -->
+
+        <record model="ir.ui.view" id="planification_professional_view_list">
+            <field name="model">lims.planification.professional</field>
+            <field name="type">tree</field>
+            <field name="name">planification_professional_list</field>
+        </record>
+        <record model="ir.ui.view" id="planification_professional_view_graph">
+            <field name="model">lims.planification.professional</field>
+            <field name="type">graph</field>
+            <field name="name">planification_professional_graph</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_planification_professional_form">
+            <field name="name">Planifications by Professional</field>
+            <field name="res_model">lims.planification.professional</field>
+            <field name="context_model">lims.planification.professional.context</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_planification_professional_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="planification_professional_view_list"/>
+            <field name="act_window" ref="act_planification_professional_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_planification_professional_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="planification_professional_view_graph"/>
+            <field name="act_window" ref="act_planification_professional_form"/>
+        </record>
+
+        <menuitem name="Planifications by Professional"
+            action="act_planification_professional_form"
+            id="menu_planification_professional"
+            parent="lims.lims_planification_menu" sequence="30"/>
+
+<!-- Planifications by Professional - Sheets -->
+
+        <record model="ir.ui.view" id="planification_professional_line_view_list">
+            <field name="model">lims.planification.professional.line</field>
+            <field name="type">tree</field>
+            <field name="name">planification_professional_line_list</field>
+        </record>
+        <record model="ir.ui.view" id="planification_professional_line_view_calendar">
+            <field name="model">lims.planification.professional.line</field>
+            <field name="type">calendar</field>
+            <field name="name">planification_professional_line_calendar</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_planification_professional_line_form">
+            <field name="name">Planifications by Professional - Sheets</field>
+            <field name="res_model">lims.planification.professional.line</field>
+            <field name="context_model">lims.planification.professional.context</field>
+            <field name="domain" eval="[('professional', 'in', Eval('active_ids', [])), ('state', 'in', ['draft', 'active'])]"
+                pyson="1"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_planification_professional_line_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="planification_professional_line_view_list"/>
+            <field name="act_window" ref="act_planification_professional_line_form"/>
+        </record>
+        <!-- <record model="ir.action.act_window.view"
+            id="act_planification_professional_line_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="planification_professional_line_view_calendar"/>
+            <field name="act_window" ref="act_planification_professional_line_form"/>
+        </record> -->
+
+        <record model="ir.action.keyword" id="act_planification_professional_line_form_keyword">
+            <field name="keyword">tree_open</field>
+            <field name="model">lims.planification.professional,-1</field>
+            <field name="action" ref="act_planification_professional_line_form"/>
+        </record>
+
+<!-- Open Sheet Sample -->
+
+        <record model="ir.action.wizard" id="act_open_sheet_sample">
+            <field name="name">Open Sheet Sample</field>
+            <field name="wiz_name">lims.planification.professional.open_sheet_sample</field>
+        </record>
+
+        <record model="ir.action.keyword" id="act_open_sheet_sample_keyword">
+            <field name="keyword">tree_open</field>
+            <field name="model">lims.planification.professional.line,-1</field>
+            <field name="action" ref="act_open_sheet_sample"/>
+        </record>
+
+        <record model="ir.ui.view" id="planification_professional_context_view_form">
+            <field name="model">lims.planification.professional.context</field>
+            <field name="type">form</field>
+            <field name="name">planification_professional_context_form</field>
+        </record>
+
+<!-- Samples Pending Planning -->
+
+        <record model="ir.ui.view" id="sample_pending_planning_view_list">
+            <field name="model">lims.sample_pending_planning</field>
+            <field name="type">tree</field>
+            <field name="name">sample_pending_planning_list</field>
+        </record>
+        <record model="ir.ui.view" id="sample_pending_planning_view_graph">
+            <field name="model">lims.sample_pending_planning</field>
+            <field name="type">graph</field>
+            <field name="name">sample_pending_planning_graph</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_sample_pending_planning">
+            <field name="name">Samples Pending Planning</field>
+            <field name="res_model">lims.sample_pending_planning</field>
+            <field name="context_model">lims.sample_pending_planning.context</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_sample_pending_planning_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="sample_pending_planning_view_list"/>
+            <field name="act_window" ref="act_sample_pending_planning"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_sample_pending_planning_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="sample_pending_planning_view_graph"/>
+            <field name="act_window" ref="act_sample_pending_planning"/>
+        </record>
+
+        <menuitem name="Samples Pending Planning"
+            action="act_sample_pending_planning"
+            id="menu_sample_pending_planning"
+            parent="lims.lims_planification_menu" sequence="40"/>
+
+        <record model="ir.action.wizard" id="act_open_pending_sample">
+            <field name="name">Open Pending Sample</field>
+            <field name="wiz_name">lims.sample_pending_planning.open_sample</field>
+        </record>
+
+        <record model="ir.action.keyword" id="act_open_pending_sample_keyword">
+            <field name="keyword">tree_open</field>
+            <field name="model">lims.sample_pending_planning,-1</field>
+            <field name="action" ref="act_open_pending_sample"/>
+        </record>
+
+        <record model="ir.ui.view" id="sample_pending_planning_context_view_form">
+            <field name="model">lims.sample_pending_planning.context</field>
+            <field name="type">form</field>
+            <field name="name">sample_pending_planning_context_form</field>
+        </record>
+
+    </data>
+</tryton>

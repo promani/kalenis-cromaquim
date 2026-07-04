@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Interface -->
+
+        <record model="ir.ui.view" id="lims_interface_view_form">
+            <field name="model">lims.interface</field>
+            <field name="type">form</field>
+            <field name="name">interface_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_interface_view_list">
+            <field name="model">lims.interface</field>
+            <field name="type">tree</field>
+            <field name="name">interface_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_interface_list">
+            <field name="name">Interfaces</field>
+            <field name="res_model">lims.interface</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_interface_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_interface_view_list"/>
+            <field name="act_window" ref="act_lims_interface_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_interface_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_interface_view_form"/>
+            <field name="act_window" ref="act_lims_interface_list"/>
+        </record>
+
+        <menuitem action="act_lims_interface_list"
+            id="lims_interface_menu"
+            parent="lims.lims_config_laboratory" sequence="80"/>
+
+        <record model="ir.model.button" id="lims_interface_draft_button">
+            <field name="name">draft</field>
+            <field name="string">Draft</field>
+            <field name="model" search="[('model', '=', 'lims.interface')]"/>
+        </record>
+        <record model="ir.model.button" id="lims_interface_activate_button">
+            <field name="name">activate</field>
+            <field name="string">Activate</field>
+            <field name="model" search="[('model', '=', 'lims.interface')]"/>
+        </record>
+        <record model="ir.model.button" id="button_interface_copy_columns">
+            <field name="name">copy_columns</field>
+            <field name="model" search="[('model', '=', 'lims.interface')]"/>
+        </record>
+        <record model="ir.model.button" id="button_interface_show_view">
+            <field name="name">show_view</field>
+            <field name="model" search="[('model', '=', 'lims.interface')]"/>
+        </record>
+
+<!-- Column -->
+
+        <record model="ir.ui.view" id="lims_interface_column_view_form">
+            <field name="model">lims.interface.column</field>
+            <field name="type">form</field>
+            <field name="name">interface_column_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_interface_column_view_list">
+            <field name="model">lims.interface.column</field>
+            <field name="type">tree</field>
+            <field name="name">interface_column_list</field>
+        </record>
+
+<!-- Grouped Repetition -->
+
+        <record model="ir.ui.view" id="lims_interface_grouped_repetition_view_form">
+            <field name="model">lims.interface.grouped_repetition</field>
+            <field name="type">form</field>
+            <field name="name">interface_grouped_repetition_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_interface_grouped_repetition_view_list">
+            <field name="model">lims.interface.grouped_repetition</field>
+            <field name="type">tree</field>
+            <field name="name">interface_grouped_repetition_list</field>
+        </record>
+
+<!-- Grouped View -->
+
+        <record model="ir.ui.view" id="lims_interface_view_view_form">
+            <field name="model">lims.interface.view</field>
+            <field name="type">form</field>
+            <field name="name">interface_view_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_interface_view_view_list">
+            <field name="model">lims.interface.view</field>
+            <field name="type">tree</field>
+            <field name="name">interface_view_list</field>
+        </record>
+
+<!-- Grouped View Column -->
+
+        <record model="ir.ui.view" id="lims_interface_view_column_view_form">
+            <field name="model">lims.interface.view.column</field>
+            <field name="type">form</field>
+            <field name="name">interface_view_column_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_interface_view_column_view_list">
+            <field name="model">lims.interface.view.column</field>
+            <field name="type">tree</field>
+            <field name="name">interface_view_column_list</field>
+        </record>
+
+<!-- Wizard Copy Interface Column -->
+
+        <record model="ir.ui.view" id="interface_copy_column_start_view_form">
+            <field name="model">lims.interface.copy_column.start</field>
+            <field name="type">form</field>
+            <field name="name">interface_copy_column_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wiz_interface_copy_column">
+            <field name="name">Copy Interface Column</field>
+            <field name="wiz_name">lims.interface.copy_column</field>
+        </record>
+
+<!-- Wizard Import Interface Column -->
+
+        <record model="ir.ui.view" id="interface_import_column_start_view_form">
+            <field name="model">lims.interface.import_column.start</field>
+            <field name="type">form</field>
+            <field name="name">interface_import_column_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="interface_import_column_map_view_form">
+            <field name="model">lims.interface.import_column.map</field>
+            <field name="type">form</field>
+            <field name="name">interface_import_column_map_form</field>
+        </record>
+        <record model="ir.ui.view" id="interface_import_column_map_cell_view_list">
+            <field name="model">lims.interface.import_column.map.cell</field>
+            <field name="type">tree</field>
+            <field name="name">interface_import_column_map_cell_list</field>
+        </record>
+        <record model="ir.action.wizard" id="wiz_interface_import_column">
+            <field name="name">Import Interface Column</field>
+            <field name="wiz_name">lims.interface.import_column</field>
+        </record>
+        <record model="ir.action.keyword" id="wiz_interface_import_column_keyword1">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.interface,-1</field>
+            <field name="action" ref="wiz_interface_import_column"/>
+        </record>
+
+<!-- Wizard Show Interface View -->
+
+        <record model="ir.ui.view" id="interface_show_view_ask_form">
+            <field name="model">lims.interface.show_view.ask</field>
+            <field name="type">form</field>
+            <field name="name">interface_show_view_ask_form</field>
+        </record>
+        <record model="ir.ui.view" id="interface_show_view_start_form">
+            <field name="model">lims.interface.show_view.start</field>
+            <field name="type">form</field>
+            <field name="name">interface_show_view_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_interface_show_view">
+            <field name="name">Show Interface View</field>
+            <field name="wiz_name">lims.interface.show_view</field>
+        </record>
+
+<!-- Compilation -->
+
+        <record model="ir.ui.view" id="lims_interface_compilation_view_form">
+            <field name="model">lims.interface.compilation</field>
+            <field name="type">form</field>
+            <field name="name">compilation_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_interface_compilation_view_list">
+            <field name="model">lims.interface.compilation</field>
+            <field name="type">tree</field>
+            <field name="name">compilation_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_interface_compilation_list">
+            <field name="name">Interface Compilations</field>
+            <field name="res_model">lims.interface.compilation</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_interface_compilation_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_interface_compilation_view_list"/>
+            <field name="act_window" ref="act_lims_interface_compilation_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_interface_compilation_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_interface_compilation_view_form"/>
+            <field name="act_window" ref="act_lims_interface_compilation_list"/>
+        </record>
+
+        <menuitem action="act_lims_interface_compilation_list"
+            id="lims_interface_compilation_menu"
+            parent="lims.lims_laboratory_results" sequence="40"/>
+
+        <record model="ir.model.button" id="lims_interface_compilation_view_data_button">
+            <field name="name">view_data</field>
+            <field name="string">View data</field>
+            <field name="model" search="[('model', '=', 'lims.interface.compilation')]"/>
+        </record>
+        <record model="ir.model.button" id="lims_interface_compilation_draft_button">
+            <field name="name">draft</field>
+            <field name="string">Draft</field>
+            <field name="model" search="[('model', '=', 'lims.interface.compilation')]"/>
+        </record>
+        <record model="ir.model.button" id="lims_interface_compilation_activate_button">
+            <field name="name">activate</field>
+            <field name="string">Activate</field>
+            <field name="model" search="[('model', '=', 'lims.interface.compilation')]"/>
+        </record>
+        <record model="ir.model.button" id="lims_interface_compilation_collect_button">
+            <field name="name">collect</field>
+            <field name="string">Collect</field>
+            <field name="model" search="[('model', '=', 'lims.interface.compilation')]"/>
+        </record>
+        <record model="ir.model.button" id="lims_interface_compilation_validate_button">
+            <field name="name">validate_</field>
+            <field name="string">Validate</field>
+            <field name="model" search="[('model', '=', 'lims.interface.compilation')]"/>
+        </record>
+        <record model="ir.model.button" id="lims_interface_compilation_confirm_button">
+            <field name="name">confirm</field>
+            <field name="string">Confirm</field>
+            <field name="model" search="[('model', '=', 'lims.interface.compilation')]"/>
+        </record>
+
+<!-- Compilation Origin -->
+
+        <record model="ir.ui.view" id="lims_interface_compilation_origin_view_form">
+            <field name="model">lims.interface.compilation.origin</field>
+            <field name="type">form</field>
+            <field name="name">compilation_origin_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_interface_compilation_origin_view_list">
+            <field name="model">lims.interface.compilation.origin</field>
+            <field name="type">tree</field>
+            <field name="name">compilation_origin_list</field>
+        </record>
+
+<!-- Wizard Open Compilation Data -->
+
+        <record model="ir.action.wizard" id="wiz_compilation_open_data">
+            <field name="name">Open Compilation Data</field>
+            <field name="wiz_name">lims.interface.compilation.open_data</field>
+        </record>
+
+<!-- Compilation Data -->
+
+        <record model="ir.action.act_window" id="act_open_compilation_data">
+            <field name="name">Compilation Data</field>
+            <field name="res_model">lims.interface.data</field>
+            <field name="context" eval="{'lims_interface_compilation': Eval('active_id'), 'lims_interface_table': Eval('table')}" pyson="1"/>
+            <field name="domain" eval="[('compilation', '=', Eval('active_id'))]" pyson="1"/>
+        </record>
+
+        <record model="ir.model.access" id="access_data">
+            <field name="model" search="[('model', '=', 'lims.interface.data')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.access" id="access_grouped_data">
+            <field name="model" search="[('model', '=', 'lims.interface.grouped_data')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Wizard Test Formula -->
+
+        <record model="ir.ui.view" id="interface_formula_test_view_form">
+            <field name="model">lims.interface.formula.test</field>
+            <field name="type">form</field>
+            <field name="name">interface_formula_test_form</field>
+        </record>
+        <record model="ir.ui.view" id="interface_formula_test_variable_view_list">
+            <field name="model">lims.interface.formula.test.variable</field>
+            <field name="type">tree</field>
+            <field name="name">interface_formula_test_variable_list</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_interface_formula_test">
+            <field name="name">Test Formula</field>
+            <field name="wiz_name">lims.interface.formula.test</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_interface_formula_test_keyword1">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.interface,-1</field>
+            <field name="action" ref="wiz_interface_formula_test"/>
+        </record>
+
+<!-- Variable -->
+
+        <record model="ir.ui.view" id="interface_variable_view_form">
+            <field name="model">lims.interface.variable</field>
+            <field name="type">form</field>
+            <field name="name">variable_form</field>
+        </record>
+        <record model="ir.ui.view" id="interface_variable_view_list">
+            <field name="model">lims.interface.variable</field>
+            <field name="type">tree</field>
+            <field name="name">variable_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_interface_variable_list">
+            <field name="name">Interface Variables</field>
+            <field name="res_model">lims.interface.variable</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_interface_variable_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="interface_variable_view_list"/>
+            <field name="act_window" ref="act_interface_variable_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_interface_variable_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="interface_variable_view_form"/>
+            <field name="act_window" ref="act_interface_variable_list"/>
+        </record>
+
+        <menuitem action="act_interface_variable_list"
+            id="lims_interface_variable_menu"
+            parent="lims_interface_menu" sequence="10"/>
+
+<!-- Variable Value -->
+
+        <record model="ir.ui.view" id="interface_variable_value_view_form">
+            <field name="model">lims.interface.variable.value</field>
+            <field name="type">form</field>
+            <field name="name">variable_value_form</field>
+        </record>
+        <record model="ir.ui.view" id="interface_variable_value_view_list">
+            <field name="model">lims.interface.variable.value</field>
+            <field name="type">tree</field>
+            <field name="name">variable_value_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_interface_variable_value_list">
+            <field name="name">Interface Variable Values</field>
+            <field name="res_model">lims.interface.variable.value</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_interface_variable_value_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="interface_variable_value_view_list"/>
+            <field name="act_window" ref="act_interface_variable_value_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_interface_variable_value_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="interface_variable_value_view_form"/>
+            <field name="act_window" ref="act_interface_variable_value_list"/>
+        </record>
+
+        <menuitem action="act_interface_variable_value_list"
+            id="lims_interface_variable_value_menu"
+            parent="lims_interface_variable_menu" sequence="10"/>
+
+<!-- Constant -->
+
+        <record model="ir.ui.view" id="interface_constant_view_form">
+            <field name="model">lims.interface.constant</field>
+            <field name="type">form</field>
+            <field name="name">constant_form</field>
+        </record>
+        <record model="ir.ui.view" id="interface_constant_view_list">
+            <field name="model">lims.interface.constant</field>
+            <field name="type">tree</field>
+            <field name="name">constant_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_interface_constant_list">
+            <field name="name">Interface Constants</field>
+            <field name="res_model">lims.interface.constant</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_interface_constant_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="interface_constant_view_list"/>
+            <field name="act_window" ref="act_interface_constant_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_interface_constant_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="interface_constant_view_form"/>
+            <field name="act_window" ref="act_interface_constant_list"/>
+        </record>
+
+        <menuitem action="act_interface_constant_list"
+            id="lims_interface_constant_menu"
+            parent="lims_interface_menu" sequence="20"/>
+
+    </data>
+</tryton>

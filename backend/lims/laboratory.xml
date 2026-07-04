@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Laboratory -->
+
+        <record model="ir.ui.view" id="lims_laboratory_view_form">
+            <field name="model">lims.laboratory</field>
+            <field name="type">form</field>
+            <field name="name">laboratory_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_laboratory_view_list">
+            <field name="model">lims.laboratory</field>
+            <field name="type">tree</field>
+            <field name="name">laboratory_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_laboratory_list">
+            <field name="name">Laboratories</field>
+            <field name="res_model">lims.laboratory</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_laboratory_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_laboratory_view_list"/>
+            <field name="act_window" ref="act_lims_laboratory_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_laboratory_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_laboratory_view_form"/>
+            <field name="act_window" ref="act_lims_laboratory_list"/>
+        </record>
+
+        <menuitem action="act_lims_laboratory_list" id="lims_laboratory_menu"
+            parent="lims_config_laboratory" sequence="10"/>
+
+        <record model="ir.model.access" id="access_laboratory">
+            <field name="model" search="[('model', '=', 'lims.laboratory')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_laboratory_group_conf_laboratory_admin">
+            <field name="model" search="[('model', '=', 'lims.laboratory')]"/>
+            <field name="group" ref="group_lims_conf_laboratory_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Laboratory CV Correction -->
+
+        <record model="ir.ui.view" id="lims_laboratory_cv_correction_view_form">
+            <field name="model">lims.laboratory.cv_correction</field>
+            <field name="type">form</field>
+            <field name="name">laboratory_cv_correction_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_laboratory_cv_correction_view_list">
+            <field name="model">lims.laboratory.cv_correction</field>
+            <field name="type">tree</field>
+            <field name="name">laboratory_cv_correction_list</field>
+        </record>
+
+<!-- Laboratory Professional -->
+
+        <record model="ir.ui.view" id="lims_laboratory_professional_view_form">
+            <field name="model">lims.laboratory.professional</field>
+            <field name="type">form</field>
+            <field name="name">laboratory_professional_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_laboratory_professional_view_list">
+            <field name="model">lims.laboratory.professional</field>
+            <field name="type">tree</field>
+            <field name="name">laboratory_professional_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_laboratory_professional_list">
+            <field name="name">Laboratory Professionals</field>
+            <field name="res_model">lims.laboratory.professional</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_laboratory_professional_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_laboratory_professional_view_list"/>
+            <field name="act_window" ref="act_lims_laboratory_professional_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_laboratory_professional_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_laboratory_professional_view_form"/>
+            <field name="act_window" ref="act_lims_laboratory_professional_list"/>
+        </record>
+
+        <menuitem action="act_lims_laboratory_professional_list"
+            id="lims_laboratory_professional_menu"
+            parent="lims_config_laboratory" sequence="20"/>
+
+        <record model="ir.model.access" id="access_laboratory_professional">
+            <field name="model" search="[('model', '=', 'lims.laboratory.professional')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_laboratory_professional_group_conf_laboratory_admin">
+            <field name="model" search="[('model', '=', 'lims.laboratory.professional')]"/>
+            <field name="group" ref="group_lims_conf_laboratory_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Laboratory Method -->
+
+        <record model="ir.ui.view" id="lims_lab_method_view_form">
+            <field name="model">lims.lab.method</field>
+            <field name="type">form</field>
+            <field name="name">lab_method_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_lab_method_view_list">
+            <field name="model">lims.lab.method</field>
+            <field name="type">tree</field>
+            <field name="name">lab_method_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_lab_method_list">
+            <field name="name">Methods</field>
+            <field name="res_model">lims.lab.method</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_lab_method_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_lab_method_view_list"/>
+            <field name="act_window" ref="act_lims_lab_method_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_lab_method_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_lab_method_view_form"/>
+            <field name="act_window" ref="act_lims_lab_method_list"/>
+        </record>
+
+        <menuitem action="act_lims_lab_method_list"
+            id="lims_lab_method_menu"
+            parent="lims_config_base_tables" sequence="30"/>
+
+        <record model="ir.model.button" id="method_activate_button">
+            <field name="name">activate</field>
+            <field name="model" search="[('model', '=', 'lims.lab.method')]"/>
+        </record>
+        <record model="ir.model.button" id="method_disable_button">
+            <field name="name">disable</field>
+            <field name="confirm">Are you sure you want to disable the method?</field>
+            <field name="model" search="[('model', '=', 'lims.lab.method')]"/>
+        </record>
+        <record model="ir.model.button" id="method_new_version_button">
+            <field name="name">new_version</field>
+            <field name="model" search="[('model', '=', 'lims.lab.method')]"/>
+        </record>
+        <record model="ir.model.button" id="method_reactivate_button">
+            <field name="name">reactivate</field>
+            <field name="model" search="[('model', '=', 'lims.lab.method')]"/>
+        </record>
+
+        <record model="ir.model.access" id="access_lab_method">
+            <field name="model" search="[('model', '=', 'lims.lab.method')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_lab_method_group_conf_base_tables_admin">
+            <field name="model" search="[('model', '=', 'lims.lab.method')]"/>
+            <field name="group" ref="group_lims_conf_base_tables_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Waiting Time per Client -->
+
+        <record model="ir.ui.view" id="lims_lab_method_results_waiting_view_form">
+            <field name="model">lims.lab.method.results_waiting</field>
+            <field name="type">form</field>
+            <field name="name">lab_method_results_waiting_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_lab_method_results_waiting_view_list">
+            <field name="model">lims.lab.method.results_waiting</field>
+            <field name="type">tree</field>
+            <field name="name">lab_method_results_waiting_list</field>
+        </record>
+
+<!-- Method Version -->
+
+        <record model="ir.ui.view" id="lims_lab_method_version_view_form">
+            <field name="model">lims.lab.method.version</field>
+            <field name="type">form</field>
+            <field name="name">lab_method_version_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_lab_method_version_view_list">
+            <field name="model">lims.lab.method.version</field>
+            <field name="type">tree</field>
+            <field name="name">lab_method_version_list</field>
+        </record>
+
+<!-- Wizard New Method Version -->
+
+        <record model="ir.ui.view" id="method_new_version_start_form">
+            <field name="model">lims.lab.method</field>
+            <field name="type">form</field>
+            <field name="name">lab_method_new_version_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_method_new_version">
+            <field name="name">New Method Version</field>
+            <field name="wiz_name">lims.lab.method.new_version</field>
+        </record>
+
+<!-- Laboratory Device -->
+
+        <record model="ir.ui.view" id="lims_lab_device_view_form">
+            <field name="model">lims.lab.device</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_lab_device_view_list">
+            <field name="model">lims.lab.device</field>
+            <field name="type">tree</field>
+            <field name="name">lab_device_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_lab_device_list">
+            <field name="name">Devices</field>
+            <field name="res_model">lims.lab.device</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_lab_device_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_lab_device_view_list"/>
+            <field name="act_window" ref="act_lims_lab_device_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_lab_device_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_lab_device_view_form"/>
+            <field name="act_window" ref="act_lims_lab_device_list"/>
+        </record>
+
+        <menuitem action="act_lims_lab_device_list" id="lims_lab_device_menu"
+            parent="lims_config_laboratory" sequence="50"/>
+
+        <record model="ir.model.access" id="access_lab_device">
+            <field name="model" search="[('model', '=', 'lims.lab.device')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_lab_device_group_conf_laboratory_admin">
+            <field name="model" search="[('model', '=', 'lims.lab.device')]"/>
+            <field name="group" ref="group_lims_conf_laboratory_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Laboratory Device Type -->
+
+        <record model="ir.ui.view" id="lims_lab_device_type_view_form">
+            <field name="model">lims.lab.device.type</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_lab_device_type_view_list">
+            <field name="model">lims.lab.device.type</field>
+            <field name="type">tree</field>
+            <field name="name">lab_device_type_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_lab_device_type_list">
+            <field name="name">Device types</field>
+            <field name="res_model">lims.lab.device.type</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_lab_device_type_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_lab_device_type_view_list"/>
+            <field name="act_window" ref="act_lims_lab_device_type_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_lab_device_type_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_lab_device_type_view_form"/>
+            <field name="act_window" ref="act_lims_lab_device_type_list"/>
+        </record>
+
+        <menuitem action="act_lims_lab_device_type_list"
+            id="lims_lab_device_type_menu"
+            parent="lims_config_laboratory" sequence="40"/>
+
+        <record model="ir.model.access" id="access_lab_device_type">
+            <field name="model" search="[('model', '=', 'lims.lab.device.type')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_lab_device_type_group_conf_laboratory_admin">
+            <field name="model" search="[('model', '=', 'lims.lab.device.type')]"/>
+            <field name="group" ref="group_lims_conf_laboratory_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Laboratory Device Laboratory -->
+
+        <record model="ir.ui.view" id="lims_lab_device_laboratory_view_form">
+            <field name="model">lims.lab.device.laboratory</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_laboratory_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_lab_device_laboratory_view_list">
+            <field name="model">lims.lab.device.laboratory</field>
+            <field name="type">tree</field>
+            <field name="name">lab_device_laboratory_list</field>
+        </record>
+
+<!-- Device Correction -->
+
+        <record model="ir.ui.view" id="lims_lab_device_correction_view_form">
+            <field name="model">lims.lab.device.correction</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_correction_form</field>
+        </record>
+        <record model="ir.ui.view" id="lims_lab_device_correction_view_list">
+            <field name="model">lims.lab.device.correction</field>
+            <field name="type">tree</field>
+            <field name="name">lab_device_correction_list</field>
+        </record>
+
+<!-- Wizard Relate Analysis to Device -->
+
+        <record model="ir.ui.view" id="lab_device_relate_analysis_start_view_form">
+            <field name="model">lims.lab.device.relate_analysis.start</field>
+            <field name="type">form</field>
+            <field name="name">lab_device_relate_analysis_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_device_relate_analysis">
+            <field name="name">Relate Analysis to Device</field>
+            <field name="wiz_name">lims.lab.device.relate_analysis</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wizard_device_relate_analysis_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.lab.device,-1</field>
+            <field name="action" ref="wizard_device_relate_analysis"/>
+        </record>
+
+<!-- Result Modifier -->
+
+        <record model="ir.ui.view" id="result_modifier_view_form">
+            <field name="model">lims.result_modifier</field>
+            <field name="type">form</field>
+            <field name="name">result_modifier_form</field>
+        </record>
+        <record model="ir.ui.view" id="result_modifier_view_list">
+            <field name="model">lims.result_modifier</field>
+            <field name="type">tree</field>
+            <field name="name">result_modifier_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_result_modifier_list">
+            <field name="name">Result Modifiers</field>
+            <field name="res_model">lims.result_modifier</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_result_modifier_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="result_modifier_view_list"/>
+            <field name="act_window" ref="act_result_modifier_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_result_modifier_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="result_modifier_view_form"/>
+            <field name="act_window" ref="act_result_modifier_list"/>
+        </record>
+
+        <menuitem action="act_result_modifier_list" id="menu_result_modifier_list"
+            parent="lims_config_laboratory" sequence="55"/>
+
+<!-- Notebook Rule -->
+
+        <record model="ir.ui.view" id="notebook_rule_view_form">
+            <field name="model">lims.rule</field>
+            <field name="type">form</field>
+            <field name="name">notebook_rule_form</field>
+        </record>
+        <record model="ir.ui.view" id="notebook_rule_view_list">
+            <field name="model">lims.rule</field>
+            <field name="type">tree</field>
+            <field name="name">notebook_rule_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_notebook_rule_list">
+            <field name="name">Notebook Rules</field>
+            <field name="res_model">lims.rule</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_notebook_rule_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="notebook_rule_view_list"/>
+            <field name="act_window" ref="act_notebook_rule_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_notebook_rule_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="notebook_rule_view_form"/>
+            <field name="act_window" ref="act_notebook_rule_list"/>
+        </record>
+
+        <menuitem action="act_notebook_rule_list" id="menu_notebook_rule_list"
+            parent="lims_config_laboratory" sequence="60"/>
+
+<!-- Notebook Rule Condition -->
+
+        <record model="ir.ui.view" id="notebook_rule_condition_view_form">
+            <field name="model">lims.rule.condition</field>
+            <field name="type">form</field>
+            <field name="name">notebook_rule_condition_form</field>
+        </record>
+        <record model="ir.ui.view" id="notebook_rule_condition_view_list">
+            <field name="model">lims.rule.condition</field>
+            <field name="type">tree</field>
+            <field name="name">notebook_rule_condition_list</field>
+        </record>
+
+    </data>
+    <data noupdate="1">
+
+        <record model="lims.result_modifier" id="result_modifier_low">
+            <field name="code">low</field>
+            <field name="name">&lt;</field>
+            <field name="expression">&lt; LoQ = &lt;result&gt;</field>
+        </record>
+        <record model="lims.result_modifier" id="result_modifier_gre">
+            <field name="code">gre</field>
+            <field name="name">&gt;</field>
+            <field name="expression">&gt; &lt;result&gt;</field>
+        </record>
+        <record model="lims.result_modifier" id="result_modifier_d">
+            <field name="code">d</field>
+            <field name="name">Detected</field>
+            <field name="expression">Detected</field>
+        </record>
+        <record model="lims.result_modifier" id="result_modifier_nd">
+            <field name="code">nd</field>
+            <field name="name">Not detected</field>
+            <field name="expression">Not detected</field>
+        </record>
+        <record model="lims.result_modifier" id="result_modifier_na">
+            <field name="code">na</field>
+            <field name="name">na</field>
+        </record>
+        <record model="lims.result_modifier" id="result_modifier_pos">
+            <field name="code">pos</field>
+            <field name="name">Positive</field>
+            <field name="expression">Positive</field>
+        </record>
+        <record model="lims.result_modifier" id="result_modifier_neg">
+            <field name="code">neg</field>
+            <field name="name">Negative</field>
+            <field name="expression">Negative</field>
+        </record>
+        <record model="lims.result_modifier" id="result_modifier_ni">
+            <field name="code">ni</field>
+            <field name="name">ni</field>
+        </record>
+        <record model="lims.result_modifier" id="result_modifier_abs">
+            <field name="code">abs</field>
+            <field name="name">Absence</field>
+            <field name="expression">Absence</field>
+        </record>
+        <record model="lims.result_modifier" id="result_modifier_pre">
+            <field name="code">pre</field>
+            <field name="name">Presence</field>
+            <field name="expression">Presence</field>
+        </record>
+
+    </data>
+</tryton>

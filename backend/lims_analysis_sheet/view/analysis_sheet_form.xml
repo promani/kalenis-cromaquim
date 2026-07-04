@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<form>
+    <label name="template"/>
+    <field name="template"/>
+    <label name="number"/>
+    <field name="number"/>
+    <notebook>
+        <page string="General" id="general">
+            <label name="professional"/>
+            <field name="professional"/>
+            <label name="laboratory"/>
+            <field name="laboratory"/>
+            <label name="samples"/>
+            <field name="samples"/>
+            <label name="date"/>
+            <field name="date"/>
+            <group id="samples" colspan="2" col="8">
+                <label name="urgent"/>
+                <field name="urgent"/>
+                <label name="out_of_ranges"/>
+                <field name="out_of_ranges"/>
+                <label name="samples_qty"/>
+                <field name="samples_qty"/>
+                <label name="completion_percentage"/>
+                <field name="completion_percentage" widget="progressbar"/>
+            </group>
+            <label name="compilation"/>
+            <field name="compilation"/>
+            <label name="planification"/>
+            <field name="planification"/>
+            <label name="planning_date"/>
+            <field name="planning_date"/>
+            <separator string="Other Info" id="other" colspan="4"/>
+            <label name="activated_by"/>
+            <field name="activated_by"/>
+            <label name="activated_date"/>
+            <field name="activated_date"/>
+            <label name="validated_by"/>
+            <field name="validated_by"/>
+            <label name="validated_date"/>
+            <field name="validated_date"/>
+            <label name="confirmed_by"/>
+            <field name="confirmed_by"/>
+            <label name="confirmed_date"/>
+            <field name="confirmed_date"/>
+            <button name="view_data" string="View data" colspan="4"/>
+            <label name="view"/>
+            <field name="view" widget="selection"/>
+            <button name="view_grouped_data" string="View grouped data" colspan="2"/>
+            <field name="interface" invisible="1"/>
+        </page>
+        <page string="Samples" id="related_samples_page">
+            <field name="related_samples" colspan="4"/>
+        </page>
+    </notebook>
+    <group id="state_holder" colspan="4">
+        <label name="state"/>
+        <field name="state"/>
+        <group id="buttons_holder" colspan="2">
+            <button name="activate" string="Activate"/>
+            <button name="validate_" string="Validate"/>
+            <button name="confirm" string="Confirm"/>
+            <button name="annul" string="Annul"/>
+        </group>
+    </group>
+</form>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Project -->
+
+        <record model="ir.ui.view" id="lims_project_view_form">
+            <field name="model">lims.project</field>
+            <field name="inherit" ref="lims_project.lims_project_view_form"/>
+            <field name="name">project_form</field>
+        </record>
+
+<!-- Sample -->
+
+        <record model="ir.ui.view" id="lims_sample_view_form">
+            <field name="model">lims.sample</field>
+            <field name="inherit" ref="lims.lims_sample_view_form"/>
+            <field name="name">sample_form</field>
+        </record>
+
+<!-- Wizard Create Sample -->
+
+        <record model="ir.ui.view" id="lims_create_sample_start_view_form">
+            <field name="model">lims.create_sample.start</field>
+            <field name="inherit" ref="lims.lims_create_sample_start_view_form"/>
+            <field name="name">create_sample_start_form</field>
+        </record>
+
+        <record model="ir.action.report" id="report_wtr_01">
+            <field name="name">WTR - Water sampling report</field>
+            <field name="model">lims.project</field>
+            <field name="report_name">lims.project.water_sampling_report</field>
+            <field name="report">lims_project_water/report/wtr_01.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+
+        <record model="ir.action.keyword" id="report_wtr_01_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">lims.project,-1</field>
+            <field name="action" ref="report_wtr_01"/>
+        </record>
+
+    </data>
+</tryton>

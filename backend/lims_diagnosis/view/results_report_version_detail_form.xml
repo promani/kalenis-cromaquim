@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/field[@name='template']" position="after">
+        <label name="diagnosis_template"/>
+        <field name="diagnosis_template"/>
+    </xpath>
+    <xpath expr="/form/field[@name='party']" position="after">
+        <label name="diagnostician"/>
+        <field name="diagnostician"/>
+    </xpath>
+    <xpath expr="/form/group[@id='buttons']" position="inside">
+        <button name="diagnose" string="Diagnosed"/>
+    </xpath>
+</data>

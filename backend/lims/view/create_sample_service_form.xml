@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<form>
+    <label name="analysis"/>
+    <field name="analysis"/>
+    <label name="laboratory"/>
+    <field name="laboratory"/>
+    <label name="method"/>
+    <field name="method"/>
+    <label name="device"/>
+    <field name="device"/>
+    <group id="priority" colspan="2" col="4">
+        <label name="urgent"/>
+        <field name="urgent"/>
+        <label name="priority"/>
+        <field name="priority"/>
+    </group>
+    <group id="checkboxes" colspan="2" col="4">
+        <label name="explode_analysis"/>
+        <field name="explode_analysis"/>
+        <label name="divide"/>
+        <field name="divide"/>
+    </group>
+    <group id="estimated_waiting_laboratory" colspan="2" col="2">
+        <label name="estimated_waiting_laboratory"/>
+        <field name="estimated_waiting_laboratory"/>
+    </group>
+    <group id="estimated_waiting_report" colspan="2" col="2">
+        <label name="estimated_waiting_report"/>
+        <field name="estimated_waiting_report"/>
+    </group>
+    <group id="laboratory_date" colspan="2" col="2">
+        <label name="laboratory_date"/>
+        <field name="laboratory_date"/>
+    </group>
+    <group id="report_date" colspan="2" col="2">
+        <label name="report_date"/>
+        <field name="report_date"/>
+    </group>
+    <label name="contract_number"/>
+    <field name="contract_number"/>
+</form>

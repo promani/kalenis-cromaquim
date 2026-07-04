@@ -1,0 +1,19 @@
+# IDE / entorno local
+.idea/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.DS_Store
+
+# Node / build del frontend
+node_modules/
+frontend/sao/
+dist/
+build/
+
+# Configuración local y secretos
+*.local.conf
+.env
+.env.*

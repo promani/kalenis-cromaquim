@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/field[@name='page_orientation']" position="after">
+        <label name="diagnosis_template"/>
+        <field name="diagnosis_template"/>
+        <group id="diagnosis_length" colspan="2">
+            <label name="diagnosis_length"/>
+            <field name="diagnosis_length"/>
+        </group>
+    </xpath>
+</data>

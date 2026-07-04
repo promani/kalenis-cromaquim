@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Results Report Version Detail -->
+
+        <record model="ir.ui.view" id="results_report_version_detail_view_list">
+            <field name="model">lims.results_report.version.detail</field>
+            <field name="inherit" ref="lims.lims_results_report_version_detail_view_list"/>
+            <field name="name">results_report_version_detail_list</field>
+        </record>
+        <record model="ir.ui.view" id="results_report_version_detail_view_form">
+            <field name="model">lims.results_report.version.detail</field>
+            <field name="inherit" ref="lims.lims_results_report_version_detail_view_form"/>
+            <field name="name">results_report_version_detail_form</field>
+        </record>
+
+        <record model="ir.model.button" id="results_report_version_detail_relate_attachment_button">
+            <field name="name">relate_attachment</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="results_report_version_detail_relate_attachment_button_group_lims_laboratory_reports">
+            <field name="button" ref="results_report_version_detail_relate_attachment_button"/>
+            <field name="group" ref="lims.group_lims_laboratory_reports"/>
+        </record>
+
+<!-- Results Report Version Detail Section -->
+
+        <record model="ir.ui.view" id="results_report_version_detail_section_view_form">
+            <field name="model">lims.results_report.version.detail.section</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_detail_section_form</field>
+        </record>
+        <record model="ir.ui.view" id="results_report_version_detail_section_view_list">
+            <field name="model">lims.results_report.version.detail.section</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_version_detail_section_list</field>
+        </record>
+
+<!-- Results Report Version Detail Trend Chart -->
+
+        <record model="ir.ui.view" id="results_report_version_detail_chart_view_form">
+            <field name="model">lims.results_report.version.detail.trend.chart</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_detail_chart_form</field>
+        </record>
+        <record model="ir.ui.view" id="results_report_version_detail_chart_view_list">
+            <field name="model">lims.results_report.version.detail.trend.chart</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_version_detail_chart_list</field>
+        </record>
+
+<!-- Wizard Relate Attachment to Results Report -->
+
+        <record model="ir.ui.view" id="results_report_version_detail_relate_attachment_start_form">
+            <field name="model">lims.results_report.version.detail.relate_attachment.start</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_detail_relate_attachment_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_results_report_version_detail_relate_attachment">
+            <field name="name">Relate Attachment to Results Report</field>
+            <field name="wiz_name">lims.results_report.version.detail.relate_attachment</field>
+        </record>
+
+<!-- Results Report -->
+
+        <record model="ir.action.report" id="report_result_report_html">
+            <field name="name">Results Report</field>
+            <field name="model">lims.results_report.version.detail</field>
+            <field name="report_name">lims.result_report</field>
+            <field name="report">lims_report_html/report/results_report.html</field>
+            <field name="extension">pdf</field>
+            <field name="template_extension">lims</field>
+        </record>
+
+<!-- Wizard Generate Results Report -->
+
+        <record model="ir.ui.view" id="notebook_generate_results_report_view_form">
+            <field name="model">lims.notebook.generate_results_report.start</field>
+            <field name="inherit" ref="lims.notebook_generate_results_report_view_form"/>
+            <field name="name">notebook_generate_results_report_form</field>
+        </record>
+
+    </data>
+</tryton>

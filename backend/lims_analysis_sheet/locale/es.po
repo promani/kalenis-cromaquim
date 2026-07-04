@@ -1,0 +1,1505 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:lims.analysis_sheet,activated_by:"
+msgid "Activated By"
+msgstr "Activada por"
+
+msgctxt "field:lims.analysis_sheet,activated_date:"
+msgid "Activated Date"
+msgstr "Fecha Activación"
+
+msgctxt "field:lims.analysis_sheet,annulled_by:"
+msgid "Annulled By"
+msgstr "Anulada por"
+
+msgctxt "field:lims.analysis_sheet,annulled_date:"
+msgid "Annulled Date"
+msgstr "Fecha Anulación"
+
+msgctxt "field:lims.analysis_sheet,compilation:"
+msgid "Compilation"
+msgstr "Compilación"
+
+msgctxt "field:lims.analysis_sheet,completion_percentage:"
+msgid "Complete"
+msgstr "Completo"
+
+msgctxt "field:lims.analysis_sheet,confirmed_by:"
+msgid "Confirmed By"
+msgstr "Confirmada Por"
+
+msgctxt "field:lims.analysis_sheet,confirmed_date:"
+msgid "Confirmed Date"
+msgstr "Fecha Confirmación"
+
+msgctxt "field:lims.analysis_sheet,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:lims.analysis_sheet,date2:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:lims.analysis_sheet,interface:"
+msgid "Interface"
+msgstr "Interfaz"
+
+msgctxt "field:lims.analysis_sheet,laboratory:"
+msgid "Laboratory"
+msgstr "Laboratorio"
+
+msgctxt "field:lims.analysis_sheet,number:"
+msgid "Number"
+msgstr "Número"
+
+msgctxt "field:lims.analysis_sheet,partial_analysys:"
+msgid "Partial analysis"
+msgstr "Análisis parciales"
+
+msgctxt "field:lims.analysis_sheet,planification:"
+msgid "Planification"
+msgstr "Planificación"
+
+msgctxt "field:lims.analysis_sheet,planning_date:"
+msgid "Planning Date"
+msgstr "Fecha Planificación"
+
+msgctxt "field:lims.analysis_sheet,professional:"
+msgid "Professional"
+msgstr "Profesional"
+
+msgctxt "field:lims.analysis_sheet,related_samples:"
+msgid "Samples"
+msgstr "Muestras"
+
+msgctxt "field:lims.analysis_sheet,report_cache:"
+msgid "Report"
+msgstr "Informe"
+
+msgctxt "field:lims.analysis_sheet,report_cache_id:"
+msgid "Report ID"
+msgstr "ID Informe"
+
+msgctxt "field:lims.analysis_sheet,report_format:"
+msgid "Report Format"
+msgstr "Formato Informe"
+
+msgctxt "field:lims.analysis_sheet,samples:"
+msgid "Samples"
+msgstr "Muestras"
+
+msgctxt "field:lims.analysis_sheet,samples_qty:"
+msgid "Samples Qty."
+msgstr "Cant. Muestras"
+
+msgctxt "field:lims.analysis_sheet,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:lims.analysis_sheet,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:lims.analysis_sheet,urgent:"
+msgid "Urgent"
+msgstr "Urgente"
+
+msgctxt "field:lims.analysis_sheet,validated_by:"
+msgid "Validated By"
+msgstr "Validada Por"
+
+msgctxt "field:lims.analysis_sheet,validated_date:"
+msgid "Validated Date"
+msgstr "Fecha Validación"
+
+msgctxt "field:lims.analysis_sheet,view:"
+msgid "View"
+msgstr "Vista"
+
+msgctxt "field:lims.analysis_sheet-lims.sample,sample:"
+msgid "Sample"
+msgstr "Muestra"
+
+msgctxt "field:lims.analysis_sheet-lims.sample,sheet:"
+msgid "Analysis sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "field:lims.analysis_sheet.add_control.start,analysis_sheet:"
+msgid "Analysis Sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "field:lims.analysis_sheet.add_control.start,con_type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:lims.analysis_sheet.add_control.start,concentration_level:"
+msgid "Concentration level"
+msgstr "Nivel de concentración"
+
+msgctxt ""
+"field:lims.analysis_sheet.add_control.start,concentration_level_invisible:"
+msgid "Concentration level invisible"
+msgstr "Nivel de concentración invisible"
+
+msgctxt "field:lims.analysis_sheet.add_control.start,fraction_domain:"
+msgid "Fraction domain"
+msgstr "Dominio para Fracción"
+
+msgctxt "field:lims.analysis_sheet.add_control.start,label:"
+msgid "Label"
+msgstr "Rótulo"
+
+msgctxt "field:lims.analysis_sheet.add_control.start,original_fraction:"
+msgid "Original/Reference Fraction"
+msgstr "Fracción original/referencia"
+
+msgctxt "field:lims.analysis_sheet.add_control.start,quantity:"
+msgid "Quantity"
+msgstr "Cantidad"
+
+msgctxt "field:lims.analysis_sheet.add_control.start,rm_bmz_type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:lims.analysis_sheet.add_control.start,type:"
+msgid "Control type"
+msgstr "Tipo de Control"
+
+msgctxt "field:lims.analysis_sheet.edit_grouped_data.start,data:"
+msgid "Data"
+msgstr "Datos"
+
+msgctxt "field:lims.analysis_sheet.edit_multi_sample_data.start,data:"
+msgid "Data"
+msgstr "Datos"
+
+msgctxt "field:lims.analysis_sheet.export_file.start,file:"
+msgid "File"
+msgstr "Archivo"
+
+msgctxt "field:lims.analysis_sheet.import_file.start,file_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.analysis_sheet.import_file.start,origin_file:"
+msgid "Origin File"
+msgstr "Archivo origen"
+
+msgctxt "field:lims.analysis_sheet.move_data.start,analysis_sheet:"
+msgid "Analysis Sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "field:lims.analysis_sheet.move_data.start,move_to:"
+msgid "Move to"
+msgstr "Mover a"
+
+msgctxt "field:lims.analysis_sheet.move_data.start,table:"
+msgid "Table"
+msgstr "Tabla"
+
+msgctxt "field:lims.analysis_sheet.move_data.start,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:lims.analysis_sheet.print_report.ask,print_expression_column:"
+msgid "Print formula column"
+msgstr "Incluir columnas con fórmulas"
+
+msgctxt "field:lims.analysis_sheet.repeat_analysis.start,annul:"
+msgid "Annul current lines"
+msgstr "Anular líneas actuales"
+
+msgctxt "field:lims.analysis_sheet.repeat_analysis.start,lines:"
+msgid "Lines"
+msgstr "Líneas"
+
+msgctxt "field:lims.analysis_sheet.repeat_analysis.start,lines_domain:"
+msgid "Lines domain"
+msgstr "Dominio para Líneas"
+
+msgctxt "field:lims.analysis_sheet.repeat_analysis.start,urgent:"
+msgid "Urgent repetition"
+msgstr "Repetición urgente"
+
+msgctxt "field:lims.analysis_sheet.repeat_analysis.start.line,analysis:"
+msgid "Analysis"
+msgstr "Análisis"
+
+msgctxt "field:lims.analysis_sheet.repeat_analysis.start.line,fraction:"
+msgid "Fraction"
+msgstr "Fracción"
+
+msgctxt "field:lims.analysis_sheet.repeat_analysis.start.line,line:"
+msgid "Line"
+msgstr "Línea"
+
+msgctxt "field:lims.analysis_sheet.repeat_analysis.start.line,repetition:"
+msgid "Repetition"
+msgstr "Repetición"
+
+msgctxt "field:lims.analysis_sheet.repeat_analysis.start.line,session_id:"
+msgid "Session ID"
+msgstr "ID Sesión"
+
+msgctxt "field:lims.analysis_sheet.results_verification.start,range_type:"
+msgid "Origin"
+msgstr "Origen"
+
+msgctxt "field:lims.configuration,analysis_sheet_annul_notebook_lines:"
+msgid "Annul lines in the Notebook when annulling Analysis Sheets"
+msgstr "Anular líneas en el Cuaderno cuando se anula una Hoja de análisis"
+
+msgctxt "field:lims.configuration,analysis_sheet_sequence:"
+msgid "Analysis Sheet Sequence"
+msgstr "Secuencia de Hoja de análisis"
+
+msgctxt "field:lims.configuration,planification_update_draft_sheet:"
+msgid "Update draft sheets when planning analyzes"
+msgstr "Actualizar Hojas de análisis en borrador al planificar"
+
+msgctxt "field:lims.laboratory,planification_update_draft_sheet:"
+msgid "Update draft sheets when planning analyzes"
+msgstr "Actualizar Hojas de análisis en borrador al planificar"
+
+msgctxt "field:lims.configuration.sequence,analysis_sheet_sequence:"
+msgid "Analysis Sheet Sequence"
+msgstr "Secuencia de Hoja de análisis"
+
+msgctxt "field:lims.interface,export_field_separator:"
+msgid "Field separator"
+msgstr "Separador de campos"
+
+msgctxt "field:lims.interface,export_field_separator_other:"
+msgid "Other"
+msgstr "Otro"
+
+msgctxt "field:lims.interface,export_file_type:"
+msgid "File Type"
+msgstr "Tipo de archivo"
+
+msgctxt "field:lims.interface,export_order_field:"
+msgid "Order field"
+msgstr "Campo ordenación"
+
+msgctxt "field:lims.interface.column,destination_column:"
+msgid "Column"
+msgstr "Columna"
+
+msgctxt "field:lims.interface.column,destination_end:"
+msgid "Field end"
+msgstr "Campo fin"
+
+msgctxt "field:lims.interface.column,destination_start:"
+msgid "Field start"
+msgstr "Campo inicio"
+
+msgctxt "field:lims.interface.compilation,analysis_sheet:"
+msgid "Analysis Sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "field:lims.interface.multi_sample_data,fraction:"
+msgid "Sample"
+msgstr "Muestra"
+
+msgctxt "field:lims.lab.device,constants:"
+msgid "Constants"
+msgstr "Constantes"
+
+msgctxt "field:lims.lab.device.constant,device:"
+msgid "Device"
+msgstr "Equipo"
+
+msgctxt "field:lims.lab.device.constant,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.lab.device.constant,value1:"
+msgid "Value 1"
+msgstr "Valor 1"
+
+msgctxt "field:lims.lab.device.constant,value2:"
+msgid "Value 2"
+msgstr "Valor 2"
+
+msgctxt "field:lims.lab.device.constant,value3:"
+msgid "Value 3"
+msgstr "Valor 3"
+
+msgctxt "field:lims.lab.device.constant,value4:"
+msgid "Value 4"
+msgstr "Valor 4"
+
+msgctxt "field:lims.lab.device.constant,value5:"
+msgid "Value 5"
+msgstr "Valor 5"
+
+msgctxt "field:lims.lab.device.constant,value6:"
+msgid "Value 6"
+msgstr "Valor 6"
+
+msgctxt "field:lims.lab.device.constant,value7:"
+msgid "Value 7"
+msgstr "Valor 7"
+
+msgctxt "field:lims.lab.device.constant,value8:"
+msgid "Value 8"
+msgstr "Valor 8"
+
+msgctxt "field:lims.lab.device.constant,value9:"
+msgid "Value 9"
+msgstr "Valor 9"
+
+msgctxt "field:lims.laboratory.professional,samples_qty:"
+msgid "# Samples"
+msgstr "Cant. Muestras"
+
+msgctxt "field:lims.laboratory.professional,sheets_process:"
+msgid "# Sheets in process"
+msgstr "Cant. Hojas en Proceso"
+
+msgctxt "field:lims.laboratory.professional,sheets_queue:"
+msgid "# Sheets in queue"
+msgstr "Cant. Hojas en Cola"
+
+msgctxt "field:lims.notebook.line,analysis_sheet:"
+msgid "Analysis Sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "field:lims.notebook.line,sheet_attachments:"
+msgid "Sheet Attachments"
+msgstr "Adjuntos de Hoja de análisis"
+
+msgctxt "field:lims.planification,analysis_sheets:"
+msgid "Analysis sheets to update"
+msgstr "Hojas de análisis para actualizar"
+
+msgctxt "field:lims.planification,planification_update_draft_sheet:"
+msgid "Update draft sheets"
+msgstr "Actualizar Hojas de análisis en borrador"
+
+msgctxt "field:lims.planification.analysis_sheet,analysis_sheet:"
+msgid "Analysis Sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "field:lims.planification.analysis_sheet,planification:"
+msgid "Planification"
+msgstr "Planificación"
+
+msgctxt "field:lims.planification.analysis_sheet,professional:"
+msgid "Laboratory professional"
+msgstr "Profesional de laboratorio"
+
+msgctxt "field:lims.planification.analysis_sheet,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:lims.planification.professional,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.planification.professional,samples_qty:"
+msgid "# Samples"
+msgstr "Cant. Muestras"
+
+msgctxt "field:lims.planification.professional,sheets_process:"
+msgid "# Sheets in process"
+msgstr "Cant. Hojas en Proceso"
+
+msgctxt "field:lims.planification.professional,sheets_queue:"
+msgid "# Sheets in queue"
+msgstr "Cant. Hojas en Cola"
+
+msgctxt "field:lims.planification.professional.context,from_date:"
+msgid "From Date"
+msgstr "Desde la fecha"
+
+msgctxt "field:lims.planification.professional.context,laboratory:"
+msgid "Laboratory"
+msgstr "Laboratorio"
+
+msgctxt "field:lims.planification.professional.context,to_date:"
+msgid "To Date"
+msgstr "Hasta la fecha"
+
+msgctxt "field:lims.planification.professional.line,color:"
+msgid "Color"
+msgstr "Color"
+
+msgctxt "field:lims.planification.professional.line,completion_percentage:"
+msgid "Complete"
+msgstr "Completo"
+
+msgctxt "field:lims.planification.professional.line,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:lims.planification.professional.line,laboratory:"
+msgid "Laboratory"
+msgstr "Laboratorio"
+
+msgctxt "field:lims.planification.professional.line,professional:"
+msgid "Professional"
+msgstr "Profesional"
+
+msgctxt "field:lims.planification.professional.line,samples_qty:"
+msgid "# Samples"
+msgstr "Cant. Muestras"
+
+msgctxt "field:lims.planification.professional.line,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:lims.planification.professional.line,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:lims.planification.relate_technicians.detail4,fraction:"
+msgid "Fraction"
+msgstr "Fracción"
+
+msgctxt "field:lims.planification.relate_technicians.detail4,services_list:"
+msgid "Services"
+msgstr "Servicios"
+
+msgctxt "field:lims.planification.relate_technicians.detail4,session_id:"
+msgid "Session ID"
+msgstr "ID Sesión"
+
+msgctxt "field:lims.planification.relate_technicians.detail4,template:"
+msgid "Analysis sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "field:lims.planification.relate_technicians.result,details4:"
+msgid "Fractions to plan"
+msgstr "Fracciones a planificar"
+
+msgctxt "field:lims.planification.relate_technicians.result,details4_domain:"
+msgid "Fractions domain"
+msgstr "Dominio para Fracciones"
+
+msgctxt "field:lims.planification.search_analysis_sheet.next,details:"
+msgid "Fractions to plan"
+msgstr "Fracciones a planificar"
+
+msgctxt "field:lims.planification.search_analysis_sheet.next,details_domain:"
+msgid "Fractions domain"
+msgstr "Dominio para Fracciones"
+
+msgctxt "field:lims.planification.search_analysis_sheet.start,date_from:"
+msgid "Date from"
+msgstr "Fecha desde"
+
+msgctxt "field:lims.planification.search_analysis_sheet.start,date_to:"
+msgid "Date to"
+msgstr "Fecha hasta"
+
+msgctxt "field:lims.planification.search_analysis_sheet.start,templates:"
+msgid "Templates"
+msgstr "Plantillas"
+
+msgctxt ""
+"field:lims.planification.search_analysis_sheet.start,templates_domain:"
+msgid "Templates domain"
+msgstr "Dominio para Plantillas"
+
+msgctxt "field:lims.rule,analysis_sheet:"
+msgid "For use in Analysis Sheets"
+msgstr "Para uso en Hojas de análisis"
+
+msgctxt "field:lims.rule,apply_on_notebook:"
+msgid "Apply directly on the Notebook"
+msgstr "Aplicar directamente en el Cuaderno"
+
+msgctxt "field:lims.sample_pending_planning,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.sample_pending_planning,samples_qty:"
+msgid "# Samples"
+msgstr "Cant. Muestras"
+
+msgctxt "field:lims.sample_pending_planning.context,date_from:"
+msgid "From Date"
+msgstr "Desde la fecha"
+
+msgctxt "field:lims.sample_pending_planning.context,date_to:"
+msgid "To Date"
+msgstr "Hasta la fecha"
+
+msgctxt "field:lims.sample_pending_planning.context,department:"
+msgid "Department"
+msgstr "Departamento"
+
+msgctxt "field:lims.sample_pending_planning.context,laboratory:"
+msgid "Laboratory"
+msgstr "Laboratorio"
+
+msgctxt "field:lims.template.analysis_sheet,analysis:"
+msgid "Analysis"
+msgstr "Análisis"
+
+msgctxt "field:lims.template.analysis_sheet,comments:"
+msgid "Comments"
+msgstr "Observaciones"
+
+msgctxt "field:lims.template.analysis_sheet,controls_allowed:"
+msgid "Controls allowed"
+msgstr "Controles habilitados"
+
+msgctxt "field:lims.template.analysis_sheet,controls_required:"
+msgid "Requires Controls"
+msgstr "Requiere controles"
+
+msgctxt "field:lims.template.analysis_sheet,interface:"
+msgid "Device Interface"
+msgstr "Interfaz"
+
+msgctxt "field:lims.template.analysis_sheet,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.template.analysis_sheet,pending_fractions:"
+msgid "Pending fractions"
+msgstr "Fracciones pendientes"
+
+msgctxt "field:lims.template.analysis_sheet,report:"
+msgid "Report"
+msgstr "Informe"
+
+msgctxt "field:lims.template.analysis_sheet,urgent:"
+msgid "Urgent"
+msgstr "Urgente"
+
+msgctxt "field:lims.template.analysis_sheet.analysis,analysis:"
+msgid "Analysis"
+msgstr "Análisis"
+
+msgctxt "field:lims.template.analysis_sheet.analysis,expressions:"
+msgid "Special formulas"
+msgstr "Fórmulas especiales"
+
+msgctxt "field:lims.template.analysis_sheet.analysis,interface:"
+msgid "Device Interface"
+msgstr "Interfaz"
+
+msgctxt "field:lims.template.analysis_sheet.analysis,matrix:"
+msgid "Matrix"
+msgstr "Matriz"
+
+msgctxt "field:lims.template.analysis_sheet.analysis,method:"
+msgid "Method"
+msgstr "Método"
+
+msgctxt "field:lims.template.analysis_sheet.analysis,method_domain:"
+msgid "Method domain"
+msgstr "Dominio para Método"
+
+msgctxt "field:lims.template.analysis_sheet.analysis,product_type:"
+msgid "Product type"
+msgstr "Tipo de producto"
+
+msgctxt "field:lims.template.analysis_sheet.analysis,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:lims.template.analysis_sheet.analysis.expression,analysis:"
+msgid "Analysis"
+msgstr "Análisis"
+
+msgctxt "field:lims.template.analysis_sheet.analysis.expression,column:"
+msgid "Column"
+msgstr "Columna"
+
+msgctxt "field:lims.template.analysis_sheet.analysis.expression,default_value:"
+msgid "Default value"
+msgstr "Valor por defecto"
+
+msgctxt "field:lims.template.analysis_sheet.analysis.expression,expression:"
+msgid "Formula"
+msgstr "Fórmula"
+
+msgctxt "help:lims.interface.column,destination_column:"
+msgid "Mapped column in batch file"
+msgstr "Columna correspondiente en el archivo destino"
+
+msgctxt "model:ir.action,name:"
+msgid "Open Analysis Sheet Data"
+msgstr "Abrir datos de Hoja de análisis"
+
+msgctxt "model:ir.action,name:act_analysis_sheet_list"
+msgid "Analysis Sheets"
+msgstr "Hojas de análisis"
+
+msgctxt "model:ir.action,name:act_analysis_sheet_related1"
+msgid "Analysis Sheets"
+msgstr "Hojas de análisis"
+
+msgctxt "model:ir.action,name:act_open_pending_sample"
+msgid "Open Pending Sample"
+msgstr "Abrir Muestras Pendientes"
+
+msgctxt "model:ir.action,name:act_open_sheet_sample"
+msgid "Open Sheet Sample"
+msgstr "Abrir Muestras de hoja"
+
+msgctxt "model:ir.action,name:act_planification_professional_form"
+msgid "Planifications by Professional"
+msgstr "Tareas por Profesional"
+
+msgctxt "model:ir.action,name:act_planification_professional_line_form"
+msgid "Planifications by Professional - Sheets"
+msgstr "Tareas por Profesional - Hojas"
+
+msgctxt "model:ir.action,name:act_sample_pending_planning"
+msgid "Samples Pending Planning"
+msgstr "Muestras Pendientes de Planificar"
+
+msgctxt "model:ir.action,name:act_template_analysis_list"
+msgid "Template Analysis"
+msgstr "Análisis de Plantilla"
+
+msgctxt "model:ir.action,name:act_template_analysis_sheet_list"
+msgid "Analysis Sheet Templates"
+msgstr "Plantillas de Hoja de análisis"
+
+msgctxt "model:ir.action,name:report_analysis_sheet"
+msgid "Analysis Sheet Report"
+msgstr "Informe de Hoja de análisis"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_add_control"
+msgid "Add Controls"
+msgstr "01) Añadir Controles"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_calculate_expressions"
+msgid "Calculate Expressions"
+msgstr "03) Calcular fórmulas"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_edit_grouped_data"
+msgid "Edit Grouped Data"
+msgstr "Editar datos"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_edit_multi_sample_data"
+msgid "Edit Multi Sample Data"
+msgstr "Editar datos multi muestra"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_evaluate_rules"
+msgid "Evaluate Rules"
+msgstr "06) Evaluar Reglas de cuaderno"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_export_file"
+msgid "Export Analysis Sheet File"
+msgstr "Exportar Hoja de análisis"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_import_file"
+msgid "Import Analysis Sheet File"
+msgstr "Importar archivo de datos"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_limits_validation"
+msgid "Limits Validation"
+msgstr "05) Validación de límites"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_move_data"
+msgid "Move Data"
+msgstr "Mover datos"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_open_data"
+msgid "Open Analysis Sheet Data"
+msgstr "Abrir datos de Hoja de análisis"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_open_sample"
+msgid "Analysis Sheet Samples"
+msgstr "Muestras de Hoja de análisis"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_print_report"
+msgid "Analysis Sheet Report"
+msgstr "Informe de Hoja de análisis"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_repeat_analysis"
+msgid "Repeat Analysis"
+msgstr "02) Repetir análisis"
+
+msgctxt "model:ir.action,name:wiz_analysis_sheet_results_verification"
+msgid "Results Verification"
+msgstr "04) Verificación de resultados"
+
+msgctxt "model:ir.action,name:wiz_search_analysis_sheet"
+msgid "Search Analysis Sheets"
+msgstr "Buscar Hojas de ensayos"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_analysis_sheet_list_domain_active"
+msgid "Active"
+msgstr "Activa"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_analysis_sheet_list_domain_all"
+msgid "All"
+msgstr "Todas"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_analysis_sheet_list_domain_done"
+msgid "Done"
+msgstr "Realizada"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_analysis_sheet_list_domain_draft"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_analysis_sheet_list_domain_validated"
+msgid "Validated"
+msgstr "Validada"
+
+msgctxt "model:ir.message,text:delete_done_sheet"
+msgid "You cannot delete an Analysis Sheet in \"Done\" state"
+msgstr "No puede eliminar una Hoja de análisis en estado \"Realizada\""
+
+msgctxt "model:ir.message,text:msg_fraction_already_sheet"
+msgid ""
+"Fraction \"%(fraction)s\" has analyses already in progress on Sheet "
+"\"%(sheet)s\""
+msgstr ""
+"La Fracción \"%(fraction)s\" ya tiene análisis en progreso en la Hoja "
+"\"%(sheet)s\""
+
+msgctxt "model:ir.message,text:msg_expression_column_interface"
+msgid "Column \"%(column)s\" does not belong to the interface of template \"%(template)s\"."
+msgstr ""
+"La columna \"%(column)s\" no pertenece a la interfaz de la plantilla "
+"\"%(template)s\"."
+
+msgctxt "model:ir.message,text:msg_expression_duplicate_default"
+msgid ""
+"Only one special formula per analysis can set a default value for column "
+"\"%(column)s\"."
+msgstr ""
+"Sólo una fórmula especial por análisis puede definir un valor por defecto "
+"para la columna \"%(column)s\"."
+
+msgctxt "model:ir.message,text:msg_sheet_compilation_unique"
+msgid "Compilation already in use by another Analysis Sheet"
+msgstr "La Compilación ya está en uso para otra Hoja de análisis"
+
+msgctxt "model:ir.message,text:msg_sheet_missing_controls"
+msgid "Controls are missing for Analysis Sheet \"%(sheet)s\""
+msgstr "Faltan Controles para la Hoja de análisis \"%(sheet)s\""
+
+msgctxt "model:ir.message,text:msg_sheet_not_controls"
+msgid "Controls are required for this Analysis Sheet"
+msgstr "Se requieren Controles para esta Hoja de análisis"
+
+msgctxt "model:ir.message,text:msg_sheet_not_lines"
+msgid "The analysis sheet has no data"
+msgstr "La Hoja de análisis no tiene datos"
+
+msgctxt "model:ir.message,text:msg_sheet_not_results"
+msgid "There are lines without result"
+msgstr "Existen líneas sin resultado"
+
+msgctxt "model:ir.message,text:msg_sheets_different_templates"
+msgid "The selected sheets have different templates"
+msgstr "Las Hojas seleccionadas tienen diferentes Plantillas"
+
+msgctxt "model:ir.message,text:msg_template_analysis_unique"
+msgid "Analysis \"%(analysis)s\" already exists in another Template"
+msgstr "El análisis «%(analysis)s» ya existe en otra plantilla"
+
+msgctxt "model:ir.message,text:msg_template_not_report"
+msgid "Template \"%(template)s\" has no associated report"
+msgstr "La plantilla «%(template)s» no tiene informe asociado"
+
+msgctxt "model:ir.message,text:msg_template_not_result_field"
+msgid "The template does not have a column for the Result field"
+msgstr "La plantilla no tiene una columna para el campo Resultado"
+
+msgctxt "model:ir.message,text:msg_template_not_result_modifier_field"
+msgid "The template does not have a column for the Result modifier field"
+msgstr ""
+"La plantilla no tiene una columna para el campo Modificador de resultado"
+
+msgctxt "model:ir.message,text:msg_template_not_verification_field"
+msgid "The template does not have a column for the Verification field"
+msgstr "La plantilla no tiene una columna para el campo Verificación"
+
+msgctxt "model:ir.rule.group,name:rule_group_sheet"
+msgid "User in laboratory"
+msgstr ""
+
+msgctxt "model:ir.sequence,name:seq_analysis_sheet"
+msgid "Analysis Sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "model:ir.sequence.type,name:seq_type_analysis_sheet"
+msgid "Analysis Sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "model:ir.ui.menu,name:"
+msgid "Samples Pending Planning"
+msgstr "Muestras Pendientes de Planificar"
+
+msgctxt "model:ir.ui.menu,name:menu_analysis_sheet_list"
+msgid "Analysis Sheets"
+msgstr "Hojas de análisis"
+
+msgctxt "model:ir.ui.menu,name:menu_planification_professional"
+msgid "Planifications by Professional"
+msgstr "Tareas por Profesional"
+
+msgctxt "model:ir.ui.menu,name:menu_sample_pending_planning"
+msgid "Samples Pending Planning"
+msgstr "Muestras Pendientes de Planificar"
+
+msgctxt "model:ir.ui.menu,name:menu_template_analysis_list"
+msgid "Template Analysis"
+msgstr "Análisis de Plantilla"
+
+msgctxt "model:ir.ui.menu,name:menu_template_analysis_sheet_list"
+msgid "Analysis Sheet Templates"
+msgstr "Plantillas de Hoja de análisis"
+
+msgctxt "model:lims.analysis_sheet,name:"
+msgid "Analysis Sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "model:lims.analysis_sheet-lims.sample,name:"
+msgid "Analysis Sheet - Sample"
+msgstr "Hoja de análisis - Muestra"
+
+msgctxt "model:lims.analysis_sheet.add_control.start,name:"
+msgid "Add Controls"
+msgstr "Añadir Controles"
+
+msgctxt "model:lims.analysis_sheet.edit_grouped_data.start,name:"
+msgid "Edit Grouped Data"
+msgstr "Editar datos"
+
+msgctxt "model:lims.analysis_sheet.edit_multi_sample_data.start,name:"
+msgid "Edit Multi Sample Data"
+msgstr "Editar datos multi muestra"
+
+msgctxt "model:lims.analysis_sheet.export_file.start,name:"
+msgid "Export Analysis Sheet File"
+msgstr "Exportar Hoja de análisis"
+
+msgctxt "model:lims.analysis_sheet.import_file.start,name:"
+msgid "Import Analysis Sheet File"
+msgstr "Importar archivo de datos"
+
+msgctxt "model:lims.analysis_sheet.move_data.start,name:"
+msgid "Move Data"
+msgstr "Mover datos"
+
+msgctxt "model:lims.analysis_sheet.print_report.ask,name:"
+msgid "Analysis Sheet Report"
+msgstr "Informe de Hoja de análisis"
+
+msgctxt "model:lims.analysis_sheet.repeat_analysis.start,name:"
+msgid "Repeat Analysis"
+msgstr "Repetir análisis"
+
+msgctxt "model:lims.analysis_sheet.repeat_analysis.start.line,name:"
+msgid "Analysis Sheet Line"
+msgstr "Línea de Hoja de análisis"
+
+msgctxt "model:lims.analysis_sheet.results_verification.start,name:"
+msgid "Results Verification"
+msgstr "Verificación de resultados"
+
+msgctxt "model:lims.interface.multi_sample_data,name:"
+msgid "Multi Sample Data"
+msgstr "Datos multi muestra"
+
+msgctxt "model:lims.lab.device.constant,name:"
+msgid "Device Constant"
+msgstr "Constante de Equipo"
+
+msgctxt "model:lims.planification.analysis_sheet,name:"
+msgid "Planification - Analysis Sheet"
+msgstr "Planificación - Hoja de análisis"
+
+msgctxt "model:lims.planification.professional,name:"
+msgid "Planification Professional"
+msgstr "Tareas por Profesional"
+
+msgctxt "model:lims.planification.professional.context,name:"
+msgid "Planification Professional Context"
+msgstr "Tareas por Profesional Contexto"
+
+msgctxt "model:lims.planification.professional.line,name:"
+msgid "Planification Professional Line"
+msgstr "Tareas por Profesional Línea"
+
+msgctxt "model:lims.planification.relate_technicians.detail4,name:"
+msgid "Fraction Detail"
+msgstr "Detalle de fracción"
+
+msgctxt "model:lims.planification.search_analysis_sheet.next,name:"
+msgid "Search Analysis Sheets"
+msgstr "Buscar Hojas de ensayos"
+
+msgctxt "model:lims.planification.search_analysis_sheet.start,name:"
+msgid "Search Analysis Sheets"
+msgstr "Buscar Hojas de ensayos"
+
+msgctxt "model:lims.sample_pending_planning,name:"
+msgid "Samples Pending Planning"
+msgstr "Muestras Pendientes de Planificar"
+
+msgctxt "model:lims.sample_pending_planning.context,name:"
+msgid "Samples Pending Planning Context"
+msgstr "Muestras Pendientes de Planificar Contexto"
+
+msgctxt "model:lims.template.analysis_sheet,name:"
+msgid "Analysis Sheet Template"
+msgstr "Plantilla de Hoja de análisis"
+
+msgctxt "model:lims.template.analysis_sheet.analysis,name:"
+msgid "Template Analysis"
+msgstr "Análisis de Plantilla"
+
+msgctxt "model:lims.template.analysis_sheet.analysis.expression,name:"
+msgid "Special Formula"
+msgstr "Fórmula especial"
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "("
+msgstr "("
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid ")"
+msgstr ")"
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid ","
+msgstr ","
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "/"
+msgstr "/"
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "/for"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "00/00/0000"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "00:00:00"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "???"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "Analysis Sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "Página"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[0]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[10]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[11]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[12]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[13]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[14]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[15]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[16]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[17]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[18]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[19]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[1]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[2]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[3]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[4]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[5]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[6]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[7]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[8]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "columns[9]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "for each=\"line in rows\""
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "for each=\"sheet in sheets\""
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "format_date(sheet.date, user.language)"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[0]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[10]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[11]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[12]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[13]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[14]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[15]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[16]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[17]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[18]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[19]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[1]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[2]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[3]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[4]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[5]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[6]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[7]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[8]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "line[9]"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "sheet.number"
+msgstr ""
+
+msgctxt "report:lims.analysis_sheet.report:"
+msgid "sheet.template.name"
+msgstr ""
+
+msgctxt "selection:lims.analysis_sheet,state:"
+msgid "Active"
+msgstr "Activa"
+
+msgctxt "selection:lims.analysis_sheet,state:"
+msgid "Annulled"
+msgstr "Anulada"
+
+msgctxt "selection:lims.analysis_sheet,state:"
+msgid "Done"
+msgstr "Realizada"
+
+msgctxt "selection:lims.analysis_sheet,state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:lims.analysis_sheet,state:"
+msgid "Validated"
+msgstr "Validada"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,con_type:"
+msgid "COI"
+msgstr "COI"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,con_type:"
+msgid "Existing"
+msgstr "Existente"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,con_type:"
+msgid "ITC"
+msgstr "ITC"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,con_type:"
+msgid "ITL"
+msgstr "ITL"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,con_type:"
+msgid "MRC"
+msgstr "MRC"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,con_type:"
+msgid "SLA"
+msgstr "SLA"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,rm_bmz_type:"
+msgid "Existing"
+msgstr "Existente"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,rm_bmz_type:"
+msgid "SLA"
+msgstr "SLA"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,type:"
+msgid "BMZ"
+msgstr "BMZ"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,type:"
+msgid "CON"
+msgstr "CON"
+
+msgctxt "selection:lims.analysis_sheet.add_control.start,type:"
+msgid "RM"
+msgstr "RM"
+
+msgctxt "selection:lims.analysis_sheet.move_data.start,move_to:"
+msgid "Existing sheet"
+msgstr "Hoja existente"
+
+msgctxt "selection:lims.analysis_sheet.move_data.start,move_to:"
+msgid "New sheet"
+msgstr "Nueva hoja"
+
+msgctxt "selection:lims.interface,export_field_separator:"
+msgid "Colon (:)"
+msgstr "Dos puntos (:)"
+
+msgctxt "selection:lims.interface,export_field_separator:"
+msgid "Comma (,)"
+msgstr "Coma (,)"
+
+msgctxt "selection:lims.interface,export_field_separator:"
+msgid "Other"
+msgstr "Otro"
+
+msgctxt "selection:lims.interface,export_field_separator:"
+msgid "Semicolon (;)"
+msgstr "Punto y coma (;)"
+
+msgctxt "selection:lims.interface,export_field_separator:"
+msgid "Space"
+msgstr "Espacio"
+
+msgctxt "selection:lims.interface,export_field_separator:"
+msgid "Tab"
+msgstr "Tabulador"
+
+msgctxt "selection:lims.interface,export_file_type:"
+msgid "Comma Separated Values"
+msgstr "Valores separados por coma (.csv)"
+
+msgctxt "selection:lims.interface,export_file_type:"
+msgid "Excel"
+msgstr "Excel"
+
+msgctxt "selection:lims.interface,export_file_type:"
+msgid "Text File"
+msgstr "Archivo de texto"
+
+msgctxt "selection:lims.planification.professional.line,state:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "selection:lims.planification.professional.line,state:"
+msgid "Done"
+msgstr "Realizado"
+
+msgctxt "selection:lims.planification.professional.line,state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:lims.planification.professional.line,state:"
+msgid "Validated"
+msgstr "Validada"
+
+msgctxt "selection:lims.planification.relate_technicians.result,grouping:"
+msgid "Analysis sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "selection:lims.planification.relate_technicians.start,grouping:"
+msgid "Analysis sheet"
+msgstr "Hoja de análisis"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "BMZ"
+msgstr "BMZ"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "BRE"
+msgstr "BRE"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "COI"
+msgstr "COI"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "Control"
+msgstr "Control"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "ITC"
+msgstr "ITC"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "ITL"
+msgstr "ITL"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "MRC"
+msgstr "MRC"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "MRT"
+msgstr "MRT"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "RM"
+msgstr "RM"
+
+msgctxt "selection:lims.template.analysis_sheet,controls_allowed:"
+msgid "SLA"
+msgstr "SLA"
+
+msgctxt "view:lims.analysis_sheet:"
+msgid "Activate"
+msgstr "Activar"
+
+msgctxt "view:lims.analysis_sheet:"
+msgid "Annul"
+msgstr "Anular"
+
+msgctxt "view:lims.analysis_sheet:"
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgctxt "view:lims.analysis_sheet:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:lims.analysis_sheet:"
+msgid "Other Info"
+msgstr "Información adicional"
+
+msgctxt "view:lims.analysis_sheet:"
+msgid "Samples"
+msgstr "Muestras"
+
+msgctxt "view:lims.analysis_sheet:"
+msgid "Validate"
+msgstr "Validar"
+
+msgctxt "view:lims.analysis_sheet:"
+msgid "View data"
+msgstr "Ver datos"
+
+msgctxt "view:lims.analysis_sheet:"
+msgid "View grouped data"
+msgstr "Ver datos agrupados"
+
+msgctxt "view:lims.interface.column:"
+msgid "Export:"
+msgstr "Exportación:"
+
+msgctxt "view:lims.interface:"
+msgid "Export"
+msgstr "Exportación"
+
+msgctxt "view:lims.planification:"
+msgid "Analysis sheets"
+msgstr "Hojas de análisis"
+
+msgctxt "view:lims.planification:"
+msgid "Search Analysis Sheets"
+msgstr "Buscar Hojas de ensayos"
+
+msgctxt "view:lims.template.analysis_sheet:"
+msgid "Analysis"
+msgstr "Análisis"
+
+msgctxt "view:lims.template.analysis_sheet:"
+msgid "Comments"
+msgstr "Observaciones"
+
+msgctxt "view:lims.template.analysis_sheet:"
+msgid "Controls"
+msgstr "Controles"
+
+msgctxt "wizard_button:lims.analysis_sheet.add_control,start,add:"
+msgid "Add"
+msgstr "Añadir"
+
+msgctxt "wizard_button:lims.analysis_sheet.add_control,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.analysis_sheet.edit_grouped_data,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.analysis_sheet.edit_grouped_data,start,save:"
+msgid "Save"
+msgstr "Guardar"
+
+msgctxt "wizard_button:lims.analysis_sheet.edit_multi_sample_data,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.analysis_sheet.edit_multi_sample_data,start,save:"
+msgid "Save"
+msgstr "Guardar"
+
+msgctxt "wizard_button:lims.analysis_sheet.export_file,export_,end:"
+msgid "Close"
+msgstr "Cerrar"
+
+msgctxt "wizard_button:lims.analysis_sheet.import_file,ask_file,collect:"
+msgid "Collect"
+msgstr "Importar datos"
+
+msgctxt "wizard_button:lims.analysis_sheet.import_file,ask_file,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.analysis_sheet.move_data,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.analysis_sheet.move_data,start,move:"
+msgid "Move"
+msgstr "Mover"
+
+msgctxt "wizard_button:lims.analysis_sheet.print_report,ask,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.analysis_sheet.print_report,ask,print_:"
+msgid "Print"
+msgstr "Imprimir"
+
+msgctxt "wizard_button:lims.analysis_sheet.repeat_analysis,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.analysis_sheet.repeat_analysis,start,repeat:"
+msgid "Repeat"
+msgstr "Repetir"
+
+msgctxt "wizard_button:lims.analysis_sheet.results_verification,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.analysis_sheet.results_verification,start,verify:"
+msgid "Ok"
+msgstr "Aceptar"
+
+msgctxt "wizard_button:lims.planification.search_analysis_sheet,next,add:"
+msgid "Add"
+msgstr "Añadir"
+
+msgctxt "wizard_button:lims.planification.search_analysis_sheet,next,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.planification.search_analysis_sheet,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims.planification.search_analysis_sheet,start,search:"
+msgid "Search"
+msgstr "Buscar"

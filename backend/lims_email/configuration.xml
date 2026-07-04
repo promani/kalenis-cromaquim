@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Configuration -->
+
+        <record model="ir.ui.view" id="lims_configuration_view">
+            <field name="model">lims.configuration</field>
+            <field name="inherit" ref="lims.lims_configuration_view"/>
+            <field name="name">configuration_form</field>
+        </record>
+
+<!-- Cron -->
+
+        <record model="ir.cron" id="cron_results_report_send_email">
+            <field name="interval_number" eval="1"/>
+            <field name="interval_type">days</field>
+            <field name="method">lims.results_report|cron_send_results_report</field>
+        </record>
+
+    </data>
+</tryton>

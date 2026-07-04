@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form>
+    <group id="description" colspan="4" col="6">
+        <label name="code"/>
+        <field name="code" xexpand="0" width="100"/>
+        <label name="description"/>
+        <field name="description" xexpand="1"/>
+        <label name="active"/>
+        <field name="active" xexpand="0" width="100"/>
+    </group>
+    <label name="device_type"/>
+    <field name="device_type"/>
+    <label name="serial_number"/>
+    <field name="serial_number"/>
+    <notebook>
+        <page string="Laboratories" id="laboratories">
+            <field name="laboratories" colspan="4"/>
+        </page>
+        <page string="Corrections" id="corrections">
+            <field name="corrections" colspan="4"/>
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<tryton>
+    <data grouped="1">
+        <record model="ir.message" id="msg_delete_task">
+            <field name="text">You can not delete task "%(task)s" because it is not in draft state</field>
+        </record>
+        <record model="ir.message" id="msg_no_task_sequence">
+            <field name="text">There is no task sequence configured</field>
+        </record>
+        <record model="ir.message" id="lbl_overdue_task_subject">
+            <field name="text">Notice of overdue tasks</field>
+        </record>
+        <record model="ir.message" id="lbl_overdue_task_body">
+            <field name="text">Your overdue tasks are listed below:</field>
+        </record>
+        <record model="ir.message" id="field_task_number">
+            <field name="text">Task Number</field>
+        </record>
+        <record model="ir.message" id="field_task_date">
+            <field name="text">Create Date</field>
+        </record>
+        <record model="ir.message" id="field_task_expiration_date">
+            <field name="text">Expiration Date</field>
+        </record>
+        <record model="ir.message" id="field_task_priority">
+            <field name="text">Priority</field>
+        </record>
+        <record model="ir.message" id="field_task_origin">
+            <field name="text">Operation Origin</field>
+        </record>
+        <record model="ir.message" id="field_task_url">
+            <field name="text">URL</field>
+        </record>
+    </data>
+</tryton>

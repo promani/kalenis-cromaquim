@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="code"/>
+    <field name="name"/>
+    <field name="version"/>
+    <field name="reference"/>
+    <field name="determination"/>
+    <field name="requalification_months"/>
+    <field name="supervised_requalification"/>
+    <field name="deprecated_since"/>
+    <field name="pnt"/>
+    <field name="results_estimated_waiting"/>
+    <field name="equivalence_code"/>
+    <field name="non_standardized_method"/>
+    <field name="report_legend"/>
+    <field name="state"/>
+</tree>

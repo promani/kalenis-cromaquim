@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/notebook/page[@id='general']/label[@name='product']"
+        position="before">
+        <label name="product_type"/>
+        <field name="product_type"/>
+        <label name="matrix"/>
+        <field name="matrix"/>
+        <label name="analysis"/>
+        <field name="analysis"/>
+        <label name="method"/>
+        <field name="method"/>
+        <label name="entry_origin"/>
+        <field name="entry_origin"/>
+        <newline/>
+    </xpath>
+    <xpath
+        expr="/form/notebook/page[@id='general']/field[@name='shipping_date']"
+        position="after">
+        <label name="expiration_date"/>
+        <field name="expiration_date"/>
+        <label name="purchase_order"/>
+        <field name="purchase_order"/>
+        <label name="unlimited_quantity"/>
+        <field name="unlimited_quantity"/>
+        <group col="2" colspan="2" id="print_price">
+            <label name="print_price"/>
+            <field name="print_price"/>
+        </group>
+        <group col="2" colspan="2" id="print_service_detail">
+            <label name="print_service_detail"/>
+            <field name="print_service_detail"/>
+        </group>
+    </xpath>
+    <xpath expr="/form/notebook" position="inside">
+        <page name="services">
+            <field name="services" colspan="4" mode="tree"/>
+        </page>
+        <page name="certifications">
+            <field name="certifications" colspan="4" mode="tree"/>
+        </page>
+    </xpath>
+</data>

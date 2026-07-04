@@ -1,0 +1,307 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:lims.configuration,mail_ack_report_body:"
+msgid "Email body of Acknowledgment of results report"
+msgstr "Cuerpo del correo de Acuse de informe de resultados"
+
+msgctxt "field:lims.configuration,mail_ack_report_grouping:"
+msgid "Grouping of Results reports by Email"
+msgstr "Agrupamiento de Informes de resultados por correo"
+
+msgctxt "field:lims.configuration,mail_ack_report_hide_recipients:"
+msgid "Hide recipients"
+msgstr "Ocultar destinatarios"
+
+msgctxt "field:lims.configuration,mail_ack_report_subject:"
+msgid "Email subject of Acknowledgment of results report"
+msgstr "Asunto del correo de Acuse de informe de resultados"
+
+msgctxt "field:lims.configuration,result_report_format:"
+msgid "Default Results Report Name Format"
+msgstr "Formato de nombre para Informe de resultados"
+
+msgctxt "field:lims.entry,email_report:"
+msgid "Automatic sending of Report by Email"
+msgstr "Envío automático de Informe por Email"
+
+msgctxt "field:lims.result_report.format,format_:"
+msgid "Format"
+msgstr "Formato"
+
+msgctxt "field:lims.result_report.format,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.results_report,email_report:"
+msgid "Automatic sending by Email"
+msgstr "Envío automático por Email"
+
+msgctxt "field:lims.results_report,mail_attachments:"
+msgid "Attachments"
+msgstr "Adjuntos"
+
+msgctxt "field:lims.results_report,mailings:"
+msgid "Mailings"
+msgstr "Envíos"
+
+msgctxt "field:lims.results_report,sent:"
+msgid "Sent"
+msgstr "Enviado"
+
+msgctxt "field:lims.results_report,sent_date:"
+msgid "Sent date"
+msgstr "Fecha de enviado"
+
+msgctxt "field:lims.results_report,sent_manually:"
+msgid "Manually sent"
+msgstr "Enviado manualmente"
+
+msgctxt "field:lims.results_report.attachment,data:"
+msgid "File"
+msgstr "Archivo"
+
+msgctxt "field:lims.results_report.attachment,file_id:"
+msgid "File ID"
+msgstr "Identificador del fichero"
+
+msgctxt "field:lims.results_report.attachment,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:lims.results_report.attachment,results_report:"
+msgid "Results Report"
+msgstr "Informe de resultados"
+
+msgctxt "field:lims.results_report.mailing,addresses:"
+msgid "Addresses"
+msgstr "Direcciones"
+
+msgctxt "field:lims.results_report.mailing,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:lims.results_report.mailing,results_report:"
+msgid "Results Report"
+msgstr "Informe de resultados"
+
+msgctxt "field:lims.results_report.version.detail,mail_attachments:"
+msgid "Attachments"
+msgstr "Adjuntos"
+
+msgctxt "field:lims.results_report.version.detail,sent_date:"
+msgid "Sent date"
+msgstr "Fecha de enviado"
+
+msgctxt ""
+"field:lims.results_report.version.detail.relate_mail_attachment.start,attachment:"
+msgid "Attachment"
+msgstr "Adjunto"
+
+msgctxt ""
+"field:lims.results_report.version.detail.relate_mail_attachment.start,attachment_domain:"
+msgid "Attachment domain"
+msgstr "Dominio para Adjunto"
+
+msgctxt "field:lims_email.mark_results_report_sent.start,sent:"
+msgid "Sent"
+msgstr "Enviado"
+
+msgctxt "field:lims_email.mark_results_report_sent.start,sent_date:"
+msgid "Sent date"
+msgstr "Fecha de enviado"
+
+msgctxt "field:lims_email.send_results_report.failed,reports_not_ready:"
+msgid "Reports not ready"
+msgstr "Informes no listos"
+
+msgctxt "field:lims_email.send_results_report.failed,reports_not_sent:"
+msgid "Reports not sent"
+msgstr "Informes no enviados"
+
+msgctxt "field:lims_email.send_results_report.start,summary:"
+msgid "Summary"
+msgstr "Resumen"
+
+msgctxt "field:party.party,email_report:"
+msgid "Automatic sending of Report by Email"
+msgstr "Envío automático de Informe por Email"
+
+msgctxt "field:party.party,result_report_format:"
+msgid "Results Report Name Format"
+msgstr "Formato de nombre para Informe de resultados"
+
+msgctxt "help:lims.configuration,mail_ack_report_body:"
+msgid "<SAMPLES> will be replaced by the list of sample's labels"
+msgstr "<SAMPLES> será reemplazado por la lista de rótulos de las muestras"
+
+msgctxt "help:lims.configuration,mail_ack_report_subject:"
+msgid "In the text will be added suffix with the results report number"
+msgstr "En el texto se añadirá sufijo con el número del informe de resultados"
+
+msgctxt "help:lims.result_report.format,format_:"
+msgid ""
+"Available variables (also in upper case):\n"
+"- ${number}\n"
+"- ${sample_number}\n"
+"- ${party_name}"
+msgstr ""
+"Variables disponibles (también en mayúsculas):\n"
+"- ${number}\n"
+"- ${sample_number}\n"
+"- ${party_name}"
+
+msgctxt "model:ir.action,name:act_results_report_format"
+msgid "Results Report Name Formats"
+msgstr "Formatos de nombre para Informe de resultados"
+
+msgctxt ""
+"model:ir.action,name:wiz_results_report_version_detail_relate_mail_attachment"
+msgid "Relate Mail Attachment to Results Report"
+msgstr "Relacionar adjunto de correo a Informe de resultados"
+
+msgctxt "model:ir.action,name:wizard_mark_results_report_sent"
+msgid "Mark Results Report as Sent"
+msgstr "Marcar Informes de resultados como enviados"
+
+msgctxt "model:ir.action,name:wizard_send_results_report"
+msgid "Send Results Reports"
+msgstr "Enviar Informes de resultados"
+
+msgctxt "model:ir.message,text:msg_invalid_report_name"
+msgid "Invalid format \"%(format)s\" with exception \"%(exception)s\"."
+msgstr "El formato \"%(format)s\" es inválido con la excepción \"%(exception)s\"."
+
+msgctxt "model:ir.message,text:msg_polisample"
+msgid "Polisample"
+msgstr "Polimuestra"
+
+msgctxt "model:ir.ui.menu,name:menu_results_report_format"
+msgid "Results Report Name Formats"
+msgstr "Formatos de nombre para Informe de resultados"
+
+msgctxt "model:lims.result_report.format,name:"
+msgid "Results Report Name Format"
+msgstr "Formato de nombre para Informe de resultados"
+
+msgctxt "model:lims.results_report.attachment,name:"
+msgid "Results Report Attachment"
+msgstr "Adjunto de Informe de resultados"
+
+msgctxt "model:lims.results_report.mailing,name:"
+msgid "Results Report Mailing"
+msgstr "Envío de Informe de resultados"
+
+msgctxt ""
+"model:lims.results_report.version.detail.relate_mail_attachment.start,name:"
+msgid "Relate Mail Attachment to Results Report"
+msgstr "Relacionar adjunto de correo a Informe de resultados"
+
+msgctxt "model:lims_email.mark_results_report_sent.start,name:"
+msgid "Mark Results Report as Sent"
+msgstr "Marcar Informes de resultados como enviados"
+
+msgctxt "model:lims_email.send_results_report.failed,name:"
+msgid "Send Results Report"
+msgstr "Enviar Informe de resultados"
+
+msgctxt "model:lims_email.send_results_report.start,name:"
+msgid "Send Results Report"
+msgstr "Enviar Informe de resultados"
+
+msgctxt "model:lims_email.send_results_report.succeed,name:"
+msgid "Send Results Report"
+msgstr "Enviar Informe de resultados"
+
+msgctxt "model:res.group,name:group_lims_send_results_report"
+msgid "Lims Sending Results Report"
+msgstr "Lims Enviar Informe de resultados"
+
+msgctxt "selection:ir.cron,method:"
+msgid "Send Results Report"
+msgstr "Enviar Informe de resultados"
+
+msgctxt "selection:lims.configuration,mail_ack_report_grouping:"
+msgid "None"
+msgstr "Ninguno"
+
+msgctxt "selection:lims.configuration,mail_ack_report_grouping:"
+msgid "Party"
+msgstr "Entidad"
+
+msgctxt "view:lims.configuration:"
+msgid "Email body of Acknowledgment of results report"
+msgstr "Cuerpo del correo de Acuse de informe de resultados"
+
+msgctxt "view:lims.configuration:"
+msgid "Email subject of Acknowledgment of results report"
+msgstr "Asunto del correo de Acuse de informe de resultados"
+
+msgctxt "view:lims.configuration:"
+msgid "Mail Acknowledgment Report"
+msgstr "Email Acuse de Informe"
+
+msgctxt "view:lims.results_report.mailing:"
+msgid "Time"
+msgstr "Hora"
+
+msgctxt "view:lims.results_report.version.detail:"
+msgid "Relate Attachment"
+msgstr "Relacionar archivo adjunto"
+
+msgctxt "view:lims.results_report.version.detail:"
+msgid "Time"
+msgstr "Hora"
+
+msgctxt "view:lims.results_report:"
+msgid "Time"
+msgstr "Hora"
+
+msgctxt "view:lims_email.send_results_report.failed:"
+msgid "Results Reports sending failed! Solve the problem and try again."
+msgstr ""
+"¡Envío de Informes de resultados fallido! Resuelva el problema y vuelva a "
+"intentar."
+
+msgctxt "view:lims_email.send_results_report.start:"
+msgid "Send the following Results Reports?"
+msgstr "¿Desea enviar los siguientes Informes de resultados?"
+
+msgctxt "view:lims_email.send_results_report.succeed:"
+msgid "Results Reports sent successfully!"
+msgstr "¡Envío de Informes de resultados exitoso!"
+
+msgctxt ""
+"wizard_button:lims.results_report.version.detail.relate_mail_attachment,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt ""
+"wizard_button:lims.results_report.version.detail.relate_mail_attachment,start,relate:"
+msgid "Relate"
+msgstr "Relacionar"
+
+msgctxt "wizard_button:lims_email.mark_results_report_sent,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims_email.mark_results_report_sent,start,send:"
+msgid "Send"
+msgstr "Enviar"
+
+msgctxt "wizard_button:lims_email.send_results_report,failed,end:"
+msgid "Ok"
+msgstr "Aceptar"
+
+msgctxt "wizard_button:lims_email.send_results_report,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:lims_email.send_results_report,start,send:"
+msgid "Send"
+msgstr "Enviar"
+
+msgctxt "wizard_button:lims_email.send_results_report,succeed,end:"
+msgid "Ok"
+msgstr "Aceptar"

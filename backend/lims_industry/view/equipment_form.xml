@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<form>
+    <group id="name" colspan="4" col="6">
+        <label name="name"/>
+        <field name="name"/>
+        <label name="template"/>
+        <field name="template"/>
+        <label name="active"/>
+        <field name="active" xexpand="0" width="100"/>
+    </group>
+    <notebook>
+        <page id="general" string="General">
+            <label name="plant"/>
+            <field name="plant"/>
+            <label name="party"/>
+            <field name="party"/>
+            <label name="type"/>
+            <field name="type"/>
+            <label name="brand"/>
+            <field name="brand"/>
+            <label name="model"/>
+            <field name="model"/>
+            <label name="power"/>
+            <field name="power"/>
+            <group colspan="4" col="6" id="voltage">
+                <label name="voltage"/>
+                <field name="voltage"/>
+                <label name="voltage_secondary"/>
+                <field name="voltage_secondary"/>
+                <label name="voltage_tertiary"/>
+                <field name="voltage_tertiary"/>
+            </group>
+            <label name="amperage"/>
+            <field name="amperage"/>
+            <label name="serial_number"/>
+            <field name="serial_number"/>
+            <label name="internal_id"/>
+            <field name="internal_id"/>
+            <group colspan="2" id="year_manufacturing">
+                <label name="year_manufacturing"/>
+                <field name="year_manufacturing"/>
+            </group>
+            <group colspan="2" id="year_service_start">
+                <label name="year_service_start"/>
+                <field name="year_service_start"/>
+            </group>
+            <label name="internal_location"/>
+            <field name="internal_location"/>
+            <label name="conservation"/>
+            <field name="conservation"/>
+            <label name="refrigeration"/>
+            <field name="refrigeration"/>
+            <label name="volume"/>
+            <field name="volume"/>
+            <label name="location"/>
+            <field name="location"/>
+            <group colspan="4" id="coordinates" string="GPS Coordinates">
+                <label name="latitude"/>
+                <field name="latitude"/>
+                <label name="longitude"/>
+                <field name="longitude"/>
+            </group>
+            <label name="missing_data"/>
+            <field name="missing_data"/>
+        </page>
+        <page id="components" string="Components">
+            <field name="components" colspan="4"/>
+        </page>
+        <page id="contacts" string="Contacts">
+            <field name="contacts" colspan="4"/>
+        </page>
+    </notebook>
+</form>

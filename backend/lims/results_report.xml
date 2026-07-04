@@ -1,0 +1,839 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Sequences for Results Report -->
+
+        <record model="ir.sequence.type" id="seq_type_results_report">
+            <field name="name">Results Report</field>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="seq_type_results_report_group_admin">
+            <field name="sequence_type" ref="seq_type_results_report"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+
+<!-- Results Report -->
+
+        <record model="ir.ui.view" id="lims_results_report_view_list">
+            <field name="model">lims.results_report</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_view_form">
+            <field name="model">lims.results_report</field>
+            <field name="type">form</field>
+            <field name="name">results_report_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_results_report_list">
+            <field name="name">Results Reports</field>
+            <field name="res_model">lims.results_report</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lims_results_report_list_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_results_report_view_list"/>
+            <field name="act_window" ref="act_lims_results_report_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lims_results_report_list_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_results_report_view_form"/>
+            <field name="act_window" ref="act_lims_results_report_list"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_results_report">
+            <field name="name">Results Reports</field>
+            <field name="res_model">lims.results_report</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_results_report_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_results_report_view_list"/>
+            <field name="act_window" ref="act_lims_results_report"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_results_report_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_results_report_view_form"/>
+            <field name="act_window" ref="act_lims_results_report"/>
+        </record>
+
+        <menuitem action="act_lims_results_report"
+            id="lims_results_report_menu"
+            parent="lims_laboratory_reports" sequence="10"
+            icon="lims-laboratory_reports"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_results_report_group_laboratory_reports_readonly">
+            <field name="menu" ref="lims_results_report_menu"/>
+            <field name="group" ref="group_lims_laboratory_reports_readonly"/>
+        </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_results_report_group_laboratory_reports">
+            <field name="menu" ref="lims_results_report_menu"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+        </record>
+
+        <record model="ir.model.access" id="access_results_report">
+            <field name="model" search="[('model', '=', 'lims.results_report')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_results_report_group_laboratory_reports">
+            <field name="model" search="[('model', '=', 'lims.results_report')]"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_results_report_cie_fraction_type">
+            <field name="field"
+                search="[('name', '=', 'cie_fraction_type'), ('model.model', '=', 'lims.results_report')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_results_report_cie_fraction_type_group_blind_sample_readonly">
+            <field name="field"
+                search="[('name', '=', 'cie_fraction_type'), ('model.model', '=', 'lims.results_report')]"/>
+            <field name="group" ref="group_lims_blind_sample_readonly"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_results_report_cie_fraction_type_group_blind_sample">
+            <field name="field"
+                search="[('name', '=', 'cie_fraction_type'), ('model.model', '=', 'lims.results_report')]"/>
+            <field name="group" ref="group_lims_blind_sample"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Results Report Version -->
+
+        <record model="ir.ui.view" id="lims_results_report_version_view_list">
+            <field name="model">lims.results_report.version</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_version_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_version_view_form">
+            <field name="model">lims.results_report.version</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_form</field>
+        </record>
+
+        <record model="ir.rule.group" id="rule_group_results_report_version">
+            <field name="name">User in laboratory</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version')]"/>
+            <field name="global_p" eval="True"/>
+        </record>
+        <record model="ir.rule" id="rule_results_report_version">
+            <field name="domain"
+                eval="[If(Bool(Eval('user', {}).get('laboratory', False)), ('laboratory', '=', Eval('user', {}).get('laboratory', None)), If(Bool(Eval('user', {}).get('laboratories', False)), ('laboratory', 'in', Eval('user', {}).get('laboratories', [])), ('id', '!=', 0)))]"
+                pyson="1"/>
+            <field name="rule_group" ref="rule_group_results_report_version"/>
+        </record>
+
+<!-- Results Report Version Detail -->
+
+        <record model="ir.ui.view" id="lims_results_report_version_detail_view_list">
+            <field name="model">lims.results_report.version.detail</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_version_detail_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_version_detail_view_form">
+            <field name="model">lims.results_report.version.detail</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_detail_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_results_report_version_detail">
+            <field name="name">Approval of Reports</field>
+            <field name="res_model">lims.results_report.version.detail</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_results_report_version_detail_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_results_report_version_detail_view_list"/>
+            <field name="act_window" ref="act_lims_results_report_version_detail"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lims_results_report_version_detail_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_results_report_version_detail_view_form"/>
+            <field name="act_window" ref="act_lims_results_report_version_detail"/>
+        </record>
+
+        <record model="ir.action.act_window.domain"
+                id="act_lims_results_report_version_detail_domain_draft">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('state', '=', 'draft')]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_lims_results_report_version_detail"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+                id="act_lims_results_report_version_detail_domain_waiting">
+            <field name="name">Waiting</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain"
+                eval="[('state', '=', 'waiting')]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_lims_results_report_version_detail"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+                id="act_lims_results_report_version_detail_domain_revised">
+            <field name="name">Revised</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain"
+                eval="[('state', '=', 'revised')]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_lims_results_report_version_detail"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+                id="act_lims_results_report_version_detail_domain_released">
+            <field name="name">Released</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain"
+                eval="[('state', '=', 'released')]" pyson="1"/>
+            <field name="act_window" ref="act_lims_results_report_version_detail"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+                id="act_lims_results_report_version_detail_domain_annulled">
+            <field name="name">Annulled</field>
+            <field name="sequence" eval="50"/>
+            <field name="domain"
+                eval="[('state', '=', 'annulled')]" pyson="1"/>
+            <field name="act_window" ref="act_lims_results_report_version_detail"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+                id="act_lims_results_report_version_detail_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="9999"/>
+            <field name="act_window" ref="act_lims_results_report_version_detail"/>
+        </record>
+
+        <menuitem action="act_lims_results_report_version_detail"
+            id="lims_results_report_version_detail_menu"
+            parent="lims_laboratory_reports" sequence="30"
+            icon="lims-results_report_version_detail"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_results_report_version_detail_group_laboratory_reports_readonly">
+            <field name="menu" ref="lims_results_report_version_detail_menu"/>
+            <field name="group" ref="group_lims_laboratory_reports_readonly"/>
+        </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_results_report_version_detail_group_laboratory_reports">
+            <field name="menu" ref="lims_results_report_version_detail_menu"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+        </record>
+
+        <record model="ir.model.button" id="results_report_version_detail_draft_button">
+            <field name="name">draft</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="results_report_version_detail_draft_button_group_lims_laboratory_reports">
+            <field name="button" ref="results_report_version_detail_draft_button"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+        </record>
+
+        <record model="ir.model.button" id="results_report_version_detail_revise_button">
+            <field name="name">revise</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="results_report_version_detail_revise_button_group_lims_laboratory_reports">
+            <field name="button" ref="results_report_version_detail_revise_button"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+        </record>
+
+        <record model="ir.model.button" id="results_report_version_detail_release_button">
+            <field name="name">release</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="results_report_version_detail_release_button_group_lims_laboratory_reports">
+            <field name="button" ref="results_report_version_detail_release_button"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+        </record>
+
+        <record model="ir.model.button" id="results_report_version_detail_release_all_lang_button">
+            <field name="name">release_all_lang</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="results_report_version_detail_release_all_lang_button_group_lims_laboratory_reports">
+            <field name="button" ref="results_report_version_detail_release_all_lang_button"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+        </record>
+
+        <record model="ir.model.button" id="results_report_version_detail_annul_button">
+            <field name="name">annul</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="results_report_version_detail_annul_button_group_lims_laboratory_reports">
+            <field name="button" ref="results_report_version_detail_annul_button"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+        </record>
+
+        <record model="ir.model.button" id="results_report_version_detail_new_version_button">
+            <field name="name">new_version</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="results_report_version_detail_new_version_button_group_lims_laboratory_reports">
+            <field name="button" ref="results_report_version_detail_new_version_button"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+        </record>
+
+        <record model="ir.rule.group" id="rule_group_results_report_version_detail">
+            <field name="name">User in laboratory</field>
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="global_p" eval="True"/>
+        </record>
+        <record model="ir.rule" id="rule_results_report_version_detail">
+            <field name="domain"
+                eval="[If(Bool(Eval('user', {}).get('laboratory', False)), ('laboratory', '=', Eval('user', {}).get('laboratory', None)), If(Bool(Eval('user', {}).get('laboratories', False)), ('laboratory', 'in', Eval('user', {}).get('laboratories', [])), ('id', '!=', 0)))]"
+                pyson="1"/>
+            <field name="rule_group" ref="rule_group_results_report_version_detail"/>
+        </record>
+
+        <record model="ir.model.access" id="access_results_report_version_detail">
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_results_report_version_detail_group_laboratory_reports">
+            <field name="model" search="[('model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_results_report_version_detail_cie_fraction_type">
+            <field name="field"
+                search="[('name', '=', 'cie_fraction_type'), ('model.model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_results_report_version_detail_cie_fraction_type_group_blind_sample_readonly">
+            <field name="field"
+                search="[('name', '=', 'cie_fraction_type'), ('model.model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="group" ref="group_lims_blind_sample_readonly"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_results_report_version_detail_cie_fraction_type_group_blind_sample">
+            <field name="field"
+                search="[('name', '=', 'cie_fraction_type'), ('model.model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="group" ref="group_lims_blind_sample"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_results_report_version_detail_annulment_reason">
+            <field name="field"
+                search="[('name', '=', 'annulment_reason'), ('model.model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_results_report_version_detail_annulment_reason_group_lims_laboratory_reports_qa">
+            <field name="field"
+                search="[('name', '=', 'annulment_reason'), ('model.model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="group" ref="group_lims_laboratory_reports_qa"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.field.access"
+            id="access_results_report_version_detail_annulment_reason_print">
+            <field name="field"
+                search="[('name', '=', 'annulment_reason_print'), ('model.model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.field.access"
+            id="access_results_report_version_detail_annulment_reason_print_group_lims_laboratory_reports_qa">
+            <field name="field"
+                search="[('name', '=', 'annulment_reason_print'), ('model.model', '=', 'lims.results_report.version.detail')]"/>
+            <field name="group" ref="group_lims_laboratory_reports_qa"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+<!-- Results Report Version Detail Signer -->
+
+        <record model="ir.ui.view" id="lims_results_report_version_detail_signer_view_list">
+            <field name="model">lims.results_report.version.detail.signer</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_version_detail_signer_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_version_detail_signer_view_form">
+            <field name="model">lims.results_report.version.detail.signer</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_detail_signer_form</field>
+        </record>
+
+<!-- Results Report Version Detail Sample -->
+
+        <record model="ir.ui.view" id="lims_results_report_version_detail_sample_view_list">
+            <field name="model">lims.results_report.version.detail.sample</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_version_detail_sample_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_version_detail_sample_view_form">
+            <field name="model">lims.results_report.version.detail.sample</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_detail_sample_form</field>
+        </record>
+
+<!-- Results Report Version Detail Line -->
+
+        <record model="ir.ui.view" id="lims_results_report_version_detail_line_view_list">
+            <field name="model">lims.results_report.version.detail.line</field>
+            <field name="type">tree</field>
+            <field name="name">results_report_version_detail_line_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_results_report_version_detail_line_view_form">
+            <field name="model">lims.results_report.version.detail.line</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_detail_line_form</field>
+        </record>
+
+<!-- Wizard Divide Reports -->
+
+        <record model="ir.ui.view" id="lims_divide_reports_start_view_form">
+            <field name="model">lims.divide_reports.start</field>
+            <field name="type">form</field>
+            <field name="name">service_divide_reports_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_divide_reports">
+            <field name="name">Divide Reports</field>
+            <field name="wiz_name">lims.divide_reports</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_divide_reports_entry_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.entry,-1</field>
+            <field name="action" ref="wiz_lims_divide_reports"/>
+        </record>
+        <record model="ir.action.keyword" id="lims_divide_reports_detail_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.entry.detail.analysis,-1</field>
+            <field name="action" ref="wiz_lims_divide_reports"/>
+        </record>
+
+<!-- Samples Pending Reporting -->
+
+        <record model="ir.ui.view" id="lims_samples_pending_reporting_view_list">
+            <field name="model">lims.notebook</field>
+            <field name="type">tree</field>
+            <field name="name">samples_pending_reporting_list</field>
+        </record>
+        <record model="ir.ui.view" id="lims_samples_pending_reporting_view_form">
+            <field name="model">lims.notebook</field>
+            <field name="type">form</field>
+            <field name="name">samples_pending_reporting_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_lims_samples_pending_reporting">
+            <field name="name">Samples Pending Reporting</field>
+            <field name="res_model">lims.notebook</field>
+            <field name="order" eval="[('fraction', 'ASC')]" pyson="1"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lims_samples_pending_reporting_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="lims_samples_pending_reporting_view_list"/>
+            <field name="act_window" ref="act_lims_samples_pending_reporting"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_lims_samples_pending_reporting_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="lims_samples_pending_reporting_view_form"/>
+            <field name="act_window" ref="act_lims_samples_pending_reporting"/>
+        </record>
+
+        <record model="ir.action.act_window.domain"
+            id="act_lims_samples_pending_reporting_domain_complete">
+            <field name="name">Complete</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'complete')]" pyson="1"/>
+            <field name="act_window" ref="act_lims_samples_pending_reporting"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_lims_samples_pending_reporting_domain_in_progress">
+            <field name="name">In progress</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain" eval="[('state', '=', 'in_progress')]" pyson="1"/>
+            <field name="act_window" ref="act_lims_samples_pending_reporting"/>
+        </record>
+
+<!-- Wizard Open Samples Pending Reporting -->
+
+        <record model="ir.ui.view" id="open_samples_pending_reporting_view_form">
+            <field name="model">lims.samples_pending_reporting.start</field>
+            <field name="type">form</field>
+            <field name="name">open_samples_pending_reporting_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_samples_pending_reporting">
+            <field name="name">Samples Pending Reporting</field>
+            <field name="wiz_name">lims.samples_pending_reporting</field>
+        </record>
+
+        <menuitem action="wiz_lims_samples_pending_reporting"
+            id="lims_samples_pending_reporting_menu"
+            parent="lims_laboratory_reports" sequence="20"
+            icon="lims-generate_results_report"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_samples_pending_reporting_group_laboratory_reports">
+            <field name="menu" ref="lims_samples_pending_reporting_menu"/>
+            <field name="group" ref="group_lims_laboratory_reports"/>
+        </record>
+
+<!-- Wizard Generate Results Report -->
+
+        <record model="ir.ui.view" id="notebook_generate_results_report_view_form">
+            <field name="model">lims.notebook.generate_results_report.start</field>
+            <field name="type">form</field>
+            <field name="name">notebook_generate_results_report_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_notebook_generate_results_report">
+            <field name="name">Generate Results Report</field>
+            <field name="wiz_name">lims.notebook.generate_results_report</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_notebook_generate_results_report_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.notebook,-2</field>
+            <field name="action" ref="wiz_notebook_generate_results_report"/>
+        </record>
+
+<!-- Wizard Open Sample Entry -->
+
+        <record model="ir.action.wizard" id="wiz_notebook_open_entry">
+            <field name="name">Sample Entry</field>
+            <field name="wiz_name">lims.notebook.open_entry</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_notebook_open_entry_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.notebook,-2</field>
+            <field name="action" ref="wiz_notebook_open_entry"/>
+        </record>
+
+<!-- Wizard Service Results Report -->
+
+        <record model="ir.action.wizard" id="wiz_lims_service_results_report">
+            <field name="name">Service Results Reports</field>
+            <field name="wiz_name">lims.service.results_report</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_service_results_report_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.service,-1</field>
+            <field name="action" ref="wiz_lims_service_results_report"/>
+        </record>
+
+<!-- Wizard Fraction Results Report -->
+
+        <record model="ir.action.wizard" id="wiz_lims_fraction_results_report">
+            <field name="name">Fraction Results Reports</field>
+            <field name="wiz_name">lims.fraction.results_report</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_fraction_results_report_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.fraction,-1</field>
+            <field name="action" ref="wiz_lims_fraction_results_report"/>
+        </record>
+
+<!-- Wizard Sample Results Report -->
+
+        <record model="ir.action.wizard" id="wiz_lims_sample_results_report">
+            <field name="name">Sample Results Reports</field>
+            <field name="wiz_name">lims.sample.results_report</field>
+        </record>
+
+        <record model="ir.action.keyword" id="lims_sample_results_report_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="wiz_lims_sample_results_report"/>
+        </record>
+
+<!-- Wizard Sample Results Report in progress -->
+
+        <record model="ir.action.wizard" id="wiz_lims_sample_results_report_in_progress">
+            <field name="name">Sample Results Reports in progress</field>
+            <field name="wiz_name">lims.sample.results_report.in_progress</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_lims_sample_results_report_in_progress_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.sample,-1</field>
+            <field name="action" ref="wiz_lims_sample_results_report_in_progress"/>
+        </record>
+
+<!-- Wizard Open Results Report Sample -->
+
+        <record model="ir.action.wizard" id="wiz_results_report_open_sample">
+            <field name="name">Results Report Samples</field>
+            <field name="wiz_name">lims.results_report.open_sample</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_results_report_open_sample_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.results_report,-1</field>
+            <field name="action" ref="wiz_results_report_open_sample"/>
+        </record>
+
+<!-- Wizard Open Results Report Entry -->
+
+        <record model="ir.action.wizard" id="wiz_results_detail_open_entry">
+            <field name="name">Results Report Entries</field>
+            <field name="wiz_name">lims.results_report.version.detail.open_entry</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_results_detail_open_entry_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.results_report.version.detail,-1</field>
+            <field name="action" ref="wiz_results_detail_open_entry"/>
+        </record>
+
+<!-- Wizard Open Results Report Attachment -->
+
+        <record model="ir.action.wizard" id="wiz_results_detail_open_attachment">
+            <field name="name">Results Report Attachments</field>
+            <field name="wiz_name">lims.results_report.version.detail.open_attachment</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_results_detail_open_attachment_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">lims.results_report.version.detail,-1</field>
+            <field name="action" ref="wiz_results_detail_open_attachment"/>
+        </record>
+
+<!-- Attachments -->
+
+        <record model="ir.ui.view" id="attachment_view_list">
+            <field name="model">ir.attachment</field>
+            <field name="type">tree</field>
+            <field name="name">attachment_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_attachment">
+            <field name="name">Attachments</field>
+            <field name="res_model">ir.attachment</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_attachment_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="attachment_view_list"/>
+            <field name="act_window" ref="act_attachment"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_attachment_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="ir.attachment_view_form"/>
+            <field name="act_window" ref="act_attachment"/>
+        </record>
+
+<!-- Wizard Release Report -->
+
+        <record model="ir.action.wizard" id="wiz_results_report_release">
+            <field name="name">Release Report</field>
+            <field name="wiz_name">lims.results_report_release</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_results_report_release_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.results_report.version.detail,-1</field>
+            <field name="action" ref="wiz_results_report_release"/>
+        </record>
+
+<!-- Wizard Report Annulation -->
+
+        <record model="ir.ui.view" id="lims_results_report_annulation_start_view_form">
+            <field name="model">lims.results_report_annulation.start</field>
+            <field name="type">form</field>
+            <field name="name">results_report_annulation_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_results_report_annulation">
+            <field name="name">Report Annulation</field>
+            <field name="wiz_name">lims.results_report_annulation</field>
+        </record>
+
+<!-- Wizard New Results Report Version -->
+
+        <record model="ir.ui.view" id="results_report_version_detail_new_version_start_form">
+            <field name="model">lims.results_report.version.detail.new_version.start</field>
+            <field name="type">form</field>
+            <field name="name">results_report_version_detail_new_version_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_results_report_version_detail_new_version">
+            <field name="name">New Report Version</field>
+            <field name="wiz_name">lims.results_report.version.detail.new_version</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_results_report_version_detail_new_version_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.results_report.version.detail,-1</field>
+            <field name="action" ref="wiz_results_report_version_detail_new_version"/>
+        </record>
+
+<!-- Wizard Report Waiting -->
+
+        <record model="ir.ui.view" id="lims_results_report_waiting_start_view_form">
+            <field name="model">lims.results_report_waiting.start</field>
+            <field name="type">form</field>
+            <field name="name">results_report_waiting_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lims_results_report_waiting">
+            <field name="name">Report Waiting</field>
+            <field name="wiz_name">lims.results_report_waiting</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_lims_results_report_waiting_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.results_report.version.detail,-1</field>
+            <field name="action" ref="wiz_lims_results_report_waiting"/>
+        </record>
+
+<!-- Wizard Repeat Analysis -->
+
+        <record model="ir.action.wizard"
+            id="wiz_results_report_version_detail_line_repeat_analysis">
+            <field name="name">Repeat Analysis</field>
+            <field name="wiz_name">lims.results_report.version.detail.line.repeat_analysis</field>
+        </record>
+
+        <record model="ir.action.keyword"
+            id="wiz_results_report_version_detail_line_repeat_analysis_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.results_report.version.detail.line,-1</field>
+            <field name="action" ref="wiz_results_report_version_detail_line_repeat_analysis"/>
+        </record>
+
+        <record model="ir.action-res.group"
+            id="wiz_results_report_version_detail_line_repeat_analysis-group_notebook_repeat_analysis">
+            <field name="action" ref="wiz_results_report_version_detail_line_repeat_analysis"/>
+            <field name="group" ref="group_notebook_repeat_analysis"/>
+        </record>
+
+<!-- Wizard Print Results Report -->
+
+        <record model="ir.action.wizard" id="wiz_print_result_report">
+            <field name="name">Results Report</field>
+            <field name="wiz_name">lims.print_result_report</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_print_result_report_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">lims.results_report.version.detail,-1</field>
+            <field name="action" ref="wiz_print_result_report"/>
+        </record>
+
+<!-- Results Report -->
+
+        <record model="ir.action.report" id="report_result_report">
+            <field name="name">Results Report</field>
+            <field name="model">lims.results_report.version.detail</field>
+            <field name="report_name">lims.result_report</field>
+            <field name="report">lims/report/results_report.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+
+<!-- Transcription Results Report -->
+
+        <record model="ir.action.report" id="report_results_report_transcription">
+            <field name="name">Transcription Results Report</field>
+            <field name="model">lims.results_report.version.detail</field>
+            <field name="report_name">lims.result_report.transcription</field>
+            <field name="report">lims/report/results_report.fodt</field>
+            <field name="extension"></field>
+        </record>
+
+        <record model="ir.action.keyword" id="report_results_report_transcription_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">lims.results_report.version.detail,-1</field>
+            <field name="action" ref="report_results_report_transcription"/>
+        </record>
+
+<!-- Wizard Print Global Results Report -->
+
+        <record model="ir.action.wizard" id="wiz_print_global_result_report">
+            <field name="name">Global Results Report</field>
+            <field name="wiz_name">lims.print_global_result_report</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_print_global_result_report_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">lims.results_report,-1</field>
+            <field name="action" ref="wiz_print_global_result_report"/>
+        </record>
+
+<!-- Global Results Report -->
+
+        <record model="ir.action.report" id="report_global_result_report">
+            <field name="name">Global Results Report</field>
+            <field name="report_name">lims.global_result_report</field>
+            <field name="report">lims/report/global_results_report.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+
+<!-- Wizard Render Results Report -->
+
+        <record model="ir.action.wizard" id="wiz_render_result_report">
+            <field name="name">Render Preview</field>
+            <field name="wiz_name">lims.render_result_report</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_render_result_report_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">lims.results_report.version.detail,-1</field>
+            <field name="action" ref="wiz_render_result_report"/>
+        </record>
+
+    </data>
+</tryton>

@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Menu -->
+
+        <!-- Administrative Tasks -->
+        <menuitem name="Administrative Tasks" id="menu_administrative_task"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_administrative_task_group_administrative_task">
+            <field name="menu" ref="menu_administrative_task"/>
+            <field name="group" ref="group_administrative_task"/>
+        </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_administrative_task_group_administrative_task_admin">
+            <field name="menu" ref="menu_administrative_task"/>
+            <field name="group" ref="group_administrative_task_admin"/>
+        </record>
+
+        <!-- Administrative Tasks / Configuration -->
+        <menuitem name="Configuration" id="menu_config"
+            parent="menu_administrative_task" sequence="10"
+            icon="lims-configuration"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_config_group_administrative_task_admin">
+            <field name="menu" ref="menu_config"/>
+            <field name="group" ref="group_administrative_task_admin"/>
+        </record>
+
+<!-- Administrative Task Configuration -->
+
+        <record model="ir.ui.view" id="task_template_view_list">
+            <field name="model">lims.administrative.task.template</field>
+            <field name="type">tree</field>
+            <field name="name">task_template_list</field>
+        </record>
+        <record model="ir.ui.view" id="task_template_view_form">
+            <field name="model">lims.administrative.task.template</field>
+            <field name="type">form</field>
+            <field name="name">task_template_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_task_template">
+            <field name="name">Administrative Tasks Configuration</field>
+            <field name="res_model">lims.administrative.task.template</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_task_template_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="task_template_view_list"/>
+            <field name="act_window" ref="act_task_template"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_task_template_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="task_template_view_form"/>
+            <field name="act_window" ref="act_task_template"/>
+        </record>
+
+        <menuitem name="Automatic generation of administrative tasks"
+            action="act_task_template" id="menu_task_template"
+            parent="menu_config" sequence="20"/>
+
+<!-- Administrative Task -->
+
+        <record model="ir.ui.view" id="task_view_list">
+            <field name="model">lims.administrative.task</field>
+            <field name="type">tree</field>
+            <field name="name">task_list</field>
+        </record>
+        <record model="ir.ui.view" id="task_view_form">
+            <field name="model">lims.administrative.task</field>
+            <field name="type">form</field>
+            <field name="name">task_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_task">
+            <field name="name">All Administrative Tasks</field>
+            <field name="res_model">lims.administrative.task</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_task_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="task_view_list"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_task_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="task_view_form"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+
+        <record model="ir.action.act_window.domain"
+            id="act_task_domain_draft">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'draft')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_domain_pending">
+            <field name="name">Pending</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'pending')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_domain_rejected">
+            <field name="name">Rejected</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'rejected')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_domain_ongoing">
+            <field name="name">Ongoing</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'ongoing')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_domain_standby">
+            <field name="name">Stand By</field>
+            <field name="sequence" eval="50"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'standby')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_domain_done">
+            <field name="name">Done</field>
+            <field name="sequence" eval="60"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'done')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_domain_discarded">
+            <field name="name">Discarded</field>
+            <field name="sequence" eval="70"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'discarded')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="200"/>
+            <field name="domain"></field>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task"/>
+        </record>
+
+        <menuitem action="act_task" id="menu_task"
+            parent="menu_administrative_task" sequence="30"/>
+
+        <record model="ir.model.button" id="administrative_task_pending_button">
+            <field name="name">pending</field>
+            <field name="model" search="[('model', '=', 'lims.administrative.task')]"/>
+        </record>
+        <record model="ir.model.button" id="administrative_task_reject_button">
+            <field name="name">reject</field>
+            <field name="model" search="[('model', '=', 'lims.administrative.task')]"/>
+        </record>
+        <record model="ir.model.button" id="administrative_task_ongoing_button">
+            <field name="name">ongoing</field>
+            <field name="model" search="[('model', '=', 'lims.administrative.task')]"/>
+        </record>
+        <record model="ir.model.button" id="administrative_task_standby_button">
+            <field name="name">standby</field>
+            <field name="model" search="[('model', '=', 'lims.administrative.task')]"/>
+        </record>
+        <record model="ir.model.button" id="administrative_task_discard_button">
+            <field name="name">discard</field>
+            <field name="model" search="[('model', '=', 'lims.administrative.task')]"/>
+        </record>
+        <record model="ir.model.button" id="administrative_task_do_button">
+            <field name="name">do</field>
+            <field name="model" search="[('model', '=', 'lims.administrative.task')]"/>
+        </record>
+
+<!-- My Administrative Task -->
+
+        <record model="ir.action.act_window" id="act_task_mine">
+            <field name="name">My Administrative Tasks</field>
+            <field name="res_model">lims.administrative.task</field>
+            <field name="domain" pyson="1"
+                eval="[('responsible.employee.id', '=', Eval('context', {}).get('employee', -1))]"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_task_mine_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="task_view_list"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_task_mine_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="task_view_form"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+
+        <record model="ir.action.act_window.domain"
+            id="act_task_mine_domain_draft">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'draft')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_mine_domain_pending">
+            <field name="name">Pending</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'pending')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_mine_domain_rejected">
+            <field name="name">Rejected</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'rejected')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_mine_domain_ongoing">
+            <field name="name">Ongoing</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'ongoing')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_mine_domain_standby">
+            <field name="name">Stand By</field>
+            <field name="sequence" eval="50"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'standby')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_mine_domain_done">
+            <field name="name">Done</field>
+            <field name="sequence" eval="60"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'done')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_mine_domain_discarded">
+            <field name="name">Discarded</field>
+            <field name="sequence" eval="70"/>
+            <field name="domain" pyson="1"
+                eval="[('state', '=', 'discarded')]"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_task_mine_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="0"/>
+            <field name="domain"></field>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_task_mine"/>
+        </record>
+
+        <menuitem action="act_task_mine" id="menu_task_mine"
+            parent="menu_administrative_task" sequence="20"/>
+
+<!-- Wizard Edit Administrative Task -->
+
+        <record model="ir.ui.view" id="edit_task_start_view_form">
+            <field name="model">lims.administrative.task.edit.start</field>
+            <field name="type">form</field>
+            <field name="name">edit_task_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_edit_task">
+            <field name="name">Edit Administrative Task</field>
+            <field name="wiz_name">lims.administrative.task.edit</field>
+        </record>
+
+        <record model="ir.action.keyword" id="wiz_edit_task_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">lims.administrative.task,-1</field>
+            <field name="action" ref="wiz_edit_task"/>
+        </record>
+
+<!-- Administrative Tasks Scheduling -->
+
+        <record model="ir.ui.view" id="task_program_view_form">
+            <field name="model">lims.administrative.task.program</field>
+            <field name="type">form</field>
+            <field name="name">task_program_form</field>
+        </record>
+        <record model="ir.ui.view" id="task_program_view_list">
+            <field name="model">lims.administrative.task.program</field>
+            <field name="type">tree</field>
+            <field name="name">task_program_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_task_program_list">
+            <field name="name">Administrative Tasks Scheduling</field>
+            <field name="res_model">lims.administrative.task.program</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_task_program_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="task_program_view_list"/>
+            <field name="act_window" ref="act_task_program_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_task_program_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="task_program_view_form"/>
+            <field name="act_window" ref="act_task_program_list"/>
+        </record>
+
+        <menuitem name="Administrative Tasks Scheduling"
+            action="act_task_program_list"
+            id="menu_task_program"
+            parent="menu_config" sequence="30"/>
+
+        <record model="ir.model.button" id="task_program_create_tasks_button">
+            <field name="name">create_tasks</field>
+            <field name="string">Generate</field>
+            <field name="confirm">Are you sure you want to generate new administrative tasks?</field>
+            <field name="help">Generate administrative tasks</field>
+            <field name="model" search="[('model', '=', 'lims.administrative.task.program')]"/>
+        </record>
+
+<!-- Wizard Generate Administrative Tasks Calendar -->
+
+        <record model="ir.action.wizard" id="wizard_generate_task_calendar">
+            <field name="name">Generate Administrative Tasks Calendar</field>
+            <field name="wiz_name">lims.administrative.task.generate</field>
+        </record>
+
+<!-- Administrative Tasks Calendar -->
+
+        <record model="ir.ui.view" id="task_view_calendar">
+            <field name="model">lims.administrative.task</field>
+            <field name="type">calendar</field>
+            <field name="name">task_calendar</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_task_calendar_list">
+            <field name="name">Administrative Tasks Calendar</field>
+            <field name="res_model">lims.administrative.task</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_task_calendar_view_calendar">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="task_view_calendar"/>
+            <field name="act_window" ref="act_task_calendar_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_task_calendar_view_list">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="task_view_list"/>
+            <field name="act_window" ref="act_task_calendar_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_task_calendar_view_form">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="task_view_form"/>
+            <field name="act_window" ref="act_task_calendar_list"/>
+        </record>
+
+        <menuitem name="Calendar"
+            action="act_task_calendar_list"
+            id="menu_task_calendar"
+            parent="menu_administrative_task" sequence="50"/>
+
+    </data>
+</tryton>
