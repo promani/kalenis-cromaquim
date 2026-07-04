@@ -61,17 +61,69 @@ Usuario ──► Cloudflare (DNS/CDN/TLS)
                               Supabase PostgreSQL
 ```
 
-## Puesta en marcha local (referencia)
+## Puesta en marcha local
 
-- Backend: requiere Python y PostgreSQL. Ver `backend/README.md`
-  (`kalenis_cli.py`, `kalenis.conf.dist`) para setup y ejecución.
-- Frontend: requiere el módulo `kalenis_user_view` instalado en Tryton y se compila
-  con `./install.sh` desde `frontend/utils/`; el directorio `sao` generado se
-  referencia en la sección `[web]` de la configuración de Tryton.
+Requisitos: Python 3.9 (Tryton 6.0 no soporta versiones más nuevas), Homebrew.
+
+```bash
+# 1. Dependencias de sistema (macOS)
+brew install libpq pango gdk-pixbuf libffi
+
+# 2. Backend en el venv (psycopg2 necesita flags en Apple Silicon)
+ARCHFLAGS="-arch arm64" \
+LDFLAGS="-L/opt/homebrew/opt/libpq/lib -L/opt/homebrew/opt/openssl@3/lib" \
+CPPFLAGS="-I/opt/homebrew/opt/libpq/include -I/opt/homebrew/opt/openssl@3/include" \
+PATH=/opt/homebrew/opt/libpq/bin:$PATH \
+.venv/bin/pip install -e ./backend
+
+# 2b. Con install editable, trytond necesita los módulos en trytond/modules/: symlinks
+MODDIR=.venv/lib/python3.9/site-packages/trytond/modules
+for d in backend/lims*; do ln -sf "$PWD/$d" "$MODDIR/$(basename $d)"; done
+
+# 3. Frontend precompilado (Tryton 6.0)
+mkdir -p ~/kalenis_front_end
+curl -fsSL https://downloads.kalenislims.com/frontend_dist_6.0.tar.gz | tar xz -C ~/kalenis_front_end
+
+# 4. Variables
+export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib   # WeasyPrint encuentra las libs de brew
+export TRYTOND_database__uri=postgresql://localhost:5432
+export TRYTOND_web__root=$HOME/kalenis_front_end/frontend_dist_6.0
+
+# 5. Inicializar la base LOCAL (una sola vez; TRYTONPASSFILE evita el prompt de password)
+brew install postgresql@16 && brew services start postgresql@16
+createdb kalenislims
+.venv/bin/trytond-admin -d kalenislims -c trytond.dev.conf --all -l es --email <email>
+.venv/bin/trytond-admin -d kalenislims -c trytond.dev.conf -u lims_analysis_sheet user_view --activate-dependencies
+
+# 6. Correr el servidor
+.venv/bin/trytond -d kalenislims -c trytond.dev.conf
+# → http://localhost:8000
+```
+
+### Supabase
+
+**Importante:** inicializar Tryton directamente contra Supabase no es viable: el ORM
+de Tryton hace decenas de miles de queries chicas y la latencia a `us-west-1` lo
+convierte en horas. El camino es inicializar en el Postgres local y **migrar con
+dump/restore** (COPY masivo, minutos):
+
+```bash
+# El pooler exige modo sesión (:5432, sin ?pgbouncer=true); el modo transacción rompe a Tryton
+pg_dump -d kalenislims --no-owner --no-privileges | psql "$SUPABASE_SESSION_URL"
+```
+
+Tryton usa la base `postgres` del proyecto Supabase (schema `public`).
+
+Notas:
+- `numpy` debe quedar en `<1.24` (`pip install 'numpy==1.23.5'`): el `openpyxl 2.6.4`
+  que pinea Kalenis usa `np.float`, eliminado en numpy 1.24.
+- `trytond.dev.conf` está versionado y no contiene secretos; la URI de la base va por env.
+- Desarrollo diario: usar la base local (rápida). Supabase queda como base del
+  entorno desplegado.
 
 ## Próximos pasos
 
-- [ ] Crear el proyecto en Supabase y la base de datos para Tryton.
+- [x] Crear el proyecto en Supabase y la base de datos para Tryton.
 - [ ] Dockerizar el backend con su configuración (`kalenis.conf`).
 - [ ] Crear el Worker + `wrangler.toml` para desplegar el contenedor en Cloudflare Containers.
 - [ ] Definir storage para adjuntos (R2 o Supabase Storage).
