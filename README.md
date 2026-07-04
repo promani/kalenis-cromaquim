@@ -124,8 +124,24 @@ Notas:
 ## Próximos pasos
 
 - [x] Crear el proyecto en Supabase y la base de datos para Tryton.
-- [ ] Dockerizar el backend con su configuración (`kalenis.conf`).
-- [ ] Crear el Worker + `wrangler.toml` para desplegar el contenedor en Cloudflare Containers.
+- [x] Dockerizar el backend (`Dockerfile` + `trytond.prod.conf`).
+- [x] Crear el Worker + `wrangler.jsonc` y desplegar en Cloudflare Containers
+      → https://kalenis-cromaquim.promani7.workers.dev
 - [ ] Definir storage para adjuntos (R2 o Supabase Storage).
-- [ ] Configurar dominio, DNS y TLS en Cloudflare.
+- [ ] Configurar dominio propio, DNS y TLS en Cloudflare.
 - [ ] Documentar el proceso de actualización desde los repos upstream.
+
+### Deploy (Cloudflare Containers)
+
+```bash
+npm install
+# secret con la URI de Supabase en modo sesión (una sola vez)
+echo 'postgresql://<user>:<pass>@aws-1-us-west-1.pooler.supabase.com:5432' \
+  | npx wrangler secret put TRYTOND_DATABASE_URI
+# build de imagen + push + publicación del Worker
+npx wrangler deploy
+```
+
+El Worker (`worker/index.js`) enruta cada request al contenedor (Durable Object
+`KalenisBackend`, 1 instancia `standard`, se duerme tras 30 min sin tráfico — el
+primer request posterior paga el arranque de Tryton).
