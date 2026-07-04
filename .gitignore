@@ -9,6 +9,7 @@ __pycache__/
 
 # Node / build del frontend
 node_modules/
+.wrangler/
 frontend/sao/
 dist/
 build/

@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kalenis-cromaquim",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-10-01",
+  "containers": [
+    {
+      "class_name": "KalenisBackend",
+      "image": "./Dockerfile",
+      "max_instances": 1,
+      "instance_type": "standard"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      { "name": "KALENIS_BACKEND", "class_name": "KalenisBackend" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["KalenisBackend"] }
+  ]
+}
