@@ -34,10 +34,14 @@ y en cada módulo del backend); las modificaciones de este repo heredan esa lice
 
 ## Arquitectura de despliegue (plan)
 
-El despliegue se apoya en **Cloudflare** y **Supabase**:
+El despliegue se apoya en **Cloudflare** y **Neon**:
 
-- **Supabase**: provee el **PostgreSQL** gestionado que usa Tryton como base de datos.
-  Toda la persistencia vive acá (los contenedores son efímeros).
+- **Neon**: provee el **PostgreSQL** gestionado (base `neondb`, región `us-east-1`,
+  cerca del contenedor de Miami para minimizar latencia). Toda la persistencia vive
+  acá (los contenedores son efímeros). Conexión con `sslmode=require`. Es serverless
+  (scale-to-zero): puede haber cold start tras inactividad.
+  > Migrado de Supabase (us-west-1) a Neon (us-east-1) por latencia — ~45% más rápido.
+  > La base de Supabase quedó como respaldo.
 - **Cloudflare Containers**: el backend Tryton corre **dockerizado en Cloudflare
   Containers**, orquestado por un Worker (que hace de router/ingress hacia el
   contenedor). Cloudflare también aporta DNS, CDN y TLS del dominio público.
@@ -58,7 +62,7 @@ Usuario ──► Cloudflare (DNS/CDN/TLS)
                               └── trytond (backend + frontend SAO/Kalenis)
                                       │
                                       ▼
-                              Supabase PostgreSQL
+                              Neon PostgreSQL (us-east-1, base 'neondb')
 ```
 
 ## Puesta en marcha local
@@ -84,29 +88,28 @@ for d in backend/lims*; do ln -sf "$PWD/$d" "$MODDIR/$(basename $d)"; done
 mkdir -p ~/kalenis_front_end
 curl -fsSL https://downloads.kalenislims.com/frontend_dist_6.0.tar.gz | tar xz -C ~/kalenis_front_end
 
-# 4. Correr el server local apuntando a Supabase (MISMA base que producción)
+# 4. Correr el server local apuntando a Neon (MISMA base que producción)
 ./run-local.sh
-# → http://localhost:8000  (lee la URI de .env; base 'postgres' de Supabase)
+# → http://localhost:8000  (lee la URI de .env; base 'neondb' de Neon)
 ```
 
-### Una sola base: Supabase
+### Una sola base: Neon
 
 Local (desarrollo) y producción (Cloudflare Containers) usan **la misma base de
-Supabase** (`postgres`). No hay base local separada ni sincronización: los cambios
-que hacés en local se ven en producción y viceversa. `run-local.sh` arma la URI
-desde `.env` y levanta trytond contra Supabase.
+Neon** (`neondb`, `us-east-1`). No hay base local separada ni sincronización: los
+cambios que hacés en local se ven en producción y viceversa. `run-local.sh` arma la
+URI desde `.env` (variable `NEW_DABTASE_URL`) y levanta trytond contra Neon.
 
-- Conexión: **modo sesión** del pooler (`:5432`, sin `?pgbouncer=true`). El modo
-  transacción (`:6543`) rompe a Tryton.
-- Como la base es remota (`us-west-1`), el **arranque** del server local es más lento
-  que contra un Postgres local (Tryton hace muchas queries chicas al iniciar); operar
-  después es normal.
+- Conexión: `sslmode=require` (obligatorio en Neon). trytond preserva el `sslmode`
+  de la URI. La base se llama `neondb` (se pasa con `-d neondb`; en el contenedor
+  vía la env `TRYTOND_DB=neondb`).
+- Neon es **serverless (scale-to-zero)**: tras inactividad se pausa y el primer
+  request paga un cold start.
+- **Bootstrap / migraciones:** requieren `pg_dump` **≥ 17** (Supabase corría PG 17;
+  Neon corre PG 18). Instalar `postgresql@17`.
 
-**Bootstrap histórico (ya hecho, no repetir):** inicializar la base desde cero contra
-Supabase por WAN es inviable (horas). Por eso el init inicial se corrió en un Postgres
-local y se migró una única vez con `pg_dump -d kalenislims --no-owner --no-privileges |
-psql "$SUPABASE_SESSION_URL"`. La base local (`kalenislims`) queda solo como respaldo.
-El mismo comando sirve para **backups** puntuales de Supabase.
+**Respaldo:** la base de **Supabase** (us-west-1) quedó como copia de respaldo de
+antes de la migración a Neon.
 
 Notas:
 - `numpy` debe quedar en `<1.24` (`pip install 'numpy==1.23.5'`): el `openpyxl 2.6.4`

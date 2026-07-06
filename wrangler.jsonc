@@ -3,6 +3,9 @@
   "name": "kalenis-cromaquim",
   "main": "worker/index.js",
   "compatibility_date": "2025-10-01",
+  "vars": {
+    "TRYTOND_DB": "neondb"
+  },
   "containers": [
     {
       "class_name": "KalenisBackend",

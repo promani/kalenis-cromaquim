@@ -10,6 +10,8 @@ export class KalenisBackend extends Container {
     super(ctx, env);
     this.envVars = {
       TRYTOND_database__uri: env.TRYTOND_DATABASE_URI,
+      // Nombre de la base dentro del servidor (Neon usa 'neondb', Supabase 'postgres')
+      TRYTOND_DB: env.TRYTOND_DB || 'postgres',
     };
   }
 }

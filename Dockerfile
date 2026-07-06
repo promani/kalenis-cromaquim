@@ -26,4 +26,6 @@ ENV TRYTOND_web__root=/app/frontend/frontend_dist_6.0
 # TRYTOND_database__uri llega por env desde el Worker (secret TRYTOND_DATABASE_URI)
 
 EXPOSE 8000
-CMD ["trytond", "-d", "postgres", "-c", "/etc/trytond.conf"]
+# La base se elige por env TRYTOND_DB (default postgres). Neon usa 'neondb'.
+ENV TRYTOND_DB=postgres
+CMD ["sh", "-c", "exec trytond -d \"$TRYTOND_DB\" -c /etc/trytond.conf"]
